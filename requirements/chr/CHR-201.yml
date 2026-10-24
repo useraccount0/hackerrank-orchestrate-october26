@@ -17,7 +17,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: r1QlSiPsFaWGXs6FXZ8BnjQkgsEA1CzHjmR4yxtbdcE=
 text: |
   The system shall read its input files from the dataset/ directory, which holds all participant-facing files.
 verification: test

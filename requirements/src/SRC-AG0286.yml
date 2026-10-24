@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 4OhyFwbvC9Nq8ohnpDlfRsSsNMbne3kvE3FL8VYZkCw=
 text: |
   | `VERIFY_RECORD_PRESENT` | `PRESENT` | Confirm that a policy-required retained record still exists. |

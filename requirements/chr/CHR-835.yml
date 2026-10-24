@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: o2MzI1omjH1sskc1t3MVHEsvPe-IQ1vqzQ6ASmEZIKY=
 text: |
   Logs shall be written in UTF-8 with \n (LF) line endings.
 verification: inspection

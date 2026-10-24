@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: adRckAv7GbWjTmATOXNNO4tCrsuBxkiZ9m_-KNxLWM4=
 text: |
   The system shall judge a deletion COMPLETE only if the retained records contain only the identifiers permitted by the rules.
 verification: test

@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: I6XFh4xS3mCI2d9sP3ZtHlSOHnAB4fyNE2wLg1INgq4=
 text: |
   The coding agent shall not replace the URL with the HackerRank homepage, the contest homepage, another challenge page, or a guessed /submission URL.
 verification: inspection

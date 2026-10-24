@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: 1JZ88PIS7ONHi6ShjyiJw3pa-4UlSpxBcxvH60MQZv8=
 text: |
   For an INCOMPLETE case, steps_json shall contain the findings, the complete ordered remediation plan, and the verification checks that must pass after remediation.
 verification: test

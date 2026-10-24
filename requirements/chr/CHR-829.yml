@@ -15,7 +15,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: oVY2Xzq4wee8G8mf-_mshBaxU1AH_HKBIZQv_7naV7k=
 text: |
   Every SESSION START and per-turn entry shall contain exactly one non-empty tool= line with the exact name of the coding harness or agent that writes the entry, checked against the harness identity given by the runtime; a missing or blank value, a placeholder, a generic label such as "AI", a model name, or another harness makes the entry invalid; the tool name shall never be guessed.
 verification: inspection

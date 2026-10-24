@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: 0_-1bPDs0ditY0EK4W4390ylzeVbWESyVldfmih0PnI=
 text: |
   The system shall be an AI-powered deletion-audit agent that audits, for each request, whether a user's personal data was actually deleted, and that can prove whether the data is truly gone.
 verification: inspection

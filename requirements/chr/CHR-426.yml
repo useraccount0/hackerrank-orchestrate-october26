@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: gOaMjGfrfTJnWUYCYRQmdDmI7zS7P6UET2s61vvNjWc=
 text: |
   Operation ANONYMIZE_RECORD shall be used only in phase REMEDIATION, always with state ANONYMIZED, and means: keep the record after irreversibly unlinking it from the user.
 verification: test

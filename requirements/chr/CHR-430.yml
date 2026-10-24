@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: xnvC_X5f6UubTSWpYkeqAKIiNe4b7x9CASg9UPIYRTg=
 text: |
   Operation VERIFY_RECORD_ANONYMIZED shall be used only in phase VERIFICATION, always with state ANONYMIZED, and means: confirm that the record can no longer be linked to the user.
 verification: test

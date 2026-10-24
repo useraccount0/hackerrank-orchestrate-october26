@@ -16,7 +16,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: I1CWfGVjC2use0BhiPTf4WkGldhIiwmyJyMBpf0z3_M=
 text: |
   Secrets (API keys, tokens, credentials) and sensitive configuration values shall never be committed or submitted: not in prompts, code, configuration, log.txt, the reports, or any other part of the submission.
 verification: inspection

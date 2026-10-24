@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: DbbJnEvOFB8Uokzy_Qjw-7XpqpSkosHe6F0TkGMY-b8=
 text: |
   - Always launch your AI coding agent from the repository root (or explicitly ask it to read `./AGENTS.md` first) so every turn is logged to `log.txt` with the required `User Prompt`, `Agent Response Summary`, `Actions`, and `Context` sections.

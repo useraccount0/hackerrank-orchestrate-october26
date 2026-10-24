@@ -20,7 +20,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: ZwmkFYo027_142P6dpbiQ8lS6DCQOkDfQg7HbZ2UJQQ=
 text: |
   output.csv shall have the header case_id,deletion_status,steps_json: exactly these columns, in this order.
 verification: test

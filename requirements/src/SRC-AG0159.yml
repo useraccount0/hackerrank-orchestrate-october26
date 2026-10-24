@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: NBddchsA6Bkj9UBk7qepwMMLJSPuRRNcZDKhUqiu1_Q=
 text: |
   - Worktrees use the same shared log file, not a per-worktree copy.

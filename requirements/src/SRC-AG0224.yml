@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: CGSO9vWp-sAkTLQp5c5o4WrnCKNP6BGxnPrmK__qu8w=
 text: |
   Use only information available at or before `audit_at` when deciding the case. Evidence created later must not change the answer for that case.

@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: 7AMZYkXeYbHgzRNClxNAqNMjDOKWnMNF0rJJQA9PuGI=
 text: |
   The system shall decide a case using only information available at or before its audit_at; evidence created later shall not change the answer for that case.
 verification: test

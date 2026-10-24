@@ -15,7 +15,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: rSCa4haN5WyQhGGmtyAY15CZhJw6IiObzSMwfC_ATUY=
 text: |
   code.zip shall contain the runnable solution, the prompts, the configuration, README.md, and the evaluation/ reports.
 verification: inspection

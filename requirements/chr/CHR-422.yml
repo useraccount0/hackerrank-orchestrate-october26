@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: chYHlznaTkB97jqoK_zDn-0WBHZJXwNNVi2uGJYRDDw=
 text: |
   Operation DISABLE_DATA_FLOW shall be used only in phase REMEDIATION, always with state DISABLED, and means: stop the process that can copy or recreate the data.
 verification: test

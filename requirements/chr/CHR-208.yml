@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: xknzbKO7WlKB_6qKtVKZdgm9o8nBqn9CwX1B9kLd0FQ=
 text: |
   reported_status is the existing deletion workflow's claim and is one of COMPLETE, PARTIALLY_COMPLETE, or NOT_STARTED; it is not proof of the true state.
 verification: test

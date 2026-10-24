@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: sUOlv2quvf9XFXsxfVTOfxtEADhCYQtA48rDZyJIuZg=
 text: |
   Operation REDACT_RECORD shall be used only in phase REMEDIATION, always with state REDACTED, and means: keep the record but remove the identifying fields required by the policy.
 verification: test

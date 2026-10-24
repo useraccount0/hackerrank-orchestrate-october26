@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: UlQskvBMXvCGBBLesslFYP0ZV88F2NhUbHJ1L53RqX4=
 text: |
   Prefer exporting each relevant session as JSON rather than copying the database. List sessions and export each challenge session:

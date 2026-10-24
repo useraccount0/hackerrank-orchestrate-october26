@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: pdBouVg0W8YJJxbwvjy4tGBm5SRtwzcl85OJSnAXl-U=
 text: |
   - Determine the resource state at `audit_at` using the available evidence. Reported workflow statuses and operation results are claims.

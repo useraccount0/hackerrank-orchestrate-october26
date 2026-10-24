@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: _BaH0fmy7t46UfWIMbrJKRlLDa7r29YxyDhwXIjhX0Y=
 text: |
   | `REPORT_EXPOSED_PII` | `PRESENT` | A record may remain, but identifiers that policy requires to be redacted or anonymized are still exposed. |

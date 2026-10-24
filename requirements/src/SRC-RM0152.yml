@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: KKN2PA0BtyHHobgJBOt3LydAjTHRyMxpcj7sdNwgMng=
 text: |
   - every `steps_json` value is a valid JSON array with consecutive step numbers starting at `1`;

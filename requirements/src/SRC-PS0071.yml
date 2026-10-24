@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: VNOwarhahiIcnjvDXr5iyCnXouYHQx-FkBBBBK6MfJc=
 text: |
   | `steps_json` | Ordered JSON array of findings, remediation actions, and verification checks |

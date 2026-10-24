@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: 3_8tv3vmVhYgswZ5fE02Yf8wEF3afQykSoZkOgpaTfg=
 text: |
   Operation REPORT_ACTIVE_DATA_FLOW shall be used only in phase FINDING, always with state ACTIVE, and means: an active process can copy or recreate the user's data.
 verification: test

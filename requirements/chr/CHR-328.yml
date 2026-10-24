@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: RlmY3DBTKvU2NU60Zn4PYQWfImRxJj10CtEpEJ1PMjU=
 text: |
   Within remediation, the system shall disable data flows and block unsafe restores before changing dependent records.
 verification: test

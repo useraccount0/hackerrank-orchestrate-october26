@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: OGrvvlflfaioUYKJJIY3jfN_lrbXnVihbhwfDCClPZA=
 text: |
   The system shall judge a deletion COMPLETE only if every record that must be retained remains available.
 verification: test

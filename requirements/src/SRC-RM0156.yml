@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: EeJlr1RKDK__3YbgHS0G34AiWm49hZAGLKxSqYDB1po=
 text: |
   - `log.txt` follows the `AGENTS.md` turn format and is uploaded to the `chat_transcript` slot; and

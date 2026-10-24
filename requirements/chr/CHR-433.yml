@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: c-IGU_HNsTH8aha_01y1NnLI68tT32Svp_UxO0hhXOo=
 text: |
   For a COMPLETE case, steps_json shall contain only VERIFICATION steps, each backed by evidence, that prove the state at audit_at.
 verification: test

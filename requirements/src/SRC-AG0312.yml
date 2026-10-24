@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 76hjqRemRJRTQ5_CN21D36uciMNW9ZzL-fc3y4qZOWc=
 text: |
   - SQL evidence can contain primary, regional, reporting, or failover replicas. Compare the relevant tables and snapshot time when investigating replication drift.

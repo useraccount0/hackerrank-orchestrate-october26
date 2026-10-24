@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: 6zwUEVdunDSIZrSiH7B4huCM1oBidBd1lsNgejF215A=
 text: |
   When investigating replication drift, the system shall compare the relevant tables and the snapshot times of the SQL replicas (primary, regional, reporting, failover).
 verification: test

@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: C9XJYkmWiT0eq6cs45dm8WoRytAXgSL_RXHgs7GZkaE=
 text: |
   dataset/sample_deletion_requests.csv contains 32 public sample requests.
 verification: inspection

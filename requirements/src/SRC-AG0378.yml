@@ -13,6 +13,6 @@ normative: false
 note: |
   AGENTS.md section 7 applies to the organizers when they maintain or regenerate the challenge dataset; participants do not do that. It may still guide our own test data (step 2), but it is not a challenge requirement for us.
 ref: ''
-reviewed: pending-user-review
+reviewed: -F13bBwxcVFDw4HnJ4aP7_EJ_O_all43QOJy8HJ5wuA=
 text: |
   These rules apply when maintaining or regenerating the challenge dataset itself:

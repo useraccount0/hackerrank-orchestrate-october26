@@ -17,7 +17,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: 4rikqN28ksSIcWQcBIbxhQMhEGZiC8dNn4y-YMZtoBw=
 text: |
   If OpenAI Codex was used, the rollout files of the challenge sessions (rollout-*.jsonl in date folders under ~/.codex/sessions/, %USERPROFILE%\.codex\sessions\, or $CODEX_HOME/sessions/) shall be copied into agent-trace/codex/ (plus a reviewed session_index.jsonl only if useful), never auth.json, config.toml, credential stores, or the whole .codex directory; for hosted-only sessions, the interface's export shall be used, with a note that no local trace file exists.
 verification: inspection

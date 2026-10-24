@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: b-24e-G4duzme2Y413SQ1Kx36C93jJ8-wwH2lvDb47k=
 text: |
   The solution shall keep its behavior deterministic where possible, including ordering and JSON serialization.
 verification: test

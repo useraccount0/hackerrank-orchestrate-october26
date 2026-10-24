@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: YN93Qlgc69bVCy6qz6AoMhYnyfhMtYs4-fZ7qTU2J-A=
 text: |
   `phase` must be `FINDING`, `REMEDIATION`, or `VERIFICATION`. Step numbers start at `1` and increase consecutively. Array order is significant.

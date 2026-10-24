@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: cjAmgn5JbCrzV2ZfRJpVQ6poAXzcnN0ZW-ue5JxNzAI=
 text: |
   The system shall not delete, or propose deleting, data that the policy requires to be retained, redacted, anonymized, or preserved as a tombstone.
 verification: test

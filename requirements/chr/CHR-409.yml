@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: vo9450I-qy3qALM8fF2GYI1IJv31ue301llGrt5ogWg=
 text: |
   Every steps_json value shall be a valid JSON array.
 verification: test

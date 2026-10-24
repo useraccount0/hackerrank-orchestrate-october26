@@ -9,10 +9,11 @@ links:
 - SRC-AG0303: 9TC_1UGwzJc0uS8d5aNmgKZ7js91yBeG0nCtR2x_Dfw=
 modality: shall
 normative: true
-note: ''
+note: |
+  Decision ISS-02 (you, 2026-10-24): where this conflicts with the sort order of CHR-416, the sort order wins, as in all 32 sample answers (case_16 and case_24 list the source before its downstream copy).
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: HORPrCG6NJEhT_aw2Hvf-JgWqJ3Cx_XoghxWS_D143M=
 text: |
   Within remediation, the system shall process downstream copies before their source records when the dependency requires it.
 verification: test

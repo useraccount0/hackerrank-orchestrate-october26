@@ -17,7 +17,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: pJ-EhR_gEmsqEv4zHdPi4Oh516a3qgWBBBcrJ7N3SXs=
 text: |
   log.txt shall not contain API keys, tokens, session cookies, OAuth codes, credentials, private keys, sensitive configuration, or real personal data; such values shall be redacted.
 verification: inspection

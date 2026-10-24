@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: ojr6MAhAZpujIZL3M4aj22HDiY-vPKqTbXZ1lHMG5xc=
 text: |
   Save the exported transcript in `agent-trace/claude-code/`. `/export` produces a readable conversation export; include the original session JSONL files as well when available because they preserve the structured trace.

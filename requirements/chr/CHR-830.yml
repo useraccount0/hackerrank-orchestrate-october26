@@ -15,7 +15,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: ZjDmnCRzmP2eKdXunVsJMszoBGWcUbf-xtGmngKQAZY=
 text: |
   Every SESSION START and per-turn entry shall contain exactly one non-empty model= line with the exact model identifier used for that turn, taken from the runtime, session metadata, harness configuration, or another authoritative source; unknown, a model family, a generic label, an inferred name, or a placeholder is invalid; the model name shall never be guessed and does not replace tool=.
 verification: inspection

@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: MS6nqR_ltKEezZ37hf_qyYsXfpc73dS-LWhPMV3uChI=
 text: |
   Open the ZIP once after creating it and confirm it contains the intended traces and no credentials or unrelated files. Submit `agent-trace.zip` with your challenge submission.

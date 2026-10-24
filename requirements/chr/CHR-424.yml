@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: rsCQPK1j5052ZjG6zFpuNoZ4R0ns5DkvZYwM0QjgkDU=
 text: |
   Operation DELETE_RECORD shall be used only in phase REMEDIATION, always with state ABSENT, and means: remove the entire record.
 verification: test

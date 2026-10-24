@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: f9U0ldqHzGsgt0TZGKnuYdwGzQaG5ftCFs7NyZZoSN8=
 text: |
   - `sample_deletion_requests.csv` contains 32 public requests. `sample_output.csv` contains their correct outputs and demonstrates the required decision and serialization format.

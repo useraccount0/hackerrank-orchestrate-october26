@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 0C9rb55ynMe3AojUW8dg5J0BjmwzUWWvEnIhWRB-qTg=
 text: |
   - Encode `steps_json` as a valid JSON array. The grader ignores JSON object-key order and whitespace but preserves array order.

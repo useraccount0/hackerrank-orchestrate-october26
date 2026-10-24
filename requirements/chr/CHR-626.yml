@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: TTBK89VE-5L1G6VFD8T8d3glUw2yyHW9WaPUPY4XLBE=
 text: |
   code.zip shall not contain nested archive files (.zip, .tar, .gz, .tgz, .7z, .rar); submissions that contain them are rejected.
 verification: inspection

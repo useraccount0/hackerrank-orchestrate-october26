@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: rqHudXh_EUUKiqEvBScU0uFwH0iUp8eH2wyw2_DQe3Q=
 text: |
   Do not skip logging or rewrite old log entries. Sub-agents and worktrees use the same log file.

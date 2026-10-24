@@ -15,10 +15,11 @@ links:
 - SRC-RM0155: E6s5pp9mpHy2eGtOwmjkxhQz1XDqDqTQ3w4NWHKzrsU=
 modality: shall
 normative: true
-note: ''
+note: |
+  Decision ISS-01 (you, 2026-10-24): option (a), code/evaluation/ only. Inside code.zip the file is code/evaluation/usage_report.md.
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: W7LjQWTj_TvMqDTEb3bw8sVXbtCmdx0dWf2_PJnpuJ0=
 text: |
   code.zip shall include the token-usage report usage_report.md in the evaluation/ folder.
 verification: inspection

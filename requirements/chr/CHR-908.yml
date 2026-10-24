@@ -17,7 +17,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: nA-SDlOYUTw3M9dovcspsErUZwyzwdJrFS4l7pqXaqY=
 text: |
   The agent-trace folder shall be zipped with the operating system's built-in archive tool, from the directory that contains agent-trace/: zip -r agent-trace.zip agent-trace on macOS/Linux, or Compress-Archive -Path .\agent-trace -DestinationPath .\agent-trace.zip -Force in Windows PowerShell.
 verification: inspection

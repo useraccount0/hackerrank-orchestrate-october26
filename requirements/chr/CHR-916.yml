@@ -19,7 +19,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: qP8U0MXQUEMaAF1pi_Zz6iWHzBlD13CjwIVE7TO3R30=
 text: |
   If another agent harness or coding tool was used (for example Aider, Goose, RooCode, Cline, Devin, Factory, or JetBrains Junie), its challenge sessions shall be exported with the tool's own export feature and its raw structured trace files copied into agent-trace/<harness-name>/, keeping the original formats and subagent folders and excluding credentials and settings files.
 verification: inspection

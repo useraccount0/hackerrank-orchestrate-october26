@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: tXE7tVJ5CnJ00VND4LWxXlaEjP49mgrcD1NUnYQbJHY=
 text: |
   | `FINDING` | `REPORT_ACTIVE_DATA_FLOW` | `ACTIVE` | An active process can copy or recreate the user's data. |

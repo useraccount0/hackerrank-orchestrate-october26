@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: MUmQOipATGjET-jO5pwTYXstPzF5Rh0Jo7qNUi3nfjY=
 text: |
   The system shall match evidence to the subject through current identifiers, historical identifiers, hashes, resource IDs, system IDs, timestamps, and other grounded links in the contents.
 verification: test

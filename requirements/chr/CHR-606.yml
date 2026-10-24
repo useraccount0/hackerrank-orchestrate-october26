@@ -10,10 +10,11 @@ links:
 - SRC-RM0127: zbocLNOYd1y9sNbtfiV5XkmlfFcyFeQczD4MSWTXDjQ=
 modality: shall
 normative: true
-note: ''
+note: |
+  Decision ISS-10 (you, 2026-10-24): the root README.md stays the organizers' original; our README with setup and run instructions is code/README.md.
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: ziefD97ok0BHjkUaAQdEz2Y7e6udiIgTXe_Q4cCo0_g=
 text: |
   The README.md submitted inside code.zip shall contain clear setup and run instructions.
 verification: inspection

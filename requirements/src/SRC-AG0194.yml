@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: zYMg83w2jTiBhSo0Wc1szRcmtRi7Y3tzrgk56G2Pmmk=
 text: |
   - `deletion_requests.csv` contains 518 evaluation requests. Produce exactly one output row for every `case_id` in this file.

@@ -16,7 +16,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: 98AnKaGwu4K9dOCJ9NP-bik8L6Fq6wnF62_GgKD-cWQ=
 text: |
   For an authorized deletion, the system shall decide whether the deletion is actually complete (COMPLETE) or not (INCOMPLETE).
 verification: test

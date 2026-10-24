@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: YgxxzCnrVseZf5JKgraLxMnlO4nRtL26WMhbCIv4Hak=
 text: |
   4. Review the staged files before sharing. Traces can contain source code, local file paths, prompts, tool arguments and output, screenshots, and other private information. Remove or redact secrets (API keys, tokens, passwords, cookies, private keys), personal information, and material you are not allowed to share. Do not include authentication files, settings, or credentials.

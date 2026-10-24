@@ -11,10 +11,11 @@ links:
 - SRC-RM0059: ijXErmLH_dGlFZqcxQhMDMKfpvUO_5mut2AU8P62Tog=
 modality: fact
 normative: true
-note: ''
+note: |
+  Decision ISS-09 (you, 2026-10-24): the union of the lists, so plain text is included.
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: mVq5-iZ7fAN4CSIuR37p8scgjpESmg32Cap4o8blhB4=
 text: |
   Evidence under dataset/evidence/ may be PDF documents, images (application screenshots), logs, JSON, plain-text records, and SQLite-compatible SQL snapshot exports.
 verification: test

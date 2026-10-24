@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: EId9R-Ij59aX3vsQ9PvgFmfHUsiX7BdlC4J6TC26IhI=
 text: |
   Operation VERIFY_RECORD_REDACTED shall be used only in phase VERIFICATION, always with state REDACTED, and means: confirm that the required identifying fields have been removed.
 verification: test

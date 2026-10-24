@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: AJSzOAcMtcEOX5y9mpx9BxTrENv7rHnWwuHE4hkqOpM=
 text: |
   The ZIP shall be opened once after it is created, to confirm that it contains the intended traces and no credentials or unrelated files.
 verification: inspection

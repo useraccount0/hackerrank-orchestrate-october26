@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 4wNTkJWSUekxM-k_A2IfNu8WHYIVDDrzQgmCVI6iyKM=
 text: |
   Each row in `deletion_requests.csv` is one case:

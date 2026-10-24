@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: SAxeKdF8qGZzhrS8JTw4G-KDcdc8t-LQ1rHr8DuGukw=
 text: |
   The system shall judge a deletion COMPLETE only if every relevant copy has received the treatment required by deletion_rules.csv.
 verification: test

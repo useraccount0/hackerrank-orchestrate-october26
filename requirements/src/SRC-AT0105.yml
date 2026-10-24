@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: SbfJ9slgLz0Uc7cRP1Bqg5GMchWMf-IzJFoF9fNoaSg=
 text: |
   2. **Create a tool subfolder** inside `agent-trace/` named after the harness (for example, `agent-trace/cursor/`, `agent-trace/windsurf/`, `agent-trace/copilot/`, `agent-trace/aider/`, or `agent-trace/goose/`).

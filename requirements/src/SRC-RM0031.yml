@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: vutea5gQkhnAjobRG_1sHKqFn8RBt4vwmdOmuhrS7fo=
 text: |
   - Generate one prediction row for every request in `dataset/deletion_requests.csv`

@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: PDjKJ10BCIcdryMmjNZQ8oB-LpFc5FXvHa-QKPQUyP4=
 text: |
   - `system_activity.csv` is a global stream of deletion, synchronization, export, backup, restore, indexing, and audit events. Its rows may describe unrelated people. Determine resource state from the available evidence rather than trusting workflow or operation results alone.

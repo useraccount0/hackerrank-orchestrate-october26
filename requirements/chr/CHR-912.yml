@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: M2pVLnbey3XFKhc8-vmKFd64IUZPQd9okEQjLFYnurY=
 text: |
   If Claude was used in the web app or the desktop chat for this challenge, only the relevant conversation export (Settings, Privacy, Export data) shall be included.
 verification: inspection

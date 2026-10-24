@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: 9Rw8beyk59pWnjucPdFWIxwcQfjS5WhCge1kIqC0Jy4=
 text: |
   log.txt shall only be appended to: earlier entries shall not be rewritten, reordered, or deleted.
 verification: inspection

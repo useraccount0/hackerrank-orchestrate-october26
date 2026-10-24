@@ -13,7 +13,7 @@ normative: false
 note: |
   Setup commands for cloning the repository (already done); they state no requirement on the solution or the submission.
 ref: ''
-reviewed: pending-user-review
+reviewed: mx4mlyPGzaWUziG8BOrTxh3sUVdKAJJxEwt7lVMLMbY=
 text: |
   ```bash
   git clone https://github.com/interviewstreet/hackerrank-orchestrate-october26.git

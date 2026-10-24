@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 5wsdk9aOcuYlSpXDYsrYLPWK--MaPIhKJxVtn-NKwQI=
 text: |
   - Do not include API keys, tokens, credentials, or secrets in prompts, code, configuration, or `log.txt`.

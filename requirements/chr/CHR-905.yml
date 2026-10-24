@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: kl0xktSDiInJWT-6Yx7s5BPb-dy2_e491Kq5cJLIK4k=
 text: |
   A temporary folder named agent-trace shall be created somewhere easy to find; only the relevant trace files shall be copied into it, with one subfolder per tool (for example agent-trace/claude-code/ and agent-trace/codex/).
 verification: inspection

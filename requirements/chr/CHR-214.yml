@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: PoR9TjJcWxZdeZmZNiIXZeBWb-FRFJBQEchgN8JRi0s=
 text: |
   dataset/user_identities.csv contains the current identity snapshot for each user: the stable user_id, name, email, phone, email hash, and the snapshot update time.
 verification: test

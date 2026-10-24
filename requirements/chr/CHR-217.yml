@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: CVuWjN39SiSEv80PzgUOup4RrnkhDELhQdtPTzCnzBQ=
 text: |
   dataset/deletion_rules.csv defines the required action (treatment) for each data category and condition; the actions include deleting the whole record, redacting prohibited identifiers, anonymizing the record, retaining it, or preserving an account tombstone with only the permitted stable reference.
 verification: test

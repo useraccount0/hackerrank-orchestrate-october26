@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: A4CFQxMluUNSNkynS2ezsoI6D9fjOH36eA8x7y0iafg=
 text: |
   log.txt shall not contain the full contents of large files or binary blobs; they shall be referenced by path instead.
 verification: inspection

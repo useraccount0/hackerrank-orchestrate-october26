@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: xVg4LOLSHcuvXqs5lSNXQzY48H6dVAMnIr52bNdsyCw=
 text: |
   For an incomplete case, the system shall report every relevant policy violation (remaining records, exposed identifiers) and every recreation risk (active data flows, restore paths) that participant-visible evidence supports.
 verification: test

@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: qPwGVtenBnAT-GFmv-N0uHcO5V8naSp-yLXg4GlyDdo=
 text: |
   - Evidence may be provided as PDF documents, application screenshots, logs, JSON, plain-text records, and SQLite-compatible SQL snapshot exports. SQL files are readable text and may be executed with SQLite.

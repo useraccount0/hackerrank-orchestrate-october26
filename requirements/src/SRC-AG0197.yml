@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: O03f7yVvfsnnoLyGE3SCaSwYyTi2bo2szlUCaCl1Ey0=
 text: |
   - `user_audit_log.csv` records historical changes to identity fields. Use it with the current snapshot to recover identifiers that may still appear in older systems and evidence.

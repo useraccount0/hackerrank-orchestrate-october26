@@ -19,7 +19,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: d5F6JYG02P2Zi00ucfx7zA52MIc-HkcMk_h9IqVFPTE=
 text: |
   The log file shall be named log.txt and be located in the repository root, the directory that contains the top-level AGENTS.md (<root>/log.txt on macOS/Linux, <root>\log.txt on Windows).
 verification: inspection

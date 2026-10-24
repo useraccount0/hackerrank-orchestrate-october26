@@ -13,6 +13,6 @@ normative: false
 note: |
   AGENTS.md section 7 applies to the organizers when they maintain or regenerate the challenge dataset; participants do not do that. It may still guide our own test data (step 2), but it is not a challenge requirement for us.
 ref: ''
-reviewed: pending-user-review
+reviewed: 50T3V9GsEEBOxFQM_KvsX5_G-og_TAuZWXO_JxENOt4=
 text: |
   - Never hand-edit generated participant data or golden output. Update the private truth or generator logic, regenerate, and validate.

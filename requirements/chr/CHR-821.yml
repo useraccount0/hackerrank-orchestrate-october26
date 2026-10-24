@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: 0x6xXYFilE8oFCyuRoxD5tlZXYp0zvw0AJukoxWdlsQ=
 text: |
   The log path shall be resolved relative to AGENTS.md; no folder name, user path, or platform home directory shall be hardcoded, so that the location stays correct across clones, renames, and checkouts.
 verification: inspection

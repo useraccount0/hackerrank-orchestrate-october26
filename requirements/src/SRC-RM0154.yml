@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: W2RTCbM2IL0zS2DMzLVD56-fhMB65m9iomEC3QAMP3w=
 text: |
   - proposed remediation and future verification steps use an empty `evidence_id` (`""`);

@@ -12,7 +12,7 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: aI_L5legqP7A5OZkY9VuCmTfP2Gyo_zfexR8p-2ZVIg=
 text: |
   ```sh
   zip -r agent-trace.zip agent-trace

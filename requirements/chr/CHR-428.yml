@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: qnkaaHAv3xuEnudNC5yUEPZQ_g3nHiSP5L6bnor5YwA=
 text: |
   Operation VERIFY_RECORD_PRESENT shall be used only in phase VERIFICATION, always with state PRESENT, and means: confirm that a record that the policy requires to be retained still exists.
 verification: test

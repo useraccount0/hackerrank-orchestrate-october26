@@ -15,7 +15,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: Pv_hGL3KP1-DlO258naGGbpfvGt0UW8DjSiyJDYzgxE=
 text: |
   REMEDIATION steps and post-remediation VERIFICATION steps of an INCOMPLETE case describe future work and shall use the empty string "" as evidence_id.
 verification: test

@@ -13,6 +13,6 @@ normative: false
 note: |
   Background story (Northstar Shop incident) that motivates the challenge; it states no requirement. The facts that matter are repeated in normative lines such as SRC-PS0005 and SRC-PS0007.
 ref: ''
-reviewed: pending-user-review
+reviewed: i6g91diq4BqymQrEfCQhbrOldTbqOi_FOrn7zs9_ko8=
 text: |
   Northstar Shop (an imaginary company) lost **$2.4 million** after one supposedly deleted customer came back as a ghost in its systems. Every internal dashboard showed the deletion request as **“Complete.”** Weeks later, the same customer tried to create a new account. The platform refused: **“This email is already registered.”**

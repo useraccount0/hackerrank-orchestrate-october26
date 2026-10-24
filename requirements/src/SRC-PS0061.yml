@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 7Ndr4CdSpEoo4SiLw3-_ZqDqSDHSzJId1NEjZr2gzDU=
 text: |
   Produce exactly one row in `output.csv` for every case in `deletion_requests.csv`:

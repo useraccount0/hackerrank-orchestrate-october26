@@ -15,7 +15,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: NUMwmQDKuh5BZ26bB43KnqdESalHoTfBJv3veLoITZc=
 text: |
   For an authorized deletion, the system shall resolve the subject's current and historical identifiers.
 verification: test

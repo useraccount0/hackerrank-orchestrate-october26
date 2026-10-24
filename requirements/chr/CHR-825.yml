@@ -17,7 +17,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: RrvanfJAg5PZ4e_M5b7YKsJLgP4TGaFnfkTaC1RmCqY=
 text: |
   The coding agent shall log every conversation turn by appending a per-turn entry (AGENTS.md section 5.2) after every user message it responds to; logging shall never be skipped.
 verification: inspection

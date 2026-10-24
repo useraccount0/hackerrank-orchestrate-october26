@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: AmLefXjB4g3u5RAzngXDRDuZALNJulxpIEvhJGjK1eg=
 text: |2
      - Copy the raw structured trace files for this challenge from the tool’s local storage directory (such as `.jsonl`, `.json`, `.db`, or chat history files) into `agent-trace/<harness-name>/`, preserving original file formats and any subagent folders. Include only the sessions from this challenge.

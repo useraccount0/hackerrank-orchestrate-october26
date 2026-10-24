@@ -16,7 +16,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: JceH6Qfzo10EtA6p3Za6cVyv1nK3ubzO08VbG1B-rZk=
 text: |
   For an incomplete case, the system shall produce a safe, complete, ordered remediation plan: the steps required to remove, redact, or anonymize the remaining data and to stop recreation, so that the deletion request is completed.
 verification: test

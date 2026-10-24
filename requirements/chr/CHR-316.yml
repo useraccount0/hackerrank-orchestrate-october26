@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: GS76WJse9ZZO_R7hfz0kLwMlLG70IwFmZaRaz-tG3Lk=
 text: |
   The system shall determine which active processes can copy or recreate the user's deleted data, and which backup or restore paths can bring deleted data back.
 verification: test

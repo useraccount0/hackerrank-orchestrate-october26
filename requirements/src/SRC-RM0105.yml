@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: pbM-C8_Zd0e5OTM-A1KtCJSMXcSYRCWUaC3vUAWxq9E=
 text: |
   This repository includes [`AGENTS.md`](./AGENTS.md), which instructs compatible AI coding tools to append conversation summaries to `log.txt` in the repository root:

@@ -10,10 +10,11 @@ links:
 - SRC-RM0075: itzMZ0GibOZY7O3XP8azEIq3oxJdONdK4TLIke1WD_w=
 modality: shall
 normative: true
-note: ''
+note: |
+  Decision ISS-02 (you, 2026-10-24): always this sort order; all 51 multi-step phase blocks of the 32 sample answers follow it.
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: RSn9CppOLNNw80wgOa-vOLvXuvZ5BpiSMHdyS0UhDVs=
 text: |
   Inside each phase, steps shall be ordered by the operation order of the allowed-operations table (CHR-418 to CHR-432), then by system_id ascending, then by resource_id ascending.
 verification: test

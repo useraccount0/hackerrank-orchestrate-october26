@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: sOAQ47z8goa4CdznvBBifKxjMYUa2Mwl8YIvC58xJM0=
 text: |
   | `BLOCK_RESTORE` | `BLOCKED` | Prevent the affected backup from restoring the user's data. |

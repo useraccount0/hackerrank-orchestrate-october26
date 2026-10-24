@@ -12,7 +12,7 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: mgUkNvxplVp2lE9ZbGYE0l2G3NWhkvSrL-B9NmM13BM=
 text: |
   ```sh
   opencode session list --format json

@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: hHvxGLZGePejzWFldXkmWzDmAkQ-iDN09aZ_phBaBYo=
 text: |
   - Order steps by phase: findings, remediation, then verification. Within each phase, follow the operation order in the table above, followed by `system_id` and `resource_id` in ascending order.

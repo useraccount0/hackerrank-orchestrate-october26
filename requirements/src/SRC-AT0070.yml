@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: Q33a6BOBEl6FR3dA-8seLRnZAD6LQKHZY1mMoPhkDyc=
 text: |
   Copy the complete `<conversation-id>` folder(s) for this challenge to `agent-trace/antigravity/`. Do not copy the entire `.gemini` directory: it may contain unrelated data. Antigravity CLI’s `last_conversations.json` is a session lookup cache, not the transcript itself.

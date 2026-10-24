@@ -12,10 +12,11 @@ links:
 - SRC-RM0036: UDDhJ9KPg9lPnEFwUjD1evfzgjtVMkQYEfxQqszMCHM=
 modality: should
 normative: true
-note: ''
+note: |
+  Decision ISS-08 (you, 2026-10-24): on this machine use python as is (python3 is not set up for now); code/README.md will show both the python3 and the python command.
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: vRaXJJrH6jksAChKea-FP8Fkj56tOyJpT7MO9L9ec6U=
 text: |
   If the solution is written in Python, its entry point should be code/main.py, run from the repository root with: python3 code/main.py
 verification: inspection

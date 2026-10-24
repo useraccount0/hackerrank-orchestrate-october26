@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: 5ZTCm_NM0riL2EtMrOgBZTp2NRxf3SWAkWSk68HazmY=
 text: |
   Operation VERIFY_DATA_FLOW_DISABLED shall be used only in phase VERIFICATION, always with state DISABLED, and means: confirm that the relevant data flow is inactive.
 verification: test

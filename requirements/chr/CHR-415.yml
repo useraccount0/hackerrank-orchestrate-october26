@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: 16BLxI2ke-SEVMJqvm8AubNrDs0XWOJdFRxwu2hJTko=
 text: |
   Steps shall be ordered by phase: all FINDING steps first, then all REMEDIATION steps, then all VERIFICATION steps.
 verification: test

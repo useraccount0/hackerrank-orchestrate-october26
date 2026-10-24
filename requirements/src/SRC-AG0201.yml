@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: f8o40tw8I_LONFkhgYGgheaVHRwz0uMj5k5H8W3Javk=
 text: |
   - `output.csv` is the blank prediction template. The final completed `output.csv` must be written at the repository root for submission.

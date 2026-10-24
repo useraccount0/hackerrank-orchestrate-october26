@@ -11,10 +11,10 @@ links:
 modality: shall
 normative: true
 note: |
-  The types are read from the example step object; the sources do not state them in words.
+  The types are read from the example step object; the sources do not state them in words. Evidence (2026-10-24): all 193 steps in the 32 sample answers have exactly these 7 fields, with step_no an integer and the other six strings.
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: M1OZRQ-0Hkp8iofPB2FSQ_8sRIWzZFqyiCRZGw5zBY8=
 text: |
   In each step object, step_no shall be a JSON integer, and phase, system_id, resource_id, operation, state, and evidence_id shall be JSON strings.
 verification: test

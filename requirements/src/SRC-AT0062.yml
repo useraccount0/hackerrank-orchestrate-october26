@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: aGhvnFD8ptYwLEh5TwmVKxUiSVMUqvfPRJnEDwW3Je8=
 text: |
   - **Windows:** look under `%USERPROFILE%\.gemini\antigravity\brain\`, `%USERPROFILE%\.gemini\antigravity-cli\brain\`, or `%USERPROFILE%\.gemini\antigravity-ide\brain\`, depending on the product used.

@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: bC18gqbtCEA-rLd-d0xHXjeF8iHBdLLoVZdDs8tyngI=
 text: |
   - Keep tool-specific config minimal and point back to this `AGENTS.md`.

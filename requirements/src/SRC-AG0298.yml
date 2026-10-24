@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 1US1m7XgBwqw5F17mJVDsDEopW-jk1LHUCM5UQNTFa4=
 text: |
   - Reconstruct the true state at `audit_at`. Ignore later evidence and do not accept `reported_status` or `reported_result` as proof.

@@ -15,7 +15,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: GtXwTNEbBhImfQveeUE9VzMIXXJXvZ_yyFVsS0iQWkI=
 text: |
   When several models are used, usage_report.md shall contain both per-model and overall totals, in the same file.
 verification: inspection

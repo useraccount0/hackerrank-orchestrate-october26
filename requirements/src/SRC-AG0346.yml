@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: c1EDWjWPDghN9KdF7wdMMTbiWQiPwLhVHHIYQPrPyGc=
 text: |
   `evaluation/usage_report.md` must summarize the final full-dataset run that produced `output.csv`, including:

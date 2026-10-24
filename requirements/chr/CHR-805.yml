@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: G00Bfm0XMyNzjv0kJcPygnSg51AmGL1k5oSHsVyeGiY=
 text: |
   Tool-specific configuration (for example CLAUDE.md, which only imports AGENTS.md) shall be kept minimal and point back to AGENTS.md.
 verification: inspection

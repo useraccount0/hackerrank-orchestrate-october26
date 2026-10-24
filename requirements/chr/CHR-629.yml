@@ -19,7 +19,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: 0ETiLOH7ElelV2ecAJUnubK9Or9IcN6pz31tLRznrYg=
 text: |
   Before submitting, the participant shall confirm: the output.csv header and its 518 sorted rows; valid JSON arrays with consecutive step numbers from 1; valid evidence IDs in findings and evidence in COMPLETE verification steps; an empty evidence_id in proposed steps; the required code.zip contents; the log.txt format and upload; and that no API keys, credentials, real personal data, or sensitive configuration values are included.
 verification: inspection

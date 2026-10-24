@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: PsGg4UYWyz5sSD0cox3iYOICQnx9CJyto_G6OPrnbdA=
 text: |
   At the start of every session the coding agent shall, in this order: read AGENTS.md completely, check the log file path, and append a SESSION START entry; then, during the session, append a per-turn entry for every user turn and follow the project contract when building, testing, evaluating, or packaging.
 verification: inspection

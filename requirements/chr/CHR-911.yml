@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: 2OYhuhkB3i40HwcTgDmhCO_YXP6A2Ob4SYB7o0nDqyM=
 text: |
   In each Claude Code session, /export shall be run and the readable transcript saved in agent-trace/claude-code/, in addition to the original session JSONL files when they are available.
 verification: inspection

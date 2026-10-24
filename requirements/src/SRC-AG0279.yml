@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: c0LrvkheyAUHSIWFHVxxELCvTgQcVGrP2iMp5scv5jw=
 text: |
   | `ANONYMIZE_RECORD` | `ANONYMIZED` | Keep the record after irreversibly unlinking it from the user. |

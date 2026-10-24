@@ -16,7 +16,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: JzzZoFin5grehDWqw8DK0wafyTujZn3gYJvV0qjLWGs=
 text: |
   The system shall reconstruct what happened across systems and determine the true state of each relevant resource at the case's audit_at from the available evidence.
 verification: test

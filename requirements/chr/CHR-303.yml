@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: 445N5o29sU3LTRnsRilLl8uAZVKBV6Y_0vE8cr06EOg=
 text: |
   The system shall determine whether a request authorizes deletion also when the request text is written in a language other than English.
 verification: test

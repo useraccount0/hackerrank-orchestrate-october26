@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: G4zA7oAAHSBTDF05k6yS5erB69TeQtvC_UDND01YjyA=
 text: |
   Before completing a response, the coding agent shall re-read the newly appended log entry, confirm that it has exactly one populated tool= line and exactly one populated model= line with authoritative values, and correct any problem before responding.
 verification: inspection

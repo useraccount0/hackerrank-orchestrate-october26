@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: 4_JDR3ZegyEu2ofti05lPhcLAa94yDZRC8wALC31-Jw=
 text: |
   For an incomplete case, the system shall state the verification checks that must pass after remediation; together they shall cover the required final state of every remediated record or process.
 verification: test

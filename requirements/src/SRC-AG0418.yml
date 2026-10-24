@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 6SZgIPOCQqgBzHlCB5dVtPz9gn4Fma14ZpJlPDJ6ogM=
 text: |
   - [ ] I have recorded the exact runtime model identifier in `model=`; it is never `unknown`, inferred, or generic.

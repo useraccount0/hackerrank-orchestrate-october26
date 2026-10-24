@@ -11,10 +11,11 @@ links:
 - SRC-AT0130: MS6nqR_ltKEezZ37hf_qyYsXfpc73dS-LWhPMV3uChI=
 modality: shall
 normative: true
-note: ''
+note: |
+  Decision ISS-05 (you, 2026-10-24, revised): log.txt is the chat_transcript; at the end the agent trace is prepared exactly as agent_trace_instructions.md describes (agent-trace.zip); where to upload it is checked then. So CHR-901 to CHR-916 apply.
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: B8GmEPCT4YuFN1KAa77ieiYkcvU4nclNJbl9wLHej0g=
 text: |
   The participant shall submit the complete agent trace of the work done on this challenge as a ZIP file named agent-trace.zip, together with the challenge submission.
 verification: inspection

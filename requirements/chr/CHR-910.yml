@@ -15,7 +15,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: z4QgWq6vDbLxP3B8QhdnbRLSZcdsvBx14dI3Xd8FJrA=
 text: |
   For Claude Code, the session files of this challenge (commonly JSONL files named with a session ID) shall be copied from the project folder under ~/.claude/projects/ (macOS/Linux) or %USERPROFILE%\.claude\projects\ (Windows) into agent-trace/claude-code/; the right folder and files are found by their content and timestamps.
 verification: inspection

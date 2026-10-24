@@ -111,7 +111,7 @@ Attributes of a requirement:
 | | `may` | Allowed (a freedom) |
 | | `fact` | A definition or a statement of how something is; no action, but the design must respect it |
 | `verification` | `test`, `inspection`, `analysis`, `demonstration`, `n/a` | How we plan to check it later (right side of the V) |
-| `issues` | `ISS-…` | Open points in [ISSUES.md](ISSUES.md) |
+| `issues` | `ISS-…` | Points in [ISSUES.md](ISSUES.md) that affect how the requirement is read. ISSUES.md says whether each one is open or decided; a decision is also copied into `note` |
 | `note` | text | Extra explanation |
 
 ## How to trace

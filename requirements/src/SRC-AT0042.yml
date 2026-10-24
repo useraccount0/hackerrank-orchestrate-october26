@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: Ok4_aE5dhzyQS2zITACaNKuv3EtV5Jj1WeOH-nQ-NhY=
 text: |
   Codex CLI and local Codex app sessions commonly store structured rollout files under:

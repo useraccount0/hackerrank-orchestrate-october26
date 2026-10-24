@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 64KlPjWzKDeUQBcfobtyxOzpUCygIfw27Cn2W9EPEtw=
 text: |
   The solution must write `output.csv` with these exact columns, in this order:

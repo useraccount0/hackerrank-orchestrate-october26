@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: I9wVQZZZZ-t6Op1WFzYmsFvFPu3IzLNE7XSd-96PL1k=
 text: |
   - Resolve the log path relative to this `AGENTS.md` file, as described in §2. Do not use the platform home directory or hardcode a user path.

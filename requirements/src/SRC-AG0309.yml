@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: kT3H8OKrBf8oDL98KNRnqgkg3ZoLpghoQoXgFZXICKE=
 text: |
   - Use `evidence_files.csv` to locate files, then inspect their contents. Do not infer case membership from the manifest alone.

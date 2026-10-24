@@ -22,7 +22,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: PDwP6ytaoW4rXUkrF-4U8tM49k0rpi8UEcKrf4cJ450=
 text: |
   Before responding to any user message, the coding agent shall confirm the quick checklist in AGENTS.md section 9.
 verification: inspection

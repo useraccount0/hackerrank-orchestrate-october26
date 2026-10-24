@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: ASlX0Hni1n_6cbvGrTyyfuUwH5_xPDS1BrM3kK07HpE=
 text: |
   `output.csv` will be compared with hidden canonical answers. Scoring will consider the correctness of `deletion_status`, identity resolution, discovered records and risks, cited evidence, policy decisions, and the completeness and order of `steps_json`.

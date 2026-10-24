@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: XyFU-A1z8El4UKCKtptCNKpbWF9jg3XPciyq5ozFTNw=
 text: |
   The trace shall include every session used for this challenge (including planning, coding, debugging, and review sessions) and, if more than one agent harness was used, the traces of each one.
 verification: inspection

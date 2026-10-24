@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 35CAZ-t2nN_2PjrufxKI5BPHhYKjTESOFTfQ9X2ocFw=
 text: |
   If you used Claude in the Claude web app or desktop chat rather than Claude Code, that is a different product history: use **Settings → Privacy → Export data** and follow the download instructions. Include only the relevant conversation export.

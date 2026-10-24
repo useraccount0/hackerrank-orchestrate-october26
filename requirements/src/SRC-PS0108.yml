@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: G0GnyTxmUvGjO-DxPOQkzjyq5hZk5qLyqdlvHPGPg9k=
 text: |
   | `FINDING` | `REPORT_RESTORE_RISK` | `ACTIVE` | A backup or restore path can bring deleted data back. |

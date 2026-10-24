@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: DVRTrgLIrYjVt0NplJBAX6JWbB67qVllt71_HtnBMkk=
 text: |
   On Windows, .venv shall be kept at the repository root (outside code/), and any code/__pycache__ folders shall be removed before running Compress-Archive.
 verification: inspection

@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: QaOiSm3hhqeK0qORi0Ysp1s4htPAZqUMRRP5HwW09DY=
 text: |
   - Ensure a clean run can process all 518 cases and produce exactly one valid row per case.

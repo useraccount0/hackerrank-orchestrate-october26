@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: _rhGxuYX7n0Giph09KCsl5VgAC_GQ0CpKm35x0-yWJk=
 text: |
   The grader parses `steps_json` as JSON. JSON object-key order and whitespace are ignored; array order is not.

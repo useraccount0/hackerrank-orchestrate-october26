@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: iyefV9t1IpqvAOpF999MUYikevX5zd72ArrRaWDu04Q=
 text: |
   4. Never commit or submit secrets. Read credentials from environment variables and use an uncommitted `.env` file when needed.

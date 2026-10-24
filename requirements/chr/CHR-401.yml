@@ -17,7 +17,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: tvo4lRo0Ep8kxND1ac-c0fDBP3pBPgIIkOfhR54xgeY=
 text: |
   The system shall write its final predictions to output.csv in the repository root; this root-level file, not dataset/output.csv, is the file that is submitted.
 verification: test

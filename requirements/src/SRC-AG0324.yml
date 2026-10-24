@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: d4X7cT_FGOXkxmXBIDF-x4iviW2vZAgSDa34Fm_zMNw=
 text: |
   - Keep behavior deterministic where possible, including ordering and JSON serialization.

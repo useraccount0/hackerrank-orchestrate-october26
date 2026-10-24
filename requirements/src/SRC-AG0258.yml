@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: MaLhKs56sKg3MtwBNPtYq5zmAEk80gJ8auJpafv8df4=
 text: |
   For a `COMPLETE` case, include only evidence-backed verification steps proving the state at `audit_at`. For an `INCOMPLETE` case, include the findings, the complete ordered remediation plan, and the checks that must pass after remediation. Findings cite participant-visible evidence. Proposed remediation and future verification steps use an empty `evidence_id`.

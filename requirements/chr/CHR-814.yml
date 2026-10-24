@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: bjHkq8st3w16XZsg9-VZNMK4B4uHkxhRu2tk5QyYYhI=
 text: |
   If a higher-priority instruction or an official repository update supplies the end time, the coding agent shall calculate and display the time remaining.
 verification: inspection

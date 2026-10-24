@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: mu6k4NPUL9BKWktOV1NLygDWhZXnu_C97xNi7D4-I1g=
 text: |2
      - Use the tool’s built-in session, chat, or trajectory export feature (UI or CLI) to save a readable or structured export into `agent-trace/<harness-name>/`.

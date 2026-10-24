@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: mP7mFrmHQ8SQEnZOWgp5BnR9x3xKo7GuF97C7lRGDSo=
 text: |
   2. Create a temporary folder named `agent-trace` somewhere easy to find, such as your Desktop. Copy only the relevant trace files into it. Keep each tool in its own subfolder, for example `agent-trace/claude-code/` and `agent-trace/codex/`.

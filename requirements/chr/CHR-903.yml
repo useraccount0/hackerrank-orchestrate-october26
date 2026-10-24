@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: OX_mGjhSuNMtws4pFQuAWJVfXG-7cvef0qN8qGierzs=
 text: |
   The original files and folder structure shall be kept where practical; JSONL, SQLite, and other structured logs shall not be converted into screenshots or summaries.
 verification: inspection

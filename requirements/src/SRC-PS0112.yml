@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: AFbpyem8oMvebxdZI4AjeMBsBDhASTXTuWeaxuLVT3I=
 text: |
   | `REMEDIATION` | `REDACT_RECORD` | `REDACTED` | Keep the record but remove the identifying fields required by policy. |

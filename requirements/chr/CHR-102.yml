@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: uoab_6757UoFkl61NrKM_1ngD7SCpbyqDLe-VzUVkUE=
 text: |
   The audit shall cover every place where personal data can remain although a deletion workflow reports "Complete": primary and secondary databases and their replicas, logs, support attachments, exports, search indexes, analytics records and exports, archives, and backups.
 verification: analysis

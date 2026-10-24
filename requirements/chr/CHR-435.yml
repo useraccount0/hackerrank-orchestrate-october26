@@ -13,10 +13,11 @@ links:
 - SRC-RM0153: T7ZQCAWdErDrr18x230N36-IWAxDchHzWpNx78lSXh0=
 modality: shall
 normative: true
-note: ''
+note: |
+  Decision ISS-07 (you, 2026-10-24): reading confirmed. All 32 sample answers follow it (findings 41 of 41 and COMPLETE checks 34 of 34 cite evidence; future steps 118 of 118 are empty).
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: n3dFXXJW2D37ES9DZGmoyln7eFOAAO_wk9zgBZxPY88=
 text: |
   Every FINDING step shall cite in evidence_id the participant-visible file_id, activity_id, or audit_id that proves it.
 verification: test

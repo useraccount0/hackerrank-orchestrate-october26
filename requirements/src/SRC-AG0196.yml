@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: ijzH3vFHq-hLuzUfCrQXDHIvHvo_j28uSjKfWN_jIB0=
 text: |
   - `user_identities.csv` contains the current identity snapshot for each user, including the stable `user_id`, name, email, phone, email hash, and snapshot update time.

@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: D1d384hFTItu-gYMnFw8K4Eg2H0GP7SEoxy_GzO_e1E=
 text: |
   Place the exported files in `agent-trace/opencode/`. If the CLI is unavailable and you need to provide the raw database instead, quit OpenCode first, copy only `opencode.db` into the staging folder, and inspect the copy for unrelated/private data. Never include `auth.json`, which can contain provider credentials. The default OpenCode data folder also contains logs and snapshots; those are not substitutes for the session exports.

@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: M2TDhM9vpD7De-oklElxx6nKHOsTCU9nzWrQ_0aRssY=
 text: |
   dataset/ contains deletion_requests.csv, sample_deletion_requests.csv, sample_output.csv, user_identities.csv, user_audit_log.csv, system_activity.csv, deletion_rules.csv, evidence_files.csv, output.csv, and the folder evidence/ with the subfolders databases/, documents/, images/, logs/, and records/.
 verification: inspection

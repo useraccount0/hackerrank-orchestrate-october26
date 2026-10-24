@@ -2,7 +2,7 @@ active: true
 derived: false
 header: |
   Run instructions for other languages
-issues: ''
+issues: ISS-10
 kind: deliverable
 level: 5.13
 links:
@@ -10,10 +10,11 @@ links:
 - SRC-RM0026: rsbnt85sT5VOnUbo4A28j3DnJna6TAoERGe1fh_Z97o=
 modality: shall
 normative: true
-note: ''
+note: |
+  Decision ISS-10 (you, 2026-10-24): the submitted README.md is our code/README.md; the root README.md stays the organizers' original.
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: _ZSfqrJN59BryXRe5wnsuGxZjs06AllJ0l0Bp4s8qcI=
 text: |
   If another language is used, its exact setup and run command shall be documented clearly in the submitted README.md.
 verification: inspection

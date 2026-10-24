@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: pQasEnssX3CdBiFMxsZmulZJ9lXNfTcjq781ZKQX1bY=
 text: |
   A SESSION START entry shall follow the AGENTS.md section 5.1 template: the heading "## [ISO-8601 TIMESTAMP] SESSION START", then the lines tool=, model=, Repo Root:, Branch:, Worktree:, Parent Agent:, Language: (js, ts, py, or custom:name), and Time Remaining: (Xd Yh Zm, or not configured).
 verification: inspection

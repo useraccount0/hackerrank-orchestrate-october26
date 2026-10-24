@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: eHye6_gl4RS9GD97ENXnNnM_i9trkHE_FnkbIChoEw0=
 text: |
   The staged files shall be reviewed before sharing: secrets (API keys, tokens, passwords, cookies, private keys), personal information, and material that may not be shared shall be removed or redacted, and authentication files, settings, and credentials shall not be included.
 verification: inspection

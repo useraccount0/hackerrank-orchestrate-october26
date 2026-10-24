@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: 6poZXNveSEvKTnW-15orLlzVRjYA2uySC5dcXyFzNxE=
 text: |
   Prompts shall be kept in source code or Markdown files.
 verification: inspection

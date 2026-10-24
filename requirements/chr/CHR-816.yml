@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: F3Zro3kEGp3iLM6YOak6MWNPJJQlGtMbF2zd5j0RgjE=
 text: |
   If the deadline has passed, the coding agent shall state that clearly, without blocking further work.
 verification: inspection

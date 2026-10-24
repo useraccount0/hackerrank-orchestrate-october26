@@ -12,10 +12,11 @@ links:
 - SRC-RM0151: 9MmGA-lltrkXE5zarKeLsllm7cEwJLbF93ZwFQtjG3M=
 modality: shall
 normative: true
-note: ''
+note: |
+  Decision ISS-03 (you, 2026-10-24): number order, i.e. sorted by the number after 'case_'. This is exactly the order of dataset/deletion_requests.csv.
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: yHXDJJh7DmOk25fxYs4SEMtbp2ksMDCOBHFbeZvVDgU=
 text: |
   The data rows of output.csv shall be sorted by case_id.
 verification: test

@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: M8RoGaTC-b4DNnb-t4pZkMsvs0yb3sYxoLocynTTBKc=
 text: |
   Only deletion_requests.csv requires predictions (answers); the other participant-facing files provide identity, policy, activity, and evidence context.
 verification: inspection

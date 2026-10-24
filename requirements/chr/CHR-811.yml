@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: sXF2ZV_l5bj0ik7GIJCgYkizPJgofVWYSSXHjjF8dTw=
 text: |
   At the beginning of each session, the coding agent shall append a short SESSION START entry in the format of AGENTS.md section 5.1.
 verification: inspection

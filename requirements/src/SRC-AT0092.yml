@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: eH2wawHtBmDJs6EiSJKbj8PXEBj4z_3bH_9-oBfR19I=
 text: |
   To redact sensitive transcript and file data during export, add `--sanitize`:

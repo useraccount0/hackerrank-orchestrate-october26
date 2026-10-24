@@ -15,7 +15,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: vlUM1HA-Ec-pEZ1zDAtbRsvq_8YrxAo1IUjtrXM8oQ8=
 text: |
   One shared log.txt is used per checkout: all agents, sub-agents, and worktrees append to the same file next to the top-level AGENTS.md, never to a private or per-worktree copy.
 verification: inspection

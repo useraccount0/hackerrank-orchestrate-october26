@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 4_Pa2cX4sMKKTCjf6MF-2nvRkSJeQS1j6eCq6ACa3AY=
 text: |
   | `REMEDIATION` | `BLOCK_RESTORE` | `BLOCKED` | Prevent the affected backup from restoring the user's data. |

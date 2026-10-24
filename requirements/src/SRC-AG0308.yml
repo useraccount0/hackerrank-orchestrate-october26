@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 0BqmQSaNyObRjSh8qKf0tH9oq7EIhdXqelHpYCTKSP8=
 text: |
   - Treat activity logs, workflow statuses, and system messages as claims unless the available evidence establishes the resulting state.

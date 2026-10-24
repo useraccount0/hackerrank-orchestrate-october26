@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: Cn7gS2XNZGzfL_p0czraEZk6AgaVg1VkGeVQE8UHIYk=
 text: |
   | `output.csv` | One answer row for each of the 518 requests in `dataset/deletion_requests.csv` |

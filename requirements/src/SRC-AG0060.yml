@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: HaIlIHUA2eiCGk7NN6Apia_kGfY3jPuWjR_3Ny60cps=
 text: |
   - One shared log is used per checkout. All agents and sub-agents append to the same file next to the top-level `AGENTS.md`, never a private copy.

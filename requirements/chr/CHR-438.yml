@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: PaEXCBaMzYuKGyUX_ouaqCaTqBY5fTBhwPxasslJIyE=
 text: |
   The system shall never cite organizer-only truth, nor an evidence item captured after the case's audit_at.
 verification: test

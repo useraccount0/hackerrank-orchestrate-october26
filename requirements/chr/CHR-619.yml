@@ -15,7 +15,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: 6-BwUWqM828YaiPuIyv6Wfl3m_P2sk87LxXscJs24So=
 text: |
   usage_report.md shall contain the total tokens and the average tokens per request.
 verification: inspection

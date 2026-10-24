@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: oLRSi7n2MPD1S8dagMIu2nRQ8YFjVkXR1aPcST0_Iws=
 text: |
   A per-turn entry shall contain the exact user message, with secrets replaced by [REDACTED].
 verification: inspection

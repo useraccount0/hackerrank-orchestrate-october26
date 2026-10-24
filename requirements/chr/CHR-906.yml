@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: RPZ63mib6XBxlPeA5eH0iSI0vRSfNX3xEqhrspCqPOo=
 text: |
   Only the session files for this challenge shall be included, not the entire home directory or application-data folder.
 verification: inspection

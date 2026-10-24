@@ -20,7 +20,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: Cx-Pc7YRhiG4xmTSnFKzpJzw0YYiGcuq9yJC_rNEmO4=
 text: |
   If Google Antigravity was used, the complete conversation folder(s) of this challenge under the product's brain directory (with .system_generated/logs/transcript.jsonl) shall be copied to agent-trace/antigravity/, not the entire .gemini directory; last_conversations.json is only a lookup cache, not the transcript.
 verification: inspection

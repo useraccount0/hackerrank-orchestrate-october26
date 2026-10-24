@@ -2,7 +2,7 @@ active: true
 derived: false
 header: |
   Packaging commands
-issues: ''
+issues: ISS-10
 kind: deliverable
 level: 6.27
 links:
@@ -11,10 +11,11 @@ links:
 - SRC-RM0139: lqyXDduViZ0AzurBkUnZD0fTiyDBb7BmaiA5lkghW6Q=
 modality: should
 normative: true
-note: ''
+note: |
+  See ISS-10: the provided command also packs the organizers' root README.md, so code.zip would hold two READMEs (theirs at the top, ours at code/README.md). To be decided at packaging time.
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: 1NhCo2hkQFVmXh-XnCaWeN_s_xaDiIW-kYQbAU3Fy6k=
 text: |
   code.zip should be created from the repository root with the provided command, which bundles README.md and code/ but not the dataset: zip -r code.zip README.md code -x (exclusions) on macOS/Linux, or Compress-Archive -Path README.md, code -DestinationPath code.zip -Force in Windows PowerShell.
 verification: demonstration

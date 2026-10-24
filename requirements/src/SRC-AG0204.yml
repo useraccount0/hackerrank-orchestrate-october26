@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: Jn0Udr4mRQ-y1AMnA5FaF3DAbAoL_N4h-EatZ8i8HeE=
 text: |
   Only `deletion_requests.csv` requires predictions. Other participant-facing files provide identity, policy, activity, and evidence context. Global data can contain decoys and unrelated records.

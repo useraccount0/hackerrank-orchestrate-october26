@@ -15,7 +15,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: 8rKgfBqZ3GEBcTDJaC_HSQ5VNLUcTKfw3qt7TX5En9I=
 text: |
   For each request, the system shall first determine from request_text whether the person actually requested (authorized) deletion, before auditing any deletion state.
 verification: test

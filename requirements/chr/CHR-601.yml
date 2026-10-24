@@ -22,10 +22,11 @@ links:
 - SRC-RM0125: Yqxn6gFL0_yhDS-o2I1zeL0Xjv6ZvuqCeo-keRGXqJM=
 modality: shall
 normative: true
-note: ''
+note: |
+  Decision ISS-05 (you, 2026-10-24, revised): log.txt is the chat_transcript; at the end the agent trace is prepared exactly as agent_trace_instructions.md describes (agent-trace.zip); where to upload it is checked then.
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: BMDxCo3o-zbZr7U6q1tA4Eq5dpR5uYyA47gSmslcWe4=
 text: |
   The participant submission shall consist of: code.zip, output.csv, the chat transcript (chat_transcript), and an AI interview.
 verification: inspection

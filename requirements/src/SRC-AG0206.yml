@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 50cqx8kukDtzMvezdkHM-K2w_Q6xmZtb_b7f4z29aU0=
 text: |
   Organizer-only files live outside `dataset/` and must never be used for predictions, prompt examples, hardcoded labels, or evaluation-time shortcuts.

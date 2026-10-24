@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: bcBct9UB0pMpbkV8d-Mw_sal5ZW8bNennRaprS9Pjlk=
 text: |
   A clean run of the solution shall process all 518 cases and produce exactly one valid row per case.
 verification: test

@@ -15,7 +15,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: F5Uue7ZyvnWk6OgHQeXHH-b6Az4lSmMdP0gZL3obFWs=
 text: |
   In output.csv, case_id is the case being audited, deletion_status is the audit result, and steps_json is the ordered JSON array of findings, remediation actions, and verification checks.
 verification: test

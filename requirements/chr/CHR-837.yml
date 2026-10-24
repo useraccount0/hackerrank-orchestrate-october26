@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: JAVsvW48-AhffU2gg44UnT7kXYlFeggZuwIJvnHaNLY=
 text: |
   When the user asks for the challenge link, the submission link, where or how to submit, where to upload the code, or any equivalent question, the coding agent shall provide this exact URL, in full and clickable, every time.
 verification: inspection

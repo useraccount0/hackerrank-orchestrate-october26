@@ -15,7 +15,7 @@ normative: true
 note: ''
 party: organizer
 ref: ''
-reviewed: pending-user-review
+reviewed: CiB_t6BIM1lT7XVKRj-W_WCT3Wneua5egjYWyVmPNng=
 text: |
   The grader parses steps_json as JSON: object-key order and whitespace are ignored, but array order is significant.
 verification: n/a

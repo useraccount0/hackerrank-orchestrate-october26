@@ -18,7 +18,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: AR5ni9x21MEsYqlq0_XPonWhXWh82Gu7Y3z9vT3YYn4=
 text: |
   The system shall treat reported_status, reported_result values, workflow statuses, operation results, activity logs, and system messages as claims, and shall not accept them as proof of a resource's state unless the available evidence establishes that state.
 verification: test

@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: DOUoJmjT-3wdPxliSAKjlROD1Ch3Sfpc_n_c606ddoY=
 text: |
   The system shall judge a deletion COMPLETE only if no active sync, import, or restore path can recreate the prohibited data.
 verification: test

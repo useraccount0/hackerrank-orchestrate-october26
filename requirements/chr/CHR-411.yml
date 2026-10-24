@@ -15,7 +15,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: 6I1CYxPmwFKCqci0SsleS3Apb-vBJGUtj7XEeQyik4g=
 text: |
   Each step object shall contain exactly the fields step_no, phase, system_id, resource_id, operation, state, and evidence_id.
 verification: test

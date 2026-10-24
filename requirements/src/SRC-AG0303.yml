@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 9TC_1UGwzJc0uS8d5aNmgKZ7js91yBeG0nCtR2x_Dfw=
 text: |
   - Within remediation, disable data flows and block unsafe restores before changing dependent records. Process downstream copies before their source records when the dependency requires it.

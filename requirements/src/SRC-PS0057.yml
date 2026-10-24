@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: Zj661iJeK5uGtVjs-PRy1Qo249ESfuBcwk4gNVxdZhE=
 text: |
   `reported_status` may be `COMPLETE`, `PARTIALLY_COMPLETE`, or `NOT_STARTED`. It is a claim from the existing deletion workflow, not proof of the true state.

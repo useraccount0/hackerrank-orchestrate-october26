@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: JPK0k5O8AZfKtPbUO9MSia_AOWwxOum8KD_HpF1deT0=
 text: |
   4. **Redact secrets and exclude credentials:** Remove or redact any API keys, tokens, passwords, cookies, private keys, or personal data. Do **not** include authentication files, settings, or credential stores (such as `auth.json`, `config.json`, `mcp.json`, `mcp_config.json`, or `.env`).

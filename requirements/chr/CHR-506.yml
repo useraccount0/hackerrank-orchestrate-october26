@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: Ws-XDKF_1Z_enB62I3jlXkQ1_iNBjiJv_XFD6qq439A=
 text: |
   The solution shall not use hardcoded golden labels or case-family shortcuts.
 verification: inspection

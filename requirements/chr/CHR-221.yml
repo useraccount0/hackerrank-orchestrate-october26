@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: iovXo_voYihqWj_gNyHmUT7khkKPhaOQCxQPs1-xS4c=
 text: |
   SQL evidence files are readable text and can be executed with SQLite; a capture may contain a primary database, regional replicas, a reporting replica, or a failover replica, so that replication drift can be investigated directly.
 verification: test

@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: mNrs9eZ6OEHQOd59En5hbrH4TLxj2jp_wPqzrUnwVTI=
 text: |
   The coding agent shall treat the October challenge end time as not configured in this repository, and shall not invent a deadline or reuse the September deadline.
 verification: inspection

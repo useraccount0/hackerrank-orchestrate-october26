@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: Huz8qbqzSkSJqN8YdIw8ZRRmMGI06Yo5wVRDz2F6-do=
 text: |
   Do **not** copy `auth.json`, `config.toml`, credential stores, or the whole `.codex` directory.

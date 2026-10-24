@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: NZvrC7Sv87aXpverlAvAC68d9RTg_HG4FwoOuJzjzcU=
 text: |
   For an ACCOUNT_TOMBSTONE, the system shall keep the stable internal user reference (user_id), so that permitted records can still reference it, and shall require the removal of the name, email, phone, email hash, and any other direct identifiers required by the applicable REDACT rule.
 verification: test

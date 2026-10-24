@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: Su0JvHVKB3Z-04GjAgvASgIO-t2eG9R-AgMiREr_kmk=
 text: |
   - Remediation steps and post-remediation verification steps for an `INCOMPLETE` case describe future work and therefore use `evidence_id` as an empty string.

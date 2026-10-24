@@ -12,7 +12,7 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: lqyXDduViZ0AzurBkUnZD0fTiyDBb7BmaiA5lkghW6Q=
 text: |
   ```powershell
   Compress-Archive -Path README.md, code -DestinationPath code.zip -Force

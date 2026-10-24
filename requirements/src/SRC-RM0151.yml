@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 9MmGA-lltrkXE5zarKeLsllm7cEwJLbF93ZwFQtjG3M=
 text: |
   - `output.csv` has the exact header `case_id,deletion_status,steps_json` and contains all 518 data rows sorted by `case_id`;

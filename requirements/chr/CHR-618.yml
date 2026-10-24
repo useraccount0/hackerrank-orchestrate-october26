@@ -15,7 +15,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: 5aSRbw5rMT7S3_FXHtnFKBtd4mGlS0XiK1OeEBOYHMw=
 text: |
   usage_report.md shall contain the input tokens and the output tokens.
 verification: inspection

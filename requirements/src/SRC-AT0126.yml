@@ -12,7 +12,7 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: OVhJY1S3Bx1jnHmqu6zWeLrx-E-ZLHh3flq8nWr5k4c=
 text: |
   ```powershell
   Compress-Archive -Path .\agent-trace -DestinationPath .\agent-trace.zip -Force

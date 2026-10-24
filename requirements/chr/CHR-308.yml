@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: YjJubsc0DZ76_jdLRhAUNg4U8DUsY7FhjTG9HagocQk=
 text: |
   The system shall use evidence_files.csv to locate evidence files and then inspect their contents; it shall not infer which case a file belongs to from the manifest alone.
 verification: test

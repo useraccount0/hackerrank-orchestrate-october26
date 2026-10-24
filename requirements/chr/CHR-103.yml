@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: Nlo0-ZPb3N2RL5dtPCRYesdlTszzK3i4pwB8nIdLUpc=
 text: |
   The audit shall take into account that active synchronization and restore processes can copy or recreate data that was already deleted from its original source.
 verification: analysis

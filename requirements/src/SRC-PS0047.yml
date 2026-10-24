@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: L9XYQYf9XxDNI5kmvkctuPf7j6iGhQbilmDETsdFQgw=
 text: |
   Evidence may be stored as PDFs, images, logs, JSON, or SQLite-compatible SQL snapshot exports under `dataset/evidence/`.

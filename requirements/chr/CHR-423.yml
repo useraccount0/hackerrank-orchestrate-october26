@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: rf0jdrPaVl2WKs8TqB9JdCjnAcbbG_7G0i2qN2S_Nbg=
 text: |
   Operation BLOCK_RESTORE shall be used only in phase REMEDIATION, always with state BLOCKED, and means: prevent the affected backup from restoring the user's data.
 verification: test

@@ -13,10 +13,11 @@ links:
 - SRC-RM0096: tnH4I6gyKm3pbSu-GnxPfdu0Uv6tBAWToz27_PX01X0=
 modality: shall
 normative: true
-note: ''
+note: |
+  Decision ISS-04 (you, 2026-10-24): README's 'row' accuracy is the step-level accuracy; the report uses both names.
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: 4o6XFrqMx9o4s1OPPVscbdE4pIAUS10do0RrKvQQtH4=
 text: |
   evaluation_report.md shall contain the step-level (row-level) and the field-level accuracy.
 verification: inspection

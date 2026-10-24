@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: SwqPtpfRV211qlq7icLVMs6pLuTmPp66yiiXx0WLRXo=
 text: |
   Sub-agents shall log their own entries in the same log file and set parent_agent= to the name of their parent agent.
 verification: inspection

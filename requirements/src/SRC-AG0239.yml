@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: mETHuwVKbbrcGOkumPFlbY-YHqYQllhO5BwX8ohkbq0=
 text: |
   - Use `NOT_APPLICABLE` with `steps_json=[]` when the request does not authorize deletion.

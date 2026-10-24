@@ -543,6 +543,8 @@ Evidence under dataset/evidence/ may be PDF documents, images (application scree
 | modality | fact |
 | verification | test |
 | issues | ISS-09 |
+| note | Decision ISS-09 (you, 2026-10-24): the union of the lists, so plain text is included.
+ |
 
 
 ## 2.21 SQL snapshots _(CHR-221)_ {#CHR-221}
@@ -997,6 +999,8 @@ Within remediation, the system shall process downstream copies before their sour
 | modality | shall |
 | verification | test |
 | issues | ISS-02 |
+| note | Decision ISS-02 (you, 2026-10-24): where this conflicts with the sort order of CHR-416, the sort order wins, as in all 32 sample answers (case_16 and case_24 list the source before its downstream copy).
+ |
 
 
 ## 3.30 Checks after remediation _(CHR-330)_ {#CHR-330}
@@ -1101,6 +1105,8 @@ The data rows of output.csv shall be sorted by case_id.
 | modality | shall |
 | verification | test |
 | issues | ISS-03 |
+| note | Decision ISS-03 (you, 2026-10-24): number order, i.e. sorted by the number after 'case_'. This is exactly the order of dataset/deletion_requests.csv.
+ |
 
 
 ## 4.6 Meaning of the columns _(CHR-406)_ {#CHR-406}
@@ -1199,7 +1205,7 @@ In each step object, step_no shall be a JSON integer, and phase, system_id, reso
 | kind | interface |
 | modality | shall |
 | verification | test |
-| note | The types are read from the example step object; the sources do not state them in words.
+| note | The types are read from the example step object; the sources do not state them in words. Evidence (2026-10-24): all 193 steps in the 32 sample answers have exactly these 7 fields, with step_no an integer and the other six strings.
  |
 
 
@@ -1258,6 +1264,8 @@ Inside each phase, steps shall be ordered by the operation order of the allowed-
 | modality | shall |
 | verification | test |
 | issues | ISS-02 |
+| note | Decision ISS-02 (you, 2026-10-24): always this sort order; all 51 multi-step phase blocks of the 32 sample answers follow it.
+ |
 
 
 ## 4.17 No invented phases, operations, or states _(CHR-417)_ {#CHR-417}
@@ -1272,6 +1280,8 @@ Steps shall use only the allowed combinations of phase, operation, and state (CH
 | kind | interface |
 | modality | shall |
 | verification | test |
+| note | Evidence (2026-10-24): all 15 operations occur in the 32 sample answers, each only with the phase and state of its table row (CHR-418 to CHR-432).
+ |
 
 
 ## 4.18 REPORT_REMAINING_RECORD (FINDING) _(CHR-418)_ {#CHR-418}
@@ -1525,6 +1535,8 @@ Every FINDING step shall cite in evidence_id the participant-visible file_id, ac
 | modality | shall |
 | verification | test |
 | issues | ISS-07 |
+| note | Decision ISS-07 (you, 2026-10-24): reading confirmed. All 32 sample answers follow it (findings 41 of 41 and COMPLETE checks 34 of 34 cite evidence; future steps 118 of 118 are empty).
+ |
 
 
 ## 4.36 COMPLETE checks cite evidence _(CHR-436)_ {#CHR-436}
@@ -1540,6 +1552,8 @@ Every VERIFICATION step of a COMPLETE case shall cite in evidence_id the file_id
 | modality | shall |
 | verification | test |
 | issues | ISS-07 |
+| note | Decision ISS-07 (you, 2026-10-24): reading confirmed. All 32 sample answers follow it (findings 41 of 41 and COMPLETE checks 34 of 34 cite evidence; future steps 118 of 118 are empty).
+ |
 
 
 ## 4.37 Future steps have an empty evidence_id _(CHR-437)_ {#CHR-437}
@@ -1756,6 +1770,8 @@ If the solution is written in Python, its entry point should be code/main.py, ru
 | modality | should |
 | verification | inspection |
 | issues | ISS-08 |
+| note | Decision ISS-08 (you, 2026-10-24): on this machine use python as is (python3 is not set up for now); code/README.md will show both the python3 and the python command.
+ |
 
 
 ## 5.13 Run instructions for other languages _(CHR-513)_ {#CHR-513}
@@ -1770,6 +1786,9 @@ If another language is used, its exact setup and run command shall be documented
 | kind | deliverable |
 | modality | shall |
 | verification | inspection |
+| issues | ISS-10 |
+| note | Decision ISS-10 (you, 2026-10-24): the submitted README.md is our code/README.md; the root README.md stays the organizers' original.
+ |
 
 
 # 6.0 Submission deliverables {#CHR-600}
@@ -1790,6 +1809,8 @@ The participant submission shall consist of: code.zip, output.csv, the chat tran
 | modality | shall |
 | verification | inspection |
 | issues | ISS-05 |
+| note | Decision ISS-05 (you, 2026-10-24, revised): log.txt is the chat_transcript; at the end the agent trace is prepared exactly as agent_trace_instructions.md describes (agent-trace.zip); where to upload it is checked then.
+ |
 
 
 ## 6.2 Contents of code.zip _(CHR-602)_ {#CHR-602}
@@ -1861,6 +1882,8 @@ The README.md submitted inside code.zip shall contain clear setup and run instru
 | modality | shall |
 | verification | inspection |
 | issues | ISS-10 |
+| note | Decision ISS-10 (you, 2026-10-24): the root README.md stays the organizers' original; our README with setup and run instructions is code/README.md.
+ |
 
 
 ## 6.7 Evaluation report file _(CHR-607)_ {#CHR-607}
@@ -1876,6 +1899,8 @@ code.zip shall include the evaluation report evaluation_report.md in the evaluat
 | modality | shall |
 | verification | inspection |
 | issues | ISS-01 |
+| note | Decision ISS-01 (you, 2026-10-24): option (a), code/evaluation/ only. Inside code.zip the file is code/evaluation/evaluation_report.md.
+ |
 
 
 ## 6.8 Usage report file _(CHR-608)_ {#CHR-608}
@@ -1891,6 +1916,8 @@ code.zip shall include the token-usage report usage_report.md in the evaluation/
 | modality | shall |
 | verification | inspection |
 | issues | ISS-01 |
+| note | Decision ISS-01 (you, 2026-10-24): option (a), code/evaluation/ only. Inside code.zip the file is code/evaluation/usage_report.md.
+ |
 
 
 ## 6.9 Where the reports are placed _(CHR-609)_ {#CHR-609}
@@ -1906,6 +1933,8 @@ The two reports shall be placed in code/evaluation/ (next to code/evaluation/mai
 | modality | shall |
 | verification | inspection |
 | issues | ISS-01 |
+| note | Decision ISS-01 (you, 2026-10-24): option (a), code/evaluation/ only. No top-level evaluation/ folder.
+ |
 
 
 ## 6.10 Report: case-level accuracy _(CHR-610)_ {#CHR-610}
@@ -1935,6 +1964,8 @@ evaluation_report.md shall contain the step-level (row-level) and the field-leve
 | modality | shall |
 | verification | inspection |
 | issues | ISS-04 |
+| note | Decision ISS-04 (you, 2026-10-24): README's 'row' accuracy is the step-level accuracy; the report uses both names.
+ |
 
 
 ## 6.12 Report: sequence accuracy _(CHR-612)_ {#CHR-612}
@@ -2159,6 +2190,9 @@ code.zip should be created from the repository root with the provided command, w
 | kind | deliverable |
 | modality | should |
 | verification | demonstration |
+| issues | ISS-10 |
+| note | See ISS-10: the provided command also packs the organizers' root README.md, so code.zip would hold two READMEs (theirs at the top, ours at code/README.md). To be decided at packaging time.
+ |
 
 
 ## 6.28 Packaging on Windows _(CHR-628)_ {#CHR-628}
@@ -2889,6 +2923,8 @@ The participant shall submit the complete agent trace of the work done on this c
 | modality | shall |
 | verification | inspection |
 | issues | ISS-05 |
+| note | Decision ISS-05 (you, 2026-10-24, revised): log.txt is the chat_transcript; at the end the agent trace is prepared exactly as agent_trace_instructions.md describes (agent-trace.zip); where to upload it is checked then. So CHR-901 to CHR-916 apply.
+ |
 
 
 ## 9.2 Every session and every harness _(CHR-902)_ {#CHR-902}

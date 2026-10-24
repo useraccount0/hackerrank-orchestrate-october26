@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: gt1L2ODeVrMTJa0UHmKas7IwCw4UTPHpoNO9aWRA2yk=
 text: |
   | `FINDING` | `REPORT_REMAINING_RECORD` | `PRESENT` | A record that should have been deleted still exists. |

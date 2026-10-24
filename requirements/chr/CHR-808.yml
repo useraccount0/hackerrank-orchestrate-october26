@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: WlLhO77lhLhn5uviY4ziPelQnJSRT31UvDLWclqI9PI=
 text: |
   The coding agent should prefer language-native APIs when possible.
 verification: inspection

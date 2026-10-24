@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: Xepm33dlXlmjm9xYGZw4rPcbqMUaqBenOtDqczM1Wzw=
 text: |
   If a nested AGENTS.md exists, the closest one governs the files inside that sub-project, but the logging rules (AGENTS.md sections 2 and 5) stay global: logging goes to the log.txt beside the top-level AGENTS.md.
 verification: inspection

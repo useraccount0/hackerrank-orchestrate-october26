@@ -15,7 +15,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: k7NCobIyOpDguaksLQFLBhnUE2InaVnUuOXVlbwi5PY=
 text: |
   Each request has the fields case_id, email, requested_at, reported_status, reported_at, audit_at, request_text, in this order.
 verification: test

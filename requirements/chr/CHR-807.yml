@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: MAVJNuiRblcOYBQmrr8GkKJXzxSx0E3DmnbZxFe1TaY=
 text: |
   The coding agent shall not assume that bash is available.
 verification: inspection

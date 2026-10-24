@@ -16,7 +16,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: 2Acvh9eR0pa_NLicYS1Fkq233Nr21mttjTDqTmyEJt0=
 text: |
   At the start of each session, the coding agent shall read AGENTS.md completely before taking any action.
 verification: inspection

@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: KGGGa9FlUlPQI5l_V7zbx5t_PIrYb9pEplUc77VEfYA=
 text: |
   At session start, the coding agent shall check the log file path defined in AGENTS.md section 2.
 verification: inspection

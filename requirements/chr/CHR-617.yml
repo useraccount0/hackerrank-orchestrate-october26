@@ -15,7 +15,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: 6uSOXmPRIwL5yZxK3pAPVFa-jSMlx_gyutt5eHNYKqE=
 text: |
   usage_report.md shall contain the model-call counts.
 verification: inspection

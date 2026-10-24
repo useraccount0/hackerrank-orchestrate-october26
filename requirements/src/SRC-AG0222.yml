@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: -Txr6wHWPGTaxObnvubEMs5w4Fj7KXCbf3G-YL0SfRE=
 text: |
   - `request_text` contains the person's request and may be written in different languages. Determine whether it actually authorizes deletion.

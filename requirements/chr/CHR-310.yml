@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: DrgKOPJRAPXOB3hzj9u4nGIrIT6K8pFoQgqeAw2xp2E=
 text: |
   The system shall extract the facts contained in images and PDFs; these are ordinary business artifacts (for example invoices, support records, handover documents, and internal product screens) and do not contain an explicit deletion verdict.
 verification: test

@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: YVXRqvA5-scJ-6QvrYH5aRCMfN3TqsWlJLwG6aEWB90=
 text: |
   The system shall use user_audit_log.csv together with the current snapshot in user_identities.csv to recover identifiers that may still appear in older systems and evidence.
 verification: test

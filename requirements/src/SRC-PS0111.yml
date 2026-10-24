@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: SSFB8bz7AdML8mqSPKLfsu-qPMiUNefx04mVlF8daWQ=
 text: |
   | `REMEDIATION` | `DELETE_RECORD` | `ABSENT` | Remove the entire record. |

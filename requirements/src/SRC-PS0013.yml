@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: jwOm-4IoowEVoEIWyNG_IdI5OdK0aRtI6gTuUy98v8s=
 text: |
   Some systems preserve an account tombstone so permitted records can continue to reference the same internal `user_id`. In these records, the stable user reference may remain, but direct identifiers such as name, email, phone, and email hash must be removed.

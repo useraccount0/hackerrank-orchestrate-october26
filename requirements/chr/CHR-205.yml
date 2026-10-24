@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: 3NVa-T2WBuPfixrwvferHfE9EHvjLiXXOUjD0YLpilo=
 text: |
   case_id uniquely identifies a request and its output row.
 verification: test

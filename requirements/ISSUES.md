@@ -7,21 +7,23 @@ They are listed here instead of being silently "fixed" inside a requirement.
 - Each issue names the exact source units (`SRC-…` = file and line, see [README.md](README.md))
   and the affected requirements (`CHR-…`). The affected requirements also carry the issue ID
   in their `issues` attribute.
-- **Status** is `open` until you decide. The *proposal* is only a suggestion. A `resolved` issue
-  stays in this list as a record of what happened.
+- **Status:** `open` means waiting for your decision; the *proposal* is only a suggestion.
+  `decided` means you decided; the decision and its date are in the entry and in the notes of the
+  affected requirements. `resolved` means the cause went away (for example, the organizers fixed
+  the file). Entries are never deleted, so the history stays visible.
 
 | ID | Short title | Affects | Status |
 |---|---|---|---|
-| [ISS-01](#iss-01) | Where the evaluation reports go | CHR-607, CHR-608, CHR-609 | open |
-| [ISS-02](#iss-02) | Remediation order: dependency or sorting? | CHR-329, CHR-416 | open |
-| [ISS-03](#iss-03) | Sort `case_id` as text or as a number? | CHR-405 | open |
-| [ISS-04](#iss-04) | "row" accuracy vs "step-level" accuracy | CHR-611 | open |
-| [ISS-05](#iss-05) | `agent-trace.zip` is missing from the submission lists | CHR-601, CHR-901 | open |
+| [ISS-01](#iss-01) | Where the evaluation reports go | CHR-607, CHR-608, CHR-609 | decided: (a) `code/evaluation/` |
+| [ISS-02](#iss-02) | Remediation order: dependency or sorting? | CHR-329, CHR-416 | decided: (a) sort order |
+| [ISS-03](#iss-03) | Sort `case_id` as text or as a number? | CHR-405 | decided: (b) number order |
+| [ISS-04](#iss-04) | "row" accuracy vs "step-level" accuracy | CHR-611 | decided: "row" = step level |
+| [ISS-05](#iss-05) | `agent-trace.zip` is missing from the submission lists | CHR-601, CHR-901 | decided (revised): follow agent_trace_instructions.md at the end |
 | [ISS-06](#iss-06) | Submission URL starts with `wwww` | CHR-836 | resolved: the organizers fixed AGENTS.md |
-| [ISS-07](#iss-07) | Unclear sentence about evidence in COMPLETE cases | CHR-435, CHR-436 | open |
-| [ISS-08](#iss-08) | `python3` does not work on this Windows machine | CHR-512 | open |
-| [ISS-09](#iss-09) | The lists of evidence formats differ | CHR-220 | open |
-| [ISS-10](#iss-10) | `README.md` is both an input and a deliverable | CHR-606 | open |
+| [ISS-07](#iss-07) | Unclear sentence about evidence in COMPLETE cases | CHR-435, CHR-436 | decided: reading confirmed |
+| [ISS-08](#iss-08) | `python3` does not work on this Windows machine | CHR-512 | decided: use `python` as is for now |
+| [ISS-09](#iss-09) | The lists of evidence formats differ | CHR-220 | decided: union of the lists |
+| [ISS-10](#iss-10) | `README.md` is both an input and a deliverable | CHR-513, CHR-606, CHR-627 | decided: keep theirs; ours is `code/README.md` |
 
 ---
 
@@ -48,6 +50,10 @@ to the zip command; (c) both places, identical copies.
 evaluation report paths with code.zip packaging in README`) points to README.md being the intended
 reading. Option (c) is a cheap safety net.
 
+**Decision (you, 2026-10-24): (a).** The reports go in `code/evaluation/`. Inside code.zip they
+are `code/evaluation/evaluation_report.md` and `code/evaluation/usage_report.md`; there is no
+top-level `evaluation/` folder. Recorded in the notes of CHR-607, CHR-608, and CHR-609.
+
 ## ISS-02
 
 **Remediation order: dependency or sorting?**
@@ -65,8 +71,16 @@ come first. The second sentence can clash with sorting: if a downstream copy's `
 **Options:** (a) always the sort order; (b) dependency order wins where a dependency exists;
 (c) find out from the 32 sample answers which rule the official answers follow.
 
-**Proposal:** (c), in a later step. `dataset/sample_output.csv` is the only evidence of what the
-grader expects.
+**Evidence (2026-10-24, read-only check of `dataset/sample_output.csv`):** option (c) was done. In
+all 32 sample answers, every phase with two or more steps (51 phase blocks) is in exact sort order
+(operation order, then `system_id`, then `resource_id`), without a single exception. In case_16
+and case_24, the source record (`account_service`) is deleted *before* its downstream search-index
+copy (`search_service`): sorting wins over "downstream first".
+
+**Proposal:** (a), always the sort order. The sample answers support it.
+
+**Decision (you, 2026-10-24): (a), always the sort order.** Recorded in the notes of CHR-329 and
+CHR-416.
 
 ## ISS-03
 
@@ -84,6 +98,11 @@ grader expects.
 If the grader matches rows by `case_id`, the order may not change the score, but the stated
 rule still has to be met.
 
+**Decision (you, 2026-10-24): (b), number order.** Rows are sorted by the number after `case_`.
+That is exactly the order of `dataset/deletion_requests.csv`. Checked: 518 unique IDs, all of the
+form `case_<number>`, and the file is in number order; text order would differ. Recorded in the
+note of CHR-405.
+
 ## ISS-04
 
 **"row" accuracy vs "step-level" accuracy**
@@ -97,6 +116,8 @@ rule still has to be met.
 **Proposal:** report case-level, step-level (= row-level), field-level, and sequence accuracy,
 and use both names in the report.
 
+**Decision (you, 2026-10-24):** proposal accepted. Recorded in the note of CHR-611.
+
 ## ISS-05
 
 **`agent-trace.zip` is missing from the submission lists**
@@ -109,6 +130,21 @@ and use both names in the report.
 
 **Proposal:** prepare `agent-trace.zip` anyway, and look for an upload slot on the submission
 page.
+
+**First decision (you, 2026-10-24), superseded below:** the agent trace is the root `log.txt`
+that the organizers request as `chat_transcript`; no separate `agent-trace.zip` is planned.
+
+**Consequence of the first decision (no longer applies):** CHR-901 to CHR-916, which come from
+agent_trace_instructions.md, will not be carried out as written. That file asks for the raw session files (Claude Code JSONL files plus
+the `/export` transcript) and says structured logs must not be replaced by summaries
+(SRC-AT0005). `log.txt` is a summary log. If an upload slot for a trace ZIP turns up after all,
+building one takes a few minutes (CHR-910, CHR-911).
+
+**Decision, revised (you, 2026-10-24, later the same day):** agent_trace_instructions.md comes
+from the organizers and will be followed at the end. The agent trace is prepared as
+`agent-trace.zip` exactly as that file describes, and `log.txt` stays the `chat_transcript`.
+CHR-901 to CHR-916 therefore apply, and the consequence above no longer holds. Where to upload
+the ZIP is checked at the end. Recorded in the notes of CHR-601 and CHR-901.
 
 ## ISS-06
 
@@ -144,7 +180,14 @@ point out once that the host name looks unusual. No change unless the organizers
 **Reading used:** findings (which only occur in INCOMPLETE cases) cite evidence (CHR-435), and
 verification steps of COMPLETE cases cite evidence (CHR-436).
 
+**Evidence (2026-10-24, read-only check of `dataset/sample_output.csv`):** the 32 sample answers
+follow exactly this reading. Findings cite evidence (41 of 41). Verification steps of COMPLETE
+cases cite evidence (34 of 34). Remediation and verification steps of INCOMPLETE cases have an
+empty `evidence_id` (41 of 41 and 77 of 77).
+
 **Proposal:** keep this reading.
+
+**Decision (you, 2026-10-24):** reading confirmed. Recorded in the notes of CHR-435 and CHR-436.
 
 ## ISS-08
 
@@ -157,6 +200,21 @@ verification steps of COMPLETE cases cite evidence (CHR-436).
 **Proposal:** our README must give a command that works on Windows too (for example
 `python code/main.py` or `py code/main.py`) next to `python3 code/main.py` for macOS/Linux.
 
+**Your question (2026-10-24): can `python3` be made to work on this machine?** Yes. Checked:
+
+- `python3` currently reaches only the Microsoft Store shortcut (`WindowsApps\python3.exe`);
+- PowerShell does not load profile scripts here (no execution policy is set, so the Windows
+  default applies), so a PowerShell alias would need a security setting changed;
+- `C:\Python315` can only be changed with admin rights.
+
+The way that needs neither: a one-line file `python3.cmd`
+(`@"C:\Python315\python.exe" %*`) in a personal folder placed at the front of your user PATH.
+It is waiting for your go-ahead. The proposal for our README stays the same.
+
+**Decision (you, 2026-10-24):** use `python` as it is on this machine for now; no `python3`
+shim. The README part of the proposal stands: `code/README.md` will show both commands. Recorded
+in the note of CHR-512.
+
 ## ISS-09
 
 **The lists of evidence formats differ**
@@ -168,6 +226,8 @@ verification steps of COMPLETE cases cite evidence (CHR-436).
 **Reading used:** the union of all lists, so plain text is included (CHR-220).
 
 **Proposal:** keep this reading (only confirm).
+
+**Decision (you, 2026-10-24):** confirmed. Recorded in the note of CHR-220.
 
 ## ISS-10
 
@@ -184,3 +244,14 @@ tree, and the requirements stay traceable to the original text. Once README.md i
 
 **Decision needed later:** keep the organizers' README text somewhere (for example in `docs/`)
 or replace it completely.
+
+**Decision (you, 2026-10-24):** keep the organizers' `README.md` unchanged at the root; our
+README with setup and run instructions is `code/README.md`. Because the root README.md never
+changes, `srctrace.py check` keeps reporting it as unchanged. Recorded in the notes of CHR-606
+and CHR-627, and, added during the review of section 5, of CHR-513 (which also names "the
+submitted README.md").
+
+**Consequence for packaging (CHR-627):** the provided zip command packs `README.md` *and*
+`code/`, so code.zip would hold the organizers' README at the top and ours at `code/README.md`,
+and a reader might open the wrong one. To be decided at packaging time, for example by zipping
+only `code/`.

@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: G_WTJT7e2g-y1euPSQXht1iHNEkkqJ1ydYyJM4eAGoc=
 text: |
   AGENTS.md is the single source of truth for any AI coding agent working in this repository; the coding agent shall obey it exactly unless the user or the platform gives higher-priority instructions.
 verification: inspection

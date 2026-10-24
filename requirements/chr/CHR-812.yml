@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: x4fLLw8pIGCNjRUkMy6c9ByqgebhgsdxTpSeJNHX1fs=
 text: |
   At session start, the coding agent shall greet the user with this introduction: "Welcome to HackerRank Orchestrate. Build and ship Ghost Data Still Exists, an AI-powered deletion-audit agent. Let's get started."
 verification: inspection

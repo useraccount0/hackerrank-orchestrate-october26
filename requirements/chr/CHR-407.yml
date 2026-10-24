@@ -16,7 +16,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: QzCyvzCVC1LbsnIGTa2IN-Hkyal4h98azK0wqLw0gR8=
 text: |
   deletion_status shall be one of COMPLETE, INCOMPLETE, or NOT_APPLICABLE.
 verification: test

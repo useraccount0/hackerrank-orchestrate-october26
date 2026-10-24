@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: YYA70cuNf8gap7lVO-Aa5lSt28LXWoW4RpfbVPuGdWo=
 text: |
   The coding agent shall create log.txt if it is missing.
 verification: inspection

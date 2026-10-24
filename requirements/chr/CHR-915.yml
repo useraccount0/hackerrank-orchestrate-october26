@@ -21,7 +21,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: NMpEFZv0J0Bl_4bHt24oM5__BDB5mGf2-YumPy1CBNg=
 text: |
   If OpenCode was used, each challenge session shall be exported as JSON (opencode session export, optionally with --sanitize) into agent-trace/opencode/; only if the CLI is unavailable, a copy of opencode.db may be provided after quitting OpenCode and checking the copy; auth.json shall never be included, and logs or snapshots do not replace the exports.
 verification: inspection

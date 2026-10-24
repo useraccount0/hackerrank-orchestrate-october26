@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: b74rZTUJGAuy-EEKqrLbc-Xp6eZ1nOHMpsPFDqgio9E=
 text: |
   Operation VERIFY_RESTORE_BLOCKED shall be used only in phase VERIFICATION, always with state BLOCKED, and means: confirm that the affected data cannot be restored.
 verification: test

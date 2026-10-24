@@ -16,7 +16,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: 5KxgoRD8pRO16neKmPfAcvL0KLPZhc0Mzca5mr0WKO0=
 text: |
   When the request does not authorize deletion, the row shall have deletion_status NOT_APPLICABLE and steps_json [] (an empty JSON array), for example case_000,NOT_APPLICABLE,[], because no deletion or deletion verification is authorized.
 verification: test

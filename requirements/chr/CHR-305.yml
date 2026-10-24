@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: IasfVoEFEpGq0p7tbgxe6HVnCW6RMYakrTyvHjBQb-I=
 text: |
   The system shall identify the subject when the request email matches either a current or a historical email address.
 verification: test

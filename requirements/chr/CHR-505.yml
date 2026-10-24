@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: e4fHytvU1S-ck--GhpGQmrYEHtEfr-0ZVMtxT1Y2O1Y=
 text: |
   Organizer-only truth, golden answers, review files, generator internals, and any other organizer-only files (they live outside dataset/) shall never be used for predictions, prompt examples, hardcoded labels, or evaluation-time shortcuts.
 verification: inspection

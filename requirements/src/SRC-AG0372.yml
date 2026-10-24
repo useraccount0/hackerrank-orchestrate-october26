@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: P9-0Q2l1DlnVmLMh_Af1oClka2ibMxjd3TQdFbEtj2M=
 text: |
   There is no required language. If using Python, `code/main.py` is a good entry point. If using another language, document the exact setup and run command clearly in the submitted README.

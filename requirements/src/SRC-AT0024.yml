@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: qx2CC2Fa6_ijRVSIkYPzBOv4izkAh3dFNODBU3v88g8=
 text: |
   Each project folder contains session files, commonly JSONL files named with a session ID. Find the folder corresponding to your challenge checkout and copy the session files you created for this challenge into `agent-trace/claude-code/`. The folder name may encode the project path, so check the session content and timestamps to identify the right files.

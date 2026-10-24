@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: SF2LsFBcPK-N6gMZkXXw2FB_w5dAAC7xxyrswX-HEQY=
 text: |
   For an authorized deletion, the system shall investigate the supplied records by searching the global activity stream and the evidence for data about the subject.
 verification: test

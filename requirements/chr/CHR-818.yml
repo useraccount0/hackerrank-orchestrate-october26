@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: eeLWmyPc7zW54wt9kaikjO6HA-bybdEbJt9bRcBNmFM=
 text: |
   When building, testing, evaluating, or packaging the solution, the coding agent shall follow the project contract (AGENTS.md section 6) and preserve the Ghost Data Still Exists deletion-audit and output contract.
 verification: inspection

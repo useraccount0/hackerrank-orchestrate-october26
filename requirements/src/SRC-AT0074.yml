@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: dLfFuPLwgfyuF-76fym7sJ-Jx70u5HgjHLTUjsqfNik=
 text: |
   OpenCode stores session and message data in a local SQLite database. Its default application-data directory is:

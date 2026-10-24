@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 2QSSk1HVByZKx5sR7Df77GYSEDJavMXFsr7enYCL2Kg=
 text: |
   | `VERIFY_RESTORE_BLOCKED` | `BLOCKED` | Confirm that the affected data cannot be restored. |

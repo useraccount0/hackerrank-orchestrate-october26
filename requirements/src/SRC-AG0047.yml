@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: UBZ_7cMpUD9lB435-xcXknC1MM-kOvdulpe1SoYtrn8=
 text: |
   The log file is named `log.txt` and lives in the same directory as this `AGENTS.md` file — the repository root.

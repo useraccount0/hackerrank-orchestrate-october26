@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: E_dWxHa9UOinvaKDxQ0bHlLAy73EDLSzMV-Drpv--4U=
 text: |
   - Apply `deletion_rules.csv` to every relevant record, including account tombstones, active data flows, and restore risks.

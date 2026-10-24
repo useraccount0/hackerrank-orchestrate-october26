@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: BkfKnO_7vL624bZcd-u9HaYe6zE5S2Al7-axnlmdldo=
 text: |
   - Never log secrets. Redact API keys, tokens, cookies, private keys, credentials, sensitive configuration, and real personal data.

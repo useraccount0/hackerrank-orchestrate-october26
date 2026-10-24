@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: ejZawkLMzRrDhJOVv5oTloMptxpfVQbYZMv3jPw7OSg=
 text: |
   email is the identity supplied with the request; it may be a current or a historical email address.
 verification: test

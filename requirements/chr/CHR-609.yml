@@ -11,10 +11,11 @@ links:
 - SRC-RM0145: 4JW3j9TT6oHx9b5-FGHNgdR5_OHMJdKmjLiyXP6_I_k=
 modality: shall
 normative: true
-note: ''
+note: |
+  Decision ISS-01 (you, 2026-10-24): option (a), code/evaluation/ only. No top-level evaluation/ folder.
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: LEWLpyKkmgGqgyleLj84vbR4lkaYjbqzqKbVY62k1lw=
 text: |
   The two reports shall be placed in code/evaluation/ (next to code/evaluation/main.py) so that they are bundled with code/; if they are placed in a top-level evaluation/ folder instead, that folder shall be added to the archive command.
 verification: inspection

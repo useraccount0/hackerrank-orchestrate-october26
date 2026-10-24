@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: gyh8codoO7hMtHqy4qlEUbL7cz1M2SOZ3BEtHpW2HB4=
 text: |
   The solution shall read secrets and credentials only from environment variables; an uncommitted .env file may be used when needed.
 verification: inspection

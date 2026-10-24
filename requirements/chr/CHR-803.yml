@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: participant
 ref: ''
-reviewed: pending-user-review
+reviewed: 6ttv4pdLEJUyAUg0_W4bUd9LUpULRb0lgOoABcWGq8Q=
 text: |
   The participant shall start the AI coding tool from the repository root (or explicitly ask it to read ./AGENTS.md first), so that it reads AGENTS.md and logs every turn to the root log.txt.
 verification: inspection

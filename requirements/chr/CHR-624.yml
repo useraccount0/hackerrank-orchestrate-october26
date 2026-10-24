@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: organizer
 ref: ''
-reviewed: pending-user-review
+reviewed: NVLiRgYVp9CJ1tbD-QPg4qqMLuCrv1aaWcsAWJ7-VBI=
 text: |
   Automated code evaluation ignores raw data files (.csv, .tsv, .json, .jsonl, .sql, .log); content stored only in those formats is not visible to the code judge or the AI interviewer.
 verification: n/a

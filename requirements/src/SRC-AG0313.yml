@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: v7HEGkCXIKGmTTVfJ6fsNsOo0dsQT5zSWbAzPa099f4=
 text: |
   - A finding must use the participant-visible `file_id`, `activity_id`, or `audit_id` that proves it.

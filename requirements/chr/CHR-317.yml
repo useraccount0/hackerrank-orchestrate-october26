@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: deOeFkxTRaWXY6wcjwDc0NgLD_3KdbcAoJPRakUB4xQ=
 text: |
   The system shall apply deletion_rules.csv to every relevant record, including account tombstones, active data flows, and restore risks.
 verification: test

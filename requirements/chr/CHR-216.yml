@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: H3Bph-ZtndzB2EA5t5YRgzH3DwautRYepKen4ywJHIM=
 text: |
   dataset/system_activity.csv is a global stream of deletion, synchronization, export, backup, restore, indexing, audit, and related operational events across services and data processes; its rows may describe unrelated people.
 verification: test

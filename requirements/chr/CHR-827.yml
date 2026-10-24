@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: coding-agent
 ref: ''
-reviewed: pending-user-review
+reviewed: 0ibMlf5SEIhRxIvBXSGr1ziik2zNSpfd6ChQS-G1RV8=
 text: |
   A per-turn entry shall follow the AGENTS.md section 5.2 template: the heading "## [ISO-8601 TIMESTAMP] <short title, max 80 chars>", then the sections "User Prompt (verbatim, secrets redacted):", "Agent Response Summary:" (2-5 sentences: what was done, why, and any important decision), "Actions:" (one bullet per file edited, command run, or tool invoked), and "Context:" with the lines tool=, model=, branch=, repo_root=, worktree=, parent_agent=.
 verification: inspection

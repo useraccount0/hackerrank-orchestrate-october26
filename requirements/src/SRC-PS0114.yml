@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: BGlQqMj09qbGP6lL59Z9ucyfD25aRyMoTkqoHmVCmZc=
 text: |
   | `VERIFICATION` | `VERIFY_RECORD_ABSENT` | `ABSENT` | Confirm that a record no longer exists. |

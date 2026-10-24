@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: KEZ4lVYhem4lf1hnsrMOd_LjUdCPkGbPOvq4OHH_STw=
 text: |
   Operation REPORT_REMAINING_RECORD shall be used only in phase FINDING, always with state PRESENT, and means: a record that should have been deleted still exists.
 verification: test

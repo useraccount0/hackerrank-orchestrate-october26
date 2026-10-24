@@ -15,7 +15,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: -0eGCJpjIbwY5Eg1M_h3bX5lo1mEmYK-jjx8Utleglw=
 text: |
   dataset/deletion_requests.csv contains the 518 evaluation requests that must be audited; each row is one case.
 verification: test

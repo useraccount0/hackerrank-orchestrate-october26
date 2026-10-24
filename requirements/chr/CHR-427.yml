@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: C-SjAXZScKslfUimHDMpOC4xMdAvpZRI4Jyy1cw5G5Q=
 text: |
   Operation VERIFY_RECORD_ABSENT shall be used only in phase VERIFICATION, always with state ABSENT, and means: confirm that a record no longer exists.
 verification: test

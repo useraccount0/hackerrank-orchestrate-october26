@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: CWt0vHt_bzkDYAiG_m29vAXca1hQjsnJxK_ECX4dZM8=
 text: |
   - Do not assume bash. Prefer language-native APIs when possible.

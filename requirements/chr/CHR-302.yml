@@ -13,7 +13,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: uRGMJrQCyRMW0xD1yDYc17CV0zoEYGIOWHwaSIR9sfc=
 text: |
   The system shall classify a request for access, correction, export, marketing opt-out, or any other non-deletion action as NOT_APPLICABLE, even if other fields of the request resemble a deletion case.
 verification: test

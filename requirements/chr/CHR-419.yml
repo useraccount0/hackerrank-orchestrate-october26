@@ -14,7 +14,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: RJ0HbFCRUu4-6rjVWwc6FbjAUcZCUOKWyjyMs-KtJxE=
 text: |
   Operation REPORT_EXPOSED_PII shall be used only in phase FINDING, always with state PRESENT, and means: a record may remain, but it still exposes identifiers that the policy requires to be redacted or anonymized.
 verification: test
