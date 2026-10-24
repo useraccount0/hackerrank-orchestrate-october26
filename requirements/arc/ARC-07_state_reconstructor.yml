@@ -1,0 +1,27 @@
+active: true
+code: code/c07_state_reconstructor/
+derived: false
+header: |
+  State reconstructor
+interface: |
+  resources + observations + audit_at -> resource states with proving evidence
+level: 1.7
+links:
+- CHR-208: kxox_fbKFI5ZGu5I_7u_J0wmmzJoyNkg1SVjjXUfIXk=
+- CHR-311: woGbY1drxygduEjjTH5i4Kz5BtaC_F1Pmmy6Aid8hDM=
+- CHR-312: VrP-8K6B2iaxGs-o4dtBZxrm9AjFzTCFwbk_IBPNuA4=
+- CHR-313: Ylz8Q6M-8wpsNN4fhUrpwVlkdMCpNeMthUMNPlxympo=
+- CHR-314: dxHlhuakvEncgeNhqBzi8_qcPGwjbCr5mi6FfS-1Nto=
+- CHR-438: K4D96IfiCqDzlrWWHV__RlQvdxLX7DG5Ud94EV0pYUQ=
+- EXT-504: GcVxG4G4CEueqO7DwzHMNLKv9RIEqMEajoFRXQ5ofB4=
+- EXT-505: 0r7CMFQK4qBHurY92pKQthKToajJpw_TMaLuQRzkcak=
+- EXT-506: bGkFagkd24RqVGhnk351rENvuQe8Wupi_R87kIp0w8M=
+- EXT-601: iQiNNFooXid8nduNUiT5R7S24afvm4aHwcRpPTKUHA0=
+- EXT-602: 6_QzgtDZbDrsvKdZIwHU4sjPHf5QIcQLQ8Av_An7-lw=
+- EXT-603: KhvRrVO_kFVa4SHt3_n54IoEoEQSfeoPSoEHrdBlQuM=
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Decides the state of each resource at audit_at from the evidence captured at or before audit_at (activity results are claims), and names the evidence item that proves it.

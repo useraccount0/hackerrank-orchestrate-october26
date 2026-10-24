@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Works with any AI model
+issues: ''
+kind: constraint
+level: 4.5
+links: []
+modality: shall
+normative: true
+note: |
+  Your words: "It should work with any AI model, right?", read as a requirement. Done with adapters for the Anthropic API and the OpenAI-compatible API, which many providers and local models accept.
+party: system
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  The solution shall work with any AI model: the provider and the model are settings, not code.
+verification: inspection

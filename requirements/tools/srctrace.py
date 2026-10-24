@@ -13,7 +13,8 @@ should not be left to an AI:
           decision (lines added, removed or moved in a file; labels to re-decide;
           new units to import).
   check   Prove that the SRC items reproduce every line of every baseline file
-          exactly once and verbatim, and that their classification is consistent.
+          exactly once and verbatim, and that their classification is consistent;
+          and that every EXT and REV requirement is implemented by a component (ARC).
   views   Write requirements/views/line_map.csv: one row per input line, with its
           SRC item and the CHR and EXT requirements that are linked to that item.
 
@@ -46,6 +47,8 @@ SOURCES_FILE = ROOT / "requirements" / "sources.yml"
 SRC_DIR = ROOT / "requirements" / "src"
 CHR_DIR = ROOT / "requirements" / "chr"
 EXT_DIR = ROOT / "requirements" / "ext"
+REV_DIR = ROOT / "requirements" / "rev"
+ARC_DIR = ROOT / "requirements" / "arc"
 LINE_MAP = ROOT / "requirements" / "views" / "line_map.csv"
 
 DISPOSITIONS = ("requirement", "heading", "formatting", "context", "not-applicable")
@@ -315,6 +318,14 @@ def cmd_check(args):
     for uid in sorted(set(items) - expected):
         problems.append(f"{uid}: SRC item does not match any unit of the baseline files")
 
+    # Doorstop checks that every CHR requirement has a component (ARC is CHR's child document);
+    # EXT and REV are not ARC's parent, so their coverage is checked here.
+    implemented = child_links(ARC_DIR)
+    for directory in (EXT_DIR, REV_DIR):
+        for uid, item in load_items(directory).items():
+            if item.get("normative") and uid not in implemented:
+                problems.append(f"{uid}: no component (ARC item) implements it")
+
     print(f"\nTOTAL: {totals['lines']} lines, {totals['blank']} blank, {totals['agent']} written by "
           f"the coding agent, {totals['units']} units: "
           + ", ".join(f"{name} {totals[name]}" for name in DISPOSITIONS))
@@ -328,7 +339,8 @@ def cmd_check(args):
             print(f"  - {problem}")
         sys.exit(1)
     print("\nRESULT: PASS - every line of every baseline file is covered by exactly one SRC item, "
-          "verbatim, or is blank, or (log.txt only) was written by the coding agent")
+          "verbatim, or is blank, or (log.txt only) was written by the coding agent; every EXT and "
+          "REV requirement is implemented by a component")
 
 
 def cmd_update(args):

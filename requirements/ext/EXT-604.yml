@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  A new requirement touches only the affected components
+issues: ''
+kind: process
+level: 6.4
+links: []
+modality: shall
+normative: true
+note: |
+  Your words: "If a change comes from the top, from adding a new requirement, only affected components will be redesigned and reimplemented. Components that don't need work are not touched."
+party: coding-agent
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  When a requirement is added or changed, only the components it affects shall be redesigned and reimplemented; components that need no work are not touched.
+verification: inspection

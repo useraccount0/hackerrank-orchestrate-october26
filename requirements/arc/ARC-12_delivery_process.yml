@@ -1,0 +1,110 @@
+active: true
+code: '-'
+derived: false
+header: |
+  Delivery process (not code)
+interface: '-'
+level: 1.12
+links:
+- CHR-509: -X4bYqExUc4LO6x5kBSLWbTh0zN-XdGMGUvGywV14l4=
+- CHR-511: 3JOR5lFxAxoP512knrUfhUnD6VCb2Dn9f4R68TGkkHk=
+- CHR-513: eceCYiStkvmrJd6NOUli32AoMnPTtL7ulTYnDAW3UmE=
+- CHR-601: krE2wQR3ZaYB3SiL9_gAE5pYOlaKu1YCRoPy5We277c=
+- CHR-602: Uavl041TuEU6vW-EDM3PNn-FEwjmTOn7WfOgoZ0XWvE=
+- CHR-603: 8oPAiUYGk8P8dhmPOEJLwEAxLYuXfX0xFqIKEUp58J8=
+- CHR-604: Ir6nX7kgEUkBjAIT30FOPgzACCH7m2TJ-u4SVupKnMo=
+- CHR-605: jn-Xz43MQVSyq1jnPOADav9TZnYrcmhJzoLnaaKFgnM=
+- CHR-606: Io7QsjyZOe1KYcJ_dtbT-dUFmnaYNFFXfbYMiYVN4lk=
+- CHR-609: Xt31vdVLkjSqCl3SbthJfvdwleznxp2OeIrHNdgps48=
+- CHR-623: QFitfhsbTEqMekBKXOhqS9SJy722gtqXTI61qCDEIFc=
+- CHR-625: -X6Vv2qTCvo9gmDvIQXcs77s_wYN-gRkwlUy_O99U3E=
+- CHR-626: Lh2qgLR3nfQlZvIvkpTGmB_N5TNfh55x7nrljAA1WHI=
+- CHR-627: M8VuDt-v85ejPt8cCTzR57vN5IicKqN681oQufq4fd4=
+- CHR-628: Z-QPHqX7DRHW4AmNQkITqtsI8H1IYmV6k-YuUfakKFk=
+- CHR-629: WCYy2ZQ0275jhhWSYwJFPOfaCTU9cRCrPhr2PWQhumg=
+- CHR-801: yjRXdpH_o_D0ckPKiTSlkvLFt2cC-XtRGb14MGOcYwc=
+- CHR-802: sBJS4zguYk5_K4Ww4pT9gjwPKG7KLQxXudvM-cuDKDo=
+- CHR-803: IMp8FipfaI1Zh_9zovy0liLMgukbOd1o9DNl8ur_cnQ=
+- CHR-804: s49W1kmE6bvlmdzc2eZoXVT7JfcKoGcvTuZWJiVBgB8=
+- CHR-805: avvDz4g2yyIV39jdcuP604efbEkz-qKcJxJ4lg2Mijo=
+- CHR-806: WYMyQCH1tTPuq0NUpe6aaqcvidggbEd-PcSeHdaVTEs=
+- CHR-807: dk2yCWsIwy_bYTT4fsAcMq4WPhel9pa28vjHkfLLZeA=
+- CHR-808: D71b_jTb2UpOOJjkldv2dlyvXZuPm9AGzDPd0q2-uyA=
+- CHR-809: VNlP78Iv5KtgGWuOrsr9BctnaMAj5Ha1SqsK1iGo7FI=
+- CHR-810: -L9gBAAAD8liDCsK_kRWy6W3vY505n3Ba1YEadLp2Rw=
+- CHR-811: K1ZU1P5kj4UAfrhPBAfDybwIAybM7spcLv0_bfE55rM=
+- CHR-812: Gp6ABSnghx8_S4H9LBDum1LxIE-VREACHo7aQfhBJDE=
+- CHR-813: SJQ_1ALnE1X8FDr0SbfTGpSUhYLLjuaTX3lgY2zZT2A=
+- CHR-814: cOsaqgaThwD0V2TZvYnmg94pKlRA1gVDp_7wBqG0t_0=
+- CHR-815: 5nY6ERO9ovQxQezg9lnsY5z4DOWvS7IE9BrBw1uTaCw=
+- CHR-816: QvfdBkAKywftKhsdgXVdczSKCL4QJt9sSUAOoUxi-_Y=
+- CHR-817: LvgS4bsgXRLxwT7YS6EDp9xyJRxxms4GuAzYUSGOyiA=
+- CHR-818: qkoTY3vGEp5cyfX6htX85g10TSI_csnhSCKE_QTfU3s=
+- CHR-819: rks7yVgMs2FFlqgZP2KLVfpeUzWp8RJdsBJzVnltAyk=
+- CHR-820: FQIVcTt4gXUCb9xmKcRX-AaZaz8nLjHC9SFii2XolDc=
+- CHR-821: eoxA0XNuGJ0nALwevWndJkbCzx-XGdZ8ZU52DlK9lxE=
+- CHR-822: __B4ZYCUcxB5zv6tS6HLMdgOH6lme4sbyFwVBNHa5No=
+- CHR-823: qc1Cjj7QGUqpytSiXQjkThGUrLfKFDxRGuR62u8ozag=
+- CHR-824: CuuSHA2i-9BWQa7MI7ICjB3OyFx0weYawi5x-bYdI2U=
+- CHR-825: GHguTJXYd0_jzbu3wOXOZ4tgafuIFOclSMh3ZQjtKxY=
+- CHR-826: JYt9TlNiTZQhvRBoUETXPIs-QK6Y7vSCJseDbEKU2ys=
+- CHR-827: 4BwhnSopMm91TDXA8N1tbG8Iy5GhmpexuXalqxc1HwI=
+- CHR-828: 1WoRTJNaXwUOH6N_yCZZzJfQfGphm_jlToWJ-HTfQEs=
+- CHR-829: 44449uyR9uzWKamOrhzTFEvsHWXoxRW0gy6otpfoVfo=
+- CHR-830: WaWiMtIa7PRc7wYSNZ2UQzKF1lm8f-fJ6QSI0aObcvI=
+- CHR-831: w3L3v6wvIjnh7iodFPPEbSaWtgcKu01T4mvbSk0t2gA=
+- CHR-832: zNKV029_6XADdwbvOJQ8YdRS4_q8hKcEkWch0ECblZ4=
+- CHR-833: fNI3NHVqYWHHOGQy_TbPbaMjzxai3z19x9wrYRpTOC8=
+- CHR-834: 2_vkrknGtuJW-K35Vt-KghDkZEcbafZJcpXwzgKaQO8=
+- CHR-835: poJa7qhfLMtDjkgwwjUthooaK4lcNEXoHUsoIJM2zw8=
+- CHR-836: MZ56GpjiQmy7AaEHjusWb2CeXX3kDL5wS35OsiN_svA=
+- CHR-837: O4AI0wGejPkdjLcsco45wZ3QlHDyE6PQMR5ZoE1dOEA=
+- CHR-838: 6CpvQfPSY1OeknepciAxDAnJg_2sWSUYYjvaOVVlkv0=
+- CHR-839: RFy3jeLR7Jm4xY55Et1N4nB6ED50ITAJ5fRfeebjJmA=
+- CHR-840: aW6SjI-1dJLNwWeti4H2x83ZQ0bl3OS1TgJomIfsXmk=
+- CHR-901: 17iBwXCvk1yxtkxVd7S59fbG_yAYM6cwCwPmVnz2trg=
+- CHR-902: W2DivOW5LB070IPHvOvDg-LHNpl2dLN17CO03bqKpiI=
+- CHR-903: 1LZMmzNzfP2fWzm17qC0dCrxnnLDR-pHibAZJpXAYAs=
+- CHR-904: _vpXxMuOwn4VX09-vXprxOEDWfGuaRCnprsHV9RIRzM=
+- CHR-905: j6eyfh1F7_16g3QdpdW3l4PhDo_BZmq-v01zXGC6hmY=
+- CHR-906: El6Hp4IgDGA-6xyKGcs7kNYQFvRM6HaL-J-nlnJqZcM=
+- CHR-907: B4wjSaLBV5jvyfD_YLJAOg64hTem0lfCClLd2t9Ycwc=
+- CHR-908: yVPqQoXMCxWtNUwHhFvQV6sWR18pHVT2Mk4am_O7Ph8=
+- CHR-909: 4-VfAV9Ppv6gYmMtqU08J1LkJ9FE4qiZsL9kxhJGw5o=
+- CHR-910: Yyolyj5OHXWxbPo74sCC0Pb-0XjOSHI5_bvG8QzKdAk=
+- CHR-911: JGi1FedNBN9olPGGlKQEawrptwaH29floYKS4Jca-vg=
+- CHR-912: EKG3GZPze4-ZlRMZgT4G4cUIba_24lAfMa2uTAhlIss=
+- CHR-913: jXzGt4yNV2tjxy0r-zJwS7RsvLHdPZZkFKQT0h8SuNI=
+- CHR-914: tGdkKAUngnEgCTUX6CgymjPq3dk8SA9_ekj_TsS2qU4=
+- CHR-915: BpexzWnU2BEHSQRVcEjUbAb2RQ5S0-WPsfcYGAYbc1c=
+- CHR-916: 2UWNw8sWc_a50SRx_kRN_j8JB78Xw3VRr-5CPoUZUoE=
+- EXT-101: xKXQ0KOu4AJ2mmyG9uiys710yIcXzgFVi4lNK0PA8LY=
+- EXT-102: jgzX81N6LMPGk18a6fESMJsIceJ92ejDWwEoUf1W6_4=
+- EXT-103: FLagaQEUT4_Dq3VmepIm8faOhaX7kCaNYmOpWTvtGng=
+- EXT-104: gej-g491lt1Ua3rL-Mth0FCah0LzK4NuhwGHHzR1tCU=
+- EXT-105: ec5w5pPNETS7LQSS0SerFopBtmczpd5Yqo8NyROzQcc=
+- EXT-106: oaIcyuDBsE5ymlbFTY9x2EVzR28P90gc3js4DVM3Od4=
+- EXT-107: fHzxl887256IWvwCrVSIKWBdEOW5MjZ-ZJK0wigXcHw=
+- EXT-108: _ubsep9c_AOjsApod1APsWx6cW8eS9XEOWIpdF_eELM=
+- EXT-109: duRsJcgIhvtfEBbgyJiRtfgcZb9D0GtYCuH-6GUDL5Q=
+- EXT-110: xaNBs4PoUhwCLB0bPe1xAyaHbuaP7S5WhoxTffQM2KM=
+- EXT-111: FQFgdLrhsYVXFrgwHxEn-a6jNY8PmiP_oBsfAD999jc=
+- EXT-204: GK5ySGuzSsMA9smEXwRjFoOVbA18beWZMkwkcKqy9a4=
+- EXT-205: FHz-cxR8o9q2N3Y0g_xHtmlfR19JmXIZ-Y_L3WWpIP8=
+- EXT-206: ZCUVHalvfUxqjZbEJzwXwRBYHblM4gNv7nAmlfQ9aOQ=
+- EXT-301: zHFwJmG9FF7ZdcCVp-wL0bgMa9JpZlRC7aesz8CgitQ=
+- EXT-302: -KsfYUfjMfU-p3W73uHqQhYRttAtc2eduQW9YHuF-oc=
+- EXT-601: iQiNNFooXid8nduNUiT5R7S24afvm4aHwcRpPTKUHA0=
+- EXT-602: 6_QzgtDZbDrsvKdZIwHU4sjPHf5QIcQLQ8Av_An7-lw=
+- EXT-603: KhvRrVO_kFVa4SHt3_n54IoEoEQSfeoPSoEHrdBlQuM=
+- EXT-604: 6wLmjb2EJIt9_5ltHRz-rCwL6kftKRafbD7wr-2wzBI=
+- EXT-605: i6ZnJ5Kcpc4H0B0Xzorj0LeMWVD1ixoTKkLf5Eu5XZ8=
+- EXT-606: 3bXIH6RsIRwwvRhW6PIKPyzbYeDy-jH7WexQk3FKMPs=
+- EXT-607: jX7R7ULQ2f6WHWlU-trpYXImP82ZGuj4sotV5GS2n0s=
+- EXT-608: nssaXwpB-y68UljgIkigLt7aCdZWaaIx8bON8d0pQfM=
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  How the work is done and delivered: the coding agent's rules and log.txt, the requirements and their traceability tools, the README, packaging of code.zip, the submission, and the agent trace. Checked by inspection, not by program tests.

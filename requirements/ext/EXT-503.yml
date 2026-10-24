@@ -5,7 +5,8 @@ header: |
 issues: ''
 kind: constraint
 level: 5.3
-links: []
+links:
+- SRC-LG0431: 1yvPL7JRn5B9JNSmbKvPisVltgz-zferrDs_f2uOCLM=
 modality: shall
 normative: true
 note: |

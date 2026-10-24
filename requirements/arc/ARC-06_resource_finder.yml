@@ -1,0 +1,29 @@
+active: true
+code: code/c06_resource_finder/
+derived: false
+header: |
+  Resource finder
+interface: identity + observations + activity -> the subject's resources
+level: 1.6
+links:
+- CHR-102: ip4401rEz4cfwzTy_q5pTjhpG1AAah0fBYH0w_oms-s=
+- CHR-103: Y-N01aIhaoew4tWNM5-mwcaayMPOnw3YRgBd-vfNweI=
+- CHR-223: LyHggxckznbt6UbJuGs4rctk26O2X89hGJgb1r-o_kc=
+- CHR-307: LYjmgOR_ykndu8WdOoW06jg9H5SdpixyW5skJBsRk0s=
+- CHR-309: JPvNWNTMnSEPhmmsgTSumQSLNfBZ_3PrCmebl-3HiJs=
+- CHR-315: UiHgr4iJt4_G0wG2jxSM5EKnosbjTqVBlVUAAGRpaho=
+- CHR-316: bF3lBEPfaFBpDvevGf_JUP_s2H8x3JShaPOg2as95mc=
+- EXT-504: GcVxG4G4CEueqO7DwzHMNLKv9RIEqMEajoFRXQ5ofB4=
+- EXT-505: 0r7CMFQK4qBHurY92pKQthKToajJpw_TMaLuQRzkcak=
+- EXT-506: bGkFagkd24RqVGhnk351rENvuQe8Wupi_R87kIp0w8M=
+- EXT-601: iQiNNFooXid8nduNUiT5R7S24afvm4aHwcRpPTKUHA0=
+- EXT-602: 6_QzgtDZbDrsvKdZIwHU4sjPHf5QIcQLQ8Av_An7-lw=
+- EXT-603: KhvRrVO_kFVa4SHt3_n54IoEoEQSfeoPSoEHrdBlQuM=
+- REV-001: s62KHmmSiv7k_m5KYl7NSuvRWigOTUCVloSVPdp4xaY=
+- REV-002: iTK0Ds3jcbY518DlBmO9FRL6em2qWuJYxA872g9MczI=
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Finds every record, data flow, and backup of the subject in the observations and the activity stream, through grounded links only (identifiers, hashes, resource IDs), and ignores decoys.

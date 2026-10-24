@@ -1,0 +1,49 @@
+active: true
+code: code/c11_evaluator/
+derived: false
+header: |
+  Evaluator
+interface: |
+  output + sample answers + usage records -> metrics and report numbers
+level: 1.11
+links:
+- CHR-213: 5neWEsS42ZlyuYxS8D-wz8jIVhFipxAf30lOZAhMWzE=
+- CHR-607: kUjn_yWVhS3n6o4K8-ea1Cfa1pCbHsNUiY9akUsx9BA=
+- CHR-608: h6Cq1FLV8xgeUVgH1qbzM9hk461jaPQv_WuoOeWb1rM=
+- CHR-609: Xt31vdVLkjSqCl3SbthJfvdwleznxp2OeIrHNdgps48=
+- CHR-610: StylY8ooPk_vdHdU7ILdR2L2V8ANNGlUQyzTfcpxZzA=
+- CHR-611: BiWmGNWC-wm99mxF-1y-qIRQRqlMcP7RLfpkwe7YUos=
+- CHR-612: fOM2vHrXKmytbBoRwvQ-WbiCcWRbKMAG2amc4efOYQs=
+- CHR-613: T0Ku_PL_3XpmEMulPA77IYDA6RMSJ7yO5bmmGwcJdcA=
+- CHR-614: RTCtDe8BbIawNLhDf_m9jixZHQ99kxtzu2x8C2YEZnA=
+- CHR-615: XX13KlilmBYP-4oUpL6qbWcD9Wkr4-rKwEHeoMUf29Q=
+- CHR-616: hDpa58D49rJ6y1V0cppCBD8AaA-DTDMEVMFSeBUQJRk=
+- CHR-617: euv-plPCTLF7NuoglPsJ6H-eTYffoB9-seA2mu_hR50=
+- CHR-618: BuGB9WPOGZvOlVRMfDB-fIYEzvF2Wx9uu2WF5w3eu4k=
+- CHR-619: X_a7ETvafEiei3LedfGrWRXZegWTnVpjprUzOsspKXE=
+- CHR-620: Z72WJcUKDI91tLNjWzude4QDxsWjD0NREeNmTG7SkNc=
+- CHR-621: OjojNJ-wteuVCUunpFi0ycFK1MB7MfynTbQiDtKueAA=
+- CHR-622: b4pmq8WahmLp4yJZPOe4INfH_tJ8MnViDMD7MhKECxg=
+- CHR-624: DvjJjczgq4egtFh8T7aMWOZEoyoCsXDjt120lWzaDvk=
+- CHR-701: guGkmCPJwYQkQWoEsrDpp19FxjS3WsBXyL4fb9fZzqk=
+- CHR-702: m9lYkq1JLCanq8hj7thyol8hPnyL_WhKy8K6PZzRYX8=
+- CHR-703: uvUmIGAwcaKEMLlqRz261ketHDqhYOuLVN4R5SjgMBk=
+- CHR-704: z9QzM1aaCRGs_MrfLnY41Kyt8txg4msLGTDrVWdCmlY=
+- CHR-705: p4TnPL2y3YWLpJDQKF1XqzTZieuE95LdyEHSH2dJ6zU=
+- CHR-706: pAwLJrAiwVwb9HhFZ93JtylthE_SK6o2v-HZBduNjvo=
+- CHR-707: JFx_Po5D4lUbSfRGXj1Q7sq0taYc9DlS5iBPabaylSU=
+- CHR-708: FlLDVvUnKMs_kGS7G8MJ8GOsnD8mVxM0pAU4O7CYzjI=
+- EXT-201: qSshKSHYGEZO-GvYHcXNj3MPx8m9ycjzf6stxbFC5s0=
+- EXT-403: kj10rLnTCj5KX4-3jsnihOikvGXNMW3qOtoodqzcHCE=
+- EXT-504: GcVxG4G4CEueqO7DwzHMNLKv9RIEqMEajoFRXQ5ofB4=
+- EXT-505: 0r7CMFQK4qBHurY92pKQthKToajJpw_TMaLuQRzkcak=
+- EXT-506: bGkFagkd24RqVGhnk351rENvuQe8Wupi_R87kIp0w8M=
+- EXT-601: iQiNNFooXid8nduNUiT5R7S24afvm4aHwcRpPTKUHA0=
+- EXT-602: 6_QzgtDZbDrsvKdZIwHU4sjPHf5QIcQLQ8Av_An7-lw=
+- EXT-603: KhvRrVO_kFVa4SHt3_n54IoEoEQSfeoPSoEHrdBlQuM=
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Scores output against the sample answers the way the organizers score (status, steps, fields, sequence), runs our own evaluation cases, and computes the numbers of evaluation_report.md and usage_report.md from recorded data.

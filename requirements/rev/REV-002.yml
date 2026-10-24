@@ -1,0 +1,21 @@
+active: true
+derived: true
+header: |
+  Hashes of old emails link records too
+issues: ''
+kind: functional
+level: 2
+links:
+- CHR-304: E7FsQdDqQqe5uJeUg5L9Zt-9ETMwmBM6GamSvQLBYmk=
+- CHR-309: JPvNWNTMnSEPhmmsgTSumQSLNfBZ_3PrCmebl-3HiJs=
+modality: shall
+normative: true
+note: ''
+party: system
+rationale: |
+  Revealed in step 3 (data analysis), not stated by any input line. Sample case_12: analytics_9914 is linked to the subject only through the hash of an old email (correlation_key in evidence_01). The hash rule was recomputed and matches user_identities.csv.
+ref: ''
+reviewed: pending-user-review
+text: |
+  A record shall be linked to the subject also through the email hash of any current or old email address of the subject; the email hash is the SHA-256 of the lower-case email address.
+verification: test

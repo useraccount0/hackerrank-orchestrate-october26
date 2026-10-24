@@ -1,0 +1,18 @@
+active: true
+classified_by: ai
+derived: false
+disposition: context
+file: log.txt
+header: |
+  log.txt:410
+level: '7.20'
+line_end: '410'
+line_start: '410'
+links: []
+normative: false
+note: |
+  A one-time request to shorten AGENTS.md, withdrawn in SRC-LG0431 (now EXT-111).
+ref: ''
+reviewed: pending-user-review
+text: |
+  Shorten `c:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26\AGENTS.md`. Keep the rules most tasks need and move the rest into files it points to.

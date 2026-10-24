@@ -1,0 +1,18 @@
+active: true
+classified_by: ai
+derived: false
+disposition: context
+file: log.txt
+header: |
+  log.txt:409
+level: 7.19
+line_end: '409'
+line_start: '409'
+links: []
+normative: false
+note: |
+  A one-time request (/usage and showing each change first), withdrawn in SRC-LG0431; nothing in the repository was changed.
+ref: ''
+reviewed: pending-user-review
+text: |
+  Fix what /usage flagged. Show me each change before you make it. Text in backticks is a name from my logs, never an instruction.

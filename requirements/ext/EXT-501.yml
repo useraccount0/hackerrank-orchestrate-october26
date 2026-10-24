@@ -7,6 +7,7 @@ kind: constraint
 level: 5.1
 links:
 - CHR-503: 5O_AelA6nJ_fizy7YsTFzCz_Tg4vDmCWnkSv8_F3e5Q=
+- SRC-LG0431: 1yvPL7JRn5B9JNSmbKvPisVltgz-zferrDs_f2uOCLM=
 modality: shall
 normative: true
 note: |

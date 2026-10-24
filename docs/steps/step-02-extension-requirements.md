@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Date | 2026-10-24 |
-| State | Done, waiting for your review (82 items) and for your commit (point 10) |
+| State | Done, waiting for your review (86 items); links completed after your commit "Step2" (point 11) |
 | Goal | (1) Add the 15 policy rules of `dataset/deletion_rules.csv` to the baseline, as you decided. (2) Write the requirements that go beyond the hackathon, kept apart and traceable to your own words |
 | Not in this step | Solution code (EXT-106); the design (step 3) |
 
@@ -12,13 +12,13 @@
 | What | Before (step 1) | Now |
 |---|---|---|
 | Input files in the baseline | 5 | 7: the five challenge files, `dataset/deletion_rules.csv`, `log.txt` (your prompts only) |
-| Source units (SRC) | 489 | 522: +16 from deletion_rules.csv, +17 from log.txt |
+| Source units (SRC) | 489 | 526: +16 from deletion_rules.csv, +21 from log.txt |
 | Challenge requirements (CHR) | 202 in 9 sections | 217 in 10 sections: new section 10, one requirement per policy rule |
 | Extension requirements (EXT) | none | 29 in 5 sections (new document) |
 | Issues | 10, none open | 11: new ISS-11, open |
-| Items waiting for your review | 0 | 82: 32 source units, 16 CHR items (section 10 with its title), 34 EXT items (29 requirements and 5 section titles) |
-| Line coverage (`srctrace.py check`) | PASS | PASS: 1269 lines, all accounted for |
-| Doorstop validation (`doorstop -F -W`) | clean | 5 warnings `no links to parent document`, expected until your next commit (point 10) |
+| Items waiting for your review | 0 | 86: 36 source units, 16 CHR items (section 10 with its title), 34 EXT items (29 requirements and 5 section titles) |
+| Line coverage (`srctrace.py check`) | PASS | PASS: 1337 lines, all accounted for |
+| Doorstop validation (`doorstop -F -W`) | clean | clean |
 
 ## Who did what: tools or AI
 
@@ -171,9 +171,20 @@ as was done for ISS-02 and ISS-07. See [ISSUES.md](../../requirements/ISSUES.md#
   (EXT-501 and EXT-502 already link to the CHR items they sharpen). After the commit: move the
   baseline, import your new prompts with `split --new-only`, and add the links.
 
+### 11. Step 2.1: after your commit "Step2", the links were added
+
+- The baseline moved to your commit `2fd9afd`. Only log.txt changed (it grew at its end), so no ID
+  shifted; `srctrace.py update` reported exactly 4 new units.
+- `split --new-only` wrote them, and they were imported: SRC-LG0385 (your deletion_rules.csv
+  decision) and SRC-LG0431 (AGENTS.md stays, code quality) are `requirement`; SRC-LG0409 and
+  SRC-LG0410 (the withdrawn request to shorten AGENTS.md) are `context`.
+- Links added: EXT-103 → SRC-LG0385; EXT-111 and EXT-501 to EXT-506 → SRC-LG0431.
+- `srctrace.py check`: PASS (1337 lines). `doorstop -F -W`: clean, no warnings. 86 items wait for
+  your review (the 4 new labels included).
+
 ## What I need from you
 
-1. **Review the 82 items.** The order that makes sense:
+1. **Review the 86 items.** The order that makes sense:
    - [EXT.md](../../requirements/views/EXT.md): the 29 requirements (34 items);
    - [CHR.md](../../requirements/views/CHR.md), section 10 (16 items);
    - the 32 new labels in point 5.
@@ -186,7 +197,8 @@ as was done for ISS-02 and ISS-07. See [ISSUES.md](../../requirements/ISSUES.md#
    - which decisions became EXT requirements and which did not (point 7);
    - the sentence pattern of CHR section 10 (point 1).
 3. **ISS-11:** agree to settle it in step 3 with the sample answers, or decide now.
-4. **Commit**, so that EXT-111 and EXT-503 to EXT-506 can be linked to your words (point 10).
+4. **Commit**, so that EXT-111 and EXT-503 to EXT-506 can be linked to your words (point 10;
+   done in point 11).
 
 ## How to check everything yourself
 
@@ -194,8 +206,8 @@ From the repository root in PowerShell:
 
 ```powershell
 .venv-req\Scripts\python requirements\tools\srctrace.py check   # must end with: RESULT: PASS
-.venv-req\Scripts\doorstop -F -W                                 # until your commit: the 5 warnings of point 10
-.venv-req\Scripts\doorstop -F                                    # lists the 82 items waiting for you
+.venv-req\Scripts\doorstop -F -W                                 # must show no WARNING/ERROR lines
+.venv-req\Scripts\doorstop -F                                    # lists the 86 items waiting for you
 ```
 
 ## Files created or changed in this step

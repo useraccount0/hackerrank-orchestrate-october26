@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  PDF text read with pypdf
+issues: ''
+kind: constraint
+level: 4.6
+links: []
+modality: shall
+normative: true
+note: 'Your words: "Yes use pypdf."'
+party: system
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  The text of PDF evidence shall be read with the open-source library pypdf.
+verification: inspection

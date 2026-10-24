@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Fix through the V-model, not only the code
+issues: ''
+kind: process
+level: 6.7
+links: []
+modality: shall
+normative: true
+note: |
+  Your words: "My plan is not to fix just code iteratively, but instead to update the v model from the top untill the implementation satisfies all requirements and there are no dilemmas."
+party: coding-agent
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  A problem shall be fixed by updating the V-model from the top (requirement, design, code, tests), and this is repeated until the implementation satisfies all requirements and no open question remains.
+verification: inspection

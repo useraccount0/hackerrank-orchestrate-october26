@@ -1,0 +1,31 @@
+active: true
+code: code/c03_evidence_reader/
+derived: false
+header: |
+  Evidence reader
+interface: manifest records + dataset/evidence/ -> observations
+level: 1.3
+links:
+- CHR-218: NnbTGDqBf1w3APRfCcCKRqaKGbD7XSNdibVd4GCy_0o=
+- CHR-220: ijeHW0s-E9nFPm_Q9bb1AsEjZ8XtS3FCqylyFQAa1zE=
+- CHR-221: 1HFBHJSTmgS9V5k4u8ROnC9xR_FlHiUNSr9mLBh0ubU=
+- CHR-308: 9pBy0uNXat00FPSOJZUIsdngvUacDVU_f8EIPGVAjs8=
+- CHR-310: REdSByvn3uxAFtp9aLGFinrapUyhDDPMBGwrDfVA4MI=
+- CHR-311: woGbY1drxygduEjjTH5i4Kz5BtaC_F1Pmmy6Aid8hDM=
+- EXT-405: vLQ8lPsJOT2C4R9bobVssO4C7Wpp6DBJFpiKv2i3gbI=
+- EXT-406: KDhUzDqIqCrspndmVQ7NyKzfO_KgtT_jz3nYY29wrXU=
+- EXT-501: 1_1CVgack4lrJJOvJPx2-5nBS-DY6fWuzkC-8176IqQ=
+- EXT-502: Ooa8_Vi4L_0qCbrWW-MWvytGQcW_TkvTkppMq2Vnygk=
+- EXT-503: v8S359ZZpVVg-2RMmLEugXc96NCRb3aaLI7a7Rdr6CM=
+- EXT-504: GcVxG4G4CEueqO7DwzHMNLKv9RIEqMEajoFRXQ5ofB4=
+- EXT-505: 0r7CMFQK4qBHurY92pKQthKToajJpw_TMaLuQRzkcak=
+- EXT-506: bGkFagkd24RqVGhnk351rENvuQe8Wupi_R87kIp0w8M=
+- EXT-601: iQiNNFooXid8nduNUiT5R7S24afvm4aHwcRpPTKUHA0=
+- EXT-602: 6_QzgtDZbDrsvKdZIwHU4sjPHf5QIcQLQ8Av_An7-lw=
+- EXT-603: KhvRrVO_kFVa4SHt3_n54IoEoEQSfeoPSoEHrdBlQuM=
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Opens each file of the evidence manifest and turns its contents into observations: which resource, in which system or store, seen when, with which identifiers and which state facts. One reader per format: SQL snapshot (sqlite3), log, JSON, text, PDF (pypdf); screenshots are read through the model gateway, once, and cached.

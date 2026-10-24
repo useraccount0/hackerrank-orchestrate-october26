@@ -1,0 +1,21 @@
+active: true
+derived: true
+header: |
+  The owning service is reported, not the copy's location
+issues: ''
+kind: interface
+level: 4
+links:
+- CHR-309: JPvNWNTMnSEPhmmsgTSumQSLNfBZ_3PrCmebl-3HiJs=
+- CHR-439: 5e09YW9KJZNKroGuRrh3sw3A-Ad5QVp5-Y64q1iubxg=
+modality: shall
+normative: true
+note: ''
+party: system
+rationale: |
+  Revealed in step 3 (data analysis), not stated by any input line. All steps of the 32 sample answers follow this mapping. Sample case_05 reports account_005 under account_service although the copy is in a failover replica table.
+ref: ''
+reviewed: pending-user-review
+text: |
+  Each step shall name the service that owns the resource (account -> account_service, search -> search_service, analytics -> analytics_platform, support -> support_platform, export -> export_service, data_flow -> integration_service, backup -> backup_service, audit_record -> security_service, tombstone -> identity_service), also when the copy was found in a replica or another store.
+verification: test

@@ -17,7 +17,8 @@
 #   0eddbbd33f682eae0a2770d67412af8a3cf4af20  step 1.1: organizers fixed the URL in AGENTS.md line 94 (wwww -> www)
 #   032a936cb393597668d4b6cef1dca03f3e3c6a36  step 2: adds dataset/deletion_rules.csv and your prompts in log.txt;
 #                                             the five organizer files are byte-identical to 0eddbbd
-baseline_commit: 032a936cb393597668d4b6cef1dca03f3e3c6a36
+#   2fd9afdac5734d66e84b076b8e9b987a3caf8756  step 2.1: your newer prompts in log.txt (log.txt grew at its end only)
+baseline_commit: 2fd9afdac5734d66e84b076b8e9b987a3caf8756
 files:
   - path: AGENTS.md
     code: AG
@@ -53,5 +54,5 @@ files:
     code: LG
     level: 7
     units: user-prompts
-    sha256: bdd009e915cebb82ea17cdbacf6435c36443a3d62b0306d492b12e29a7e3f22e
-    lines: 381
+    sha256: 1ddae759e5e54d59d5c406c9e6fc86332545fe4e9c8b8547c95b15b525d0be62
+    lines: 449

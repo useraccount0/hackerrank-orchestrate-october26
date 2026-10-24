@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Requirements revealed by implementation or testing
+issues: ''
+kind: process
+level: 6.5
+links: []
+modality: shall
+normative: true
+note: |
+  Your words: "If change comes from a bug that was found in code, or behavior, that was not expected through requirements and was not part of the design, than it can be traced up the v model and added as a new type of requirement that was revealed during implementation or testing." Done with the document REV.
+party: coding-agent
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  A bug or an unexpected behavior that the requirements and the design did not foresee shall be traced up the V-model and recorded as a new requirement, of the type 'revealed during implementation or testing'.
+verification: inspection

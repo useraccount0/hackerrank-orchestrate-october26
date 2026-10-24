@@ -1,0 +1,46 @@
+active: true
+code: code/c08_policy_checker/
+derived: false
+header: |
+  Policy checker
+interface: |
+  resource states + deletion rules -> violations, risks, compliant resources, case status
+level: 1.8
+links:
+- CHR-217: QBctDgcHC_6Jy1GzAxIzdL_DhR8EfOhXizpnrbAw0AQ=
+- CHR-317: FVLkzzpaP4Ub30ZqVt9nifuomGPfuGlrLCRhJnaqwG8=
+- CHR-318: g6orgxCoQpe0ijcqW_rPlfo3NVRbY_JEXyEuT9DcwXc=
+- CHR-319: 3EO9ezsVqGqT14mtQwoN5J1djyIZiyiXbpOP5Vc1DtU=
+- CHR-320: y3cFPvazfVssvKDCM4wRAhozgTHpNqPwTUy9Ame2bKk=
+- CHR-321: 9RHBFGJtIbKL50QrB9U86yXzAYChqe1l281VaA92BbE=
+- CHR-322: vbazWAEm0vaHIZiimS5lz8ZJRYO-wqtm4J9TN6Ab09Y=
+- CHR-323: YJozjQS2jCzHrU8N23Z-pXVSg5R8Mg0P2Ip4lx5Pi0Y=
+- CHR-324: 7jbf1sCSRykIaxBZ0FNvkFv3iRN5n-FSvEV5ZCBElVs=
+- CHR-325: SBwsv7DsVsKDV9wpm-e0aZjg-gkAkrxuvpz-cviiSbw=
+- CHR-1001: 5GWZz8tWBpw5YMmXfwkaVQhaNT8ZLMwCHFYNQIZFxJg=
+- CHR-1002: 9UE4Mx7OQzywDY5sXFyy_FI01M5XGhj3eKCn49T7YWs=
+- CHR-1003: BA79Q6yqqFYxfPOTN9N9sSdny8klyMXPSVZOS10VdrU=
+- CHR-1004: xscmNCARyr1bj_DU8_vcjuJbAK4ly6_u09jP6Yn8fik=
+- CHR-1005: mxJWlgllAqc5RwP0f2hBg1bxe4V8jWywdCUZ0QKqEQE=
+- CHR-1006: J9I4tG5CFOzdqWQ8gVm-M9DK0DEQWu9WEkPipH_Z9lY=
+- CHR-1007: _D-2UPYixIlf8TpfRCT0e8E1von-gU-GR18Q5a2dVHE=
+- CHR-1008: lU0RNzer57Cf5tzJZwA1HV_I4Zep9wkrSk4D8tcrwAg=
+- CHR-1009: AH_lzKBv4HCmvMBO5FmFoAGIFbMx1itbi-S5N_d_hEg=
+- CHR-1010: nOg-XlAg70T3wchmOcM-5S_H7Wr5qVGCnu0buadrpBw=
+- CHR-1011: mMBs5Fgw18LzQdHXQZ4w-Pp_VgxIeKeNx7UsEIITAwE=
+- CHR-1012: VsWpfwDRKlK4cx8SoS9Jji2SD1SOmmWSMoKI63Jk8yg=
+- CHR-1013: __5U906rr7FRhODZqEa6vSrKBdBSZp6n_Ekn3e7oZxY=
+- CHR-1014: Y0SyE1VDS0Tbq7AjehN2KoWvppnUY70FdIX_cF9LrjA=
+- CHR-1015: 3XRqJHF2HC8nYrabzUGKrWepVIzNMVljsI4GHoWq2yQ=
+- EXT-504: GcVxG4G4CEueqO7DwzHMNLKv9RIEqMEajoFRXQ5ofB4=
+- EXT-505: 0r7CMFQK4qBHurY92pKQthKToajJpw_TMaLuQRzkcak=
+- EXT-506: bGkFagkd24RqVGhnk351rENvuQe8Wupi_R87kIp0w8M=
+- EXT-601: iQiNNFooXid8nduNUiT5R7S24afvm4aHwcRpPTKUHA0=
+- EXT-602: 6_QzgtDZbDrsvKdZIwHU4sjPHf5QIcQLQ8Av_An7-lw=
+- EXT-603: KhvRrVO_kFVa4SHt3_n54IoEoEQSfeoPSoEHrdBlQuM=
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Maps each resource to its data category and deletion rule, and judges whether its state complies with the required treatment; decides COMPLETE or INCOMPLETE.

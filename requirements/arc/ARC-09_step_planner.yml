@@ -1,0 +1,62 @@
+active: true
+code: code/c09_step_planner/
+derived: false
+header: |
+  Step planner
+interface: policy results -> steps_json
+level: 1.9
+links:
+- CHR-326: bleZOqHi7vi41Hq6w4CAiX1yLuSAALQTe8XL9MXtMeg=
+- CHR-327: 8R_fb6LeDn5YGSMtdy07pXlLYqWL_Zvy2J5iiYSk_MI=
+- CHR-328: nfPFsRzOckvvuQEAhOg5qQPs-WUmTXXS7LjpjqrO3Ec=
+- CHR-329: 1lzwWWRN8yGHz1taWGz0L-s9gs4NyuEDkVh573ltYV8=
+- CHR-330: b5kAFY88I6PEYRHZtYPXQjQ5kjQWUj-VygqhQyMAZuc=
+- CHR-331: jMW2wby9LN9FBaWDM-x6WtEIe6ahiu3KEEPvYc3g7SQ=
+- CHR-406: 8FARg4xJe9lgKX3BP91YetEmRwtx6bs4VDhGGRHTaw4=
+- CHR-407: zWsgQa7AzTsLqKpphi6kQYttqTu9EV-QR4lFjor5ajA=
+- CHR-408: GhcanVmOiE6G18VTznOuwMtJs1iLrjV9QgpieHLiYsU=
+- CHR-409: nrmIuFTUpjMl8ZGLIbQzzxP0DfTY8p1QRew2OiaDCwY=
+- CHR-410: gWh6OwjnUfDb38hPeD6VF3QZXe6SDrqzloIXzQPsYIQ=
+- CHR-411: A0iWq91tC1G-3kJGONlm758_StvQ6sALZdoh8kZaAXM=
+- CHR-412: 0YHLeOZP52tcDPmVUA6FAA5fo8xJEwB_OINPq2R4qis=
+- CHR-413: OdlCTUEDrlT0V03qY2p7mJuZZ1HJ-9Z82sRCj9BhwEU=
+- CHR-414: ZF1McodaDxMn5UjhqOEg5r72CPYkh586Catt0AZiNVQ=
+- CHR-415: WLdXmPMhhdQ9sMf2KejY-CdjcxkWFKECwvvrJDrTGuw=
+- CHR-416: vGUHuOHgIN9Atb7Y1H4Uii7qK9vD01J54yR05sJq2XM=
+- CHR-417: -IaP_D12tTSV_o4l81l178VJzjsOMRqbOrRhUiWm0No=
+- CHR-418: 1NY8aXQOg88lBRUEd3ziX55xz2V40u6S0Lt3TJuXeng=
+- CHR-419: bUHaF1kRMDFTa76QFfYy0_UgFWmAeSdkORmQBy0Sa4k=
+- CHR-420: Po4QNE8X_l4hUEi7AtzCpF_0EQiyeeMJVxmb4SmL8F8=
+- CHR-421: UhGNNidzag7-P025xGW4RA-TXcQxXHhq4J64c2ST-Mg=
+- CHR-422: av1w_Pt6hJxCCJs0TmmdGBsM6YuG8Aw9z6lUwAAbA8k=
+- CHR-423: OqES-kfxoq9KtUXq61RQn7KSqksvetcbOwwGmZ3Ujp0=
+- CHR-424: D2yRFGZCfyS_k6N9YRDrzXhTDO3PdrO0-dI51v-uK7Q=
+- CHR-425: wylt0Vhq_HUgpUwKPg__Hs9t3YdKTsDnkXrpjt1i3RQ=
+- CHR-426: EipZO8H_h8QMyOORqxa_Nd4dp2TzZpgH-wu6JBwZMuQ=
+- CHR-427: pSacJ8HNtQjAlt0EIhdEMvSYBBZJSFCQTI_8-U-Cj-A=
+- CHR-428: OxqFM5Sc3C8fdIcaZCk9Dqu-5VHXef0UZqk0sgq36Rc=
+- CHR-429: lZ1MCRQ8I-w0hH2LHPsXga0Efer-D-jfxQYtwJn3v3Q=
+- CHR-430: _y9wF42wi7i6MHw2dubcUJkNpp5_lXN0ct2I9qmOgZU=
+- CHR-431: OEBbfmo6XZD-Du2wrC_QALkJ8JGOu6ZZ2B0I-OB5ahk=
+- CHR-432: GzinAnJ6VDB5ZJnKge7Bj6bxiHFNrb1U_k26wAMsmDE=
+- CHR-433: AKQcwjunhKOpib_1EqezbOT-EDqavCNMKXDWa1kAQMg=
+- CHR-434: T-8RWSb9AOQZJxewBOc2PQAfXs7Jp712A8vJcUNBlBs=
+- CHR-435: 3IFqTavTDlTKMJSGMb-cZdqdSTbkWebiPox78ypRPQE=
+- CHR-436: u2Usxt5M8dTOnRmMgxgIMVbhLwk4igqpbHkWOr0hhpU=
+- CHR-437: Y8ELg0DDsHTf4Yo7Fi21sDlKj6Wk00v7_MAbwSPyDEw=
+- CHR-439: 5e09YW9KJZNKroGuRrh3sw3A-Ad5QVp5-Y64q1iubxg=
+- EXT-202: cw37d9aVBZl7bM8E-lim5-yHI-K96H9mNX5jTXLg-0Y=
+- EXT-504: GcVxG4G4CEueqO7DwzHMNLKv9RIEqMEajoFRXQ5ofB4=
+- EXT-505: 0r7CMFQK4qBHurY92pKQthKToajJpw_TMaLuQRzkcak=
+- EXT-506: bGkFagkd24RqVGhnk351rENvuQe8Wupi_R87kIp0w8M=
+- EXT-601: iQiNNFooXid8nduNUiT5R7S24afvm4aHwcRpPTKUHA0=
+- EXT-602: 6_QzgtDZbDrsvKdZIwHU4sjPHf5QIcQLQ8Av_An7-lw=
+- EXT-603: KhvRrVO_kFVa4SHt3_n54IoEoEQSfeoPSoEHrdBlQuM=
+- REV-003: 1IRP4WhhXVBB2h_dmOwyvNo2Hw23qEsbDWvbP0_ncac=
+- REV-004: yEdC4WQVMOJC6GH-rDFTjYAugsZQnSgtOik0Gz9QKo0=
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Turns the policy results into the ordered steps of steps_json (findings, remediation, verification), with the evidence rules and the fixed sort order, and serializes them deterministically.

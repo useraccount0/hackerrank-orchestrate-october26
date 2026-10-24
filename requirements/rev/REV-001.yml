@@ -1,0 +1,20 @@
+active: true
+derived: true
+header: |
+  Emails are matched without regard to case
+issues: ''
+kind: functional
+level: 1
+links:
+- CHR-309: JPvNWNTMnSEPhmmsgTSumQSLNfBZ_3PrCmebl-3HiJs=
+modality: shall
+normative: true
+note: ''
+party: system
+rationale: |
+  Revealed in step 3 (data analysis), not stated by any input line. Evidence lists some emails in upper case, for example CHOI.JIHOON94@GMAIL.COM in evidence_03 (customer_account_handover_20261001.txt).
+ref: ''
+reviewed: pending-user-review
+text: |
+  Email addresses shall be compared without regard to upper and lower case when evidence is matched to the subject.
+verification: test

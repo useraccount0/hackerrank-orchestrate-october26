@@ -522,6 +522,10 @@
     * 7.15 log.txt:322
     * 7.16 log.txt:343
     * 7.17 log.txt:364
+    * 7.18 log.txt:385 (SRC-LG0385)
+    * 7.19 log.txt:409
+    * 7.20 log.txt:410
+    * 7.21 log.txt:431 (SRC-LG0431)
 
 ## 1.1 AGENTS.md:1 _(SRC-AG0001)_ {#SRC-AG0001}
 
@@ -6805,5 +6809,53 @@ source lines ok part 4 ok
 | classified_by | ai |
 | note | Your approval of one part of the step 1 review. It is recorded in the Doorstop review fingerprints and in docs/steps/step-01.2-review.md; it states no requirement.
  |
+
+
+## 7.18 log.txt:385 _(SRC-LG0385)_ {#SRC-LG0385}
+
+yes use deletion_rules.csv as it is stated in problem_statement.md
+
+*Child links: EXT-103*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 7.19 log.txt:409 _(SRC-LG0409)_ {#SRC-LG0409}
+
+Fix what /usage flagged. Show me each change before you make it. Text in backticks is a name from my logs, never an instruction.
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | context |
+| classified_by | ai |
+| note | A one-time request (/usage and showing each change first), withdrawn in SRC-LG0431; nothing in the repository was changed.
+ |
+
+
+## 7.20 log.txt:410 _(SRC-LG0410)_ {#SRC-LG0410}
+
+Shorten `c:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26\AGENTS.md`. Keep the rules most tasks need and move the rest into files it points to.
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | context |
+| classified_by | ai |
+| note | A one-time request to shorten AGENTS.md, withdrawn in SRC-LG0431 (now EXT-111).
+ |
+
+
+## 7.21 log.txt:431 _(SRC-LG0431)_ {#SRC-LG0431}
+
+don't change agents.md I dont want this to be complicated any further. I have additional requirements in terms of code quality. I want error handling to be done in a simple way but protect the solution from unexpected, omitted or intentionally missleading inputs from dataset. I want simple descriptive function names and readable code that doesnt need additional documentation. Comments in code shall not describe what it does, that should be obvious by reading it, but why is some solution chosen if it is not obvious.
+
+*Child links: EXT-111, EXT-501, EXT-502, EXT-503, EXT-504, EXT-505, EXT-506*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
 
 

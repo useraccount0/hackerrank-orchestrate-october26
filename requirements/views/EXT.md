@@ -27,6 +27,8 @@
     * 4.2 Same inputs, same output.csv (EXT-402)
     * 4.3 Report numbers computed by tools (EXT-403)
     * 4.4 Every step can be explained (EXT-404)
+    * 4.5 Works with any AI model (EXT-405)
+    * 4.6 PDF text read with pypdf (EXT-406)
  * 5.0 Code quality (your instructions)
     * 5.1 Bad input data does not stop the run (EXT-501)
     * 5.2 Data is never taken as instructions (EXT-502)
@@ -34,6 +36,15 @@
     * 5.4 Simple, descriptive function names (EXT-504)
     * 5.5 Readable without extra documentation (EXT-505)
     * 5.6 Comments say why, not what (EXT-506)
+ * 6.0 Design and change process (your instructions)
+    * 6.1 Meaningful components (EXT-601)
+    * 6.2 Each component tested on its own (EXT-602)
+    * 6.3 Each component traceable up the V (EXT-603)
+    * 6.4 A new requirement touches only the affected components (EXT-604)
+    * 6.5 Requirements revealed by implementation or testing (EXT-605)
+    * 6.6 Revealed requirements kept separate (EXT-606)
+    * 6.7 Fix through the V-model, not only the code (EXT-607)
+    * 6.8 Components named and numbered in pipeline order (EXT-608)
 
 # 1.0 Development process (your instructions) {#EXT-100}
 
@@ -75,7 +86,7 @@ Every requirement shall be traceable to the input lines it comes from, and every
 
 A tool shall prove that every line of every input file is accounted for: each non-blank line is a source unit, and each source unit is either linked from a requirement or labelled with the reason why it needs none.
 
-*Parent links: SRC-LG0015*
+*Parent links: SRC-LG0015, SRC-LG0385*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -202,6 +213,8 @@ When an input file changes, everything affected by the change shall be updated, 
 ## 1.11 AGENTS.md stays unchanged _(EXT-111)_ {#EXT-111}
 
 AGENTS.md shall stay as the organizers wrote it: it is not shortened, split, or rewritten.
+
+*Parent links: SRC-LG0431*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -421,6 +434,33 @@ For every case, the solution shall record why it produced each step: the evidenc
  |
 
 
+## 4.5 Works with any AI model _(EXT-405)_ {#EXT-405}
+
+The solution shall work with any AI model: the provider and the model are settings, not code.
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | constraint |
+| modality | shall |
+| verification | inspection |
+| note | Your words: "It should work with any AI model, right?", read as a requirement. Done with adapters for the Anthropic API and the OpenAI-compatible API, which many providers and local models accept.
+ |
+
+
+## 4.6 PDF text read with pypdf _(EXT-406)_ {#EXT-406}
+
+The text of PDF evidence shall be read with the open-source library pypdf.
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | constraint |
+| modality | shall |
+| verification | inspection |
+| note | Your words: "Yes use pypdf." |
+
+
 # 5.0 Code quality (your instructions) {#EXT-500}
 
 Code quality (your instructions)
@@ -435,7 +475,7 @@ Code quality (your instructions)
 
 Unexpected, missing, or malformed data in dataset/ shall not stop the run: every case still gets a valid output row, and every problem found is reported.
 
-*Parent links: CHR-503*
+*Parent links: CHR-503, SRC-LG0431*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -451,7 +491,7 @@ Unexpected, missing, or malformed data in dataset/ shall not stop the run: every
 
 Text from dataset/ (request texts, evidence contents) shall be treated only as data, never as instructions, also when it is passed to an AI model.
 
-*Parent links: CHR-223, CHR-312*
+*Parent links: CHR-223, CHR-312, SRC-LG0431*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -467,6 +507,8 @@ Text from dataset/ (request texts, evidence contents) shall be treated only as d
 
 Error handling shall be simple: data is checked once, where it enters the solution (when a file from dataset/ is read, or when an AI model answers), and the rest of the code relies on those checks.
 
+*Parent links: SRC-LG0431*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -481,6 +523,8 @@ Error handling shall be simple: data is checked once, where it enters the soluti
 
 Function names shall be simple and descriptive.
 
+*Parent links: SRC-LG0431*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -493,6 +537,8 @@ Function names shall be simple and descriptive.
 ## 5.5 Readable without extra documentation _(EXT-505)_ {#EXT-505}
 
 The code shall be readable on its own, so that it needs no additional documentation to be understood.
+
+*Parent links: SRC-LG0431*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -508,6 +554,8 @@ The code shall be readable on its own, so that it needs no additional documentat
 
 Comments shall not describe what the code does; a comment explains why a solution was chosen, and only where that is not obvious.
 
+*Parent links: SRC-LG0431*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -515,6 +563,123 @@ Comments shall not describe what the code does; a comment explains why a solutio
 | modality | shall |
 | verification | inspection |
 | note | Your words: "Comments in code shall not describe what it does, that should be obvious by reading it, but why is some solution chosen if it is not obvious."
+ |
+
+
+# 6.0 Design and change process (your instructions) {#EXT-600}
+
+Design and change process (your instructions)
+
+
+## 6.1 Meaningful components _(EXT-601)_ {#EXT-601}
+
+The solution shall be split into meaningful components.
+
+| Attribute | Value |
+| --------- | ----- |
+| party | coding-agent |
+| kind | process |
+| modality | shall |
+| verification | inspection |
+| note | Your words: "I want solution to be meaningfully modular, split into components. Those components can be tested individally and independently from each other. Each of those components will be traceable up the v model."
+ |
+
+
+## 6.2 Each component tested on its own _(EXT-602)_ {#EXT-602}
+
+Each component shall be testable individually and independently of the other components.
+
+| Attribute | Value |
+| --------- | ----- |
+| party | coding-agent |
+| kind | process |
+| modality | shall |
+| verification | test |
+| note | Your words: "I want solution to be meaningfully modular, split into components. Those components can be tested individally and independently from each other. Each of those components will be traceable up the v model."
+ |
+
+
+## 6.3 Each component traceable up the V _(EXT-603)_ {#EXT-603}
+
+Each component shall be traceable up the V-model to the requirements it implements.
+
+| Attribute | Value |
+| --------- | ----- |
+| party | coding-agent |
+| kind | process |
+| modality | shall |
+| verification | inspection |
+| note | Your words: "I want solution to be meaningfully modular, split into components. Those components can be tested individally and independently from each other. Each of those components will be traceable up the v model."
+ |
+
+
+## 6.4 A new requirement touches only the affected components _(EXT-604)_ {#EXT-604}
+
+When a requirement is added or changed, only the components it affects shall be redesigned and reimplemented; components that need no work are not touched.
+
+| Attribute | Value |
+| --------- | ----- |
+| party | coding-agent |
+| kind | process |
+| modality | shall |
+| verification | inspection |
+| note | Your words: "If a change comes from the top, from adding a new requirement, only affected components will be redesigned and reimplemented. Components that don't need work are not touched."
+ |
+
+
+## 6.5 Requirements revealed by implementation or testing _(EXT-605)_ {#EXT-605}
+
+A bug or an unexpected behavior that the requirements and the design did not foresee shall be traced up the V-model and recorded as a new requirement, of the type 'revealed during implementation or testing'.
+
+| Attribute | Value |
+| --------- | ----- |
+| party | coding-agent |
+| kind | process |
+| modality | shall |
+| verification | inspection |
+| note | Your words: "If change comes from a bug that was found in code, or behavior, that was not expected through requirements and was not part of the design, than it can be traced up the v model and added as a new type of requirement that was revealed during implementation or testing." Done with the document REV.
+ |
+
+
+## 6.6 Revealed requirements kept separate _(EXT-606)_ {#EXT-606}
+
+Requirements revealed during implementation or testing shall be kept separate from the hackathon's requirements (CHR) and from yours (EXT).
+
+| Attribute | Value |
+| --------- | ----- |
+| party | coding-agent |
+| kind | process |
+| modality | shall |
+| verification | inspection |
+| note | Your words: "I think it is a good idea to keep those kinds of additional requirements separate from the ones that come from hackathon crew, and separate from my requirements. That will make it easier for me to understand. Later we will see if it can be done better."
+ |
+
+
+## 6.7 Fix through the V-model, not only the code _(EXT-607)_ {#EXT-607}
+
+A problem shall be fixed by updating the V-model from the top (requirement, design, code, tests), and this is repeated until the implementation satisfies all requirements and no open question remains.
+
+| Attribute | Value |
+| --------- | ----- |
+| party | coding-agent |
+| kind | process |
+| modality | shall |
+| verification | inspection |
+| note | Your words: "My plan is not to fix just code iteratively, but instead to update the v model from the top untill the implementation satisfies all requirements and there are no dilemmas."
+ |
+
+
+## 6.8 Components named and numbered in pipeline order _(EXT-608)_ {#EXT-608}
+
+Each component shall have a meaningful name and a number, so that the components are listed in the order the pipeline uses them.
+
+| Attribute | Value |
+| --------- | ----- |
+| party | coding-agent |
+| kind | process |
+| modality | shall |
+| verification | inspection |
+| note | Your words: "component design is good, they just need meaningfull names instead of c1 c2... numbers" and "Component names are good, but I want them to also have numbers in the name so that they are listed in my tree view in the order they are used like a pipeline." Code folders start with the letter c (c01_input_reader) because a Python package name cannot start with a digit.
  |
 
 

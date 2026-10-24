@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Each component tested on its own
+issues: ''
+kind: process
+level: 6.2
+links: []
+modality: shall
+normative: true
+note: |
+  Your words: "I want solution to be meaningfully modular, split into components. Those components can be tested individally and independently from each other. Each of those components will be traceable up the v model."
+party: coding-agent
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Each component shall be testable individually and independently of the other components.
+verification: test

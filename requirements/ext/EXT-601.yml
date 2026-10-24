@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Meaningful components
+issues: ''
+kind: process
+level: 6.1
+links: []
+modality: shall
+normative: true
+note: |
+  Your words: "I want solution to be meaningfully modular, split into components. Those components can be tested individally and independently from each other. Each of those components will be traceable up the v model."
+party: coding-agent
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  The solution shall be split into meaningful components.
+verification: inspection

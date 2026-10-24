@@ -1,0 +1,18 @@
+settings:
+  digits: '3'
+  itemformat: yaml
+  parent: CHR
+  prefix: ARC
+  sep: '-'
+attributes:
+  # Custom attributes that are part of an item's fingerprint: changing one of
+  # them marks the item "unreviewed".
+  reviewed:
+  - code
+  - interface
+  - note
+  # Custom attributes shown in published documents.
+  publish:
+  - code
+  - interface
+  - note

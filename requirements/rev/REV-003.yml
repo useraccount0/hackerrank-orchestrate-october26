@@ -1,0 +1,20 @@
+active: true
+derived: true
+header: |
+  An incomplete case verifies every relevant record
+issues: ''
+kind: functional
+level: 3
+links:
+- CHR-434: T-8RWSb9AOQZJxewBOc2PQAfXs7Jp712A8vJcUNBlBs=
+modality: shall
+normative: true
+note: ''
+party: system
+rationale: |
+  Revealed in step 3 (data analysis), not stated by any input line. All 22 INCOMPLETE sample answers do this, for example case_06 verifies account_006 (already absent) next to search_001 (remediated).
+ref: ''
+reviewed: pending-user-review
+text: |
+  In an INCOMPLETE case, the verification phase shall contain one check for every relevant record, data flow, and backup: also for those that already comply and for those that are retained.
+verification: test

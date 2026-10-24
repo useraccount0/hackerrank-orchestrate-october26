@@ -1,0 +1,43 @@
+active: true
+code: code/c01_input_reader/
+derived: false
+header: |
+  Input reader
+interface: dataset/*.csv -> records + list of input problems
+level: 1.1
+links:
+- CHR-201: hNTGPhQoI7f_Dleo3Dw1mJhCiGmuZKymaCXfk2DzICU=
+- CHR-202: -E-qlor1ZsjkHYtHWGUBe_D38xI4ff2pDhNtj0VSPTM=
+- CHR-203: iRINsx2q0vUUoXJwVQVVBJhlO-K5L6vlPR1NTNCe4Do=
+- CHR-204: KSiz41rW1x92VC7HGNteIqAgdQ6W3o7EqyqhGwRyhxI=
+- CHR-205: jcALpcAoxo4UVj6e2TPx-olENpQS6alU2acW34Fe9cY=
+- CHR-206: kGIakZCHDYjKuWB701p8X7GFWxtzOZikxC1UxyqQrfA=
+- CHR-207: 4F6WF5eZXa1g-2kxZ49h9-nb7Nfm67j9oVb5Vg0PwBc=
+- CHR-208: kxox_fbKFI5ZGu5I_7u_J0wmmzJoyNkg1SVjjXUfIXk=
+- CHR-209: VeGTuEDhc6kyRXeoWJX2EvrM_nsYvZTWnShEODNfxns=
+- CHR-210: O6crxN-qdfhRTXg28lTb35q5UIIJ1KvPh1KaNvCEd1k=
+- CHR-211: DQ1102Kn5g8Z29JU1enRhIGxCt18SGBYhePLVDupJ84=
+- CHR-212: SRj3VvpVQdSCX_gyj-EKqjMnquj7JNS4fu-V4c4J880=
+- CHR-213: 5neWEsS42ZlyuYxS8D-wz8jIVhFipxAf30lOZAhMWzE=
+- CHR-214: 2ZN15K8RH1ftOZx5DRDIE9p2RWamE8LTFIwlHrYtF6A=
+- CHR-215: cm3AH0oe8ijdZR3yjOPcFYhjlwi38ShDs_lQ1CjJCLY=
+- CHR-216: q9LUO1DNzZwiL_1UP6lcn1smnCCs6W5WwL4aO8H2MrU=
+- CHR-217: QBctDgcHC_6Jy1GzAxIzdL_DhR8EfOhXizpnrbAw0AQ=
+- CHR-218: NnbTGDqBf1w3APRfCcCKRqaKGbD7XSNdibVd4GCy_0o=
+- CHR-504: 86CIBGojsieZB2GPXvt5tlU42h-LjNqgbKdfru_ONHA=
+- CHR-505: Og97i5IQcRJnzcLiPfvhyEFdsuqe_bBj1CqPnKaSioA=
+- CHR-510: oZtrSTbN7pHW0IXNRvMbzrzRSNULW8NDpdfvDRDYH-M=
+- EXT-501: 1_1CVgack4lrJJOvJPx2-5nBS-DY6fWuzkC-8176IqQ=
+- EXT-503: v8S359ZZpVVg-2RMmLEugXc96NCRb3aaLI7a7Rdr6CM=
+- EXT-504: GcVxG4G4CEueqO7DwzHMNLKv9RIEqMEajoFRXQ5ofB4=
+- EXT-505: 0r7CMFQK4qBHurY92pKQthKToajJpw_TMaLuQRzkcak=
+- EXT-506: bGkFagkd24RqVGhnk351rENvuQe8Wupi_R87kIp0w8M=
+- EXT-601: iQiNNFooXid8nduNUiT5R7S24afvm4aHwcRpPTKUHA0=
+- EXT-602: 6_QzgtDZbDrsvKdZIwHU4sjPHf5QIcQLQ8Av_An7-lw=
+- EXT-603: KhvRrVO_kFVa4SHt3_n54IoEoEQSfeoPSoEHrdBlQuM=
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Reads the CSV files of dataset/ (requests, identities, identity history, activity, deletion rules, evidence manifest, sample requests and answers) into plain records, checks every value where it is read, and reports what it had to skip.

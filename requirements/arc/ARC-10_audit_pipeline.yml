@@ -1,0 +1,40 @@
+active: true
+code: code/c10_audit_pipeline/
+derived: false
+header: |
+  Audit pipeline
+interface: dataset/ -> output.csv + explanations
+level: '1.10'
+links:
+- CHR-101: ey6AJPBCoo7ooMS2dXdYq923akqUre-AFwJPFLYBjx8=
+- CHR-219: C22V51AIi9DEbEG4Wpyg6i8mMukEuZAao6cduUFtKyE=
+- CHR-222: LVdF5iXA2whauSB84tWks0Z-bYtBLkkJ00w948zHqbk=
+- CHR-401: dv2yFbfs2QNf0Kd0bxow47Ss2Rov0QGsbp5bxEa4KqU=
+- CHR-402: 1YzK2fpV1D5G7nBJJ9kg7QAqo9VnWZmULdNo2MDDue0=
+- CHR-403: c4u1lrIB2i6aMPMPvjdaCaPk6T_q2H31YqiNo0-kLK4=
+- CHR-404: 8S58B8GK4MIwH3HDTG1t9Ln1bDEqPz1_9-rTxneQg8I=
+- CHR-405: 4c2-NsMVMjLPd1iZ_tgRB0HbpIwNL8sVp5_3TvvRHEk=
+- CHR-501: XFWWWA0DTScW2iycxolOjmQSsGF6RkoOqp0i7Z81v88=
+- CHR-502: XZ7OjRWYkn4Vdbr2AMrIY_Yzp8tEduSKkwiXc_cAJrQ=
+- CHR-503: 5O_AelA6nJ_fizy7YsTFzCz_Tg4vDmCWnkSv8_F3e5Q=
+- CHR-506: D5zsldwcSYr3nGOuSCYUOQTqMD_5Vf7nbS-2vt9S1p0=
+- CHR-507: 53FjKbOfL7WdmHcpLXBmy_1E7zXvZ8zMlue_V98Bruo=
+- CHR-510: oZtrSTbN7pHW0IXNRvMbzrzRSNULW8NDpdfvDRDYH-M=
+- CHR-512: 6xFAw4b9tXFnW3Fsb8XzsBu3TVcylVWR_U-rjIiaMlI=
+- EXT-203: iX0NwnfUwe7GesTpZ9JzQS-eWswiy5oePwwXTG3gDLI=
+- EXT-401: iqOoXr7TUnZUSeG3q_mGXVYe32SigWJfEe5177Qn0ww=
+- EXT-402: VFah-g0aPJ-GEs4OFX-SiZCxZbfUBN_tVSEjIFCN_DI=
+- EXT-404: VqbPh3WX6uCVBmkM4wFEovJoz8zTqrwSGcGwnXPsvCE=
+- EXT-501: 1_1CVgack4lrJJOvJPx2-5nBS-DY6fWuzkC-8176IqQ=
+- EXT-504: GcVxG4G4CEueqO7DwzHMNLKv9RIEqMEajoFRXQ5ofB4=
+- EXT-505: 0r7CMFQK4qBHurY92pKQthKToajJpw_TMaLuQRzkcak=
+- EXT-506: bGkFagkd24RqVGhnk351rENvuQe8Wupi_R87kIp0w8M=
+- EXT-601: iQiNNFooXid8nduNUiT5R7S24afvm4aHwcRpPTKUHA0=
+- EXT-602: 6_QzgtDZbDrsvKdZIwHU4sjPHf5QIcQLQ8Av_An7-lw=
+- EXT-603: KhvRrVO_kFVa4SHt3_n54IoEoEQSfeoPSoEHrdBlQuM=
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  The entry point code/main.py. Runs the components for every case, writes output.csv at the repository root (one row per case, number order) and a readable explanation of every step beside it.

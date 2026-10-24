@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Revealed requirements kept separate
+issues: ''
+kind: process
+level: 6.6
+links: []
+modality: shall
+normative: true
+note: |
+  Your words: "I think it is a good idea to keep those kinds of additional requirements separate from the ones that come from hackathon crew, and separate from my requirements. That will make it easier for me to understand. Later we will see if it can be done better."
+party: coding-agent
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Requirements revealed during implementation or testing shall be kept separate from the hackathon's requirements (CHR) and from yours (EXT).
+verification: inspection
