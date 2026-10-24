@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Python 3.15 only
+issues: ISS-12
+kind: constraint
+level: 4.7
+links: []
+modality: shall
+normative: true
+note: |
+  Your words: "only python 3.15 will be used for this project" (your decision on ISS-12).
+party: system
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  The project shall use Python 3.15 only: the solution is built, tested, and run with it, and code/pyproject.toml declares no other version.
+verification: inspection

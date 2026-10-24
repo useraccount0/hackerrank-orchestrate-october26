@@ -25,6 +25,7 @@ They are listed here instead of being silently "fixed" inside a requirement.
 | [ISS-09](#iss-09) | The lists of evidence formats differ | CHR-220 | decided: union of the lists |
 | [ISS-10](#iss-10) | `README.md` is both an input and a deliverable | CHR-513, CHR-606, CHR-627 | decided: keep theirs; ours is `code/README.md` |
 | [ISS-11](#iss-11) | A policy rule's condition does not hold: what then? | CHR-1005 to CHR-1008, CHR-1011 to CHR-1015 | open (found in step 2) |
+| [ISS-12](#iss-12) | The tests have run only on Python 3.15 | REV-007, ARC-12 | decided: Python 3.15 only |
 
 ---
 
@@ -289,3 +290,27 @@ anonymize or redact).
 **Proposal:** settle it in step 3 (design) with evidence: find records of these categories in the
 32 sample cases and see which steps the official sample answers contain for them, as was done for
 ISS-02 and ISS-07.
+
+## ISS-12
+
+**The tests have run only on Python 3.15**
+
+Found in step 5, in the recheck of c01.
+
+- `code/pyproject.toml` declares Python 3.10 as the minimum (a design choice of step 4, so that
+  the evaluators' Python is likely to be new enough).
+- Python versions differ in details: `datetime.fromisoformat` accepts more forms from 3.11 on.
+  REV-007 now asks for the same results on every supported version, and c01 no longer depends on
+  that difference.
+- The type checker (mypy) checks the code against the 3.10 library, but no test has run on 3.10:
+  only Python 3.15 is installed here. Rancher Desktop (Docker) is installed but not running.
+
+**Proposal:** before packaging (ARC-12), run all tests once on Python 3.10, in a `python:3.10`
+container (Rancher Desktop must be started; the image is downloaded once, about 50 MB) or with a
+second Python installed next to 3.15. If you prefer neither, the declared minimum can be raised
+to the version that was actually tested.
+
+**Decision (you, 2026-10-25):** "only python 3.15 will be used for this project". Recorded as
+EXT-407. `code/pyproject.toml` now declares Python 3.15 only, and mypy and ruff check against
+3.15. REV-007 stays, but with one supported version it holds without extra code, so c01's own
+written form for times was removed again (its note says so).

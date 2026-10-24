@@ -39,7 +39,7 @@ links:
 - REV-006: 81XtRG-GyybRiCmlvrjAI1ZwSehee2PauwGvN22CxaE=
 normative: true
 note: |
-  Checks: each line is one row; a row has as many values as the header has columns; its id, and every value the record has no meaning without, is not empty; times carry a time zone and are stored as UTC; reported_status, required_action, deletion_status and the sample steps use only the published values; an evidence path leads to a file inside dataset/evidence/. A repeated id keeps the first row.
+  Checks: each line is one row; a row has as many values as the header has columns; its id, and every value the record has no meaning without, is not empty; times carry a time zone and are stored as UTC; reported_status, required_action, deletion_status and the sample steps use only the published values; an evidence path leads to a file inside dataset/evidence/. A repeated id keeps the first row. A column the header lacks counts as empty, and a repeated column is reported; each is reported once per file.
 ref: ''
 reviewed: pending-user-review
 text: |

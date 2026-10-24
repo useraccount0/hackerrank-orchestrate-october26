@@ -535,6 +535,7 @@
     * 7.28 log.txt:584 (SRC-LG0584)
     * 7.29 log.txt:607
     * 7.30 log.txt:630
+    * 7.31 log.txt:652
 
 ## 1.1 AGENTS.md:1 _(SRC-AG0001)_ {#SRC-AG0001}
 
@@ -6971,6 +6972,18 @@ recheck c00
 | disposition | context |
 | classified_by | ai |
 | note | An order to recheck the interfaces in this session; it states no lasting requirement.
+ |
+
+
+## 7.31 log.txt:652 _(SRC-LG0652)_ {#SRC-LG0652}
+
+continue with c01
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | context |
+| classified_by | ai |
+| note | Your go-ahead to start component c01, as EXT-610 asks for; it states no new requirement.
  |
 
 

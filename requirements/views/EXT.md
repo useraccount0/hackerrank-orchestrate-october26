@@ -29,6 +29,7 @@
     * 4.4 Every step can be explained (EXT-404)
     * 4.5 Works with any AI model (EXT-405)
     * 4.6 PDF text read with pypdf (EXT-406)
+    * 4.7 Python 3.15 only (EXT-407)
  * 5.0 Code quality (your instructions)
     * 5.1 Bad input data does not stop the run (EXT-501)
     * 5.2 Data is never taken as instructions (EXT-502)
@@ -466,6 +467,21 @@ The text of PDF evidence shall be read with the open-source library pypdf.
 | modality | shall |
 | verification | inspection |
 | note | Your words: "Yes use pypdf." |
+
+
+## 4.7 Python 3.15 only _(EXT-407)_ {#EXT-407}
+
+The project shall use Python 3.15 only: the solution is built, tested, and run with it, and code/pyproject.toml declares no other version.
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | constraint |
+| modality | shall |
+| verification | inspection |
+| issues | ISS-12 |
+| note | Your words: "only python 3.15 will be used for this project" (your decision on ISS-12).
+ |
 
 
 # 5.0 Code quality (your instructions) {#EXT-500}

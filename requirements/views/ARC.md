@@ -37,7 +37,7 @@ Reads the CSV files of dataset/ (requests, identities, identity history, activit
 | code | code/c01_input_reader/ |
 | interface | DatasetReader: dataset_dir -> Dataset (all CSV records, input problems)
  |
-| note | Checks: each line is one row; a row has as many values as the header has columns; its id, and every value the record has no meaning without, is not empty; times carry a time zone and are stored as UTC; reported_status, required_action, deletion_status and the sample steps use only the published values; an evidence path leads to a file inside dataset/evidence/. A repeated id keeps the first row.
+| note | Checks: each line is one row; a row has as many values as the header has columns; its id, and every value the record has no meaning without, is not empty; times carry a time zone and are stored as UTC; reported_status, required_action, deletion_status and the sample steps use only the published values; an evidence path leads to a file inside dataset/evidence/. A repeated id keeps the first row. A column the header lacks counts as empty, and a repeated column is reported; each is reported once per file.
  |
 
 
@@ -173,7 +173,7 @@ Scores output against the sample answers the way the organizers score (status, s
 
 How the work is done and delivered: the coding agent's rules and log.txt, the requirements and their traceability tools, the README, packaging of code.zip, the submission, and the agent trace. Checked by inspection, not by program tests.
 
-*Parent links: CHR-509, CHR-511, CHR-513, CHR-601, CHR-602, CHR-603, CHR-604, CHR-605, CHR-606, CHR-609, CHR-623, CHR-625, CHR-626, CHR-627, CHR-628, CHR-629, CHR-801, CHR-802, CHR-803, CHR-804, CHR-805, CHR-806, CHR-807, CHR-808, CHR-809, CHR-810, CHR-811, CHR-812, CHR-813, CHR-814, CHR-815, CHR-816, CHR-817, CHR-818, CHR-819, CHR-820, CHR-821, CHR-822, CHR-823, CHR-824, CHR-825, CHR-826, CHR-827, CHR-828, CHR-829, CHR-830, CHR-831, CHR-832, CHR-833, CHR-834, CHR-835, CHR-836, CHR-837, CHR-838, CHR-839, CHR-840, CHR-901, CHR-902, CHR-903, CHR-904, CHR-905, CHR-906, CHR-907, CHR-908, CHR-909, CHR-910, CHR-911, CHR-912, CHR-913, CHR-914, CHR-915, CHR-916, EXT-101, EXT-102, EXT-103, EXT-104, EXT-105, EXT-106, EXT-107, EXT-108, EXT-109, EXT-110, EXT-111, EXT-204, EXT-205, EXT-206, EXT-301, EXT-302, EXT-601, EXT-602, EXT-603, EXT-604, EXT-605, EXT-606, EXT-607, EXT-608, EXT-610, EXT-611*
+*Parent links: CHR-509, CHR-511, CHR-513, CHR-601, CHR-602, CHR-603, CHR-604, CHR-605, CHR-606, CHR-609, CHR-623, CHR-625, CHR-626, CHR-627, CHR-628, CHR-629, CHR-801, CHR-802, CHR-803, CHR-804, CHR-805, CHR-806, CHR-807, CHR-808, CHR-809, CHR-810, CHR-811, CHR-812, CHR-813, CHR-814, CHR-815, CHR-816, CHR-817, CHR-818, CHR-819, CHR-820, CHR-821, CHR-822, CHR-823, CHR-824, CHR-825, CHR-826, CHR-827, CHR-828, CHR-829, CHR-830, CHR-831, CHR-832, CHR-833, CHR-834, CHR-835, CHR-836, CHR-837, CHR-838, CHR-839, CHR-840, CHR-901, CHR-902, CHR-903, CHR-904, CHR-905, CHR-906, CHR-907, CHR-908, CHR-909, CHR-910, CHR-911, CHR-912, CHR-913, CHR-914, CHR-915, CHR-916, EXT-101, EXT-102, EXT-103, EXT-104, EXT-105, EXT-106, EXT-107, EXT-108, EXT-109, EXT-110, EXT-111, EXT-204, EXT-205, EXT-206, EXT-301, EXT-302, EXT-407, EXT-601, EXT-602, EXT-603, EXT-604, EXT-605, EXT-606, EXT-607, EXT-608, EXT-610, EXT-611, REV-007*
 
 | Attribute | Value |
 | --------- | ----- |

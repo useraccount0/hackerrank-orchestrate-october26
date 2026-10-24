@@ -1,0 +1,18 @@
+active: true
+classified_by: ai
+derived: false
+disposition: context
+file: log.txt
+header: |
+  log.txt:652
+level: 7.31
+line_end: '652'
+line_start: '652'
+links: []
+normative: false
+note: |
+  Your go-ahead to start component c01, as EXT-610 asks for; it states no new requirement.
+ref: ''
+reviewed: pending-user-review
+text: |
+  continue with c01

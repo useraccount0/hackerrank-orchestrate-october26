@@ -6,10 +6,20 @@ import io
 import json
 import tempfile
 import unittest
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
-from c00_interfaces.records import Dataset, Step
+from c00_interfaces.records import (
+    Activity,
+    CaseAnswer,
+    Dataset,
+    DeletionRule,
+    EvidenceFile,
+    IdentityChange,
+    IdentityRecord,
+    Request,
+    Step,
+)
 from c01_input_reader.input_reader import read_dataset
 
 REAL_DATASET = Path(__file__).resolve().parents[2] / "dataset"
@@ -22,6 +32,10 @@ REQUEST_02 = ("case_02,bo@example.com,2026-08-19T10:00:00Z,NOT_STARTED,2026-08-2
 VERIFY_STEP = Step(1, "VERIFICATION", "account_service", "account_001", "VERIFY_RECORD_ABSENT", "ABSENT", "evidence_01")
 STEP = dataclasses.asdict(VERIFY_STEP)
 EVIDENCE_HEADER = "file_id,file_path,origin,captured_at\n"
+
+
+def utc(text: str) -> datetime:
+    return datetime.fromisoformat(text).replace(tzinfo=UTC)
 
 
 def answer_line(case_id: str, status: str, steps: object) -> str:
@@ -65,7 +79,7 @@ class ReadsTheRealDataset(unittest.TestCase):
                   len(dataset.identities), len(dataset.identity_changes), len(dataset.activities),
                   len(dataset.rules), len(dataset.evidence_files)]
         self.assertEqual(counts, [518, 32, 32, 850, 306, 4011, 15, 94])
-        self.assertTrue(all(request.audit_at.tzinfo == timezone.utc for request in dataset.requests))
+        self.assertTrue(all(request.audit_at.tzinfo == UTC for request in dataset.requests))
 
 
 class SmallDatasetTest(unittest.TestCase):
@@ -84,18 +98,32 @@ class SmallDatasetTest(unittest.TestCase):
 
 
 class ReadsValuesIntoRecords(SmallDatasetTest):
-    def test_the_small_dataset_reads_without_problems(self) -> None:
+    def test_each_value_lands_in_its_field(self) -> None:
         dataset = read_dataset(self.folder)
         self.assertEqual(dataset.problems, ())
-        self.assertEqual([request.case_id for request in dataset.requests], ["case_01", "case_02"])
-        self.assertEqual(dataset.sample_answers[0].steps, (VERIFY_STEP,))
+        self.assertEqual(dataset.requests[0], Request("case_01", "ana@example.com", utc("2026-08-18T09:14:00"),
+                                                      "COMPLETE", utc("2026-08-20T16:42:00"),
+                                                      utc("2026-09-03T11:30:00"), "Delete it, please."))
+        self.assertEqual(dataset.sample_requests, dataset.requests[:1])
+        self.assertEqual(dataset.sample_answers, (CaseAnswer("case_01", "COMPLETE", (VERIFY_STEP,)),))
+        self.assertEqual(dataset.identities, (IdentityRecord("user_01", "Ana Example", "ana@example.com", "+1 555 0100",
+                                                             "0a1b2c", utc("2026-05-28T04:03:00")),))
+        self.assertEqual(dataset.identity_changes, (IdentityChange("audit_01", "user_01", utc("2025-01-01T00:00:00"),
+                                                                   "phone", "+1 555 0199", "+1 555 0100"),))
+        self.assertEqual(dataset.activities, (Activity("activity_01", utc("2026-08-20T16:40:00"), "DELETE_RECORD",
+                                                       "deletion_worker", "account_service", "account_001", "SUCCESS",
+                                                       "Deleted account_001."),))
+        self.assertEqual(dataset.rules, (DeletionRule("rule_01", "USER_PROFILE", "Always", "DELETE"),))
+        self.assertEqual(dataset.evidence_files, (EvidenceFile("evidence_01", "evidence/logs/events.log",
+                                                               "central_observability_export",
+                                                               utc("2026-09-01T12:00:00")),))
 
     def test_times_become_utc_and_spaces_around_values_are_trimmed(self) -> None:
         row = (" case_03 , cy@example.com ,2026-08-18T11:14:00+02:00,COMPLETE,2026-08-20T16:42:00Z,"
                "2026-09-03T11:30:00Z,x\n")
         request = self.read_with("deletion_requests.csv", REQUEST_HEADER + row).requests[0]
         self.assertEqual((request.case_id, request.email), ("case_03", "cy@example.com"))
-        self.assertEqual(request.requested_at, datetime(2026, 8, 18, 9, 14, tzinfo=timezone.utc))
+        self.assertEqual(request.requested_at, datetime(2026, 8, 18, 9, 14, tzinfo=UTC))
 
     def test_an_empty_request_text_is_kept_for_the_classifier_to_judge(self) -> None:
         row = REQUEST_02.replace("Erase my data.", "")
@@ -130,6 +158,14 @@ class SkipsAndReportsBadRows(SmallDatasetTest):
         self.assertEqual(dataset.unreadable_case_ids, ("case_02",))
         self.assertEqual(problem_texts(dataset), ["deletion_requests.csv line 2: audit_at has no time zone"])
 
+    def test_a_time_that_leaves_the_calendar_in_utc_does_not_stop_the_run(self) -> None:
+        dataset = self.read_with("deletion_requests.csv", REQUEST_HEADER
+                                 + REQUEST_01.replace("2026-08-18T09:14:00Z", "0001-01-01T00:00:00+05:00")
+                                 + REQUEST_02.replace("2026-09-04T10:00:00Z", "9999-12-31T23:59:59-05:00"))
+        self.assertEqual(dataset.unreadable_case_ids, ("case_01", "case_02"))
+        self.assertEqual([problem.message for problem in dataset.problems],
+                         ["requested_at is not a possible time in UTC", "audit_at is not a possible time in UTC"])
+
     def test_an_unknown_reported_status_is_rejected(self) -> None:
         dataset = self.read_with("deletion_requests.csv", REQUEST_HEADER + REQUEST_02.replace("NOT_STARTED", "DONE"))
         self.assertEqual(dataset.unreadable_case_ids, ("case_02",))
@@ -152,6 +188,11 @@ class SkipsAndReportsBadRows(SmallDatasetTest):
         self.assertEqual(problem_texts(dataset),
                          ["deletion_requests.csv line 2: has 8 values, but the header has 7 columns"])
 
+    def test_a_space_before_a_quoted_value_is_accepted(self) -> None:
+        dataset = self.read_with("deletion_requests.csv", REQUEST_HEADER
+                                 + REQUEST_02.replace(",Erase my data.", ", \"Erase, my data.\""))
+        self.assertEqual([request.request_text for request in dataset.requests], ["Erase, my data."])
+
     def test_a_stray_quote_cannot_swallow_the_rows_after_it(self) -> None:
         dataset = self.read_with("deletion_requests.csv", REQUEST_HEADER
                                  + REQUEST_01.replace("\"Delete it, please.\"", "\"Delete it") + REQUEST_02)
@@ -164,11 +205,28 @@ class SkipsAndReportsBadRows(SmallDatasetTest):
         self.assertEqual(problem_texts(dataset),
                          ["deletion_requests.csv line 3: repeats case_id case_02; the first row is kept"])
 
-    def test_a_missing_column_is_reported_and_its_cases_are_kept(self) -> None:
+    def test_a_missing_required_column_is_reported_and_its_cases_are_kept(self) -> None:
         dataset = self.read_with("deletion_requests.csv", REQUEST_HEADER.replace(",audit_at", "")
                                  + REQUEST_02.replace(",2026-09-04T10:00:00Z", ""))
         self.assertEqual(dataset.unreadable_case_ids, ("case_02",))
-        self.assertEqual(problem_texts(dataset), ["deletion_requests.csv line 2: has no audit_at column"])
+        self.assertEqual(problem_texts(dataset),
+                         ["deletion_requests.csv line 1: has no column audit_at; its values count as empty",
+                          "deletion_requests.csv line 2: audit_at is empty"])
+
+    def test_a_missing_column_that_may_be_empty_costs_no_rows(self) -> None:
+        header, row = SMALL_DATASET["system_activity.csv"].splitlines()
+        dataset = self.read_with("system_activity.csv", header.replace(",details", "") + "\n"
+                                 + row.replace(",Deleted account_001.", "") + "\n")
+        self.assertEqual([(activity.activity_id, activity.details) for activity in dataset.activities],
+                         [("activity_01", "")])
+        self.assertEqual(problem_texts(dataset),
+                         ["system_activity.csv line 1: has no column details; its values count as empty"])
+
+    def test_a_repeated_column_is_reported(self) -> None:
+        dataset = self.read_with("deletion_requests.csv", REQUEST_HEADER.replace("\n", ",audit_at\n")
+                                 + REQUEST_02.replace("\n", ",2030-01-01T00:00:00Z\n"))
+        self.assertEqual(problem_texts(dataset),
+                         ["deletion_requests.csv line 1: repeats column audit_at; only the last copy is read"])
 
     def test_sample_answers_must_follow_the_published_step_format(self) -> None:
         broken_answers = [

@@ -6,6 +6,7 @@
  * 4 The owning service is reported, not the copy's location (REV-004)
  * 5 A complete listing without the record proves its absence (REV-005)
  * 6 A request row that cannot be read still gets its output row (REV-006)
+ * 7 The same files are read the same way on every supported Python version (REV-007)
 
 # 1 Emails are matched without regard to case _(REV-001)_ {#REV-001}
 
@@ -100,6 +101,25 @@ When a row of deletion_requests.csv fails the input checks, the row shall be ski
 | modality | shall |
 | verification | test |
 | rationale | Revealed in step 5, while designing the input reader's checks: skipping a bad row, as for the other files, would silently drop its case from output.csv, and a submission without that row breaks CHR-403. The real dataset has no such row; the protection is for unexpected or misleading input (EXT-501).
+ |
+
+
+# 7 The same files are read the same way on every supported Python version _(REV-007)_ {#REV-007}
+
+The solution shall give the same results on every Python version it declares to support; where the standard library behaves differently between these versions (for example, in which written forms of a time datetime.fromisoformat accepts), the solution shall use its own explicit rule instead.
+
+*Parent links: CHR-502, EXT-402*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | functional |
+| modality | shall |
+| verification | test |
+| issues | ISS-12 |
+| rationale | Revealed in step 5, in the recheck of c01: on Python 3.11 and newer, datetime.fromisoformat accepts forms such as 20260904T100000Z that Python 3.10 rejects. code/pyproject.toml declares Python 3.10 as the minimum, so one file could be read differently depending on who runs the solution. EXT-402 covers repeated runs, not different Python versions. The tests have run only on Python 3.15 so far (ISS-12).
+ |
+| note | Since your decision on ISS-12 (EXT-407), the solution supports one Python version, 3.15, so this holds without extra code: c01's own written form for times was removed again, and code/pyproject.toml declares only 3.15.
  |
 
 

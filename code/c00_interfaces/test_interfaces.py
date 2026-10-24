@@ -3,7 +3,7 @@
 import dataclasses
 import re
 import unittest
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from c00_interfaces.components import ModelError
@@ -11,7 +11,7 @@ from c00_interfaces.fakes import FakeModelGateway, fake_components
 from c00_interfaces.records import OPERATIONS, PHASES, CaseAnswer, CaseVerdict, ModelQuestion, Observation
 
 PROBLEM_STATEMENT = Path(__file__).resolve().parents[2] / "problem_statement.md"
-NOON = datetime(2026, 9, 3, 12, 0, tzinfo=timezone.utc)
+NOON = datetime(2026, 9, 3, 12, 0, tzinfo=UTC)
 
 
 class InterfacesCanBeMocked(unittest.TestCase):
