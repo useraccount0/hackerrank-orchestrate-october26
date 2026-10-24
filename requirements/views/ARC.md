@@ -18,7 +18,7 @@
 
 The data records the components exchange (code/c00_interfaces/records.py) and the call signature of every component (code/c00_interfaces/components.py). Components depend only on these, never on each other's code; the audit pipeline receives the components as one bundle, so a test can replace any of them, and the model gateway, by a fake (code/c00_interfaces/fakes.py).
 
-*Parent links: EXT-402, EXT-501, EXT-504, EXT-505, EXT-506, EXT-602, EXT-603, EXT-609, REV-005*
+*Parent links: EXT-402, EXT-501, EXT-504, EXT-505, EXT-506, EXT-602, EXT-603, EXT-609, REV-005, REV-006*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -28,14 +28,16 @@ The data records the components exchange (code/c00_interfaces/records.py) and th
 
 ## 1.2 Input reader _(ARC-01_input_reader)_ {#ARC-01_input_reader}
 
-Reads the CSV files of dataset/ (requests, identities, identity history, activity, deletion rules, evidence manifest, sample requests and answers) into plain records, checks every value where it is read, and reports what it had to skip.
+Reads the CSV files of dataset/ (requests, identities, identity history, activity, deletion rules, evidence manifest, sample requests and answers) into plain records, checks every value where it is read, and reports what it had to skip. Of a request row it had to skip, it still passes on the case_id, so that the case gets its output row (REV-006).
 
-*Parent links: CHR-201, CHR-202, CHR-203, CHR-204, CHR-205, CHR-206, CHR-207, CHR-208, CHR-209, CHR-210, CHR-211, CHR-212, CHR-213, CHR-214, CHR-215, CHR-216, CHR-217, CHR-218, CHR-504, CHR-505, CHR-510, EXT-501, EXT-503, EXT-504, EXT-505, EXT-506, EXT-601, EXT-602, EXT-603*
+*Parent links: CHR-201, CHR-202, CHR-203, CHR-204, CHR-205, CHR-206, CHR-207, CHR-208, CHR-209, CHR-210, CHR-211, CHR-212, CHR-213, CHR-214, CHR-215, CHR-216, CHR-217, CHR-218, CHR-504, CHR-505, CHR-510, EXT-501, EXT-503, EXT-504, EXT-505, EXT-506, EXT-601, EXT-602, EXT-603, REV-006*
 
 | Attribute | Value |
 | --------- | ----- |
 | code | code/c01_input_reader/ |
 | interface | DatasetReader: dataset_dir -> Dataset (all CSV records, input problems)
+ |
+| note | Checks: each line is one row; a row has as many values as the header has columns; its id, and every value the record has no meaning without, is not empty; times carry a time zone and are stored as UTC; reported_status, required_action, deletion_status and the sample steps use only the published values; an evidence path leads to a file inside dataset/evidence/. A repeated id keeps the first row.
  |
 
 
@@ -144,9 +146,9 @@ Turns the policy results into the ordered steps of steps_json (findings, remedia
 
 ## 1.11 Audit pipeline _(ARC-10_audit_pipeline)_ {#ARC-10_audit_pipeline}
 
-The entry point code/main.py. Runs the components for every case, writes output.csv at the repository root (one row per case, number order) and a readable explanation of every step beside it.
+The entry point code/main.py. Runs the components for every case, writes output.csv at the repository root (one row per case, number order, also for a case whose request row could not be read: REV-006) and a readable explanation of every step beside it.
 
-*Parent links: CHR-101, CHR-219, CHR-222, CHR-401, CHR-402, CHR-403, CHR-404, CHR-405, CHR-501, CHR-502, CHR-503, CHR-506, CHR-507, CHR-510, CHR-512, EXT-203, EXT-401, EXT-402, EXT-404, EXT-501, EXT-504, EXT-505, EXT-506, EXT-601, EXT-602, EXT-603*
+*Parent links: CHR-101, CHR-219, CHR-222, CHR-401, CHR-402, CHR-403, CHR-404, CHR-405, CHR-501, CHR-502, CHR-503, CHR-506, CHR-507, CHR-510, CHR-512, EXT-203, EXT-401, EXT-402, EXT-404, EXT-501, EXT-504, EXT-505, EXT-506, EXT-601, EXT-602, EXT-603, REV-006*
 
 | Attribute | Value |
 | --------- | ----- |

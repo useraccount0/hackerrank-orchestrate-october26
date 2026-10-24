@@ -5,6 +5,7 @@
  * 3 An incomplete case verifies every relevant record (REV-003)
  * 4 The owning service is reported, not the copy's location (REV-004)
  * 5 A complete listing without the record proves its absence (REV-005)
+ * 6 A request row that cannot be read still gets its output row (REV-006)
 
 # 1 Emails are matched without regard to case _(REV-001)_ {#REV-001}
 
@@ -83,6 +84,22 @@ When an evidence item lists all records of a store (a snapshot table or collecti
 | modality | shall |
 | verification | test |
 | rationale | Revealed in step 4, when the interfaces were rechecked against the 32 sample answers: 4 cited verification steps prove ABSENT with evidence that never names the record (case_01, case_02, case_04: evidence_54, an SQL snapshot of the customer_profiles tables; case_31: evidence_51, a JSON snapshot bundle). Found with a script that checks whether each cited evidence file contains the step's resource_id.
+ |
+
+
+# 6 A request row that cannot be read still gets its output row _(REV-006)_ {#REV-006}
+
+When a row of deletion_requests.csv fails the input checks, the row shall be skipped and reported, but its case_id, when readable, shall still be passed on, so that the case gets its output row.
+
+*Parent links: CHR-403, CHR-503, EXT-501*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | functional |
+| modality | shall |
+| verification | test |
+| rationale | Revealed in step 5, while designing the input reader's checks: skipping a bad row, as for the other files, would silently drop its case from output.csv, and a submission without that row breaks CHR-403. The real dataset has no such row; the protection is for unexpected or misleading input (EXT-501).
  |
 
 

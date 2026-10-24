@@ -533,6 +533,8 @@
     * 7.26 log.txt:541 (SRC-LG0541)
     * 7.27 log.txt:562
     * 7.28 log.txt:584 (SRC-LG0584)
+    * 7.29 log.txt:607
+    * 7.30 log.txt:630
 
 ## 1.1 AGENTS.md:1 _(SRC-AG0001)_ {#SRC-AG0001}
 
@@ -6946,5 +6948,29 @@ Now define interfaces between components, so that tests can mock them, and then 
 | --------- | ----- |
 | disposition | requirement |
 | classified_by | ai |
+
+
+## 7.29 log.txt:607 _(SRC-LG0607)_ {#SRC-LG0607}
+
+recheck c00
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | context |
+| classified_by | ai |
+| note | An order to recheck the interfaces in this session; it states no lasting requirement.
+ |
+
+
+## 7.30 log.txt:630 _(SRC-LG0630)_ {#SRC-LG0630}
+
+recheck c00
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | context |
+| classified_by | ai |
+| note | An order to recheck the interfaces in this session; it states no lasting requirement.
+ |
 
 

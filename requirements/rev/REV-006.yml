@@ -1,0 +1,22 @@
+active: true
+derived: true
+header: |
+  A request row that cannot be read still gets its output row
+issues: ''
+kind: functional
+level: 6
+links:
+- CHR-403: c4u1lrIB2i6aMPMPvjdaCaPk6T_q2H31YqiNo0-kLK4=
+- CHR-503: 5O_AelA6nJ_fizy7YsTFzCz_Tg4vDmCWnkSv8_F3e5Q=
+- EXT-501: 1_1CVgack4lrJJOvJPx2-5nBS-DY6fWuzkC-8176IqQ=
+modality: shall
+normative: true
+note: ''
+party: system
+rationale: |
+  Revealed in step 5, while designing the input reader's checks: skipping a bad row, as for the other files, would silently drop its case from output.csv, and a submission without that row breaks CHR-403. The real dataset has no such row; the protection is for unexpected or misleading input (EXT-501).
+ref: ''
+reviewed: pending-user-review
+text: |
+  When a row of deletion_requests.csv fails the input checks, the row shall be skipped and reported, but its case_id, when readable, shall still be passed on, so that the case gets its output row.
+verification: test

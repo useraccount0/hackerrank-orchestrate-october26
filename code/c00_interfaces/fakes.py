@@ -46,7 +46,7 @@ class FakeModelGateway:
                      for question in self.questions)
 
 
-EMPTY_DATASET = Dataset((), (), (), (), (), (), (), (), ())
+EMPTY_DATASET = Dataset((), (), (), (), (), (), (), (), (), ())
 
 
 def read_empty_dataset(dataset_dir: Path) -> Dataset:

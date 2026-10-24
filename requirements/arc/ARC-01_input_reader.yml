@@ -36,9 +36,11 @@ links:
 - EXT-601: iQiNNFooXid8nduNUiT5R7S24afvm4aHwcRpPTKUHA0=
 - EXT-602: 6_QzgtDZbDrsvKdZIwHU4sjPHf5QIcQLQ8Av_An7-lw=
 - EXT-603: KhvRrVO_kFVa4SHt3_n54IoEoEQSfeoPSoEHrdBlQuM=
+- REV-006: 81XtRG-GyybRiCmlvrjAI1ZwSehee2PauwGvN22CxaE=
 normative: true
-note: ''
+note: |
+  Checks: each line is one row; a row has as many values as the header has columns; its id, and every value the record has no meaning without, is not empty; times carry a time zone and are stored as UTC; reported_status, required_action, deletion_status and the sample steps use only the published values; an evidence path leads to a file inside dataset/evidence/. A repeated id keeps the first row.
 ref: ''
 reviewed: pending-user-review
 text: |
-  Reads the CSV files of dataset/ (requests, identities, identity history, activity, deletion rules, evidence manifest, sample requests and answers) into plain records, checks every value where it is read, and reports what it had to skip.
+  Reads the CSV files of dataset/ (requests, identities, identity history, activity, deletion rules, evidence manifest, sample requests and answers) into plain records, checks every value where it is read, and reports what it had to skip. Of a request row it had to skip, it still passes on the case_id, so that the case gets its output row (REV-006).

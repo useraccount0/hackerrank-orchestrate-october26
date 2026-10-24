@@ -239,6 +239,8 @@ The system shall be an AI-powered deletion-audit agent that audits, for each req
 
 *Parent links: SRC-AG0029, SRC-PS0007, SRC-RM0005*
 
+*Child links: ARC-02_model_gateway, ARC-10_audit_pipeline*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -253,6 +255,8 @@ The audit shall cover every place where personal data can remain although a dele
 
 *Parent links: SRC-AG0031, SRC-PS0005, SRC-RM0007*
 
+*Child links: ARC-06_resource_finder*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -266,6 +270,8 @@ The audit shall cover every place where personal data can remain although a dele
 The audit shall take into account that active synchronization and restore processes can copy or recreate data that was already deleted from its original source.
 
 *Parent links: SRC-AG0031, SRC-PS0005, SRC-RM0007*
+
+*Child links: ARC-06_resource_finder*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -286,6 +292,8 @@ The system shall read its input files from the dataset/ directory, which holds a
 
 *Parent links: SRC-AG0173, SRC-AG0321, SRC-PS0033, SRC-RM0028, SRC-RM0030, SRC-RM0045*
 
+*Child links: ARC-01_input_reader*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -299,6 +307,8 @@ The system shall read its input files from the dataset/ directory, which holds a
 dataset/ contains deletion_requests.csv, sample_deletion_requests.csv, sample_output.csv, user_identities.csv, user_audit_log.csv, system_activity.csv, deletion_rules.csv, evidence_files.csv, output.csv, and the folder evidence/ with the subfolders databases/, documents/, images/, logs/, and records/.
 
 *Parent links: SRC-AG0175, SRC-RM0045*
+
+*Child links: ARC-01_input_reader*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -314,6 +324,8 @@ dataset/deletion_requests.csv contains the 518 evaluation requests that must be 
 
 *Parent links: SRC-AG0194, SRC-PS0037, SRC-PS0051, SRC-RM0049*
 
+*Child links: ARC-01_input_reader*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -327,6 +339,8 @@ dataset/deletion_requests.csv contains the 518 evaluation requests that must be 
 Each request has the fields case_id, email, requested_at, reported_status, reported_at, audit_at, request_text, in this order.
 
 *Parent links: SRC-AG0210, SRC-AG0212, SRC-PS0051, SRC-PS0053*
+
+*Child links: ARC-01_input_reader*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -342,6 +356,8 @@ case_id uniquely identifies a request and its output row.
 
 *Parent links: SRC-AG0216*
 
+*Child links: ARC-01_input_reader*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -355,6 +371,8 @@ case_id uniquely identifies a request and its output row.
 email is the identity supplied with the request; it may be a current or a historical email address.
 
 *Parent links: SRC-AG0217*
+
+*Child links: ARC-01_input_reader*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -370,6 +388,8 @@ requested_at is the time when the request was submitted.
 
 *Parent links: SRC-AG0218*
 
+*Child links: ARC-01_input_reader*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -383,6 +403,8 @@ requested_at is the time when the request was submitted.
 reported_status is the existing deletion workflow's claim and is one of COMPLETE, PARTIALLY_COMPLETE, or NOT_STARTED; it is not proof of the true state.
 
 *Parent links: SRC-AG0219, SRC-PS0057*
+
+*Child links: ARC-01_input_reader, ARC-07_state_reconstructor*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -398,6 +420,8 @@ reported_at is the time when the workflow's claim was reported.
 
 *Parent links: SRC-AG0220*
 
+*Child links: ARC-01_input_reader*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -411,6 +435,8 @@ reported_at is the time when the workflow's claim was reported.
 audit_at is the cutoff time for which the answer of the case is required.
 
 *Parent links: SRC-AG0221*
+
+*Child links: ARC-01_input_reader*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -426,6 +452,8 @@ request_text contains the person's request and may be written in different langu
 
 *Parent links: SRC-AG0222*
 
+*Child links: ARC-01_input_reader*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -439,6 +467,8 @@ request_text contains the person's request and may be written in different langu
 dataset/sample_deletion_requests.csv contains 32 public sample requests.
 
 *Parent links: SRC-AG0195, SRC-PS0038, SRC-RM0050*
+
+*Child links: ARC-01_input_reader*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -454,6 +484,8 @@ dataset/sample_output.csv contains the correct outputs for the sample requests a
 
 *Parent links: SRC-AG0195, SRC-PS0039, SRC-RM0051*
 
+*Child links: ARC-01_input_reader, ARC-11_evaluator*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -467,6 +499,8 @@ dataset/sample_output.csv contains the correct outputs for the sample requests a
 dataset/user_identities.csv contains the current identity snapshot for each user: the stable user_id, name, email, phone, email hash, and the snapshot update time.
 
 *Parent links: SRC-AG0196, SRC-PS0040, SRC-RM0052*
+
+*Child links: ARC-01_input_reader*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -482,6 +516,8 @@ dataset/user_audit_log.csv records historical changes to identity fields.
 
 *Parent links: SRC-AG0197, SRC-PS0041, SRC-RM0053*
 
+*Child links: ARC-01_input_reader*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -495,6 +531,8 @@ dataset/user_audit_log.csv records historical changes to identity fields.
 dataset/system_activity.csv is a global stream of deletion, synchronization, export, backup, restore, indexing, audit, and related operational events across services and data processes; its rows may describe unrelated people.
 
 *Parent links: SRC-AG0198, SRC-PS0042, SRC-RM0054*
+
+*Child links: ARC-01_input_reader*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -510,6 +548,8 @@ dataset/deletion_rules.csv defines the required action (treatment) for each data
 
 *Parent links: SRC-AG0199, SRC-PS0043, SRC-RM0055*
 
+*Child links: ARC-01_input_reader, ARC-08_policy_checker*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -523,6 +563,8 @@ dataset/deletion_rules.csv defines the required action (treatment) for each data
 dataset/evidence_files.csv is the manifest of the evidence files under dataset/evidence/: it maps each file_id to its path, source origin, and capture time; it does not say which case or user a file concerns.
 
 *Parent links: SRC-AG0200, SRC-PS0044, SRC-RM0056*
+
+*Child links: ARC-01_input_reader, ARC-03_evidence_reader*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -538,6 +580,8 @@ dataset/output.csv is a blank output template provided as a reference; it is not
 
 *Parent links: SRC-AG0201, SRC-PS0045, SRC-RM0040, SRC-RM0057*
 
+*Child links: ARC-10_audit_pipeline*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -551,6 +595,8 @@ dataset/output.csv is a blank output template provided as a reference; it is not
 Evidence under dataset/evidence/ may be PDF documents, images (application screenshots), logs, JSON, plain-text records, and SQLite-compatible SQL snapshot exports.
 
 *Parent links: SRC-AG0202, SRC-PS0047, SRC-RM0059*
+
+*Child links: ARC-03_evidence_reader*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -569,6 +615,8 @@ SQL evidence files are readable text and can be executed with SQLite; a capture 
 
 *Parent links: SRC-AG0202, SRC-AG0312, SRC-RM0059*
 
+*Child links: ARC-03_evidence_reader*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -583,6 +631,8 @@ Only deletion_requests.csv requires predictions (answers); the other participant
 
 *Parent links: SRC-AG0204, SRC-RM0061*
 
+*Child links: ARC-10_audit_pipeline*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -596,6 +646,8 @@ Only deletion_requests.csv requires predictions (answers); the other participant
 Global data (activity and evidence) can contain decoys and records about unrelated people.
 
 *Parent links: SRC-AG0198, SRC-AG0204*
+
+*Child links: ARC-06_resource_finder*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -616,6 +668,8 @@ For each request, the system shall first determine from request_text whether the
 
 *Parent links: SRC-AG0029, SRC-AG0222, SRC-AG0296, SRC-RM0009*
 
+*Child links: ARC-04_request_classifier*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -629,6 +683,8 @@ For each request, the system shall first determine from request_text whether the
 The system shall classify a request for access, correction, export, marketing opt-out, or any other non-deletion action as NOT_APPLICABLE, even if other fields of the request resemble a deletion case.
 
 *Parent links: SRC-AG0296, SRC-PS0019*
+
+*Child links: ARC-04_request_classifier*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -644,6 +700,8 @@ The system shall determine whether a request authorizes deletion also when the r
 
 *Parent links: SRC-AG0222*
 
+*Child links: ARC-04_request_classifier*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -657,6 +715,8 @@ The system shall determine whether a request authorizes deletion also when the r
 For an authorized deletion, the system shall resolve the subject's current and historical identifiers.
 
 *Parent links: SRC-AG0029, SRC-AG0297, SRC-PS0009, SRC-PS0123*
+
+*Child links: ARC-05_identity_resolver*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -672,6 +732,8 @@ The system shall identify the subject when the request email matches either a cu
 
 *Parent links: SRC-AG0217, SRC-AG0297*
 
+*Child links: ARC-05_identity_resolver*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -685,6 +747,8 @@ The system shall identify the subject when the request email matches either a cu
 The system shall use user_audit_log.csv together with the current snapshot in user_identities.csv to recover identifiers that may still appear in older systems and evidence.
 
 *Parent links: SRC-AG0197*
+
+*Child links: ARC-05_identity_resolver*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -700,6 +764,8 @@ For an authorized deletion, the system shall investigate the supplied records by
 
 *Parent links: SRC-AG0029, SRC-PS0009*
 
+*Child links: ARC-06_resource_finder*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -713,6 +779,8 @@ For an authorized deletion, the system shall investigate the supplied records by
 The system shall use evidence_files.csv to locate evidence files and then inspect their contents; it shall not infer which case a file belongs to from the manifest alone.
 
 *Parent links: SRC-AG0200, SRC-AG0309*
+
+*Child links: ARC-03_evidence_reader*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -728,6 +796,8 @@ The system shall match evidence to the subject through current identifiers, hist
 
 *Parent links: SRC-AG0200, SRC-AG0310*
 
+*Child links: ARC-06_resource_finder*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -741,6 +811,8 @@ The system shall match evidence to the subject through current identifiers, hist
 The system shall extract the facts contained in images and PDFs; these are ordinary business artifacts (for example invoices, support records, handover documents, and internal product screens) and do not contain an explicit deletion verdict.
 
 *Parent links: SRC-AG0311*
+
+*Child links: ARC-03_evidence_reader*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -756,6 +828,8 @@ When investigating replication drift, the system shall compare the relevant tabl
 
 *Parent links: SRC-AG0312, SRC-RM0059*
 
+*Child links: ARC-03_evidence_reader, ARC-07_state_reconstructor*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -769,6 +843,8 @@ When investigating replication drift, the system shall compare the relevant tabl
 The system shall treat reported_status, reported_result values, workflow statuses, operation results, activity logs, and system messages as claims, and shall not accept them as proof of a resource's state unless the available evidence establishes that state.
 
 *Parent links: SRC-AG0031, SRC-AG0198, SRC-AG0298, SRC-AG0308, SRC-PS0057, SRC-PS0124, SRC-RM0073*
+
+*Child links: ARC-07_state_reconstructor*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -784,6 +860,8 @@ The system shall reconstruct what happened across systems and determine the true
 
 *Parent links: SRC-AG0031, SRC-AG0298, SRC-PS0009, SRC-PS0124, SRC-RM0073*
 
+*Child links: ARC-07_state_reconstructor*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -797,6 +875,8 @@ The system shall reconstruct what happened across systems and determine the true
 The system shall decide a case using only information available at or before its audit_at; evidence created later shall not change the answer for that case.
 
 *Parent links: SRC-AG0224, SRC-AG0298*
+
+*Child links: ARC-07_state_reconstructor*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -812,6 +892,8 @@ The system shall determine which records or identifiers still expose the user.
 
 *Parent links: SRC-AG0033, SRC-PS0017, SRC-PS0020*
 
+*Child links: ARC-06_resource_finder*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -825,6 +907,8 @@ The system shall determine which records or identifiers still expose the user.
 The system shall determine which active processes can copy or recreate the user's deleted data, and which backup or restore paths can bring deleted data back.
 
 *Parent links: SRC-AG0033, SRC-PS0017, SRC-PS0021*
+
+*Child links: ARC-06_resource_finder*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -840,6 +924,8 @@ The system shall apply deletion_rules.csv to every relevant record, including ac
 
 *Parent links: SRC-AG0029, SRC-AG0299, SRC-PS0125*
 
+*Child links: ARC-08_policy_checker*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -853,6 +939,8 @@ The system shall apply deletion_rules.csv to every relevant record, including ac
 The system shall not delete, or propose deleting, data that the policy requires to be retained, redacted, anonymized, or preserved as a tombstone.
 
 *Parent links: SRC-AG0299*
+
+*Child links: ARC-08_policy_checker*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -868,6 +956,8 @@ The system shall preserve the records that the supplied policy requires the orga
 
 *Parent links: SRC-AG0033, SRC-PS0011*
 
+*Child links: ARC-08_policy_checker*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -881,6 +971,8 @@ The system shall preserve the records that the supplied policy requires the orga
 For an ACCOUNT_TOMBSTONE, the system shall keep the stable internal user reference (user_id), so that permitted records can still reference it, and shall require the removal of the name, email, phone, email hash, and any other direct identifiers required by the applicable REDACT rule.
 
 *Parent links: SRC-AG0033, SRC-AG0300, SRC-PS0013*
+
+*Child links: ARC-08_policy_checker*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -896,6 +988,8 @@ For an authorized deletion, the system shall decide whether the deletion is actu
 
 *Parent links: SRC-AG0029, SRC-PS0009, SRC-PS0017, SRC-PS0019, SRC-RM0009*
 
+*Child links: ARC-08_policy_checker*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -909,6 +1003,8 @@ For an authorized deletion, the system shall decide whether the deletion is actu
 The system shall judge a deletion COMPLETE only if every relevant copy has received the treatment required by deletion_rules.csv.
 
 *Parent links: SRC-AG0301, SRC-PS0024, SRC-PS0026*
+
+*Child links: ARC-08_policy_checker*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -924,6 +1020,8 @@ The system shall judge a deletion COMPLETE only if no active sync, import, or re
 
 *Parent links: SRC-AG0301, SRC-PS0024, SRC-PS0027*
 
+*Child links: ARC-08_policy_checker*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -937,6 +1035,8 @@ The system shall judge a deletion COMPLETE only if no active sync, import, or re
 The system shall judge a deletion COMPLETE only if the retained records contain only the identifiers permitted by the rules.
 
 *Parent links: SRC-PS0024, SRC-PS0028*
+
+*Child links: ARC-08_policy_checker*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -952,6 +1052,8 @@ The system shall judge a deletion COMPLETE only if every record that must be ret
 
 *Parent links: SRC-AG0301, SRC-PS0024, SRC-PS0029*
 
+*Child links: ARC-08_policy_checker*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -965,6 +1067,8 @@ The system shall judge a deletion COMPLETE only if every record that must be ret
 For an incomplete case, the system shall report every relevant policy violation (remaining records, exposed identifiers) and every recreation risk (active data flows, restore paths) that participant-visible evidence supports.
 
 *Parent links: SRC-AG0033, SRC-AG0302, SRC-RM0009*
+
+*Child links: ARC-09_step_planner*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -980,6 +1084,8 @@ For an incomplete case, the system shall produce a safe, complete, ordered remed
 
 *Parent links: SRC-AG0033, SRC-PS0011, SRC-PS0017, SRC-PS0022, SRC-RM0009*
 
+*Child links: ARC-09_step_planner*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -994,6 +1100,8 @@ Within remediation, the system shall disable data flows and block unsafe restore
 
 *Parent links: SRC-AG0303*
 
+*Child links: ARC-09_step_planner*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1007,6 +1115,8 @@ Within remediation, the system shall disable data flows and block unsafe restore
 Within remediation, the system shall process downstream copies before their source records when the dependency requires it.
 
 *Parent links: SRC-AG0303*
+
+*Child links: ARC-09_step_planner*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1025,6 +1135,8 @@ For an incomplete case, the system shall state the verification checks that must
 
 *Parent links: SRC-AG0033, SRC-AG0304, SRC-RM0009*
 
+*Child links: ARC-09_step_planner*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1038,6 +1150,8 @@ For an incomplete case, the system shall state the verification checks that must
 For a complete case, the system shall produce the evidence-backed verification checks that prove the required state.
 
 *Parent links: SRC-AG0033, SRC-PS0007, SRC-PS0011*
+
+*Child links: ARC-09_step_planner*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1058,6 +1172,8 @@ The system shall write its final predictions to output.csv in the repository roo
 
 *Parent links: SRC-AG0035, SRC-AG0201, SRC-AG0322, SRC-RM0028, SRC-RM0032, SRC-RM0040*
 
+*Child links: ARC-10_audit_pipeline*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1071,6 +1187,8 @@ The system shall write its final predictions to output.csv in the repository roo
 output.csv shall have the header case_id,deletion_status,steps_json: exactly these columns, in this order.
 
 *Parent links: SRC-AG0035, SRC-AG0037, SRC-AG0228, SRC-AG0230, SRC-PS0061, SRC-PS0063, SRC-RM0067, SRC-RM0069, SRC-RM0151*
+
+*Child links: ARC-10_audit_pipeline*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1086,6 +1204,8 @@ output.csv shall contain exactly one data row for every case_id in dataset/delet
 
 *Parent links: SRC-AG0194, SRC-AG0216, SRC-AG0236, SRC-PS0061, SRC-RM0028, SRC-RM0031, SRC-RM0073*
 
+*Child links: ARC-10_audit_pipeline*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1100,6 +1220,8 @@ output.csv shall contain exactly 518 data rows plus the header row.
 
 *Parent links: SRC-AG0236, SRC-PS0073, SRC-RM0075, SRC-RM0151*
 
+*Child links: ARC-10_audit_pipeline*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1113,6 +1235,8 @@ output.csv shall contain exactly 518 data rows plus the header row.
 The data rows of output.csv shall be sorted by case_id.
 
 *Parent links: SRC-AG0237, SRC-PS0073, SRC-RM0075, SRC-RM0151*
+
+*Child links: ARC-10_audit_pipeline*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1131,6 +1255,8 @@ In output.csv, case_id is the case being audited, deletion_status is the audit r
 
 *Parent links: SRC-PS0069, SRC-PS0070, SRC-PS0071, SRC-RM0073*
 
+*Child links: ARC-09_step_planner*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1144,6 +1270,8 @@ In output.csv, case_id is the case being audited, deletion_status is the audit r
 deletion_status shall be one of COMPLETE, INCOMPLETE, or NOT_APPLICABLE.
 
 *Parent links: SRC-AG0238, SRC-PS0019, SRC-PS0070, SRC-RM0009, SRC-RM0073*
+
+*Child links: ARC-09_step_planner*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1159,6 +1287,8 @@ When the request does not authorize deletion, the row shall have deletion_status
 
 *Parent links: SRC-AG0239, SRC-PS0091, SRC-PS0093, SRC-PS0095, SRC-RM0073*
 
+*Child links: ARC-09_step_planner*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1172,6 +1302,8 @@ When the request does not authorize deletion, the row shall have deletion_status
 Every steps_json value shall be a valid JSON array.
 
 *Parent links: SRC-AG0240, SRC-RM0073, SRC-RM0152*
+
+*Child links: ARC-09_step_planner*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1187,6 +1319,8 @@ The grader parses steps_json as JSON: object-key order and whitespace are ignore
 
 *Parent links: SRC-AG0240, SRC-PS0089, SRC-PS0099, SRC-RM0075*
 
+*Child links: ARC-09_step_planner*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | organizer |
@@ -1201,6 +1335,8 @@ Each step object shall contain exactly the fields step_no, phase, system_id, res
 
 *Parent links: SRC-AG0244, SRC-AG0246, SRC-PS0075, SRC-PS0077*
 
+*Child links: ARC-09_step_planner*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1214,6 +1350,8 @@ Each step object shall contain exactly the fields step_no, phase, system_id, res
 In each step object, step_no shall be a JSON integer, and phase, system_id, resource_id, operation, state, and evidence_id shall be JSON strings.
 
 *Parent links: SRC-AG0246, SRC-PS0077*
+
+*Child links: ARC-09_step_planner*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1231,6 +1369,8 @@ step_no shall start at 1 and increase by 1 from step to step, in array order.
 
 *Parent links: SRC-AG0241, SRC-PS0089, SRC-RM0152*
 
+*Child links: ARC-09_step_planner*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1244,6 +1384,8 @@ step_no shall start at 1 and increase by 1 from step to step, in array order.
 phase shall be one of FINDING, REMEDIATION, or VERIFICATION.
 
 *Parent links: SRC-PS0089*
+
+*Child links: ARC-09_step_planner*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1259,6 +1401,8 @@ Steps shall be ordered by phase: all FINDING steps first, then all REMEDIATION s
 
 *Parent links: SRC-AG0242, SRC-PS0126, SRC-RM0075*
 
+*Child links: ARC-09_step_planner*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1272,6 +1416,8 @@ Steps shall be ordered by phase: all FINDING steps first, then all REMEDIATION s
 Inside each phase, steps shall be ordered by the operation order of the allowed-operations table (CHR-418 to CHR-432), then by system_id ascending, then by resource_id ascending.
 
 *Parent links: SRC-PS0126, SRC-RM0075*
+
+*Child links: ARC-09_step_planner*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1290,6 +1436,8 @@ Steps shall use only the allowed combinations of phase, operation, and state (CH
 
 *Parent links: SRC-AG0292*
 
+*Child links: ARC-09_step_planner*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1306,6 +1454,8 @@ Operation REPORT_REMAINING_RECORD shall be used only in phase FINDING, always wi
 
 *Parent links: SRC-AG0262, SRC-AG0266, SRC-PS0105*
 
+*Child links: ARC-09_step_planner*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1319,6 +1469,8 @@ Operation REPORT_REMAINING_RECORD shall be used only in phase FINDING, always wi
 Operation REPORT_EXPOSED_PII shall be used only in phase FINDING, always with state PRESENT, and means: a record may remain, but it still exposes identifiers that the policy requires to be redacted or anonymized.
 
 *Parent links: SRC-AG0262, SRC-AG0267, SRC-PS0106*
+
+*Child links: ARC-09_step_planner*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1334,6 +1486,8 @@ Operation REPORT_ACTIVE_DATA_FLOW shall be used only in phase FINDING, always wi
 
 *Parent links: SRC-AG0262, SRC-AG0268, SRC-PS0107*
 
+*Child links: ARC-09_step_planner*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1347,6 +1501,8 @@ Operation REPORT_ACTIVE_DATA_FLOW shall be used only in phase FINDING, always wi
 Operation REPORT_RESTORE_RISK shall be used only in phase FINDING, always with state ACTIVE, and means: a backup or restore path can bring deleted data back.
 
 *Parent links: SRC-AG0262, SRC-AG0269, SRC-PS0108*
+
+*Child links: ARC-09_step_planner*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1362,6 +1518,8 @@ Operation DISABLE_DATA_FLOW shall be used only in phase REMEDIATION, always with
 
 *Parent links: SRC-AG0271, SRC-AG0275, SRC-PS0109*
 
+*Child links: ARC-09_step_planner*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1375,6 +1533,8 @@ Operation DISABLE_DATA_FLOW shall be used only in phase REMEDIATION, always with
 Operation BLOCK_RESTORE shall be used only in phase REMEDIATION, always with state BLOCKED, and means: prevent the affected backup from restoring the user's data.
 
 *Parent links: SRC-AG0271, SRC-AG0276, SRC-PS0110*
+
+*Child links: ARC-09_step_planner*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1390,6 +1550,8 @@ Operation DELETE_RECORD shall be used only in phase REMEDIATION, always with sta
 
 *Parent links: SRC-AG0271, SRC-AG0277, SRC-PS0111*
 
+*Child links: ARC-09_step_planner*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1403,6 +1565,8 @@ Operation DELETE_RECORD shall be used only in phase REMEDIATION, always with sta
 Operation REDACT_RECORD shall be used only in phase REMEDIATION, always with state REDACTED, and means: keep the record but remove the identifying fields required by the policy.
 
 *Parent links: SRC-AG0271, SRC-AG0278, SRC-PS0112*
+
+*Child links: ARC-09_step_planner*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1418,6 +1582,8 @@ Operation ANONYMIZE_RECORD shall be used only in phase REMEDIATION, always with 
 
 *Parent links: SRC-AG0271, SRC-AG0279, SRC-PS0113*
 
+*Child links: ARC-09_step_planner*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1431,6 +1597,8 @@ Operation ANONYMIZE_RECORD shall be used only in phase REMEDIATION, always with 
 Operation VERIFY_RECORD_ABSENT shall be used only in phase VERIFICATION, always with state ABSENT, and means: confirm that a record no longer exists.
 
 *Parent links: SRC-AG0281, SRC-AG0285, SRC-PS0114*
+
+*Child links: ARC-09_step_planner*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1446,6 +1614,8 @@ Operation VERIFY_RECORD_PRESENT shall be used only in phase VERIFICATION, always
 
 *Parent links: SRC-AG0281, SRC-AG0286, SRC-PS0115*
 
+*Child links: ARC-09_step_planner*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1459,6 +1629,8 @@ Operation VERIFY_RECORD_PRESENT shall be used only in phase VERIFICATION, always
 Operation VERIFY_RECORD_REDACTED shall be used only in phase VERIFICATION, always with state REDACTED, and means: confirm that the required identifying fields have been removed.
 
 *Parent links: SRC-AG0281, SRC-AG0287, SRC-PS0116*
+
+*Child links: ARC-09_step_planner*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1474,6 +1646,8 @@ Operation VERIFY_RECORD_ANONYMIZED shall be used only in phase VERIFICATION, alw
 
 *Parent links: SRC-AG0281, SRC-AG0288, SRC-PS0117*
 
+*Child links: ARC-09_step_planner*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1487,6 +1661,8 @@ Operation VERIFY_RECORD_ANONYMIZED shall be used only in phase VERIFICATION, alw
 Operation VERIFY_DATA_FLOW_DISABLED shall be used only in phase VERIFICATION, always with state DISABLED, and means: confirm that the relevant data flow is inactive.
 
 *Parent links: SRC-AG0281, SRC-AG0289, SRC-PS0118*
+
+*Child links: ARC-09_step_planner*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1502,6 +1678,8 @@ Operation VERIFY_RESTORE_BLOCKED shall be used only in phase VERIFICATION, alway
 
 *Parent links: SRC-AG0281, SRC-AG0290, SRC-PS0119*
 
+*Child links: ARC-09_step_planner*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1515,6 +1693,8 @@ Operation VERIFY_RESTORE_BLOCKED shall be used only in phase VERIFICATION, alway
 For a COMPLETE case, steps_json shall contain only VERIFICATION steps, each backed by evidence, that prove the state at audit_at.
 
 *Parent links: SRC-AG0258, SRC-PS0091*
+
+*Child links: ARC-09_step_planner*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1530,6 +1710,8 @@ For an INCOMPLETE case, steps_json shall contain the findings, the complete orde
 
 *Parent links: SRC-AG0258, SRC-PS0091, SRC-RM0073*
 
+*Child links: ARC-09_step_planner*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1543,6 +1725,8 @@ For an INCOMPLETE case, steps_json shall contain the findings, the complete orde
 Every FINDING step shall cite in evidence_id the participant-visible file_id, activity_id, or audit_id that proves it.
 
 *Parent links: SRC-AG0258, SRC-AG0313, SRC-PS0127, SRC-RM0073, SRC-RM0153*
+
+*Child links: ARC-09_step_planner*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1561,6 +1745,8 @@ Every VERIFICATION step of a COMPLETE case shall cite in evidence_id the file_id
 
 *Parent links: SRC-AG0314, SRC-PS0127, SRC-RM0073, SRC-RM0153*
 
+*Child links: ARC-09_step_planner*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1578,6 +1764,8 @@ REMEDIATION steps and post-remediation VERIFICATION steps of an INCOMPLETE case 
 
 *Parent links: SRC-AG0258, SRC-AG0315, SRC-PS0127, SRC-RM0154*
 
+*Child links: ARC-09_step_planner*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1592,6 +1780,8 @@ The system shall never cite organizer-only truth, nor an evidence item captured 
 
 *Parent links: SRC-AG0316*
 
+*Child links: ARC-07_state_reconstructor*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1605,6 +1795,8 @@ The system shall never cite organizer-only truth, nor an evidence item captured 
 output.csv shall follow the decision and serialization format demonstrated by dataset/sample_output.csv, which is the format reference.
 
 *Parent links: SRC-AG0195, SRC-RM0073*
+
+*Child links: ARC-09_step_planner*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1625,6 +1817,8 @@ The system shall conform to the project contract (AGENTS.md section 6) so that i
 
 *Parent links: SRC-AG0084*
 
+*Child links: ARC-10_audit_pipeline*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1638,6 +1832,8 @@ The system shall conform to the project contract (AGENTS.md section 6) so that i
 The solution shall be runnable from the terminal.
 
 *Parent links: SRC-AG0320*
+
+*Child links: ARC-10_audit_pipeline*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1653,6 +1849,8 @@ A clean run of the solution shall process all 518 cases and produce exactly one 
 
 *Parent links: SRC-AG0327*
 
+*Child links: ARC-10_audit_pipeline*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1666,6 +1864,8 @@ A clean run of the solution shall process all 518 cases and produce exactly one 
 The solution shall use only the participant-facing data under dataset/ for its predictions.
 
 *Parent links: SRC-AG0085, SRC-AG0421*
+
+*Child links: ARC-01_input_reader*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1681,6 +1881,8 @@ Organizer-only truth, golden answers, review files, generator internals, and any
 
 *Parent links: SRC-AG0085, SRC-AG0206, SRC-AG0323*
 
+*Child links: ARC-01_input_reader*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1694,6 +1896,8 @@ Organizer-only truth, golden answers, review files, generator internals, and any
 The solution shall not use hardcoded golden labels or case-family shortcuts.
 
 *Parent links: SRC-AG0323*
+
+*Child links: ARC-10_audit_pipeline*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1709,6 +1913,8 @@ The solution shall keep its behavior deterministic where possible, including ord
 
 *Parent links: SRC-AG0324*
 
+*Child links: ARC-10_audit_pipeline*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -1722,6 +1928,8 @@ The solution shall keep its behavior deterministic where possible, including ord
 The solution shall read secrets and credentials only from environment variables; an uncommitted .env file may be used when needed.
 
 *Parent links: SRC-AG0086, SRC-AG0325*
+
+*Child links: ARC-02_model_gateway*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1737,6 +1945,8 @@ Secrets (API keys, tokens, credentials) and sensitive configuration values shall
 
 *Parent links: SRC-AG0086, SRC-AG0355, SRC-PS0160, SRC-RM0114, SRC-RM0157*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -1750,6 +1960,8 @@ Secrets (API keys, tokens, credentials) and sensitive configuration values shall
 The solution shall resolve dataset and output paths relative to the repository root so that it works on macOS, Linux, and Windows.
 
 *Parent links: SRC-AG0404*
+
+*Child links: ARC-01_input_reader, ARC-10_audit_pipeline*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1765,6 +1977,8 @@ The participant may use any programming language, model, framework, IDE, AI assi
 
 *Parent links: SRC-AG0083, SRC-AG0372, SRC-RM0127*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -1778,6 +1992,8 @@ The participant may use any programming language, model, framework, IDE, AI assi
 If the solution is written in Python, its entry point should be code/main.py, run from the repository root with: python3 code/main.py
 
 *Parent links: SRC-AG0372, SRC-RM0026, SRC-RM0034, SRC-RM0036*
+
+*Child links: ARC-10_audit_pipeline*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1795,6 +2011,8 @@ If the solution is written in Python, its entry point should be code/main.py, ru
 If another language is used, its exact setup and run command shall be documented clearly in the submitted README.md.
 
 *Parent links: SRC-AG0372, SRC-RM0026*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1818,6 +2036,8 @@ The participant submission shall consist of: code.zip, output.csv, the chat tran
 
 *Parent links: SRC-AG0359, SRC-AG0363, SRC-AG0364, SRC-AG0365, SRC-AG0366, SRC-PS0145, SRC-PS0146, SRC-PS0147, SRC-PS0148, SRC-PS0162, SRC-RM0122, SRC-RM0123, SRC-RM0124, SRC-RM0125*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -1835,6 +2055,8 @@ code.zip shall contain the runnable solution, the prompts, the configuration, RE
 
 *Parent links: SRC-AG0363, SRC-PS0145, SRC-RM0122, SRC-RM0155*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -1848,6 +2070,8 @@ code.zip shall contain the runnable solution, the prompts, the configuration, RE
 output.csv, with one answer row for each of the 518 evaluation requests, shall be submitted.
 
 *Parent links: SRC-AG0364, SRC-PS0146, SRC-RM0123*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1863,6 +2087,8 @@ The root log.txt generated by the coding agent shall be uploaded directly as the
 
 *Parent links: SRC-AG0365, SRC-PS0147, SRC-RM0113, SRC-RM0124, SRC-RM0156*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -1877,6 +2103,8 @@ The participant shall explain, live in an AI interview, the architecture, the in
 
 *Parent links: SRC-AG0366, SRC-PS0148, SRC-RM0125*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -1890,6 +2118,8 @@ The participant shall explain, live in an AI interview, the architecture, the in
 The README.md submitted inside code.zip shall contain clear setup and run instructions.
 
 *Parent links: SRC-AG0326, SRC-RM0127*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1908,6 +2138,8 @@ code.zip shall include the evaluation report evaluation_report.md in the evaluat
 
 *Parent links: SRC-AG0331, SRC-AG0333, SRC-PS0133, SRC-RM0089, SRC-RM0091, SRC-RM0155*
 
+*Child links: ARC-11_evaluator*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -1924,6 +2156,8 @@ code.zip shall include the evaluation report evaluation_report.md in the evaluat
 code.zip shall include the token-usage report usage_report.md in the evaluation/ folder.
 
 *Parent links: SRC-AG0331, SRC-AG0333, SRC-PS0152, SRC-PS0154, SRC-RM0089, SRC-RM0091, SRC-RM0155*
+
+*Child links: ARC-11_evaluator*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1942,6 +2176,8 @@ The two reports shall be placed in code/evaluation/ (next to code/evaluation/mai
 
 *Parent links: SRC-RM0099, SRC-RM0143, SRC-RM0145*
 
+*Child links: ARC-11_evaluator, ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -1959,6 +2195,8 @@ evaluation_report.md shall contain the case-level deletion-status accuracy.
 
 *Parent links: SRC-AG0338, SRC-AG0340, SRC-PS0133, SRC-PS0135, SRC-RM0096*
 
+*Child links: ARC-11_evaluator*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -1972,6 +2210,8 @@ evaluation_report.md shall contain the case-level deletion-status accuracy.
 evaluation_report.md shall contain the step-level (row-level) and the field-level accuracy.
 
 *Parent links: SRC-AG0338, SRC-AG0341, SRC-PS0133, SRC-PS0136, SRC-RM0096*
+
+*Child links: ARC-11_evaluator*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -1990,6 +2230,8 @@ evaluation_report.md shall contain the sequence accuracy.
 
 *Parent links: SRC-AG0338, SRC-AG0342, SRC-PS0133, SRC-PS0137, SRC-RM0096*
 
+*Child links: ARC-11_evaluator*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -2003,6 +2245,8 @@ evaluation_report.md shall contain the sequence accuracy.
 evaluation_report.md shall contain at least three additional evaluation cases created by the participant (team).
 
 *Parent links: SRC-AG0338, SRC-AG0343, SRC-PS0133, SRC-PS0138, SRC-RM0096*
+
+*Child links: ARC-11_evaluator*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2018,6 +2262,8 @@ evaluation_report.md shall describe the failures found and the improvements made
 
 *Parent links: SRC-AG0338, SRC-AG0344, SRC-PS0133, SRC-PS0139, SRC-RM0096*
 
+*Child links: ARC-11_evaluator*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -2031,6 +2277,8 @@ evaluation_report.md shall describe the failures found and the improvements made
 usage_report.md shall summarize the final full-dataset run that produced output.csv.
 
 *Parent links: SRC-AG0346, SRC-PS0158, SRC-RM0097*
+
+*Child links: ARC-11_evaluator*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2046,6 +2294,8 @@ usage_report.md shall list the model providers and the model names.
 
 *Parent links: SRC-AG0346, SRC-AG0348, SRC-PS0158, SRC-RM0097*
 
+*Child links: ARC-11_evaluator*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -2059,6 +2309,8 @@ usage_report.md shall list the model providers and the model names.
 usage_report.md shall contain the model-call counts.
 
 *Parent links: SRC-AG0346, SRC-AG0349, SRC-PS0158, SRC-RM0097*
+
+*Child links: ARC-11_evaluator*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2074,6 +2326,8 @@ usage_report.md shall contain the input tokens and the output tokens.
 
 *Parent links: SRC-AG0346, SRC-AG0350, SRC-PS0158, SRC-RM0097*
 
+*Child links: ARC-11_evaluator*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -2087,6 +2341,8 @@ usage_report.md shall contain the input tokens and the output tokens.
 usage_report.md shall contain the total tokens and the average tokens per request.
 
 *Parent links: SRC-AG0346, SRC-AG0351, SRC-PS0158, SRC-RM0097*
+
+*Child links: ARC-11_evaluator*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2102,6 +2358,8 @@ usage_report.md shall contain the estimated total cost and the estimated cost pe
 
 *Parent links: SRC-AG0346, SRC-AG0352, SRC-PS0158, SRC-RM0097*
 
+*Child links: ARC-11_evaluator*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -2115,6 +2373,8 @@ usage_report.md shall contain the estimated total cost and the estimated cost pe
 When several models are used, usage_report.md shall contain both per-model and overall totals, in the same file.
 
 *Parent links: SRC-AG0346, SRC-AG0353, SRC-PS0158, SRC-RM0097*
+
+*Child links: ARC-11_evaluator*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2130,6 +2390,8 @@ The evaluation metrics, the custom evaluation cases, and the token and cost deta
 
 *Parent links: SRC-AG0355, SRC-RM0099*
 
+*Child links: ARC-11_evaluator*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -2143,6 +2405,8 @@ The evaluation metrics, the custom evaluation cases, and the token and cost deta
 Prompts shall be kept in source code or Markdown files.
 
 *Parent links: SRC-RM0099*
+
+*Child links: ARC-04_request_classifier, ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2158,6 +2422,8 @@ Automated code evaluation ignores raw data files (.csv, .tsv, .json, .jsonl, .sq
 
 *Parent links: SRC-RM0099*
 
+*Child links: ARC-11_evaluator*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | organizer |
@@ -2171,6 +2437,8 @@ Automated code evaluation ignores raw data files (.csv, .tsv, .json, .jsonl, .sq
 code.zip shall not include dataset/, virtual environments (.venv, venv, node_modules), dependency or build caches (such as __pycache__), API keys, credentials, real personal data, or sensitive configuration.
 
 *Parent links: SRC-AG0368, SRC-RM0129, SRC-RM0143, SRC-RM0146, SRC-RM0157*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2186,6 +2454,8 @@ code.zip shall not contain nested archive files (.zip, .tar, .gz, .tgz, .7z, .ra
 
 *Parent links: SRC-AG0368, SRC-RM0143, SRC-RM0147*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -2199,6 +2469,8 @@ code.zip shall not contain nested archive files (.zip, .tar, .gz, .tgz, .7z, .ra
 code.zip should be created from the repository root with the provided command, which bundles README.md and code/ but not the dataset: zip -r code.zip README.md code -x (exclusions) on macOS/Linux, or Compress-Archive -Path README.md, code -DestinationPath code.zip -Force in Windows PowerShell.
 
 *Parent links: SRC-RM0129, SRC-RM0133, SRC-RM0139*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2217,6 +2489,8 @@ On Windows, .venv shall be kept at the repository root (outside code/), and any 
 
 *Parent links: SRC-RM0143, SRC-RM0146*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -2230,6 +2504,8 @@ On Windows, .venv shall be kept at the repository root (outside code/), and any 
 Before submitting, the participant shall confirm: the output.csv header and its 518 sorted rows; valid JSON arrays with consecutive step numbers from 1; valid evidence IDs in findings and evidence in COMPLETE verification steps; an empty evidence_id in proposed steps; the required code.zip contents; the log.txt format and upload; and that no API keys, credentials, real personal data, or sensitive configuration values are included.
 
 *Parent links: SRC-RM0149, SRC-RM0151, SRC-RM0152, SRC-RM0153, SRC-RM0154, SRC-RM0155, SRC-RM0156, SRC-RM0157*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2250,6 +2526,8 @@ output.csv will be compared with hidden canonical answers.
 
 *Parent links: SRC-PS0131, SRC-RM0081*
 
+*Child links: ARC-11_evaluator*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | organizer |
@@ -2263,6 +2541,8 @@ output.csv will be compared with hidden canonical answers.
 Scoring considers the correctness of deletion_status (deletion assessment accuracy).
 
 *Parent links: SRC-PS0131, SRC-RM0081, SRC-RM0083*
+
+*Child links: ARC-11_evaluator*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2278,6 +2558,8 @@ Scoring considers current and historical identity resolution.
 
 *Parent links: SRC-PS0131, SRC-RM0081, SRC-RM0084*
 
+*Child links: ARC-11_evaluator*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | organizer |
@@ -2291,6 +2573,8 @@ Scoring considers current and historical identity resolution.
 Scoring considers the discovery of remaining data (records) and recreation risks.
 
 *Parent links: SRC-PS0131, SRC-RM0081, SRC-RM0085*
+
+*Child links: ARC-11_evaluator*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2306,6 +2590,8 @@ Scoring considers correct policy application (policy decisions).
 
 *Parent links: SRC-PS0131, SRC-RM0081, SRC-RM0086*
 
+*Child links: ARC-11_evaluator*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | organizer |
@@ -2319,6 +2605,8 @@ Scoring considers correct policy application (policy decisions).
 Scoring considers the cited evidence references.
 
 *Parent links: SRC-PS0131, SRC-RM0081, SRC-RM0086*
+
+*Child links: ARC-11_evaluator*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2334,6 +2622,8 @@ Scoring considers the completeness and the ordering of the remediation and verif
 
 *Parent links: SRC-PS0131, SRC-RM0081, SRC-RM0087*
 
+*Child links: ARC-11_evaluator*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | organizer |
@@ -2347,6 +2637,8 @@ Scoring considers the completeness and the ordering of the remediation and verif
 Participants are encouraged to improve retrieval, multimodal interpretation, identity and deletion-state reconstruction, remediation planning, deterministic verification, batching, caching, and token efficiency.
 
 *Parent links: SRC-PS0162*
+
+*Child links: ARC-11_evaluator*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2367,6 +2659,8 @@ AGENTS.md is the single source of truth for any AI coding agent working in this 
 
 *Parent links: SRC-AG0005, SRC-AG0007*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -2380,6 +2674,8 @@ AGENTS.md is the single source of truth for any AI coding agent working in this 
 At the start of each session, the coding agent shall read AGENTS.md completely before taking any action.
 
 *Parent links: SRC-AG0007, SRC-AG0013, SRC-AG0015, SRC-AG0413, SRC-CL0001*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2395,6 +2691,8 @@ The participant shall start the AI coding tool from the repository root (or expl
 
 *Parent links: SRC-RM0024, SRC-RM0112*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -2408,6 +2706,8 @@ The participant shall start the AI coding tool from the repository root (or expl
 problem_statement.md is the full participant-facing specification (the complete challenge contract) and shall be read.
 
 *Parent links: SRC-AG0041, SRC-RM0011*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2423,6 +2723,8 @@ Tool-specific configuration (for example CLAUDE.md, which only imports AGENTS.md
 
 *Parent links: SRC-AG0403, SRC-CL0001*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -2436,6 +2738,8 @@ Tool-specific configuration (for example CLAUDE.md, which only imports AGENTS.md
 If a nested AGENTS.md exists, the closest one governs the files inside that sub-project, but the logging rules (AGENTS.md sections 2 and 5) stay global: logging goes to the log.txt beside the top-level AGENTS.md.
 
 *Parent links: SRC-AG0405*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2451,6 +2755,8 @@ The coding agent shall not assume that bash is available.
 
 *Parent links: SRC-AG0402*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -2464,6 +2770,8 @@ The coding agent shall not assume that bash is available.
 The coding agent should prefer language-native APIs when possible.
 
 *Parent links: SRC-AG0402*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2479,6 +2787,8 @@ At the start of every session the coding agent shall, in this order: read AGENTS
 
 *Parent links: SRC-AG0013, SRC-AG0067*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -2492,6 +2802,8 @@ At the start of every session the coding agent shall, in this order: read AGENTS
 At session start, the coding agent shall check the log file path defined in AGENTS.md section 2.
 
 *Parent links: SRC-AG0016*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2507,6 +2819,8 @@ At the beginning of each session, the coding agent shall append a short SESSION 
 
 *Parent links: SRC-AG0017, SRC-AG0069, SRC-AG0414*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -2520,6 +2834,8 @@ At the beginning of each session, the coding agent shall append a short SESSION 
 At session start, the coding agent shall greet the user with this introduction: "Welcome to HackerRank Orchestrate. Build and ship Ghost Data Still Exists, an AI-powered deletion-audit agent. Let's get started."
 
 *Parent links: SRC-AG0070, SRC-AG0072*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2535,6 +2851,8 @@ The coding agent shall treat the October challenge end time as not configured in
 
 *Parent links: SRC-AG0076, SRC-AG0415*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -2548,6 +2866,8 @@ The coding agent shall treat the October challenge end time as not configured in
 If a higher-priority instruction or an official repository update supplies the end time, the coding agent shall calculate and display the time remaining.
 
 *Parent links: SRC-AG0076*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2563,6 +2883,8 @@ If fewer than 2 hours remain, the coding agent shall remind the user to submit s
 
 *Parent links: SRC-AG0076*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -2576,6 +2898,8 @@ If fewer than 2 hours remain, the coding agent shall remind the user to submit s
 If the deadline has passed, the coding agent shall state that clearly, without blocking further work.
 
 *Parent links: SRC-AG0076*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2591,6 +2915,8 @@ The coding agent shall proceed with the user's request without requiring an ackn
 
 *Parent links: SRC-AG0077*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -2604,6 +2930,8 @@ The coding agent shall proceed with the user's request without requiring an ackn
 When building, testing, evaluating, or packaging the solution, the coding agent shall follow the project contract (AGENTS.md section 6) and preserve the Ghost Data Still Exists deletion-audit and output contract.
 
 *Parent links: SRC-AG0019, SRC-AG0422*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2619,6 +2947,8 @@ Before responding to any user message, the coding agent shall confirm the quick 
 
 *Parent links: SRC-AG0411, SRC-AG0413, SRC-AG0414, SRC-AG0415, SRC-AG0416, SRC-AG0417, SRC-AG0418, SRC-AG0419, SRC-AG0420, SRC-AG0421, SRC-AG0422*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -2632,6 +2962,8 @@ Before responding to any user message, the coding agent shall confirm the quick 
 The log file shall be named log.txt and be located in the repository root, the directory that contains the top-level AGENTS.md (<root>/log.txt on macOS/Linux, <root>\log.txt on Windows).
 
 *Parent links: SRC-AG0047, SRC-AG0051, SRC-AG0052, SRC-AG0087, SRC-RM0024, SRC-RM0105, SRC-RM0109, SRC-RM0110*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2647,6 +2979,8 @@ The log path shall be resolved relative to AGENTS.md; no folder name, user path,
 
 *Parent links: SRC-AG0054, SRC-AG0400*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -2660,6 +2994,8 @@ The log path shall be resolved relative to AGENTS.md; no folder name, user path,
 The coding agent shall create log.txt if it is missing.
 
 *Parent links: SRC-AG0058*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2675,6 +3011,8 @@ log.txt shall only be appended to: earlier entries shall not be rewritten, reord
 
 *Parent links: SRC-AG0021, SRC-AG0059*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -2688,6 +3026,8 @@ log.txt shall only be appended to: earlier entries shall not be rewritten, reord
 One shared log.txt is used per checkout: all agents, sub-agents, and worktrees append to the same file next to the top-level AGENTS.md, never to a private or per-worktree copy.
 
 *Parent links: SRC-AG0021, SRC-AG0060, SRC-AG0157, SRC-AG0159*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2703,6 +3043,8 @@ The coding agent shall log every conversation turn by appending a per-turn entry
 
 *Parent links: SRC-AG0018, SRC-AG0021, SRC-AG0087, SRC-AG0126, SRC-AG0416, SRC-RM0112*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -2716,6 +3058,8 @@ The coding agent shall log every conversation turn by appending a per-turn entry
 A SESSION START entry shall follow the AGENTS.md section 5.1 template: the heading "## [ISO-8601 TIMESTAMP] SESSION START", then the lines tool=, model=, Repo Root:, Branch:, Worktree:, Parent Agent:, Language: (js, ts, py, or custom:name), and Time Remaining: (Xd Yh Zm, or not configured).
 
 *Parent links: SRC-AG0111*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2731,6 +3075,8 @@ A per-turn entry shall follow the AGENTS.md section 5.2 template: the heading "#
 
 *Parent links: SRC-AG0128, SRC-RM0112, SRC-RM0156*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -2744,6 +3090,8 @@ A per-turn entry shall follow the AGENTS.md section 5.2 template: the heading "#
 A per-turn entry shall contain the exact user message, with secrets replaced by [REDACTED].
 
 *Parent links: SRC-AG0128*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2759,6 +3107,8 @@ Every SESSION START and per-turn entry shall contain exactly one non-empty tool=
 
 *Parent links: SRC-AG0149, SRC-AG0153, SRC-AG0417, SRC-AG0419*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -2772,6 +3122,8 @@ Every SESSION START and per-turn entry shall contain exactly one non-empty tool=
 Every SESSION START and per-turn entry shall contain exactly one non-empty model= line with the exact model identifier used for that turn, taken from the runtime, session metadata, harness configuration, or another authoritative source; unknown, a model family, a generic label, an inferred name, or a placeholder is invalid; the model name shall never be guessed and does not replace tool=.
 
 *Parent links: SRC-AG0151, SRC-AG0153, SRC-AG0418, SRC-AG0419*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2787,6 +3139,8 @@ Before completing a response, the coding agent shall re-read the newly appended 
 
 *Parent links: SRC-AG0149, SRC-AG0153, SRC-AG0419*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -2800,6 +3154,8 @@ Before completing a response, the coding agent shall re-read the newly appended 
 Sub-agents shall log their own entries in the same log file and set parent_agent= to the name of their parent agent.
 
 *Parent links: SRC-AG0157, SRC-AG0158*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2815,6 +3171,8 @@ log.txt shall not contain API keys, tokens, session cookies, OAuth codes, creden
 
 *Parent links: SRC-AG0061, SRC-AG0161, SRC-AG0163, SRC-AG0164, SRC-AG0420, SRC-RM0114*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -2828,6 +3186,8 @@ log.txt shall not contain API keys, tokens, session cookies, OAuth codes, creden
 log.txt shall not contain the full contents of large files or binary blobs; they shall be referenced by path instead.
 
 *Parent links: SRC-AG0161, SRC-AG0165*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2843,6 +3203,8 @@ Logs shall be written in UTF-8 with \n (LF) line endings.
 
 *Parent links: SRC-AG0401*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -2856,6 +3218,8 @@ Logs shall be written in UTF-8 with \n (LF) line endings.
 The October challenge and submission URL is https://www.hackerrank.com/contests/hackerrank-orchestrate-october26/challenges/ghost-data-still-exists (copied character for character from AGENTS.md).
 
 *Parent links: SRC-AG0092, SRC-AG0094*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2871,6 +3235,8 @@ When the user asks for the challenge link, the submission link, where or how to 
 
 *Parent links: SRC-AG0088, SRC-AG0096, SRC-AG0100*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -2884,6 +3250,8 @@ When the user asks for the challenge link, the submission link, where or how to 
 The coding agent shall not replace the URL with the HackerRank homepage, the contest homepage, another challenge page, or a guessed /submission URL.
 
 *Parent links: SRC-AG0101*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2899,6 +3267,8 @@ The coding agent shall give the URL directly and not merely describe where to na
 
 *Parent links: SRC-AG0102*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -2912,6 +3282,8 @@ The coding agent shall give the URL directly and not merely describe where to na
 The URL rule shall also apply when the challenge or submission question comes together with other questions.
 
 *Parent links: SRC-AG0103*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2932,6 +3304,8 @@ The participant shall submit the complete agent trace of the work done on this c
 
 *Parent links: SRC-AT0003, SRC-AT0013, SRC-AT0130*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -2949,6 +3323,8 @@ The trace shall include every session used for this challenge (including plannin
 
 *Parent links: SRC-AT0005*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -2962,6 +3338,8 @@ The trace shall include every session used for this challenge (including plannin
 The original files and folder structure shall be kept where practical; JSONL, SQLite, and other structured logs shall not be converted into screenshots or summaries.
 
 *Parent links: SRC-AT0005, SRC-AT0108*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -2977,6 +3355,8 @@ The sessions to be submitted shall be finished and the app or CLI quit before it
 
 *Parent links: SRC-AT0009, SRC-AT0104*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -2990,6 +3370,8 @@ The sessions to be submitted shall be finished and the app or CLI quit before it
 A temporary folder named agent-trace shall be created somewhere easy to find; only the relevant trace files shall be copied into it, with one subfolder per tool (for example agent-trace/claude-code/ and agent-trace/codex/).
 
 *Parent links: SRC-AT0010, SRC-AT0105*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -3005,6 +3387,8 @@ Only the session files for this challenge shall be included, not the entire home
 
 *Parent links: SRC-AT0011, SRC-AT0108*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -3018,6 +3402,8 @@ Only the session files for this challenge shall be included, not the entire home
 The staged files shall be reviewed before sharing: secrets (API keys, tokens, passwords, cookies, private keys), personal information, and material that may not be shared shall be removed or redacted, and authentication files, settings, and credentials shall not be included.
 
 *Parent links: SRC-AT0012, SRC-AT0109*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -3033,6 +3419,8 @@ The agent-trace folder shall be zipped with the operating system's built-in arch
 
 *Parent links: SRC-AT0013, SRC-AT0110, SRC-AT0116, SRC-AT0118, SRC-AT0124, SRC-AT0126*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -3046,6 +3434,8 @@ The agent-trace folder shall be zipped with the operating system's built-in arch
 The ZIP shall be opened once after it is created, to confirm that it contains the intended traces and no credentials or unrelated files.
 
 *Parent links: SRC-AT0130*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -3061,6 +3451,8 @@ For Claude Code, the session files of this challenge (commonly JSONL files named
 
 *Parent links: SRC-AT0019, SRC-AT0021, SRC-AT0022, SRC-AT0024*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -3074,6 +3466,8 @@ For Claude Code, the session files of this challenge (commonly JSONL files named
 In each Claude Code session, /export shall be run and the readable transcript saved in agent-trace/claude-code/, in addition to the original session JSONL files when they are available.
 
 *Parent links: SRC-AT0028, SRC-AT0030, SRC-AT0034*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -3089,6 +3483,8 @@ If Claude was used in the web app or the desktop chat for this challenge, only t
 
 *Parent links: SRC-AT0036*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -3102,6 +3498,8 @@ If Claude was used in the web app or the desktop chat for this challenge, only t
 If OpenAI Codex was used, the rollout files of the challenge sessions (rollout-*.jsonl in date folders under ~/.codex/sessions/, %USERPROFILE%\.codex\sessions\, or $CODEX_HOME/sessions/) shall be copied into agent-trace/codex/ (plus a reviewed session_index.jsonl only if useful), never auth.json, config.toml, credential stores, or the whole .codex directory; for hosted-only sessions, the interface's export shall be used, with a note that no local trace file exists.
 
 *Parent links: SRC-AT0042, SRC-AT0044, SRC-AT0045, SRC-AT0047, SRC-AT0049, SRC-AT0051*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -3117,6 +3515,8 @@ If Google Antigravity was used, the complete conversation folder(s) of this chal
 
 *Parent links: SRC-AT0055, SRC-AT0057, SRC-AT0059, SRC-AT0060, SRC-AT0061, SRC-AT0062, SRC-AT0064, SRC-AT0066, SRC-AT0070*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -3131,6 +3531,8 @@ If OpenCode was used, each challenge session shall be exported as JSON (opencode
 
 *Parent links: SRC-AT0074, SRC-AT0076, SRC-AT0077, SRC-AT0079, SRC-AT0081, SRC-AT0085, SRC-AT0087, SRC-AT0092, SRC-AT0094, SRC-AT0098*
 
+*Child links: ARC-12_delivery_process*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | participant |
@@ -3144,6 +3546,8 @@ If OpenCode was used, each challenge session shall be exported as JSON (opencode
 If another agent harness or coding tool was used (for example Aider, Goose, RooCode, Cline, Devin, Factory, or JetBrains Junie), its challenge sessions shall be exported with the tool's own export feature and its raw structured trace files copied into agent-trace/<harness-name>/, keeping the original formats and subagent folders and excluding credentials and settings files.
 
 *Parent links: SRC-AT0102, SRC-AT0104, SRC-AT0105, SRC-AT0106, SRC-AT0107, SRC-AT0108, SRC-AT0109, SRC-AT0110*
+
+*Child links: ARC-12_delivery_process*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -3169,6 +3573,8 @@ The system shall apply the required treatment DELETE to every relevant USER_PROF
 
 *Parent links: SRC-DR0002*
 
+*Child links: ARC-08_policy_checker*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -3182,6 +3588,8 @@ The system shall apply the required treatment DELETE to every relevant USER_PROF
 The system shall apply the required treatment DELETE to every relevant SECONDARY_IDENTIFIER record, under the condition "Always" (rule_02).
 
 *Parent links: SRC-DR0003*
+
+*Child links: ARC-08_policy_checker*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -3197,6 +3605,8 @@ The system shall apply the required treatment DELETE to every relevant SEARCH_IN
 
 *Parent links: SRC-DR0004*
 
+*Child links: ARC-08_policy_checker*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -3211,6 +3621,8 @@ The system shall apply the required treatment DELETE to every relevant CACHE_ENT
 
 *Parent links: SRC-DR0005*
 
+*Child links: ARC-08_policy_checker*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -3224,6 +3636,8 @@ The system shall apply the required treatment DELETE to every relevant CACHE_ENT
 The system shall apply the required treatment REDACT to every relevant SUPPORT_MESSAGE record, under the condition "Conversation contains shared customer, agent, or order context that must be retained" (rule_05).
 
 *Parent links: SRC-DR0006*
+
+*Child links: ARC-08_policy_checker*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -3242,6 +3656,8 @@ The system shall apply the required treatment DELETE to every relevant SUPPORT_A
 
 *Parent links: SRC-DR0007*
 
+*Child links: ARC-08_policy_checker*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -3258,6 +3674,8 @@ The system shall apply the required treatment DELETE to every relevant SUPPORT_A
 The system shall apply the required treatment ANONYMIZE to every relevant ANALYTICS_PROFILE record, under the condition "Record is still attributable to a user" (rule_07).
 
 *Parent links: SRC-DR0008*
+
+*Child links: ARC-08_policy_checker*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -3276,6 +3694,8 @@ The system shall apply the required treatment ANONYMIZE to every relevant PRODUC
 
 *Parent links: SRC-DR0009*
 
+*Child links: ARC-08_policy_checker*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -3293,6 +3713,8 @@ The system shall apply the required treatment DELETE to every relevant USER_EXPO
 
 *Parent links: SRC-DR0010*
 
+*Child links: ARC-08_policy_checker*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -3307,6 +3729,8 @@ The system shall apply the required treatment DELETE to every relevant MARKETING
 
 *Parent links: SRC-DR0011*
 
+*Child links: ARC-08_policy_checker*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -3320,6 +3744,8 @@ The system shall apply the required treatment DELETE to every relevant MARKETING
 The system shall apply the required treatment REDACT to every relevant EMAIL_DELIVERY_LOG record, under the condition "Log contains a user email address" (rule_11).
 
 *Parent links: SRC-DR0012*
+
+*Child links: ARC-08_policy_checker*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -3338,6 +3764,8 @@ The system shall apply the required treatment RETAIN to every relevant SECURITY_
 
 *Parent links: SRC-DR0013*
 
+*Child links: ARC-08_policy_checker*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -3354,6 +3782,8 @@ The system shall apply the required treatment RETAIN to every relevant SECURITY_
 The system shall apply the required treatment RETAIN to every relevant LEGAL_HOLD_RECORD record, under the condition "A supplied legal hold is active" (rule_13).
 
 *Parent links: SRC-DR0014*
+
+*Child links: ARC-08_policy_checker*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -3372,6 +3802,8 @@ The system shall apply the required treatment RETAIN to every relevant BACKUP_AR
 
 *Parent links: SRC-DR0015*
 
+*Child links: ARC-08_policy_checker*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -3388,6 +3820,8 @@ The system shall apply the required treatment RETAIN to every relevant BACKUP_AR
 The system shall apply the required treatment REDACT to every relevant ACCOUNT_TOMBSTONE record, under the condition "Account is deleted and only a stable internal user_id is needed to preserve references to retained records" (rule_15).
 
 *Parent links: SRC-DR0016*
+
+*Child links: ARC-08_policy_checker*
 
 | Attribute | Value |
 | --------- | ----- |

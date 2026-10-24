@@ -3,6 +3,7 @@
 Components depend only on these records and on the signatures in components.py, never on each
 other's code, so each component can be tested alone with hand-made records.
 All times are timezone-aware UTC datetimes.
+An empty string means the value was not given, so it must never match another empty string.
 The iteration order of a frozenset changes from run to run, so frozenset fields serve membership
 tests only; whatever reaches output.csv or an explanation is sorted first (EXT-402).
 """
@@ -14,6 +15,10 @@ from dataclasses import dataclass, field
 from datetime import datetime
 
 IDENTIFIER_KINDS = ("user_ref", "email", "email_hash", "phone", "name")
+
+REPORTED_STATUSES = ("COMPLETE", "PARTIALLY_COMPLETE", "NOT_STARTED")
+
+RULE_ACTIONS = ("DELETE", "REDACT", "ANONYMIZE", "RETAIN")
 
 DELETION_STATUSES = ("COMPLETE", "INCOMPLETE", "NOT_APPLICABLE")
 
@@ -126,7 +131,11 @@ class CaseAnswer:
 
 @dataclass(frozen=True)
 class Dataset:
+    """unreadable_case_ids are the cases whose request rows failed their checks; each still needs
+    an output row (REV-006)."""
+
     requests: tuple[Request, ...]
+    unreadable_case_ids: tuple[str, ...]
     sample_requests: tuple[Request, ...]
     sample_answers: tuple[CaseAnswer, ...]
     identities: tuple[IdentityRecord, ...]
