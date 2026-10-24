@@ -18,7 +18,7 @@
 
 The data records the components exchange (code/c00_interfaces/records.py) and the call signature of every component (code/c00_interfaces/components.py). Components depend only on these, never on each other's code; the audit pipeline receives the components as one bundle, so a test can replace any of them, and the model gateway, by a fake (code/c00_interfaces/fakes.py).
 
-*Parent links: EXT-504, EXT-505, EXT-506, EXT-602, EXT-603, EXT-609, REV-005*
+*Parent links: EXT-402, EXT-501, EXT-504, EXT-505, EXT-506, EXT-602, EXT-603, EXT-609, REV-005*
 
 | Attribute | Value |
 | --------- | ----- |

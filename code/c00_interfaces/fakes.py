@@ -41,7 +41,7 @@ class FakeModelGateway:
         self.questions.append(question)
         return self.answer_for(question)
 
-    def calls(self) -> tuple[ModelCall, ...]:
+    def recorded_calls(self) -> tuple[ModelCall, ...]:
         return tuple(ModelCall(question.purpose, "fake", "fake-model", 0, 0, 0.0, False)
                      for question in self.questions)
 

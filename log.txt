@@ -624,3 +624,25 @@ repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
 
+## [2026-10-25T00:44:16+02:00] Second recheck of c00: five more interface problems fixed
+
+User Prompt (verbatim, secrets redacted):
+recheck c00
+
+Agent Response Summary:
+Rechecked code/c00_interfaces a second time, against the identity data and the request emails not examined before and against what each later component needs. Fixed five problems: a resource without evidence can now have an unknown state (present None) instead of a guessed one, the model gateway has an agreed failure (ModelError) so one bad answer never stops the run, REV-001 now also covers the 20 evaluation requests whose email has upper-case letters, the records state that frozenset order must never reach the output (EXT-402), and calls() was renamed recorded_calls() with clearer contracts. Changing REV-001 made Doorstop flag exactly ARC-05 and ARC-06 as suspect; both designs already compare emails without case, so the links were confirmed with clear. Results: 6 tests OK, mypy strict and ruff clean, doorstop -F -W clean, srctrace.py check PASS, 125 items waiting for review.
+
+Actions:
+* Read-only script over dataset/ (audit-log field names, emails shared by users over time, unmatched and upper-case request emails)
+* Edited code/c00_interfaces/records.py, components.py, fakes.py, test_interfaces.py; ran python -m unittest, mypy and ruff
+* Ran scratch scripts with Doorstop's API (no git add): REV-001 text and rationale, ARC-00 links to EXT-402 and EXT-501, clear of the suspect links of ARC-05 and ARC-06 to REV-001
+* Ran doorstop -F -W, srctrace.py check, views and publish; edited docs/steps/step-04-interfaces.md
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+

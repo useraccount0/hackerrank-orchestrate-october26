@@ -1,4 +1,4 @@
-"""ARC-00_interfaces: EXT-602, EXT-609, REV-005, CHR-416 to CHR-432."""
+"""ARC-00_interfaces: EXT-501, EXT-602, EXT-609, REV-005, CHR-416 to CHR-432."""
 
 import dataclasses
 import re
@@ -6,6 +6,7 @@ import unittest
 from datetime import datetime, timezone
 from pathlib import Path
 
+from c00_interfaces.components import ModelError
 from c00_interfaces.fakes import FakeModelGateway, fake_components
 from c00_interfaces.records import OPERATIONS, PHASES, CaseAnswer, CaseVerdict, ModelQuestion, Observation
 
@@ -17,7 +18,14 @@ class InterfacesCanBeMocked(unittest.TestCase):
     def test_fake_model_gateway_answers_and_records_the_question(self) -> None:
         gateway = FakeModelGateway(lambda question: f"answer for {question.purpose}")
         self.assertEqual(gateway.ask(ModelQuestion("classify", "instructions", "data")), "answer for classify")
-        self.assertEqual([call.purpose for call in gateway.calls()], ["classify"])
+        self.assertEqual([call.purpose for call in gateway.recorded_calls()], ["classify"])
+
+    def test_a_fake_model_gateway_can_fail_like_a_real_one(self) -> None:
+        def no_access(question: ModelQuestion) -> str:
+            raise ModelError("no access")
+
+        with self.assertRaises(ModelError):
+            FakeModelGateway(no_access).ask(ModelQuestion("classify", "instructions", "data"))
 
     def test_a_bundle_of_fakes_stands_in_for_every_component(self) -> None:
         components = fake_components()

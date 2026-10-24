@@ -89,10 +89,29 @@ minimum Python version (3.10) are in `code/pyproject.toml`.
 After your commit "Step4", your interface instructions became source unit SRC-LG0584, and
 EXT-609 to EXT-611 now link to it. Doorstop shows no warnings.
 
+## Second recheck of c00
+
+This pass checked the interfaces against the parts of the data not looked at before (identity
+history, request emails) and against what each later component will need. Found and fixed:
+
+| # | Problem | Fix |
+|---|---|---|
+| 1 | **A resource with no evidence was forced to be "present" or "absent"**, although only an activity result (a claim, CHR-312) might mention it | `ResourceState.present` can now be `None` (unknown), always together with an empty `proof_id`; the policy checker decides what unknown means |
+| 2 | **No agreed way for the model gateway to fail** (no access, failed call, unusable answer), so each component would have guessed | New `ModelError` in `components.py`: the gateway raises it, and the caller decides what to do instead, so one bad answer never stops the run (EXT-501). A new test shows how a fake gateway fails |
+| 3 | **20 of the 518 requests write the email with upper-case letters**, but REV-001 only covered evidence | REV-001 now covers the request email too. Doorstop then flagged exactly the two components that implement REV-001 (ARC-05, ARC-06) as suspect: your EXT-604 at work. Both designs already compare emails without case, so the links were confirmed with Doorstop's `clear` |
+| 4 | **The order of a frozenset changes from run to run**, which could make `output.csv` differ between runs (EXT-402) | The rule is now written into `records.py`: frozenset fields serve membership tests only; whatever reaches the output is sorted first |
+| 5 | Names and contracts | `calls()` renamed to `recorded_calls()` (EXT-504); `Identity` states that emails are lower-case and that the hashes include old emails; `StoreListing` explains `resource_kind` |
+
+Checked and fine: no email ever belonged to two people, every request matches a user, and no
+identity changed after August 2026, so the identity resolver's signature is enough.
+
+Results: 6 tests OK; mypy (strict) and ruff clean; `doorstop -F -W` clean; `srctrace.py check`
+PASS.
+
 ## How to check
 
 ```powershell
-python -m unittest discover -s code -t code -p "test_*.py"     # must end with OK (5 tests)
+python -m unittest discover -s code -t code -p "test_*.py"     # must end with OK (6 tests)
 cd code; ..\.venv\Scripts\python -m mypy c00_interfaces; ..\.venv\Scripts\ruff check c00_interfaces; cd ..
 .venv-req\Scripts\python requirements\tools\srctrace.py check   # must end with RESULT: PASS
 ```

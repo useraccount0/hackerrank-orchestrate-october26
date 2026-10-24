@@ -40,11 +40,16 @@ class DatasetReader(Protocol):
     def __call__(self, dataset_dir: Path) -> Dataset: ...
 
 
+class ModelError(Exception):
+    """The model gave no usable answer (no access, a failed call, or an answer that failed its
+    check). The caller decides what to do instead, so one bad answer never stops the run (EXT-501)."""
+
+
 @runtime_checkable
 class ModelGateway(Protocol):
     def ask(self, question: ModelQuestion) -> str: ...
 
-    def calls(self) -> tuple[ModelCall, ...]: ...
+    def recorded_calls(self) -> tuple[ModelCall, ...]: ...
 
 
 @runtime_checkable

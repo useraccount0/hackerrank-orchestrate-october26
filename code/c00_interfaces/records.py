@@ -3,6 +3,8 @@
 Components depend only on these records and on the signatures in components.py, never on each
 other's code, so each component can be tested alone with hand-made records.
 All times are timezone-aware UTC datetimes.
+The iteration order of a frozenset changes from run to run, so frozenset fields serve membership
+tests only; whatever reaches output.csv or an explanation is sorted first (EXT-402).
 """
 
 from __future__ import annotations
@@ -160,7 +162,8 @@ class Observation:
 @dataclass(frozen=True)
 class StoreListing:
     """All records of one store at one time, such as a snapshot table: a record of resource_kind
-    that is not in resource_ids was absent from that store (REV-005)."""
+    (the resource-id prefix the store holds, such as "account") that is not in resource_ids was
+    absent from that store (REV-005)."""
 
     evidence_id: str
     captured_at: datetime
@@ -204,6 +207,8 @@ class RequestDecision:
 
 @dataclass(frozen=True)
 class Identity:
+    """Emails are lower-case (REV-001); email_hashes include the hashes of old emails (REV-002)."""
+
     user_id: str
     emails: frozenset[str]
     email_hashes: frozenset[str]
@@ -223,13 +228,14 @@ class Resource:
 class ResourceState:
     """The state of one resource at audit_at.
 
-    proof_id is the evidence, activity, or audit id that shows this state, and "" when nothing
-    captured at or before audit_at shows it.
+    present is None, and proof_id is "", when nothing captured at or before audit_at shows the
+    state; an activity result alone is only a claim (CHR-312), so the state is then unknown, not
+    guessed. Otherwise proof_id is the evidence, activity, or audit id that shows the state.
     """
 
     resource: Resource
     category: str | None
-    present: bool
+    present: bool | None
     identifiers_present: frozenset[str]
     flow_enabled: bool | None
     restore_allowed: bool | None

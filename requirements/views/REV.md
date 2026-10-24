@@ -8,7 +8,7 @@
 
 # 1 Emails are matched without regard to case _(REV-001)_ {#REV-001}
 
-Email addresses shall be compared without regard to upper and lower case when evidence is matched to the subject.
+Email addresses shall be compared without regard to upper and lower case, both when the request email is matched to an identity and when evidence is matched to the subject.
 
 *Parent links: CHR-309*
 
@@ -18,7 +18,7 @@ Email addresses shall be compared without regard to upper and lower case when ev
 | kind | functional |
 | modality | shall |
 | verification | test |
-| rationale | Revealed in step 3 (data analysis), not stated by any input line. Evidence lists some emails in upper case, for example CHOI.JIHOON94@GMAIL.COM in evidence_03 (customer_account_handover_20261001.txt).
+| rationale | Revealed in step 3 (data analysis), not stated by any input line. Evidence lists some emails in upper case, for example CHOI.JIHOON94@GMAIL.COM in evidence_03 (customer_account_handover_20261001.txt). Rechecked in step 4: 20 of the 518 evaluation requests write the request email with upper-case letters.
  |
 
 
