@@ -7,6 +7,7 @@
  * 5 A complete listing without the record proves its absence (REV-005)
  * 6 A request row that cannot be read still gets its output row (REV-006)
  * 7 The same files are read the same way on every supported Python version (REV-007)
+ * 8 A name links a record only when the whole name matches (REV-008)
 
 # 1 Emails are matched without regard to case _(REV-001)_ {#REV-001}
 
@@ -120,6 +121,22 @@ The solution shall give the same results on every Python version it declares to 
 | rationale | Revealed in step 5, in the recheck of c01: on Python 3.11 and newer, datetime.fromisoformat accepts forms such as 20260904T100000Z that Python 3.10 rejects. code/pyproject.toml declares Python 3.10 as the minimum, so one file could be read differently depending on who runs the solution. EXT-402 covers repeated runs, not different Python versions. The tests have run only on Python 3.15 so far (ISS-12).
  |
 | note | Since your decision on ISS-12 (EXT-407), the solution supports one Python version, 3.15, so this holds without extra code: c01's own written form for times was removed again, and code/pyproject.toml declares only 3.15.
+ |
+
+
+# 8 A name links a record only when the whole name matches _(REV-008)_ {#REV-008}
+
+A name shall link a record to the subject only when the whole name matches one of the subject's names; a name that merely contains the subject's name, or is contained in it, shall not.
+
+*Parent links: CHR-223, CHR-309*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | functional |
+| modality | shall |
+| verification | test |
+| rationale | Revealed in step 6, while building the evidence reader: the evidence holds names next to the subjects' names that would match as substrings, such as Priya Ramanathan (Priya Raman, case_07) and Jonas Berglund (Jonas Berg, case_06). Found by comparing every identifier the reader extracted with the identity data.
  |
 
 

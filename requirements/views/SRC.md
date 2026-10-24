@@ -536,6 +536,8 @@
     * 7.29 log.txt:607
     * 7.30 log.txt:630
     * 7.31 log.txt:652
+    * 7.32 log.txt:675
+    * 7.33 log.txt:697 (SRC-LG0697)
 
 ## 1.1 AGENTS.md:1 _(SRC-AG0001)_ {#SRC-AG0001}
 
@@ -6985,5 +6987,29 @@ continue with c01
 | classified_by | ai |
 | note | Your go-ahead to start component c01, as EXT-610 asks for; it states no new requirement.
  |
+
+
+## 7.32 log.txt:675 _(SRC-LG0675)_ {#SRC-LG0675}
+
+recheck c01
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | context |
+| classified_by | ai |
+| note | An order to recheck component c01 in this session; it states no lasting requirement.
+ |
+
+
+## 7.33 log.txt:697 _(SRC-LG0697)_ {#SRC-LG0697}
+
+only python 3.15 will be used for this project
+
+*Child links: EXT-407*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
 
 

@@ -1,0 +1,2 @@
+# What the solution needs to run (Python 3.15): python -m pip install -r code/requirements.txt
+pypdf==6.21.2

@@ -41,9 +41,9 @@ class RecordsAreSafeToShare(unittest.TestCase):
 
     def test_records_with_identifiers_and_facts_stay_hashable(self) -> None:
         seen = Observation("evidence_01", NOON, NOON, "customer_profiles", "account_001", True,
-                           identifiers={"email": "a@example.com"}, facts={"account_status": "ACTIVE"})
+                           identifiers={"email": frozenset({"a@example.com"})}, facts={"account_status": "ACTIVE"})
         same = Observation("evidence_01", NOON, NOON, "customer_profiles", "account_001", True,
-                           identifiers={"email": "a@example.com"}, facts={"account_status": "ACTIVE"})
+                           identifiers={"email": frozenset({"a@example.com"})}, facts={"account_status": "ACTIVE"})
         self.assertEqual(len({seen, same}), 1)
 
 

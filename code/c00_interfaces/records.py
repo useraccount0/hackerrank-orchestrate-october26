@@ -150,9 +150,12 @@ class Dataset:
 class Observation:
     """One record seen in one evidence item.
 
+    captured_at is when the evidence item was captured (it decides whether the item may be cited
+    at audit_at); observed_at is when this record was seen, which can be earlier.
     found is None when the evidence does not say whether the record exists.
-    identifiers holds only the personal identifiers present on the record, keyed by a kind from
-    IDENTIFIER_KINDS; facts holds the other state facts as written in the evidence.
+    identifiers holds the personal identifiers present on the record, keyed by a kind from
+    IDENTIFIER_KINDS; one record can hold several values of one kind. Emails and email hashes are
+    lower-case (REV-001). facts holds the other fields as written in the evidence.
     """
 
     evidence_id: str
@@ -163,7 +166,7 @@ class Observation:
     found: bool | None
     category: str | None = None
     # hash=False keeps the record hashable; a dict field would make hash() fail.
-    identifiers: Mapping[str, str] = field(default_factory=dict, hash=False)
+    identifiers: Mapping[str, frozenset[str]] = field(default_factory=dict, hash=False)
     facts: Mapping[str, str] = field(default_factory=dict, hash=False)
     excerpt: str = ""
 
@@ -172,10 +175,11 @@ class Observation:
 class StoreListing:
     """All records of one store at one time, such as a snapshot table: a record of resource_kind
     (the resource-id prefix the store holds, such as "account") that is not in resource_ids was
-    absent from that store (REV-005)."""
+    absent from that store at observed_at (REV-005). captured_at is as in Observation."""
 
     evidence_id: str
     captured_at: datetime
+    observed_at: datetime
     store: str
     resource_kind: str
     resource_ids: frozenset[str]

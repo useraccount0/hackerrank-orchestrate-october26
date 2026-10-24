@@ -473,6 +473,8 @@ The text of PDF evidence shall be read with the open-source library pypdf.
 
 The project shall use Python 3.15 only: the solution is built, tested, and run with it, and code/pyproject.toml declares no other version.
 
+*Parent links: SRC-LG0697*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |

@@ -1,0 +1,18 @@
+active: true
+classified_by: ai
+derived: false
+disposition: context
+file: log.txt
+header: |
+  log.txt:675
+level: 7.32
+line_end: '675'
+line_start: '675'
+links: []
+normative: false
+note: |
+  An order to recheck component c01 in this session; it states no lasting requirement.
+ref: ''
+reviewed: pending-user-review
+text: |
+  recheck c01

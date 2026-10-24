@@ -5,7 +5,8 @@ header: |
 issues: ISS-12
 kind: constraint
 level: 4.7
-links: []
+links:
+- SRC-LG0697: rYDxTdyGUhrS4_AsDPSPsRPm_0_GI7jSjB_nt65ImUs=
 modality: shall
 normative: true
 note: |

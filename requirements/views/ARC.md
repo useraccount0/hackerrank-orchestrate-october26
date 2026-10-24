@@ -58,12 +58,14 @@ The only place that calls an AI model. Provider and model are settings; adapters
 
 Opens each file of the evidence manifest and turns its contents into observations: which resource, in which system or store, seen when, with which identifiers and which state facts. One reader per format: SQL snapshot (sqlite3), log, JSON, text, PDF (pypdf); screenshots are read through the model gateway, once, and cached.
 
-*Parent links: CHR-218, CHR-220, CHR-221, CHR-308, CHR-310, CHR-311, EXT-405, EXT-406, EXT-501, EXT-502, EXT-503, EXT-504, EXT-505, EXT-506, EXT-601, EXT-602, EXT-603, REV-005*
+*Parent links: CHR-218, CHR-220, CHR-221, CHR-308, CHR-310, CHR-311, EXT-405, EXT-406, EXT-501, EXT-502, EXT-503, EXT-504, EXT-505, EXT-506, EXT-601, EXT-602, EXT-603, REV-001, REV-005*
 
 | Attribute | Value |
 | --------- | ----- |
 | code | code/c03_evidence_reader/ |
 | interface | EvidenceReader: evidence files, dataset_dir, ModelGateway -> EvidenceReading (Observations, StoreListings, input problems)
+ |
+| note | Design: one reader per format (sql_snapshots, json_records, log_lines, text_documents) and one set of rules for all of them (record_fields). The text of a PDF comes from pypdf, and the text of a screenshot from the model gateway, which only writes down what it sees. Identifiers are recognized by the shape of their values wherever they appear (emails and hashes lower-cased, REV-001); names only from fields that are called a name. Whether a record exists comes from explicit signals (404, NOT_FOUND, rows=0, result values), and a missing signal wins. Log lines of one trace are joined. Every SQL table and every JSON collection is a complete listing, for each kind of record its store holds in any file (REV-005). SQLite may only load a snapshot (EXT-502). A file that cannot be read is reported and skipped.
  |
 
 
@@ -97,7 +99,7 @@ Finds the subject of a request from its email (current or old) and collects all 
 
 Finds every record, data flow, and backup of the subject in the observations and the activity stream, through grounded links only (identifiers, hashes, resource IDs), and ignores decoys.
 
-*Parent links: CHR-102, CHR-103, CHR-223, CHR-307, CHR-309, CHR-315, CHR-316, EXT-504, EXT-505, EXT-506, EXT-601, EXT-602, EXT-603, REV-001, REV-002*
+*Parent links: CHR-102, CHR-103, CHR-223, CHR-307, CHR-309, CHR-315, CHR-316, EXT-504, EXT-505, EXT-506, EXT-601, EXT-602, EXT-603, REV-001, REV-002, REV-008*
 
 | Attribute | Value |
 | --------- | ----- |
