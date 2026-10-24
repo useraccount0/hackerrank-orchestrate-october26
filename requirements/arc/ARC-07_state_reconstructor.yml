@@ -4,8 +4,8 @@ derived: false
 header: |
   State reconstructor
 interface: |
-  resources + observations + audit_at -> resource states with proving evidence
-level: 1.7
+  StateReconstructor: Resources, Observations, Activities, audit_at -> ResourceStates
+level: 1.8
 links:
 - CHR-208: kxox_fbKFI5ZGu5I_7u_J0wmmzJoyNkg1SVjjXUfIXk=
 - CHR-311: woGbY1drxygduEjjTH5i4Kz5BtaC_F1Pmmy6Aid8hDM=

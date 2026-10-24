@@ -3,8 +3,9 @@ code: code/c10_audit_pipeline/
 derived: false
 header: |
   Audit pipeline
-interface: dataset/ -> output.csv + explanations
-level: '1.10'
+interface: |
+  Components bundle, dataset_dir -> output.csv and a CaseResult (answer, explanation) per case
+level: 1.11
 links:
 - CHR-101: ey6AJPBCoo7ooMS2dXdYq923akqUre-AFwJPFLYBjx8=
 - CHR-219: C22V51AIi9DEbEG4Wpyg6i8mMukEuZAao6cduUFtKyE=

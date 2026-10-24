@@ -3,8 +3,9 @@ code: code/c01_input_reader/
 derived: false
 header: |
   Input reader
-interface: dataset/*.csv -> records + list of input problems
-level: 1.1
+interface: |
+  DatasetReader: dataset_dir -> Dataset (all CSV records, input problems)
+level: 1.2
 links:
 - CHR-201: hNTGPhQoI7f_Dleo3Dw1mJhCiGmuZKymaCXfk2DzICU=
 - CHR-202: -E-qlor1ZsjkHYtHWGUBe_D38xI4ff2pDhNtj0VSPTM=

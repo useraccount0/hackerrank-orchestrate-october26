@@ -3,9 +3,8 @@ code: code/c11_evaluator/
 derived: false
 header: |
   Evaluator
-interface: |
-  output + sample answers + usage records -> metrics and report numbers
-level: 1.11
+interface: 'Evaluator: predicted and expected CaseAnswers -> Scores'
+level: 1.12
 links:
 - CHR-213: 5neWEsS42ZlyuYxS8D-wz8jIVhFipxAf30lOZAhMWzE=
 - CHR-607: kUjn_yWVhS3n6o4K8-ea1Cfa1pCbHsNUiY9akUsx9BA=

@@ -578,3 +578,26 @@ repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
 
+## [2026-10-25T00:03:43+02:00] Step 4: interfaces between components defined (ARC-00_interfaces)
+
+User Prompt (verbatim, secrets redacted):
+Now define interfaces between components, so that tests can mock them, and then I will let you work on individual components one at a time. Leave the one that uses AI as the last one for implementation
+
+Agent Response Summary:
+Defined the interfaces as a new component, code/c00_interfaces/: records.py (the plain data records the components exchange), components.py (one call signature per component and the Components bundle the pipeline receives), fakes.py (FakeModelGateway), and test_interfaces.py, whose 2 tests pass with python -m unittest. Recorded the user's instructions as EXT-609 to EXT-611 (interfaces first, one component at a time, the model gateway last), added ARC-00_interfaces, and set every ARC item's interface attribute to its exact signature. A first update script saved the ARC items before Doorstop had loaded them and wrote 12 of them nearly empty; the checks caught it, the files were restored from the user's commit Step3 with git restore, and the update was redone with every item loaded first. srctrace.py check passes, Doorstop shows only 3 expected warnings for the new EXT items, 122 items wait for review, and no component logic was written.
+
+Actions:
+* Created code/c00_interfaces/ (__init__.py, records.py, components.py, fakes.py, test_interfaces.py); ran python -m unittest discover -s code -t code (2 tests OK)
+* Ran scratch scripts that import EXT-609 to EXT-611 and ARC-00_interfaces and update the ARC items with Doorstop's API (no git add)
+* Ran git restore --source=HEAD on the 12 damaged ARC item files, then redid the update
+* Ran doorstop -F -W, srctrace.py check (PASS), srctrace.py views, doorstop publish for EXT, ARC and the HTML
+* Created docs/steps/step-04-interfaces.md; edited docs/v-model.md
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+

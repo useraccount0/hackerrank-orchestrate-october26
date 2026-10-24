@@ -3,8 +3,8 @@ code: code/c09_step_planner/
 derived: false
 header: |
   Step planner
-interface: policy results -> steps_json
-level: 1.9
+interface: 'StepPlanner: CaseVerdict -> CaseAnswer (ordered Steps)'
+level: '1.10'
 links:
 - CHR-326: bleZOqHi7vi41Hq6w4CAiX1yLuSAALQTe8XL9MXtMeg=
 - CHR-327: 8R_fb6LeDn5YGSMtdy07pXlLYqWL_Zvy2J5iiYSk_MI=

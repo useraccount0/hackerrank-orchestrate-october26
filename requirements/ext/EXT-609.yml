@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Interfaces first, so that tests can mock components
+issues: ''
+kind: process
+level: 6.9
+links: []
+modality: shall
+normative: true
+note: |
+  Your words: "Now define interfaces between components, so that tests can mock them, and then I will let you work on individual components one at a time. Leave the one that uses AI as the last one for implementation"
+party: coding-agent
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  The interfaces between the components shall be defined before the components are implemented, so that a test can replace any component by a fake.
+verification: inspection

@@ -1,0 +1,20 @@
+active: true
+code: code/c00_interfaces/
+derived: false
+header: |
+  Interfaces
+interface: records.py and components.py
+level: 1.1
+links:
+- EXT-504: GcVxG4G4CEueqO7DwzHMNLKv9RIEqMEajoFRXQ5ofB4=
+- EXT-505: 0r7CMFQK4qBHurY92pKQthKToajJpw_TMaLuQRzkcak=
+- EXT-506: bGkFagkd24RqVGhnk351rENvuQe8Wupi_R87kIp0w8M=
+- EXT-602: 6_QzgtDZbDrsvKdZIwHU4sjPHf5QIcQLQ8Av_An7-lw=
+- EXT-603: KhvRrVO_kFVa4SHt3_n54IoEoEQSfeoPSoEHrdBlQuM=
+- EXT-609: m4hdYQbhsj79MzkdVJ5az_W0jvTwXMM0QveFvIqKSnQ=
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  The data records the components exchange (code/c00_interfaces/records.py) and the call signature of every component (code/c00_interfaces/components.py). Components depend only on these, never on each other's code; the audit pipeline receives the components as one bundle, so a test can replace any of them, and the model gateway, by a fake (code/c00_interfaces/fakes.py).

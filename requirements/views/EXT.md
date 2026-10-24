@@ -45,6 +45,9 @@
     * 6.6 Revealed requirements kept separate (EXT-606)
     * 6.7 Fix through the V-model, not only the code (EXT-607)
     * 6.8 Components named and numbered in pipeline order (EXT-608)
+    * 6.9 Interfaces first, so that tests can mock components (EXT-609)
+    * 6.10 One component at a time (EXT-610)
+    * 6.11 The component that uses AI comes last (EXT-611)
 
 # 1.0 Development process (your instructions) {#EXT-100}
 
@@ -700,6 +703,48 @@ Each component shall have a meaningful name and a number, so that the components
 | modality | shall |
 | verification | inspection |
 | note | Your words: "component design is good, they just need meaningfull names instead of c1 c2... numbers" and "Component names are good, but I want them to also have numbers in the name so that they are listed in my tree view in the order they are used like a pipeline." Code folders start with the letter c (c01_input_reader) because a Python package name cannot start with a digit.
+ |
+
+
+## 6.9 Interfaces first, so that tests can mock components _(EXT-609)_ {#EXT-609}
+
+The interfaces between the components shall be defined before the components are implemented, so that a test can replace any component by a fake.
+
+| Attribute | Value |
+| --------- | ----- |
+| party | coding-agent |
+| kind | process |
+| modality | shall |
+| verification | inspection |
+| note | Your words: "Now define interfaces between components, so that tests can mock them, and then I will let you work on individual components one at a time. Leave the one that uses AI as the last one for implementation"
+ |
+
+
+## 6.10 One component at a time _(EXT-610)_ {#EXT-610}
+
+The components shall be implemented one at a time, each started with your go-ahead.
+
+| Attribute | Value |
+| --------- | ----- |
+| party | coding-agent |
+| kind | process |
+| modality | shall |
+| verification | inspection |
+| note | Your words: "Now define interfaces between components, so that tests can mock them, and then I will let you work on individual components one at a time. Leave the one that uses AI as the last one for implementation"
+ |
+
+
+## 6.11 The component that uses AI comes last _(EXT-611)_ {#EXT-611}
+
+The component that calls an AI model (ARC-02_model_gateway) shall be implemented last; until then, the components that use it are tested with a fake gateway.
+
+| Attribute | Value |
+| --------- | ----- |
+| party | coding-agent |
+| kind | process |
+| modality | shall |
+| verification | inspection |
+| note | Your words: "Now define interfaces between components, so that tests can mock them, and then I will let you work on individual components one at a time. Leave the one that uses AI as the last one for implementation"
  |
 
 

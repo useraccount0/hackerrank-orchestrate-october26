@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  One component at a time
+issues: ''
+kind: process
+level: '6.10'
+links: []
+modality: shall
+normative: true
+note: |
+  Your words: "Now define interfaces between components, so that tests can mock them, and then I will let you work on individual components one at a time. Leave the one that uses AI as the last one for implementation"
+party: coding-agent
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  The components shall be implemented one at a time, each started with your go-ahead.
+verification: inspection

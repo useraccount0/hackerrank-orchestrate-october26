@@ -3,8 +3,9 @@ code: code/c04_request_classifier/
 derived: false
 header: |
   Request classifier
-interface: 'request text -> authorizes deletion: yes or no, with a short reason'
-level: 1.4
+interface: |
+  RequestClassifier: Requests, ModelGateway -> RequestDecision per case
+level: 1.5
 links:
 - CHR-301: gA9zmy8ljS-1r1Btr1NW9YWMcA22bymLMFN0JWzWdyw=
 - CHR-302: Y2EZovDxb6orI7I485QpklhjQ07a4PvxYvDoTZG8V3E=

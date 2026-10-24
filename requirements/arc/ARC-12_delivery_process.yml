@@ -4,7 +4,7 @@ derived: false
 header: |
   Delivery process (not code)
 interface: '-'
-level: 1.12
+level: 1.13
 links:
 - CHR-509: -X4bYqExUc4LO6x5kBSLWbTh0zN-XdGMGUvGywV14l4=
 - CHR-511: 3JOR5lFxAxoP512knrUfhUnD6VCb2Dn9f4R68TGkkHk=
@@ -102,6 +102,8 @@ links:
 - EXT-606: 3bXIH6RsIRwwvRhW6PIKPyzbYeDy-jH7WexQk3FKMPs=
 - EXT-607: jX7R7ULQ2f6WHWlU-trpYXImP82ZGuj4sotV5GS2n0s=
 - EXT-608: nssaXwpB-y68UljgIkigLt7aCdZWaaIx8bON8d0pQfM=
+- EXT-610: iiuYnr0585tfoUW1lH4WwVPcPaWAFeaWrLE7G_RTPr8=
+- EXT-611: pe9t5nrcZgkiZW6N_Y7mOUHo8JbpS_KSCYdnbtsyVx8=
 normative: true
 note: ''
 ref: ''

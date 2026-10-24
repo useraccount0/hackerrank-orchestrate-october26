@@ -3,8 +3,9 @@ code: code/c02_model_gateway/
 derived: false
 header: |
   Model gateway
-interface: prompt + data (+ image) -> checked answer; usage records
-level: 1.2
+interface: |
+  ModelGateway: ask(ModelQuestion) -> answer text; calls() -> ModelCall records
+level: 1.3
 links:
 - CHR-101: ey6AJPBCoo7ooMS2dXdYq923akqUre-AFwJPFLYBjx8=
 - CHR-508: d-sVBv9O_ffGowtJRL4PnAwvfWtzS4uuemUdTiviny8=
@@ -19,6 +20,7 @@ links:
 - EXT-601: iQiNNFooXid8nduNUiT5R7S24afvm4aHwcRpPTKUHA0=
 - EXT-602: 6_QzgtDZbDrsvKdZIwHU4sjPHf5QIcQLQ8Av_An7-lw=
 - EXT-603: KhvRrVO_kFVa4SHt3_n54IoEoEQSfeoPSoEHrdBlQuM=
+- EXT-611: pe9t5nrcZgkiZW6N_Y7mOUHo8JbpS_KSCYdnbtsyVx8=
 normative: true
 note: ''
 ref: ''

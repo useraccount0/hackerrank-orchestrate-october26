@@ -3,8 +3,9 @@ code: code/c05_identity_resolver/
 derived: false
 header: |
   Identity resolver
-interface: request email + identities + identity history -> identity
-level: 1.5
+interface: |
+  IdentityResolver: email, IdentityRecords, IdentityChanges, audit_at -> Identity or none
+level: 1.6
 links:
 - CHR-304: E7FsQdDqQqe5uJeUg5L9Zt-9ETMwmBM6GamSvQLBYmk=
 - CHR-305: gNLOipC4Op4IMLJLJCIqBk8qDlCmXtSC0GE-he50w80=

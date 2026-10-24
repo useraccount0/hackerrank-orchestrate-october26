@@ -3,8 +3,9 @@ code: code/c03_evidence_reader/
 derived: false
 header: |
   Evidence reader
-interface: manifest records + dataset/evidence/ -> observations
-level: 1.3
+interface: |
+  EvidenceReader: evidence files, dataset_dir, ModelGateway -> EvidenceReading (Observations, input problems)
+level: 1.4
 links:
 - CHR-218: NnbTGDqBf1w3APRfCcCKRqaKGbD7XSNdibVd4GCy_0o=
 - CHR-220: ijeHW0s-E9nFPm_Q9bb1AsEjZ8XtS3FCqylyFQAa1zE=

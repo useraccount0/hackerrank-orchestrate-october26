@@ -1,19 +1,32 @@
 ### Table of Contents
 
-    * 1.1 Input reader (ARC-01_input_reader)
-    * 1.2 Model gateway (ARC-02_model_gateway)
-    * 1.3 Evidence reader (ARC-03_evidence_reader)
-    * 1.4 Request classifier (ARC-04_request_classifier)
-    * 1.5 Identity resolver (ARC-05_identity_resolver)
-    * 1.6 Resource finder (ARC-06_resource_finder)
-    * 1.7 State reconstructor (ARC-07_state_reconstructor)
-    * 1.8 Policy checker (ARC-08_policy_checker)
-    * 1.9 Step planner (ARC-09_step_planner)
-    * 1.10 Audit pipeline (ARC-10_audit_pipeline)
-    * 1.11 Evaluator (ARC-11_evaluator)
-    * 1.12 Delivery process (not code) (ARC-12_delivery_process)
+    * 1.1 Interfaces (ARC-00_interfaces)
+    * 1.2 Input reader (ARC-01_input_reader)
+    * 1.3 Model gateway (ARC-02_model_gateway)
+    * 1.4 Evidence reader (ARC-03_evidence_reader)
+    * 1.5 Request classifier (ARC-04_request_classifier)
+    * 1.6 Identity resolver (ARC-05_identity_resolver)
+    * 1.7 Resource finder (ARC-06_resource_finder)
+    * 1.8 State reconstructor (ARC-07_state_reconstructor)
+    * 1.9 Policy checker (ARC-08_policy_checker)
+    * 1.10 Step planner (ARC-09_step_planner)
+    * 1.11 Audit pipeline (ARC-10_audit_pipeline)
+    * 1.12 Evaluator (ARC-11_evaluator)
+    * 1.13 Delivery process (not code) (ARC-12_delivery_process)
 
-## 1.1 Input reader _(ARC-01_input_reader)_ {#ARC-01_input_reader}
+## 1.1 Interfaces _(ARC-00_interfaces)_ {#ARC-00_interfaces}
+
+The data records the components exchange (code/c00_interfaces/records.py) and the call signature of every component (code/c00_interfaces/components.py). Components depend only on these, never on each other's code; the audit pipeline receives the components as one bundle, so a test can replace any of them, and the model gateway, by a fake (code/c00_interfaces/fakes.py).
+
+*Parent links: EXT-504, EXT-505, EXT-506, EXT-602, EXT-603, EXT-609*
+
+| Attribute | Value |
+| --------- | ----- |
+| code | code/c00_interfaces/ |
+| interface | records.py and components.py |
+
+
+## 1.2 Input reader _(ARC-01_input_reader)_ {#ARC-01_input_reader}
 
 Reads the CSV files of dataset/ (requests, identities, identity history, activity, deletion rules, evidence manifest, sample requests and answers) into plain records, checks every value where it is read, and reports what it had to skip.
 
@@ -22,22 +35,24 @@ Reads the CSV files of dataset/ (requests, identities, identity history, activit
 | Attribute | Value |
 | --------- | ----- |
 | code | code/c01_input_reader/ |
-| interface | dataset/*.csv -> records + list of input problems |
+| interface | DatasetReader: dataset_dir -> Dataset (all CSV records, input problems)
+ |
 
 
-## 1.2 Model gateway _(ARC-02_model_gateway)_ {#ARC-02_model_gateway}
+## 1.3 Model gateway _(ARC-02_model_gateway)_ {#ARC-02_model_gateway}
 
 The only place that calls an AI model. Provider and model are settings; adapters speak the Anthropic API and the OpenAI-compatible API over plain HTTP. Caches every answer, records calls, tokens, and cost, and checks each answer before handing it on. Reads the API key from the environment only.
 
-*Parent links: CHR-101, CHR-508, EXT-401, EXT-402, EXT-405, EXT-502, EXT-503, EXT-504, EXT-505, EXT-506, EXT-601, EXT-602, EXT-603*
+*Parent links: CHR-101, CHR-508, EXT-401, EXT-402, EXT-405, EXT-502, EXT-503, EXT-504, EXT-505, EXT-506, EXT-601, EXT-602, EXT-603, EXT-611*
 
 | Attribute | Value |
 | --------- | ----- |
 | code | code/c02_model_gateway/ |
-| interface | prompt + data (+ image) -> checked answer; usage records |
+| interface | ModelGateway: ask(ModelQuestion) -> answer text; calls() -> ModelCall records
+ |
 
 
-## 1.3 Evidence reader _(ARC-03_evidence_reader)_ {#ARC-03_evidence_reader}
+## 1.4 Evidence reader _(ARC-03_evidence_reader)_ {#ARC-03_evidence_reader}
 
 Opens each file of the evidence manifest and turns its contents into observations: which resource, in which system or store, seen when, with which identifiers and which state facts. One reader per format: SQL snapshot (sqlite3), log, JSON, text, PDF (pypdf); screenshots are read through the model gateway, once, and cached.
 
@@ -46,10 +61,11 @@ Opens each file of the evidence manifest and turns its contents into observation
 | Attribute | Value |
 | --------- | ----- |
 | code | code/c03_evidence_reader/ |
-| interface | manifest records + dataset/evidence/ -> observations |
+| interface | EvidenceReader: evidence files, dataset_dir, ModelGateway -> EvidenceReading (Observations, input problems)
+ |
 
 
-## 1.4 Request classifier _(ARC-04_request_classifier)_ {#ARC-04_request_classifier}
+## 1.5 Request classifier _(ARC-04_request_classifier)_ {#ARC-04_request_classifier}
 
 Decides whether a request text, in any language, authorizes deletion. The text is passed to the model as data, never as instructions.
 
@@ -58,10 +74,11 @@ Decides whether a request text, in any language, authorizes deletion. The text i
 | Attribute | Value |
 | --------- | ----- |
 | code | code/c04_request_classifier/ |
-| interface | request text -> authorizes deletion: yes or no, with a short reason |
+| interface | RequestClassifier: Requests, ModelGateway -> RequestDecision per case
+ |
 
 
-## 1.5 Identity resolver _(ARC-05_identity_resolver)_ {#ARC-05_identity_resolver}
+## 1.6 Identity resolver _(ARC-05_identity_resolver)_ {#ARC-05_identity_resolver}
 
 Finds the subject of a request from its email (current or old) and collects all current and old identifiers: user_id, emails, phones, names, and email hashes.
 
@@ -70,10 +87,11 @@ Finds the subject of a request from its email (current or old) and collects all 
 | Attribute | Value |
 | --------- | ----- |
 | code | code/c05_identity_resolver/ |
-| interface | request email + identities + identity history -> identity |
+| interface | IdentityResolver: email, IdentityRecords, IdentityChanges, audit_at -> Identity or none
+ |
 
 
-## 1.6 Resource finder _(ARC-06_resource_finder)_ {#ARC-06_resource_finder}
+## 1.7 Resource finder _(ARC-06_resource_finder)_ {#ARC-06_resource_finder}
 
 Finds every record, data flow, and backup of the subject in the observations and the activity stream, through grounded links only (identifiers, hashes, resource IDs), and ignores decoys.
 
@@ -82,10 +100,11 @@ Finds every record, data flow, and backup of the subject in the observations and
 | Attribute | Value |
 | --------- | ----- |
 | code | code/c06_resource_finder/ |
-| interface | identity + observations + activity -> the subject's resources |
+| interface | ResourceFinder: Identity, Request, Observations, Activities -> Resources
+ |
 
 
-## 1.7 State reconstructor _(ARC-07_state_reconstructor)_ {#ARC-07_state_reconstructor}
+## 1.8 State reconstructor _(ARC-07_state_reconstructor)_ {#ARC-07_state_reconstructor}
 
 Decides the state of each resource at audit_at from the evidence captured at or before audit_at (activity results are claims), and names the evidence item that proves it.
 
@@ -94,11 +113,11 @@ Decides the state of each resource at audit_at from the evidence captured at or 
 | Attribute | Value |
 | --------- | ----- |
 | code | code/c07_state_reconstructor/ |
-| interface | resources + observations + audit_at -> resource states with proving evidence
+| interface | StateReconstructor: Resources, Observations, Activities, audit_at -> ResourceStates
  |
 
 
-## 1.8 Policy checker _(ARC-08_policy_checker)_ {#ARC-08_policy_checker}
+## 1.9 Policy checker _(ARC-08_policy_checker)_ {#ARC-08_policy_checker}
 
 Maps each resource to its data category and deletion rule, and judges whether its state complies with the required treatment; decides COMPLETE or INCOMPLETE.
 
@@ -107,11 +126,11 @@ Maps each resource to its data category and deletion rule, and judges whether it
 | Attribute | Value |
 | --------- | ----- |
 | code | code/c08_policy_checker/ |
-| interface | resource states + deletion rules -> violations, risks, compliant resources, case status
+| interface | PolicyChecker: case_id, ResourceStates, DeletionRules -> CaseVerdict (Judgements)
  |
 
 
-## 1.9 Step planner _(ARC-09_step_planner)_ {#ARC-09_step_planner}
+## 1.10 Step planner _(ARC-09_step_planner)_ {#ARC-09_step_planner}
 
 Turns the policy results into the ordered steps of steps_json (findings, remediation, verification), with the evidence rules and the fixed sort order, and serializes them deterministically.
 
@@ -120,10 +139,10 @@ Turns the policy results into the ordered steps of steps_json (findings, remedia
 | Attribute | Value |
 | --------- | ----- |
 | code | code/c09_step_planner/ |
-| interface | policy results -> steps_json |
+| interface | StepPlanner: CaseVerdict -> CaseAnswer (ordered Steps) |
 
 
-## 1.10 Audit pipeline _(ARC-10_audit_pipeline)_ {#ARC-10_audit_pipeline}
+## 1.11 Audit pipeline _(ARC-10_audit_pipeline)_ {#ARC-10_audit_pipeline}
 
 The entry point code/main.py. Runs the components for every case, writes output.csv at the repository root (one row per case, number order) and a readable explanation of every step beside it.
 
@@ -132,10 +151,11 @@ The entry point code/main.py. Runs the components for every case, writes output.
 | Attribute | Value |
 | --------- | ----- |
 | code | code/c10_audit_pipeline/ |
-| interface | dataset/ -> output.csv + explanations |
+| interface | Components bundle, dataset_dir -> output.csv and a CaseResult (answer, explanation) per case
+ |
 
 
-## 1.11 Evaluator _(ARC-11_evaluator)_ {#ARC-11_evaluator}
+## 1.12 Evaluator _(ARC-11_evaluator)_ {#ARC-11_evaluator}
 
 Scores output against the sample answers the way the organizers score (status, steps, fields, sequence), runs our own evaluation cases, and computes the numbers of evaluation_report.md and usage_report.md from recorded data.
 
@@ -144,15 +164,14 @@ Scores output against the sample answers the way the organizers score (status, s
 | Attribute | Value |
 | --------- | ----- |
 | code | code/c11_evaluator/ |
-| interface | output + sample answers + usage records -> metrics and report numbers
- |
+| interface | Evaluator: predicted and expected CaseAnswers -> Scores |
 
 
-## 1.12 Delivery process (not code) _(ARC-12_delivery_process)_ {#ARC-12_delivery_process}
+## 1.13 Delivery process (not code) _(ARC-12_delivery_process)_ {#ARC-12_delivery_process}
 
 How the work is done and delivered: the coding agent's rules and log.txt, the requirements and their traceability tools, the README, packaging of code.zip, the submission, and the agent trace. Checked by inspection, not by program tests.
 
-*Parent links: CHR-509, CHR-511, CHR-513, CHR-601, CHR-602, CHR-603, CHR-604, CHR-605, CHR-606, CHR-609, CHR-623, CHR-625, CHR-626, CHR-627, CHR-628, CHR-629, CHR-801, CHR-802, CHR-803, CHR-804, CHR-805, CHR-806, CHR-807, CHR-808, CHR-809, CHR-810, CHR-811, CHR-812, CHR-813, CHR-814, CHR-815, CHR-816, CHR-817, CHR-818, CHR-819, CHR-820, CHR-821, CHR-822, CHR-823, CHR-824, CHR-825, CHR-826, CHR-827, CHR-828, CHR-829, CHR-830, CHR-831, CHR-832, CHR-833, CHR-834, CHR-835, CHR-836, CHR-837, CHR-838, CHR-839, CHR-840, CHR-901, CHR-902, CHR-903, CHR-904, CHR-905, CHR-906, CHR-907, CHR-908, CHR-909, CHR-910, CHR-911, CHR-912, CHR-913, CHR-914, CHR-915, CHR-916, EXT-101, EXT-102, EXT-103, EXT-104, EXT-105, EXT-106, EXT-107, EXT-108, EXT-109, EXT-110, EXT-111, EXT-204, EXT-205, EXT-206, EXT-301, EXT-302, EXT-601, EXT-602, EXT-603, EXT-604, EXT-605, EXT-606, EXT-607, EXT-608*
+*Parent links: CHR-509, CHR-511, CHR-513, CHR-601, CHR-602, CHR-603, CHR-604, CHR-605, CHR-606, CHR-609, CHR-623, CHR-625, CHR-626, CHR-627, CHR-628, CHR-629, CHR-801, CHR-802, CHR-803, CHR-804, CHR-805, CHR-806, CHR-807, CHR-808, CHR-809, CHR-810, CHR-811, CHR-812, CHR-813, CHR-814, CHR-815, CHR-816, CHR-817, CHR-818, CHR-819, CHR-820, CHR-821, CHR-822, CHR-823, CHR-824, CHR-825, CHR-826, CHR-827, CHR-828, CHR-829, CHR-830, CHR-831, CHR-832, CHR-833, CHR-834, CHR-835, CHR-836, CHR-837, CHR-838, CHR-839, CHR-840, CHR-901, CHR-902, CHR-903, CHR-904, CHR-905, CHR-906, CHR-907, CHR-908, CHR-909, CHR-910, CHR-911, CHR-912, CHR-913, CHR-914, CHR-915, CHR-916, EXT-101, EXT-102, EXT-103, EXT-104, EXT-105, EXT-106, EXT-107, EXT-108, EXT-109, EXT-110, EXT-111, EXT-204, EXT-205, EXT-206, EXT-301, EXT-302, EXT-601, EXT-602, EXT-603, EXT-604, EXT-605, EXT-606, EXT-607, EXT-608, EXT-610, EXT-611*
 
 | Attribute | Value |
 | --------- | ----- |

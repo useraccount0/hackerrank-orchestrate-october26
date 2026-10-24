@@ -3,8 +3,9 @@ code: code/c06_resource_finder/
 derived: false
 header: |
   Resource finder
-interface: identity + observations + activity -> the subject's resources
-level: 1.6
+interface: |
+  ResourceFinder: Identity, Request, Observations, Activities -> Resources
+level: 1.7
 links:
 - CHR-102: ip4401rEz4cfwzTy_q5pTjhpG1AAah0fBYH0w_oms-s=
 - CHR-103: Y-N01aIhaoew4tWNM5-mwcaayMPOnw3YRgBd-vfNweI=

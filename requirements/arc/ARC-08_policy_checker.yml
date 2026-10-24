@@ -4,8 +4,8 @@ derived: false
 header: |
   Policy checker
 interface: |
-  resource states + deletion rules -> violations, risks, compliant resources, case status
-level: 1.8
+  PolicyChecker: case_id, ResourceStates, DeletionRules -> CaseVerdict (Judgements)
+level: 1.9
 links:
 - CHR-217: QBctDgcHC_6Jy1GzAxIzdL_DhR8EfOhXizpnrbAw0AQ=
 - CHR-317: FVLkzzpaP4Ub30ZqVt9nifuomGPfuGlrLCRhJnaqwG8=
