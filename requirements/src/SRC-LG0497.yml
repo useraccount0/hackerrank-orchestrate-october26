@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: log.txt
+header: |
+  log.txt:497
+level: 7.24
+line_end: '497'
+line_start: '497'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  I have more requirements regarding design process. I want solution to be meaningfully modular, split into components. Those components can be tested individally and independently from each other. Each of those components will be traceable up the v model. That will save time and work when changes are needed. If a change comes from the top, from adding a new requirement, only affected components will be redesigned and reimplemented. Components that don't need work are not touched. If change comes from a bug that was found in code, or behavior, that was not expected through requirements and was not part of the design, than it can be traced up the v model and added as a new type of requirement that was revealed during implementation or testing. I think it is a good idea to keep those kinds of additional requirements separate from the ones that come from hackathon crew, and separate from my requirements. That will make it easier for me to understand. Later we will see if it can be done better. My plan is not to fix just code iteratively, but instead to update the v model from the top untill the implementation satisfies all requirements and there are no dilemmas.

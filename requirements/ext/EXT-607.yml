@@ -5,7 +5,8 @@ header: |
 issues: ''
 kind: process
 level: 6.7
-links: []
+links:
+- SRC-LG0497: KFe6jyG1VO3hCRtQlOrn5iSCLwbVTwMwL8t0s95dvpg=
 modality: shall
 normative: true
 note: |

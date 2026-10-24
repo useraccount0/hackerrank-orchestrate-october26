@@ -18,7 +18,8 @@
 #   032a936cb393597668d4b6cef1dca03f3e3c6a36  step 2: adds dataset/deletion_rules.csv and your prompts in log.txt;
 #                                             the five organizer files are byte-identical to 0eddbbd
 #   2fd9afdac5734d66e84b076b8e9b987a3caf8756  step 2.1: your newer prompts in log.txt (log.txt grew at its end only)
-baseline_commit: 2fd9afdac5734d66e84b076b8e9b987a3caf8756
+#   207665145cae5bd130da26526e7976790caceb4e  step 3: your newer prompts in log.txt (log.txt grew at its end only)
+baseline_commit: 207665145cae5bd130da26526e7976790caceb4e
 files:
   - path: AGENTS.md
     code: AG
@@ -54,5 +55,5 @@ files:
     code: LG
     level: 7
     units: user-prompts
-    sha256: 1ddae759e5e54d59d5c406c9e6fc86332545fe4e9c8b8547c95b15b525d0be62
-    lines: 449
+    sha256: 2ffdc3916d526ec1d0e2dcb0e644ee92ec71b1442bfdd326de5eb731276e37f0
+    lines: 558

@@ -1,0 +1,18 @@
+active: true
+classified_by: ai
+derived: false
+disposition: context
+file: log.txt
+header: |
+  log.txt:453
+level: 7.22
+line_end: '453'
+line_start: '453'
+links: []
+normative: false
+note: |
+  A go-ahead to continue after your commit. As logged it lacks the trailing backslash of the message you sent; the correction is in the log entry of the next turn.
+ref: ''
+reviewed: pending-user-review
+text: |
+  commit made, continue]

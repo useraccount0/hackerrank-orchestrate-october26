@@ -438,6 +438,8 @@ For every case, the solution shall record why it produced each step: the evidenc
 
 The solution shall work with any AI model: the provider and the model are settings, not code.
 
+*Parent links: SRC-LG0519*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | system |
@@ -451,6 +453,8 @@ The solution shall work with any AI model: the provider and the model are settin
 ## 4.6 PDF text read with pypdf _(EXT-406)_ {#EXT-406}
 
 The text of PDF evidence shall be read with the open-source library pypdf.
+
+*Parent links: SRC-LG0519*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -575,6 +579,8 @@ Design and change process (your instructions)
 
 The solution shall be split into meaningful components.
 
+*Parent links: SRC-LG0497*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -588,6 +594,8 @@ The solution shall be split into meaningful components.
 ## 6.2 Each component tested on its own _(EXT-602)_ {#EXT-602}
 
 Each component shall be testable individually and independently of the other components.
+
+*Parent links: SRC-LG0497*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -603,6 +611,8 @@ Each component shall be testable individually and independently of the other com
 
 Each component shall be traceable up the V-model to the requirements it implements.
 
+*Parent links: SRC-LG0497*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -616,6 +626,8 @@ Each component shall be traceable up the V-model to the requirements it implemen
 ## 6.4 A new requirement touches only the affected components _(EXT-604)_ {#EXT-604}
 
 When a requirement is added or changed, only the components it affects shall be redesigned and reimplemented; components that need no work are not touched.
+
+*Parent links: SRC-LG0497*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -631,6 +643,8 @@ When a requirement is added or changed, only the components it affects shall be 
 
 A bug or an unexpected behavior that the requirements and the design did not foresee shall be traced up the V-model and recorded as a new requirement, of the type 'revealed during implementation or testing'.
 
+*Parent links: SRC-LG0497*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -644,6 +658,8 @@ A bug or an unexpected behavior that the requirements and the design did not for
 ## 6.6 Revealed requirements kept separate _(EXT-606)_ {#EXT-606}
 
 Requirements revealed during implementation or testing shall be kept separate from the hackathon's requirements (CHR) and from yours (EXT).
+
+*Parent links: SRC-LG0497*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -659,6 +675,8 @@ Requirements revealed during implementation or testing shall be kept separate fr
 
 A problem shall be fixed by updating the V-model from the top (requirement, design, code, tests), and this is repeated until the implementation satisfies all requirements and no open question remains.
 
+*Parent links: SRC-LG0497*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -672,6 +690,8 @@ A problem shall be fixed by updating the V-model from the top (requirement, desi
 ## 6.8 Components named and numbered in pipeline order _(EXT-608)_ {#EXT-608}
 
 Each component shall have a meaningful name and a number, so that the components are listed in the order the pipeline uses them.
+
+*Parent links: SRC-LG0519, SRC-LG0541*
 
 | Attribute | Value |
 | --------- | ----- |

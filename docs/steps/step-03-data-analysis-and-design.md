@@ -132,3 +132,10 @@ Claude subscription (through the Claude Code CLI); the components that need no m
 3. ~~Lighter V-model from here~~: replaced by the component design above, which your design-process
    requirements call for. To approve: the 11 components plus P1, the documents `ARC` and `REV`,
    and the 4 REV items.
+
+## After your commit "Step3"
+
+The baseline moved to your commit `2076651` (only log.txt had grown). Your 5 newer prompts became
+source units SRC-LG0453 to SRC-LG0541; the 3 that carry instructions now link to EXT-405, EXT-406,
+and EXT-601 to EXT-608. `srctrace.py check`: PASS (1446 lines). `doorstop -F -W`: no warnings.
+118 items wait for your review.

@@ -526,6 +526,11 @@
     * 7.19 log.txt:409
     * 7.20 log.txt:410
     * 7.21 log.txt:431 (SRC-LG0431)
+    * 7.22 log.txt:453
+    * 7.23 log.txt:475
+    * 7.24 log.txt:497 (SRC-LG0497)
+    * 7.25 log.txt:519 (SRC-LG0519)
+    * 7.26 log.txt:541 (SRC-LG0541)
 
 ## 1.1 AGENTS.md:1 _(SRC-AG0001)_ {#SRC-AG0001}
 
@@ -6852,6 +6857,65 @@ Shorten `c:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26\
 don't change agents.md I dont want this to be complicated any further. I have additional requirements in terms of code quality. I want error handling to be done in a simple way but protect the solution from unexpected, omitted or intentionally missleading inputs from dataset. I want simple descriptive function names and readable code that doesnt need additional documentation. Comments in code shall not describe what it does, that should be obvious by reading it, but why is some solution chosen if it is not obvious.
 
 *Child links: EXT-111, EXT-501, EXT-502, EXT-503, EXT-504, EXT-505, EXT-506*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 7.22 log.txt:453 _(SRC-LG0453)_ {#SRC-LG0453}
+
+commit made, continue]
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | context |
+| classified_by | ai |
+| note | A go-ahead to continue after your commit. As logged it lacks the trailing backslash of the message you sent; the correction is in the log entry of the next turn.
+ |
+
+
+## 7.23 log.txt:475 _(SRC-LG0475)_ {#SRC-LG0475}
+
+continue
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | context |
+| classified_by | ai |
+| note | A go-ahead to continue; it states no requirement. |
+
+
+## 7.24 log.txt:497 _(SRC-LG0497)_ {#SRC-LG0497}
+
+I have more requirements regarding design process. I want solution to be meaningfully modular, split into components. Those components can be tested individally and independently from each other. Each of those components will be traceable up the v model. That will save time and work when changes are needed. If a change comes from the top, from adding a new requirement, only affected components will be redesigned and reimplemented. Components that don't need work are not touched. If change comes from a bug that was found in code, or behavior, that was not expected through requirements and was not part of the design, than it can be traced up the v model and added as a new type of requirement that was revealed during implementation or testing. I think it is a good idea to keep those kinds of additional requirements separate from the ones that come from hackathon crew, and separate from my requirements. That will make it easier for me to understand. Later we will see if it can be done better. My plan is not to fix just code iteratively, but instead to update the v model from the top untill the implementation satisfies all requirements and there are no dilemmas.
+
+*Child links: EXT-601, EXT-602, EXT-603, EXT-604, EXT-605, EXT-606, EXT-607*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 7.25 log.txt:519 _(SRC-LG0519)_ {#SRC-LG0519}
+
+component design is good, they just need meaningfull names instead of c1 c2... numbers. It should work with any AI model, right? Will your proposal use my current claude subscription? Yes use pypdf.
+
+*Child links: EXT-405, EXT-406, EXT-608*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 7.26 log.txt:541 _(SRC-LG0541)_ {#SRC-LG0541}
+
+I will choose later whether to work with API key or my existing subscription. Component names are good, but I want them to also have numbers in the name so that they are listed in my tree view in the order they are used like a pipeline.
+
+*Child links: EXT-608*
 
 | Attribute | Value |
 | --------- | ----- |
