@@ -73,14 +73,14 @@ class ResourceFinder(Protocol):
 
 @runtime_checkable
 class StateReconstructor(Protocol):
-    def __call__(self, resources: Sequence[Resource], observations: Sequence[Observation],
+    def __call__(self, resources: Sequence[Resource], evidence: EvidenceReading,
                  activities: Sequence[Activity], audit_at: datetime) -> tuple[ResourceState, ...]: ...
 
 
 @runtime_checkable
 class PolicyChecker(Protocol):
-    def __call__(self, case_id: str, states: Sequence[ResourceState],
-                 rules: Sequence[DeletionRule]) -> CaseVerdict: ...
+    def __call__(self, case_id: str, states: Sequence[ResourceState], rules: Sequence[DeletionRule],
+                 audit_at: datetime) -> CaseVerdict: ...
 
 
 @runtime_checkable

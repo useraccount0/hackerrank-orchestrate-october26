@@ -601,3 +601,26 @@ repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
 
+## [2026-10-25T00:23:57+02:00] Recheck of c00: four interface problems found and fixed
+
+User Prompt (verbatim, secrets redacted):
+recheck c00
+
+Agent Response Summary:
+Rechecked code/c00_interfaces against the requirements and the 32 sample answers; the user's own import edit was kept. Four problems were found and fixed: absence proven by a complete snapshot that never names the record could not be expressed (new revealed requirement REV-005 and a StoreListing record, found by a script over the cited evidence of the samples), the policy checker lacked audit_at for the retention and legal-hold conditions, records with dict fields could not be hashed, and the old test only proved callability. The fakes now have exact signatures checked by mypy in strict mode (a deliberately broken fake was rejected), the allowed-operations table is part of the contract and is tested against problem_statement.md, and ruff passes. The baseline moved to the user's commit Step4, EXT-609 to EXT-611 now link to the user's words, Doorstop shows no warnings, srctrace.py check passes, and 125 items wait for review.
+
+Actions:
+* Read-only script over dataset/sample_output.csv and the cited evidence files (which cited files do not contain the resource id)
+* Edited code/c00_interfaces/records.py, components.py, fakes.py, test_interfaces.py; created code/pyproject.toml and code/requirements-dev.txt
+* Created .venv (ignored by git) with mypy and ruff; ran mypy strict and ruff (clean), a mypy negative test in the scratchpad, and python -m unittest (5 tests OK)
+* Ran scratch scripts with Doorstop's API (no git add): REV-005, links from ARC-00, ARC-03, ARC-07, interface attributes of ARC-03, ARC-07, ARC-08; baseline moved to 23ef069 with 2 new prompt units and links for EXT-609 to EXT-611
+* Ran doorstop -F -W (clean), srctrace.py check (PASS), views and publish; edited docs/steps/step-04-interfaces.md and docs/v-model.md
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+

@@ -4,7 +4,7 @@ derived: false
 header: |
   Policy checker
 interface: |
-  PolicyChecker: case_id, ResourceStates, DeletionRules -> CaseVerdict (Judgements)
+  PolicyChecker: case_id, ResourceStates, DeletionRules, audit_at -> CaseVerdict (Judgements)
 level: 1.9
 links:
 - CHR-217: QBctDgcHC_6Jy1GzAxIzdL_DhR8EfOhXizpnrbAw0AQ=

@@ -531,6 +531,8 @@
     * 7.24 log.txt:497 (SRC-LG0497)
     * 7.25 log.txt:519 (SRC-LG0519)
     * 7.26 log.txt:541 (SRC-LG0541)
+    * 7.27 log.txt:562
+    * 7.28 log.txt:584 (SRC-LG0584)
 
 ## 1.1 AGENTS.md:1 _(SRC-AG0001)_ {#SRC-AG0001}
 
@@ -6916,6 +6918,29 @@ component design is good, they just need meaningfull names instead of c1 c2... n
 I will choose later whether to work with API key or my existing subscription. Component names are good, but I want them to also have numbers in the name so that they are listed in my tree view in the order they are used like a pipeline.
 
 *Child links: EXT-608*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 7.27 log.txt:562 _(SRC-LG0562)_ {#SRC-LG0562}
+
+commited
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | context |
+| classified_by | ai |
+| note | A report that you committed; it states no requirement. |
+
+
+## 7.28 log.txt:584 _(SRC-LG0584)_ {#SRC-LG0584}
+
+Now define interfaces between components, so that tests can mock them, and then I will let you work on individual components one at a time. Leave the one that uses AI as the last one for implementation
+
+*Child links: EXT-609, EXT-610, EXT-611*
 
 | Attribute | Value |
 | --------- | ----- |

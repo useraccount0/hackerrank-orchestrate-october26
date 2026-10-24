@@ -710,6 +710,8 @@ Each component shall have a meaningful name and a number, so that the components
 
 The interfaces between the components shall be defined before the components are implemented, so that a test can replace any component by a fake.
 
+*Parent links: SRC-LG0584*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -724,6 +726,8 @@ The interfaces between the components shall be defined before the components are
 
 The components shall be implemented one at a time, each started with your go-ahead.
 
+*Parent links: SRC-LG0584*
+
 | Attribute | Value |
 | --------- | ----- |
 | party | coding-agent |
@@ -737,6 +741,8 @@ The components shall be implemented one at a time, each started with your go-ahe
 ## 6.11 The component that uses AI comes last _(EXT-611)_ {#EXT-611}
 
 The component that calls an AI model (ARC-02_model_gateway) shall be implemented last; until then, the components that use it are tested with a fake gateway.
+
+*Parent links: SRC-LG0584*
 
 | Attribute | Value |
 | --------- | ----- |

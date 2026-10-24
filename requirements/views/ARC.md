@@ -18,7 +18,7 @@
 
 The data records the components exchange (code/c00_interfaces/records.py) and the call signature of every component (code/c00_interfaces/components.py). Components depend only on these, never on each other's code; the audit pipeline receives the components as one bundle, so a test can replace any of them, and the model gateway, by a fake (code/c00_interfaces/fakes.py).
 
-*Parent links: EXT-504, EXT-505, EXT-506, EXT-602, EXT-603, EXT-609*
+*Parent links: EXT-504, EXT-505, EXT-506, EXT-602, EXT-603, EXT-609, REV-005*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -56,12 +56,12 @@ The only place that calls an AI model. Provider and model are settings; adapters
 
 Opens each file of the evidence manifest and turns its contents into observations: which resource, in which system or store, seen when, with which identifiers and which state facts. One reader per format: SQL snapshot (sqlite3), log, JSON, text, PDF (pypdf); screenshots are read through the model gateway, once, and cached.
 
-*Parent links: CHR-218, CHR-220, CHR-221, CHR-308, CHR-310, CHR-311, EXT-405, EXT-406, EXT-501, EXT-502, EXT-503, EXT-504, EXT-505, EXT-506, EXT-601, EXT-602, EXT-603*
+*Parent links: CHR-218, CHR-220, CHR-221, CHR-308, CHR-310, CHR-311, EXT-405, EXT-406, EXT-501, EXT-502, EXT-503, EXT-504, EXT-505, EXT-506, EXT-601, EXT-602, EXT-603, REV-005*
 
 | Attribute | Value |
 | --------- | ----- |
 | code | code/c03_evidence_reader/ |
-| interface | EvidenceReader: evidence files, dataset_dir, ModelGateway -> EvidenceReading (Observations, input problems)
+| interface | EvidenceReader: evidence files, dataset_dir, ModelGateway -> EvidenceReading (Observations, StoreListings, input problems)
  |
 
 
@@ -108,12 +108,12 @@ Finds every record, data flow, and backup of the subject in the observations and
 
 Decides the state of each resource at audit_at from the evidence captured at or before audit_at (activity results are claims), and names the evidence item that proves it.
 
-*Parent links: CHR-208, CHR-311, CHR-312, CHR-313, CHR-314, CHR-438, EXT-504, EXT-505, EXT-506, EXT-601, EXT-602, EXT-603*
+*Parent links: CHR-208, CHR-311, CHR-312, CHR-313, CHR-314, CHR-438, EXT-504, EXT-505, EXT-506, EXT-601, EXT-602, EXT-603, REV-005*
 
 | Attribute | Value |
 | --------- | ----- |
 | code | code/c07_state_reconstructor/ |
-| interface | StateReconstructor: Resources, Observations, Activities, audit_at -> ResourceStates
+| interface | StateReconstructor: Resources, EvidenceReading, Activities, audit_at -> ResourceStates
  |
 
 
@@ -126,7 +126,7 @@ Maps each resource to its data category and deletion rule, and judges whether it
 | Attribute | Value |
 | --------- | ----- |
 | code | code/c08_policy_checker/ |
-| interface | PolicyChecker: case_id, ResourceStates, DeletionRules -> CaseVerdict (Judgements)
+| interface | PolicyChecker: case_id, ResourceStates, DeletionRules, audit_at -> CaseVerdict (Judgements)
  |
 
 

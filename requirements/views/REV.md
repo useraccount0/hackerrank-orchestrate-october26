@@ -4,6 +4,7 @@
  * 2 Hashes of old emails link records too (REV-002)
  * 3 An incomplete case verifies every relevant record (REV-003)
  * 4 The owning service is reported, not the copy's location (REV-004)
+ * 5 A complete listing without the record proves its absence (REV-005)
 
 # 1 Emails are matched without regard to case _(REV-001)_ {#REV-001}
 
@@ -66,6 +67,22 @@ Each step shall name the service that owns the resource (account -> account_serv
 | modality | shall |
 | verification | test |
 | rationale | Revealed in step 3 (data analysis), not stated by any input line. All steps of the 32 sample answers follow this mapping. Sample case_05 reports account_005 under account_service although the copy is in a failover replica table.
+ |
+
+
+# 5 A complete listing without the record proves its absence _(REV-005)_ {#REV-005}
+
+When an evidence item lists all records of a store (a snapshot table or collection) at a time at or before audit_at, a record of that store's kind that is not in the listing shall count as absent from that store, and that evidence item proves the absence.
+
+*Parent links: CHR-313, CHR-436*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | functional |
+| modality | shall |
+| verification | test |
+| rationale | Revealed in step 4, when the interfaces were rechecked against the 32 sample answers: 4 cited verification steps prove ABSENT with evidence that never names the record (case_01, case_02, case_04: evidence_54, an SQL snapshot of the customer_profiles tables; case_31: evidence_51, a JSON snapshot bundle). Found with a script that checks whether each cited evidence file contains the step's resource_id.
  |
 
 

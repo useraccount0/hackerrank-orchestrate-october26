@@ -4,7 +4,7 @@ derived: false
 header: |
   Evidence reader
 interface: |
-  EvidenceReader: evidence files, dataset_dir, ModelGateway -> EvidenceReading (Observations, input problems)
+  EvidenceReader: evidence files, dataset_dir, ModelGateway -> EvidenceReading (Observations, StoreListings, input problems)
 level: 1.4
 links:
 - CHR-218: NnbTGDqBf1w3APRfCcCKRqaKGbD7XSNdibVd4GCy_0o=
@@ -24,6 +24,7 @@ links:
 - EXT-601: iQiNNFooXid8nduNUiT5R7S24afvm4aHwcRpPTKUHA0=
 - EXT-602: 6_QzgtDZbDrsvKdZIwHU4sjPHf5QIcQLQ8Av_An7-lw=
 - EXT-603: KhvRrVO_kFVa4SHt3_n54IoEoEQSfeoPSoEHrdBlQuM=
+- REV-005: MQYo8SBXgkbI2io-50NNwugX12Ruq1GP_18wRA7Mjxo=
 normative: true
 note: ''
 ref: ''

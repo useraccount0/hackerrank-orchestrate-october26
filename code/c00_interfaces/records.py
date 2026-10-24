@@ -13,6 +13,30 @@ from datetime import datetime
 
 IDENTIFIER_KINDS = ("user_ref", "email", "email_hash", "phone", "name")
 
+DELETION_STATUSES = ("COMPLETE", "INCOMPLETE", "NOT_APPLICABLE")
+
+PHASES = ("FINDING", "REMEDIATION", "VERIFICATION")
+
+# The allowed-operations table of problem_statement.md, in its order: inside a phase, steps are
+# sorted by this order first (CHR-416), so the order is part of the contract.
+OPERATIONS = {
+    "REPORT_REMAINING_RECORD": ("FINDING", "PRESENT"),
+    "REPORT_EXPOSED_PII": ("FINDING", "PRESENT"),
+    "REPORT_ACTIVE_DATA_FLOW": ("FINDING", "ACTIVE"),
+    "REPORT_RESTORE_RISK": ("FINDING", "ACTIVE"),
+    "DISABLE_DATA_FLOW": ("REMEDIATION", "DISABLED"),
+    "BLOCK_RESTORE": ("REMEDIATION", "BLOCKED"),
+    "DELETE_RECORD": ("REMEDIATION", "ABSENT"),
+    "REDACT_RECORD": ("REMEDIATION", "REDACTED"),
+    "ANONYMIZE_RECORD": ("REMEDIATION", "ANONYMIZED"),
+    "VERIFY_RECORD_ABSENT": ("VERIFICATION", "ABSENT"),
+    "VERIFY_RECORD_PRESENT": ("VERIFICATION", "PRESENT"),
+    "VERIFY_RECORD_REDACTED": ("VERIFICATION", "REDACTED"),
+    "VERIFY_RECORD_ANONYMIZED": ("VERIFICATION", "ANONYMIZED"),
+    "VERIFY_DATA_FLOW_DISABLED": ("VERIFICATION", "DISABLED"),
+    "VERIFY_RESTORE_BLOCKED": ("VERIFICATION", "BLOCKED"),
+}
+
 
 @dataclass(frozen=True)
 class InputProblem:
@@ -127,14 +151,28 @@ class Observation:
     resource_id: str
     found: bool | None
     category: str | None = None
-    identifiers: Mapping[str, str] = field(default_factory=dict)
-    facts: Mapping[str, str] = field(default_factory=dict)
+    # hash=False keeps the record hashable; a dict field would make hash() fail.
+    identifiers: Mapping[str, str] = field(default_factory=dict, hash=False)
+    facts: Mapping[str, str] = field(default_factory=dict, hash=False)
     excerpt: str = ""
+
+
+@dataclass(frozen=True)
+class StoreListing:
+    """All records of one store at one time, such as a snapshot table: a record of resource_kind
+    that is not in resource_ids was absent from that store (REV-005)."""
+
+    evidence_id: str
+    captured_at: datetime
+    store: str
+    resource_kind: str
+    resource_ids: frozenset[str]
 
 
 @dataclass(frozen=True)
 class EvidenceReading:
     observations: tuple[Observation, ...]
+    listings: tuple[StoreListing, ...]
     problems: tuple[InputProblem, ...]
 
 
@@ -196,7 +234,7 @@ class ResourceState:
     flow_enabled: bool | None
     restore_allowed: bool | None
     proof_id: str
-    facts: Mapping[str, str] = field(default_factory=dict)
+    facts: Mapping[str, str] = field(default_factory=dict, hash=False)
 
 
 @dataclass(frozen=True)

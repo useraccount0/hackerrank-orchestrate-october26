@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: context
+file: log.txt
+header: |
+  log.txt:562
+level: 7.27
+line_end: '562'
+line_start: '562'
+links: []
+normative: false
+note: A report that you committed; it states no requirement.
+ref: ''
+reviewed: pending-user-review
+text: |
+  commited
