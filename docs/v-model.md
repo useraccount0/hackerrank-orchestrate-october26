@@ -53,7 +53,9 @@ tool, not by memory:
 
 Because Doorstop fingerprints each item, a later change is never silent. If a source line or a
 requirement changes, it is reported as `unreviewed changes`, and every link to it as a
-`suspect link`, until someone looks at it again.
+`suspect link`, until someone looks at it again. This already happened once: when the
+organizers fixed one line of AGENTS.md, exactly one requirement was flagged
+([step 1.1](steps/step-01.1-rebaseline-agents-url-fix.md)).
 
 ## Keeping "beyond the hackathon" requirements apart (step 2)
 
@@ -74,7 +76,7 @@ step 2:
 
 | Tool | Open source? | Used for | Why this one |
 |---|---|---|---|
-| git | yes (GPL-2.0) | Freezing the baseline: inputs read from commit `acb3dfc…` | Already the project's version control; exact and repeatable |
+| git | yes (GPL-2.0) | Freezing the baseline: inputs read from the commit recorded in [requirements/sources.yml](../requirements/sources.yml) | Already the project's version control; exact and repeatable |
 | Doorstop 3.2 | yes (LGPL-3.0) | Storing items, links, review fingerprints, validation, publishing (Markdown, HTML, traceability matrix) | Plain YAML files in git (clean diffs); built-in parent/child coverage checks; `derived` flag for extensions; pure Python, so it runs here on Python 3.15 |
 | PyYAML, Python | yes | Running Doorstop and the small checker | |
 | `requirements/tools/srctrace.py` | ours, about 300 lines | Cutting files into units; proving line coverage; the line map | No existing tool checks that *every line* of a Markdown file is covered |

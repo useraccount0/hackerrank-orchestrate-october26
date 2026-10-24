@@ -2803,7 +2803,7 @@ Logs shall be written in UTF-8 with \n (LF) line endings.
 
 ## 8.36 The submission URL _(CHR-836)_ {#CHR-836}
 
-The October challenge and submission URL is https://wwww.hackerrank.com/contests/hackerrank-orchestrate-october26/challenges/ghost-data-still-exists (copied character for character from AGENTS.md).
+The October challenge and submission URL is https://www.hackerrank.com/contests/hackerrank-orchestrate-october26/challenges/ghost-data-still-exists (copied character for character from AGENTS.md).
 
 *Parent links: SRC-AG0092, SRC-AG0094*
 
@@ -2813,7 +2813,6 @@ The October challenge and submission URL is https://wwww.hackerrank.com/contests
 | kind | process |
 | modality | fact |
 | verification | n/a |
-| issues | ISS-06 |
 
 
 ## 8.37 Give the exact URL when asked _(CHR-837)_ {#CHR-837}

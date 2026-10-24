@@ -7,7 +7,8 @@ They are listed here instead of being silently "fixed" inside a requirement.
 - Each issue names the exact source units (`SRC-…` = file and line, see [README.md](README.md))
   and the affected requirements (`CHR-…`). The affected requirements also carry the issue ID
   in their `issues` attribute.
-- **Status** is `open` until you decide. The *proposal* is only a suggestion.
+- **Status** is `open` until you decide. The *proposal* is only a suggestion. A `resolved` issue
+  stays in this list as a record of what happened.
 
 | ID | Short title | Affects | Status |
 |---|---|---|---|
@@ -16,7 +17,7 @@ They are listed here instead of being silently "fixed" inside a requirement.
 | [ISS-03](#iss-03) | Sort `case_id` as text or as a number? | CHR-405 | open |
 | [ISS-04](#iss-04) | "row" accuracy vs "step-level" accuracy | CHR-611 | open |
 | [ISS-05](#iss-05) | `agent-trace.zip` is missing from the submission lists | CHR-601, CHR-901 | open |
-| [ISS-06](#iss-06) | Submission URL starts with `wwww` | CHR-836 | open |
+| [ISS-06](#iss-06) | Submission URL starts with `wwww` | CHR-836 | resolved: the organizers fixed AGENTS.md |
 | [ISS-07](#iss-07) | Unclear sentence about evidence in COMPLETE cases | CHR-435, CHR-436 | open |
 | [ISS-08](#iss-08) | `python3` does not work on this Windows machine | CHR-512 | open |
 | [ISS-09](#iss-09) | The lists of evidence formats differ | CHR-220 | open |
@@ -113,7 +114,14 @@ page.
 
 **Submission URL starts with `wwww`**
 
-- SRC-AG0094: `https://wwww.hackerrank.com/contests/hackerrank-orchestrate-october26/challenges/ghost-data-still-exists`
+**Resolved (2026-10-24, step 1.1):** the organizers fixed the URL in commit `0eddbbd`
+("Update AGENTS.md"). AGENTS.md line 94 now reads
+`https://www.hackerrank.com/contests/hackerrank-orchestrate-october26/challenges/ghost-data-still-exists`.
+The baseline moved to that commit; SRC-AG0094 and CHR-836 were updated, and CHR-836 no longer
+lists this issue. See [step 1.1](../docs/steps/step-01.1-rebaseline-agents-url-fix.md).
+The text below is the original description.
+
+- SRC-AG0094 (old baseline `acb3dfc`): `https://wwww.hackerrank.com/contests/hackerrank-orchestrate-october26/challenges/ghost-data-still-exists`
   has four `w`s.
 - AGENTS.md requires giving "this exact URL" (SRC-AG0096, SRC-AG0100 to SRC-AG0103).
 
@@ -170,8 +178,8 @@ verification steps of COMPLETE cases cite evidence (CHR-436).
   SRC-RM0127), and the packaging commands zip the root README.md (SRC-RM0133, SRC-RM0139).
 
 **Consequence (already handled):** the root README.md will be rewritten later. So the baseline
-is read from git commit `acb3dfc…`, not from the working tree, and the requirements stay
-traceable to the original text. Once README.md is edited, `srctrace.py check` will report
+is read from git, at the commit recorded in [sources.yml](sources.yml), not from the working
+tree, and the requirements stay traceable to the original text. Once README.md is edited, `srctrace.py check` will report
 "CHANGED since the baseline" for it. That is expected, not an error.
 
 **Decision needed later:** keep the organizers' README text somewhere (for example in `docs/`)

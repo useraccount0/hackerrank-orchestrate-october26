@@ -1116,7 +1116,7 @@ The October challenge and submission URL is:
 
 ## 1.54 AGENTS.md:94 _(SRC-AG0094)_ {#SRC-AG0094}
 
-https://wwww.hackerrank.com/contests/hackerrank-orchestrate-october26/challenges/ghost-data-still-exists
+https://www.hackerrank.com/contests/hackerrank-orchestrate-october26/challenges/ghost-data-still-exists
 
 *Child links: CHR-836*
 

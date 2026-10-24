@@ -56,3 +56,52 @@ repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
 
+## [2026-10-24T19:18:01+02:00] Re-baseline after organizers fixed the submission URL in AGENTS.md
+
+User Prompt (verbatim, secrets redacted):
+agents.md was fixed by organisers, the wwww part. Update everything that is affected
+
+Agent Response Summary:
+Confirmed with git that the organizers' commit 0eddbbd changed only AGENTS.md line 94 (wwww -> www); no other root file and no line number changed. Moved the requirements baseline to 0eddbbd in requirements/sources.yml, refreshed source unit SRC-AG0094 with a new deterministic `srctrace.py update` command (no hand edits), and let Doorstop identify the single affected requirement (CHR-836 suspect link), which was updated and confirmed with doorstop clear; ISS-06 is marked resolved. Documents that named the old commit now point to sources.yml, a step 1.1 record was added, and the views were regenerated; srctrace check PASS, doorstop -F -W clean, nothing staged or committed.
+
+Actions:
+* git log / git diff comparing the old baseline acb3dfc with organizer commit 0eddbbd and HEAD
+* Edited requirements/sources.yml (baseline_commit 0eddbbd, new AGENTS.md SHA-256, history comment)
+* Added the `update` command to requirements/tools/srctrace.py; `check` now prints the actual SHA-256 on mismatch
+* Ran srctrace.py check (expected FAIL, 3 problems), srctrace.py update (SRC-AG0094 text), srctrace.py check (PASS)
+* Ran doorstop -F -W (CHR-836 suspect link), edited requirements/chr/CHR-836.yml, ran doorstop clear CHR-836, then git restore --staged
+* Edited requirements/ISSUES.md, requirements/README.md, docs/v-model.md, docs/steps/step-01-requirements-baseline.md
+* Created docs/steps/step-01.1-rebaseline-agents-url-fix.md
+* Regenerated requirements/views/line_map.csv, SRC.md, CHR.md and requirements/_build/html
+* Saved a memory note on the user's working style (outside the repository)
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+
+## [2026-10-24T19:21:10+02:00] Re-baseline (continued): safer srctrace update, tested on a clone
+
+User Prompt (verbatim, secrets redacted):
+(same message as the previous entry, continued work) agents.md was fixed by organisers, the wwww part. Update everything that is affected
+
+Agent Response Summary:
+After the previous entry, a weakness in the new `srctrace.py update` command was found: if organizers ever insert or remove lines, unit IDs shift and old texts would land on the wrong units. The command now updates a file only when its line structure is unchanged and otherwise reports it for a person, changing nothing. All three behaviours (in-place text change, label to re-decide, inserted line) were tested on a throwaway local clone in the scratchpad; on the real repository the command is a no-op, srctrace check PASS, doorstop -F -W clean, nothing staged or committed.
+
+Actions:
+* Edited requirements/tools/srctrace.py (update refuses files whose line structure changed)
+* Edited requirements/README.md and docs/steps/step-01.1-rebaseline-agents-url-fix.md (procedure wording, test results)
+* Tested srctrace.py update on a scratch git clone with a test commit (outside the repository)
+* Ran srctrace.py update (no-op), srctrace.py check (PASS), doorstop -F -W (no warnings) on the real repository
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+

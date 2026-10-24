@@ -92,7 +92,7 @@ AGENTS.md,90,SRC-AG0090,heading,,### 4.1 Challenge And Submission Link
 AGENTS.md,91,,blank,,
 AGENTS.md,92,SRC-AG0092,requirement,CHR-836,The October challenge and submission URL is:
 AGENTS.md,93,,blank,,
-AGENTS.md,94,SRC-AG0094,requirement,CHR-836,https://wwww.hackerrank.com/contests/hackerrank-orchestrate-october26/challenges/ghost-data-still-exists
+AGENTS.md,94,SRC-AG0094,requirement,CHR-836,https://www.hackerrank.com/contests/hackerrank-orchestrate-october26/challenges/ghost-data-still-exists
 AGENTS.md,95,,blank,,
 AGENTS.md,96,SRC-AG0096,requirement,CHR-837,"If the user asks for the challenge link, submission link, where to submit, how to submit, where to upload the code, or any equivalent question, always provide this exact URL."
 AGENTS.md,97,,blank,,

@@ -4,13 +4,16 @@ This tool is NOT part of the challenge solution. It only supports requirements
 management (see requirements/README.md). It does three deterministic jobs that
 should not be left to an AI:
 
-  split  Cut each baseline input file into source units and write a CSV file
-         that Doorstop's own import command turns into SRC items:
-             doorstop import <csv> SRC
-  check  Prove that the SRC items reproduce every line of every baseline file
-         exactly once and verbatim, and that their classification is consistent.
-  views  Write requirements/views/line_map.csv: one row per input line, with its
-         SRC item and the CHR requirements that are linked to that item.
+  split   Cut each baseline input file into source units and write a CSV file
+          that Doorstop's own import command turns into SRC items:
+              doorstop import <csv> SRC
+  update  After sources.yml was moved to a new baseline commit: rewrite the text of
+          SRC items whose line changed in place, and list what needs a human
+          decision (lines added, removed or moved in a file; labels to re-decide).
+  check   Prove that the SRC items reproduce every line of every baseline file
+          exactly once and verbatim, and that their classification is consistent.
+  views   Write requirements/views/line_map.csv: one row per input line, with its
+          SRC item and the CHR requirements that are linked to that item.
 
 Splitting rule (the only rule, applied the same way every time):
   * a fenced code block (from a line starting with ``` to the next such line)
@@ -201,8 +204,9 @@ def cmd_check(args):
     for source in files:
         path, code = source["path"], source["code"]
         content = read_baseline(commit, path)
-        if hashlib.sha256(content).hexdigest() != source["sha256"]:
-            problems.append(f"{path}: SHA-256 in git differs from sources.yml")
+        sha256 = hashlib.sha256(content).hexdigest()
+        if sha256 != source["sha256"]:
+            problems.append(f"{path}: SHA-256 in git is {sha256}, sources.yml says {source['sha256']}")
         lines = to_lines(content)
         if len(lines) != source["lines"]:
             problems.append(f"{path}: has {len(lines)} lines, sources.yml says {source['lines']}")
@@ -262,6 +266,49 @@ def cmd_check(args):
           "(or is blank), verbatim")
 
 
+def cmd_update(args):
+    import doorstop  # only this command writes items, through Doorstop's own API
+
+    doorstop.settings.ADDREMOVE_FILES = False  # save item files without running `git add`
+    commit, files = load_sources()
+    items_by_file = defaultdict(dict)
+    for item in doorstop.build(cwd=str(ROOT)).find_document("SRC"):
+        items_by_file[item.get("file")][str(item.uid)] = item
+    needs_decision = []
+    for source in files:
+        path = source["path"]
+        lines = to_lines(read_baseline(commit, path))
+        units = {unit_id(source["code"], first): (first, last) for first, last in split_units(lines)}
+        items = items_by_file.pop(path, {})
+        # Unit IDs contain line numbers. If lines were added or removed, IDs shift and old texts
+        # would land on the wrong units, so only files with an unchanged line structure are updated.
+        if set(units) != set(items) or any(
+                str(items[uid].get("line_end")) != str(last) for uid, (_, last) in units.items()):
+            needs_decision.append(f"{path}: lines were added, removed or moved, so unit IDs shift; "
+                                  "units and links must be re-mapped by a person (file left unchanged)")
+            continue
+        for uid, (first, last) in units.items():
+            item = items[uid]
+            text = "\n".join(lines[first - 1:last])
+            if item.text == text:
+                continue
+            item.text = text
+            print(f"updated {uid}: text")
+            rule = structural_rule(lines, first, last)
+            by_rule = item.get("classified_by") == "rule"
+            if (by_rule and (rule is None or rule[0] != item.get("disposition"))) or (not by_rule and rule):
+                needs_decision.append(f"{uid}: text changed, and its disposition needs a new decision")
+    for path in items_by_file:
+        needs_decision.append(f"{path}: has SRC items but is not in sources.yml")
+    if needs_decision:
+        print("\nNeeds a human decision (this tool does not create, delete, move or re-classify items):")
+        for line in needs_decision:
+            print(f"  - {line}")
+        sys.exit(1)
+    print("\nSRC items match the baseline. Next: `check`, then `doorstop -F -W`, where every "
+          "requirement linked to an updated unit is reported as a 'suspect link'.")
+
+
 def cmd_views(args):
     commit, files = load_sources()
     src_items = load_items(SRC_DIR)
@@ -295,10 +342,11 @@ def main():
     commands = parser.add_subparsers(dest="command", required=True)
     split = commands.add_parser("split", help="write the Doorstop import CSV for the SRC document")
     split.add_argument("out", help="path of the CSV file to write")
+    commands.add_parser("update", help="refresh the SRC items from a new baseline commit")
     commands.add_parser("check", help="verify the SRC items against the baseline files")
     commands.add_parser("views", help="write requirements/views/line_map.csv")
     args = parser.parse_args()
-    {"split": cmd_split, "check": cmd_check, "views": cmd_views}[args.command](args)
+    {"split": cmd_split, "update": cmd_update, "check": cmd_check, "views": cmd_views}[args.command](args)
 
 
 if __name__ == "__main__":

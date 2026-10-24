@@ -7,6 +7,11 @@
 | Goal | Turn every line of the challenge files in the repository root into traceable requirements, with no line skipped, and make the result checkable by tools |
 | Not in this step | Solution code, `output.csv`, and requirements that go beyond the hackathon (that is step 2) |
 
+> **Later change:** after this step, the organizers fixed the submission URL in AGENTS.md. The
+> baseline moved to their commit `0eddbbd`, and ISS-06 is resolved, so 9 issues remain open.
+> See [step 1.1](step-01.1-rebaseline-agents-url-fix.md). This page still describes step 1 as it
+> was done.
+
 ## Results in numbers
 
 | What | Count |

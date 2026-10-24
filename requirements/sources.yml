@@ -8,12 +8,16 @@
 # level  = first number of the Doorstop level of the file's units (units are <level>.<n>)
 # sha256 = SHA-256 of the file content stored in git (LF line endings)
 # lines  = number of lines in the file
-baseline_commit: acb3dfca6e94e4803a26e72c49074a488de93c93
+#
+# Baseline history (newest last):
+#   acb3dfca6e94e4803a26e72c49074a488de93c93  step 1: first baseline
+#   0eddbbd33f682eae0a2770d67412af8a3cf4af20  step 1.1: organizers fixed the URL in AGENTS.md line 94 (wwww -> www)
+baseline_commit: 0eddbbd33f682eae0a2770d67412af8a3cf4af20
 files:
   - path: AGENTS.md
     code: AG
     level: 1
-    sha256: 290b327083d21bc0a37d820a417bc2060e2f0c2127104868aa4b9451b5a92910
+    sha256: 559446bcb3cebbedae90deb0931545b10ca5469266acde856b7cc7a011f09afe
     lines: 422
   - path: CLAUDE.md
     code: CL

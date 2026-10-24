@@ -2,12 +2,12 @@ active: true
 derived: false
 header: |
   The submission URL
-issues: ISS-06
+issues: ''
 kind: process
 level: 8.36
 links:
 - SRC-AG0092: 3h9nx9xgYAi8Z6SV4QaTdP4EAvp-muEcPCc4ftsf-q0=
-- SRC-AG0094: PGrxfK3zDlmERVs0nizGPlj2KjbTSlq6ypoc5TnuIME=
+- SRC-AG0094: JE4yzHEwLmt5fGRSAjRFAFFRTLcIcZK6DiCpAZnJS_E=
 modality: fact
 normative: true
 note: ''
@@ -15,5 +15,5 @@ party: coding-agent
 ref: ''
 reviewed: pending-user-review
 text: |
-  The October challenge and submission URL is https://wwww.hackerrank.com/contests/hackerrank-orchestrate-october26/challenges/ghost-data-still-exists (copied character for character from AGENTS.md).
+  The October challenge and submission URL is https://www.hackerrank.com/contests/hackerrank-orchestrate-october26/challenges/ghost-data-still-exists (copied character for character from AGENTS.md).
 verification: n/a
