@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Claude Code /export
+issues: ''
+kind: process
+level: 9.11
+links:
+- SRC-AT0028: LF3RturMqizs_YY2XDcxu5nbE6wfqkEbD92AVAf-r-M=
+- SRC-AT0030: LEh9JeENKKC5kSpsRRhCXfQzaXTSaHV8giZoe7kl_tI=
+- SRC-AT0034: ojr6MAhAZpujIZL3M4aj22HDiY-vPKqTbXZ1lHMG5xc=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  In each Claude Code session, /export shall be run and the readable transcript saved in agent-trace/claude-code/, in addition to the original session JSONL files when they are available.
+verification: inspection

@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: heading
+file: AGENTS.md
+header: |
+  AGENTS.md:155
+level: 1.71
+line_end: '155'
+line_start: '155'
+links: []
+normative: false
+note: 'rule: Markdown heading'
+ref: ''
+reviewed: RRg1L8rLFYi435kt503tI4hDj3gS79x5VhezY2qV7Cc=
+text: |
+  ### 5.3 Sub-Agent And Worktree Rules

@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Decoys and unrelated records
+issues: ''
+kind: interface
+level: 2.23
+links:
+- SRC-AG0198: PDjKJ10BCIcdryMmjNZQ8oB-LpFc5FXvHa-QKPQUyP4=
+- SRC-AG0204: Jn0Udr4mRQ-y1AMnA5FaF3DAbAoL_N4h-EatZ8i8HeE=
+modality: fact
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Global data (activity and evidence) can contain decoys and records about unrelated people.
+verification: test

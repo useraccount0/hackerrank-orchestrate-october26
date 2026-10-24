@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  Usage report: cost
+issues: ''
+kind: deliverable
+level: '6.20'
+links:
+- SRC-AG0346: c1EDWjWPDghN9KdF7wdMMTbiWQiPwLhVHHIYQPrPyGc=
+- SRC-AG0352: 43KwrYOv8kTHhgXw-jq6hmji_nZOOC0C-J9oOe8WNR0=
+- SRC-PS0158: aIka7geFC1KzIUjaMjr9Fmcy2OqXVFy6HzdJuq5N_ks=
+- SRC-RM0097: h5EHxDMFUanK--Ct8PwkblJ7lwERCF8zPl_tZQ09Cq8=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  usage_report.md shall contain the estimated total cost and the estimated cost per request.
+verification: inspection

@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  reported_status
+issues: ''
+kind: interface
+level: 2.8
+links:
+- SRC-AG0219: MVHsyZRt-TjOO45JNJAAFTqvHU-wfbs6suDf80l9edc=
+- SRC-PS0057: Zj661iJeK5uGtVjs-PRy1Qo249ESfuBcwk4gNVxdZhE=
+modality: fact
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  reported_status is the existing deletion workflow's claim and is one of COMPLETE, PARTIALLY_COMPLETE, or NOT_STARTED; it is not proof of the true state.
+verification: test

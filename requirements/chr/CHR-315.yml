@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Find what still exposes the user
+issues: ''
+kind: functional
+level: 3.15
+links:
+- SRC-AG0033: H5lL9gyy6OgZcEkarhI-WTp3quZa8h9fAol9L6OwcvE=
+- SRC-PS0017: LXPMx_DzC0wXBUkrZ8F5bbeVl9_GJgm0buYGYro3poQ=
+- SRC-PS0020: zLrUqdgwGgcHFRnUMs57BvX8LcrqkrX4wtgDkU4D28U=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall determine which records or identifiers still expose the user.
+verification: test

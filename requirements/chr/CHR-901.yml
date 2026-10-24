@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Submit agent-trace.zip
+issues: ISS-05
+kind: deliverable
+level: 9.1
+links:
+- SRC-AT0003: dsoBrOB_NHbpBLHb7KldqLJBuxb8lZO8lVYbtocYe2U=
+- SRC-AT0013: Xo6pRyi2Nw89Kdn3jlwwVYPjUij3x16dn-uHxY-pL8Y=
+- SRC-AT0130: MS6nqR_ltKEezZ37hf_qyYsXfpc73dS-LWhPMV3uChI=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  The participant shall submit the complete agent trace of the work done on this challenge as a ZIP file named agent-trace.zip, together with the challenge submission.
+verification: inspection

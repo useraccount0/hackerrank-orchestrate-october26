@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: README.md
+header: |
+  README.md:105
+level: 3.56
+line_end: '105'
+line_start: '105'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  This repository includes [`AGENTS.md`](./AGENTS.md), which instructs compatible AI coding tools to append conversation summaries to `log.txt` in the repository root:

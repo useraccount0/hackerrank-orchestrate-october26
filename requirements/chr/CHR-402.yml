@@ -1,0 +1,26 @@
+active: true
+derived: false
+header: |
+  Exact header
+issues: ''
+kind: interface
+level: 4.2
+links:
+- SRC-AG0035: P9bjA_bm1trgxxTYTG0i_engY4gxkyGRqQYjkEc0q2s=
+- SRC-AG0037: i2xcrkzDY6lBtKchkkaFbEM7BcngE73V9EmDWnXvDjA=
+- SRC-AG0228: 64KlPjWzKDeUQBcfobtyxOzpUCygIfw27Cn2W9EPEtw=
+- SRC-AG0230: AGkYWEaFCU7NO2L6jnV8kbhDmYRV2ZFDV-LFPlT_0WQ=
+- SRC-PS0061: 7Ndr4CdSpEoo4SiLw3-_ZqDqSDHSzJId1NEjZr2gzDU=
+- SRC-PS0063: mnti0i5bGf-Ee55DE2Tz-VyYwJRWfFIlgzKwlTUeIeQ=
+- SRC-RM0067: 33uGmltClAXBmSWeeSwTHCHG5-7SCp9jj0EAPPbzT2I=
+- SRC-RM0069: 8Xi6YqmStFowhc21PkPy3U1chgd4X0ja3erPrDGAfoA=
+- SRC-RM0151: 9MmGA-lltrkXE5zarKeLsllm7cEwJLbF93ZwFQtjG3M=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  output.csv shall have the header case_id,deletion_status,steps_json: exactly these columns, in this order.
+verification: test

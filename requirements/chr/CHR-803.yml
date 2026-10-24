@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Start the coding tool from the repository root
+issues: ''
+kind: process
+level: 8.3
+links:
+- SRC-RM0024: UuuKFn1i_LofQnPTZgkxhAjWmbsxIG6Yn41pb_npyV8=
+- SRC-RM0112: DbbJnEvOFB8Uokzy_Qjw-7XpqpSkosHe6F0TkGMY-b8=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  The participant shall start the AI coding tool from the repository root (or explicitly ask it to read ./AGENTS.md first), so that it reads AGENTS.md and logs every turn to the root log.txt.
+verification: inspection

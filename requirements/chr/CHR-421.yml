@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  REPORT_RESTORE_RISK (FINDING)
+issues: ''
+kind: interface
+level: 4.21
+links:
+- SRC-AG0262: WkM9KE122-rbIUZMoaHgAcBREjqz78kArmJxl1Ob9tw=
+- SRC-AG0269: m76fjfO5_TT4FwJYRzWEWGEKBfEzUU5r2DxqEnZA7z0=
+- SRC-PS0108: G0GnyTxmUvGjO-DxPOQkzjyq5hZk5qLyqdlvHPGPg9k=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Operation REPORT_RESTORE_RISK shall be used only in phase FINDING, always with state ACTIVE, and means: a backup or restore path can bring deleted data back.
+verification: test

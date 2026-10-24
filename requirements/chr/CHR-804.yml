@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  The problem statement is the full specification
+issues: ''
+kind: process
+level: 8.4
+links:
+- SRC-AG0041: gpsovUWXTSvLpnalp6kJEZ2QSY6eO7sYTkZe_VSDPuU=
+- SRC-RM0011: Gw0HzyKi98ufIcWW3dnPVWkIc4hiWIw3Y9_osg3sTwU=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  problem_statement.md is the full participant-facing specification (the complete challenge contract) and shall be read.
+verification: inspection

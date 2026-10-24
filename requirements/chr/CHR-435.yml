@@ -1,0 +1,22 @@
+active: true
+derived: false
+header: |
+  Findings cite evidence
+issues: ISS-07
+kind: interface
+level: 4.35
+links:
+- SRC-AG0258: MaLhKs56sKg3MtwBNPtYq5zmAEk80gJ8auJpafv8df4=
+- SRC-AG0313: v7HEGkCXIKGmTTVfJ6fsNsOo0dsQT5zSWbAzPa099f4=
+- SRC-PS0127: RFG_J9TZlk6yxfdbZENL0ObbCldP477O1NN9G0zTPPk=
+- SRC-RM0073: sbs2P_wLeG5O2JApRl622RMH3WBhO0Vn1EVhMzInVYw=
+- SRC-RM0153: T7ZQCAWdErDrr18x230N36-IWAxDchHzWpNx78lSXh0=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Every FINDING step shall cite in evidence_id the participant-visible file_id, activity_id, or audit_id that proves it.
+verification: test

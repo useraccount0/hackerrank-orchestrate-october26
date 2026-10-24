@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: problem_statement.md
+header: |
+  problem_statement.md:107
+level: 5.58
+line_end: '107'
+line_start: '107'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  | `FINDING` | `REPORT_ACTIVE_DATA_FLOW` | `ACTIVE` | An active process can copy or recreate the user's data. |

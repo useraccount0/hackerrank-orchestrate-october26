@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  VERIFY_RECORD_ANONYMIZED (VERIFICATION)
+issues: ''
+kind: interface
+level: '4.30'
+links:
+- SRC-AG0281: r6p4m1CE2_WSEqreE_28UQijElARYEPaXCzl5W1Q9ys=
+- SRC-AG0288: MQeG4Se8eYoO3_Q3-bI6ZEPIKkRkpE29uKOr2J_ZQLY=
+- SRC-PS0117: HPv3ti1lzPMAckF46N0aSbokpccRq_PycMnEoE_WEuI=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Operation VERIFY_RECORD_ANONYMIZED shall be used only in phase VERIFICATION, always with state ANONYMIZED, and means: confirm that the record can no longer be linked to the user.
+verification: test

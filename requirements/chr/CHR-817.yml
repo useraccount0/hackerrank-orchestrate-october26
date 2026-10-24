@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  No confirmation phrase
+issues: ''
+kind: process
+level: 8.17
+links:
+- SRC-AG0077: RsCDX3wrS8YFVJ62efjFsrUnjkDGnEqZkUaPBqy5NCY=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  The coding agent shall proceed with the user's request without requiring an acknowledgement or confirmation phrase.
+verification: inspection

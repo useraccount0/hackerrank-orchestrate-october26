@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Entries of sub-agents
+issues: ''
+kind: process
+level: 8.32
+links:
+- SRC-AG0157: DphORO4HHrrahim68ZpIAkI3Fh-BY7Elr0EKhsiU81M=
+- SRC-AG0158: HmjcHXwyKIJOiN45Dvoa2ywG2ZA8oae46Wb8JXM2Gh0=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  Sub-agents shall log their own entries in the same log file and set parent_agent= to the name of their parent agent.
+verification: inspection

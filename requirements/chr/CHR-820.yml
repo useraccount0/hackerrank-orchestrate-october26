@@ -1,0 +1,25 @@
+active: true
+derived: false
+header: |
+  Name and place of the log file
+issues: ''
+kind: process
+level: '8.20'
+links:
+- SRC-AG0047: UBZ_7cMpUD9lB435-xcXknC1MM-kOvdulpe1SoYtrn8=
+- SRC-AG0051: U27-gEiqpe6EfJzzeqtNNdwBrahmVZEj8_SkMw9kfnI=
+- SRC-AG0052: rRw2tcGAcmxHR1Z9P2vTE81O4d7C0CZaSKUfVHAD1fI=
+- SRC-AG0087: DuCa164iC7NDJlFhm2Z8T24eXbxd2qj74_H5hd959vI=
+- SRC-RM0024: UuuKFn1i_LofQnPTZgkxhAjWmbsxIG6Yn41pb_npyV8=
+- SRC-RM0105: pbM-C8_Zd0e5OTM-A1KtCJSMXcSYRCWUaC3vUAWxq9E=
+- SRC-RM0109: pqUEYT8iN9ewXD7bscwy1Kziq1TD9cEIcQl5pQ-Q9Dw=
+- SRC-RM0110: U_kZCYnn84WgUCBIWKfQ4ZDEKWutQOBo4Htj5QqU2Ws=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  The log file shall be named log.txt and be located in the repository root, the directory that contains the top-level AGENTS.md (<root>/log.txt on macOS/Linux, <root>\log.txt on Windows).
+verification: inspection

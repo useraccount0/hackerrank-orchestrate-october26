@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  Python entry point
+issues: ISS-08
+kind: constraint
+level: 5.12
+links:
+- SRC-AG0372: P9-0Q2l1DlnVmLMh_Af1oClka2ibMxjd3TQdFbEtj2M=
+- SRC-RM0026: rsbnt85sT5VOnUbo4A28j3DnJna6TAoERGe1fh_Z97o=
+- SRC-RM0034: vI97rL9gz6QJywNmZP7cUwyGJC9oCSBIb6irStca_98=
+- SRC-RM0036: UDDhJ9KPg9lPnEFwUjD1evfzgjtVMkQYEfxQqszMCHM=
+modality: should
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  If the solution is written in Python, its entry point should be code/main.py, run from the repository root with: python3 code/main.py
+verification: inspection

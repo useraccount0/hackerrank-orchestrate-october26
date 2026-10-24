@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  Claude Code session files
+issues: ''
+kind: process
+level: '9.10'
+links:
+- SRC-AT0019: N5XAJZAzAGkmnZOU4S3ZtLBjERA5BASQx7PoQ_-XW-s=
+- SRC-AT0021: QvpYb4NrXpYGJmazIKjlZ1St16mru5KhdJJbjZ6tyZk=
+- SRC-AT0022: sHrLV7ZZhiyeLEIl7QU6LEa5_w0DkwjphU0HIJW_uRU=
+- SRC-AT0024: qx2CC2Fa6_ijRVSIkYPzBOv4izkAh3dFNODBU3v88g8=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  For Claude Code, the session files of this challenge (commonly JSONL files named with a session ID) shall be copied from the project folder under ~/.claude/projects/ (macOS/Linux) or %USERPROFILE%\.claude\projects\ (Windows) into agent-trace/claude-code/; the right folder and files are found by their content and timestamps.
+verification: inspection

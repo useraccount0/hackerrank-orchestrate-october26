@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: heading
+file: AGENTS.md
+header: |
+  AGENTS.md:45
+level: 1.24
+line_end: '45'
+line_start: '45'
+links: []
+normative: false
+note: 'rule: Markdown heading'
+ref: ''
+reviewed: yHi0ODtMtjENEWWvgE7mEJ5DR82n5TEjqy_4OJSjY6Y=
+text: |
+  ## 2. Log File — Location And Lifecycle

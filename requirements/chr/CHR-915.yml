@@ -1,0 +1,27 @@
+active: true
+derived: false
+header: |
+  OpenCode, if used
+issues: ''
+kind: process
+level: 9.15
+links:
+- SRC-AT0074: dLfFuPLwgfyuF-76fym7sJ-Jx70u5HgjHLTUjsqfNik=
+- SRC-AT0076: xMXG7RWI8BsemO6aExlO_jWrBQPjATjeIl1m2Os7_pY=
+- SRC-AT0077: wz-p6yeWYaKc_vyLnd29bDBi4fUltmmww3y7TOEelUQ=
+- SRC-AT0079: MxWwpHjChrkC5Pv0kGZi2ie9m_uLY8QTykrBH-jxtWI=
+- SRC-AT0081: h6DbtJLirKJNsdyU7A8RBCazHmqe_Rgk_1GfYhNr1bs=
+- SRC-AT0085: UlQskvBMXvCGBBLesslFYP0ZV88F2NhUbHJ1L53RqX4=
+- SRC-AT0087: mgUkNvxplVp2lE9ZbGYE0l2G3NWhkvSrL-B9NmM13BM=
+- SRC-AT0092: eH2wawHtBmDJs6EiSJKbj8PXEBj4z_3bH_9-oBfR19I=
+- SRC-AT0094: PPTInHOo9jVtZVXBht1S516TTzu6SJyilplqfH_ledc=
+- SRC-AT0098: D1d384hFTItu-gYMnFw8K4Eg2H0GP7SEoxy_GzO_e1E=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  If OpenCode was used, each challenge session shall be exported as JSON (opencode session export, optionally with --sanitize) into agent-trace/opencode/; only if the CLI is unavailable, a copy of opencode.db may be provided after quitting OpenCode and checking the copy; auth.json shall never be included, and logs or snapshots do not replace the exports.
+verification: inspection

@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: AGENTS.md
+header: |
+  AGENTS.md:61
+level: 1.35
+line_end: '61'
+line_start: '61'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  - Never log secrets. Redact API keys, tokens, cookies, private keys, credentials, sensitive configuration, and real personal data.

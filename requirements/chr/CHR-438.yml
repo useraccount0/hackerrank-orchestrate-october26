@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Evidence that must never be cited
+issues: ''
+kind: constraint
+level: 4.38
+links:
+- SRC-AG0316: UzVNCJAVEkVfkxW-2qoI3wL3KM6YesVRqf9EiOn8jBQ=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall never cite organizer-only truth, nor an evidence item captured after the case's audit_at.
+verification: test

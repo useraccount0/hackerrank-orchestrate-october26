@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Where the reports are placed
+issues: ISS-01
+kind: deliverable
+level: 6.9
+links:
+- SRC-RM0099: Szg9WR-vQ1rRzCLCfCNVCt9ZUCyD1tjpIZPjtQJXiuM=
+- SRC-RM0143: Ax3OKxtpiDYU664fJz0aSmJKuPCq3KSje2U3x5Frxu0=
+- SRC-RM0145: 4JW3j9TT6oHx9b5-FGHNgdR5_OHMJdKmjLiyXP6_I_k=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  The two reports shall be placed in code/evaluation/ (next to code/evaluation/main.py) so that they are bundled with code/; if they are placed in a top-level evaluation/ folder instead, that folder shall be added to the archive command.
+verification: inspection

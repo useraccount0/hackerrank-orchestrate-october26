@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  518 data rows
+issues: ''
+kind: interface
+level: 4.4
+links:
+- SRC-AG0236: B3Ji0lPYsTCGDUmQXdbEMWfur5wET3AVAPHmf9Hdbzc=
+- SRC-PS0073: cJPYh5ygRFy6xabq1F-qZN1gTqEBOHDQgR5UD9u8UUY=
+- SRC-RM0075: itzMZ0GibOZY7O3XP8azEIq3oxJdONdK4TLIke1WD_w=
+- SRC-RM0151: 9MmGA-lltrkXE5zarKeLsllm7cEwJLbF93ZwFQtjG3M=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  output.csv shall contain exactly 518 data rows plus the header row.
+verification: test

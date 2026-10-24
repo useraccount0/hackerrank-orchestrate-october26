@@ -1,0 +1,17 @@
+active: true
+derived: false
+header: |
+  Deletion audit logic
+issues: ''
+kind: ''
+level: 3.0
+links: []
+modality: ''
+normative: false
+note: ''
+party: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Deletion audit logic
+verification: ''

@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: context
+file: AGENTS.md
+header: |
+  AGENTS.md:27
+level: 1.16
+line_end: '27'
+line_start: '27'
+links: []
+normative: false
+note: Describes the repository as a starter repo; it states no requirement.
+ref: ''
+reviewed: pending-user-review
+text: |
+  This is a starter repo for the **HackerRank Orchestrate** challenge: **Ghost Data Still Exists**.

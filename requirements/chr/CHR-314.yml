@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Nothing after audit_at
+issues: ''
+kind: functional
+level: 3.14
+links:
+- SRC-AG0224: CGSO9vWp-sAkTLQp5c5o4WrnCKNP6BGxnPrmK__qu8w=
+- SRC-AG0298: 1US1m7XgBwqw5F17mJVDsDEopW-jk1LHUCM5UQNTFa4=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall decide a case using only information available at or before its audit_at; evidence created later shall not change the answer for that case.
+verification: test

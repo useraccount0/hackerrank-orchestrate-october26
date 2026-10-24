@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: README.md
+header: |
+  README.md:152
+level: 3.84
+line_end: '152'
+line_start: '152'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  - every `steps_json` value is a valid JSON array with consecutive step numbers starting at `1`;

@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  Usage report: per-model totals
+issues: ''
+kind: deliverable
+level: 6.21
+links:
+- SRC-AG0346: c1EDWjWPDghN9KdF7wdMMTbiWQiPwLhVHHIYQPrPyGc=
+- SRC-AG0353: IS4lJJFHIHtQCHj7ga9F3sbZkJacw7yRugvVs_gZOZ4=
+- SRC-PS0158: aIka7geFC1KzIUjaMjr9Fmcy2OqXVFy6HzdJuq5N_ks=
+- SRC-RM0097: h5EHxDMFUanK--Ct8PwkblJ7lwERCF8zPl_tZQ09Cq8=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  When several models are used, usage_report.md shall contain both per-model and overall totals, in the same file.
+verification: inspection

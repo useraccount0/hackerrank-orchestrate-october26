@@ -1,0 +1,11 @@
+# Local Python environments and caches (never commit, never put in code.zip)
+.venv/
+.venv-*/
+venv/
+__pycache__/
+
+# Local secrets (AGENTS.md: read credentials from environment variables / an uncommitted .env)
+.env
+
+# Generated HTML views of the requirements (rebuild with the command in requirements/README.md)
+requirements/_build/

@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: heading
+file: AGENTS.md
+header: |
+  AGENTS.md:318
+level: 1.166
+line_end: '318'
+line_start: '318'
+links: []
+normative: false
+note: 'rule: Markdown heading'
+ref: ''
+reviewed: TZWycV0qSMkQa5vIOUPmQtulS3jSumxBjax9PedE35s=
+text: |
+  ### 6.7 Constraints That Make The Submission Evaluable

@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: README.md
+header: |
+  README.md:153
+level: 3.85
+line_end: '153'
+line_start: '153'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  - findings cite valid evidence IDs, and `COMPLETE` verification steps cite evidence proving the current state;

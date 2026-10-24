@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  No large content in the log
+issues: ''
+kind: process
+level: 8.34
+links:
+- SRC-AG0161: wudYGS7Sg1cufwYq_pEOX0Fiy1dNtVsnjB-yRD25FGg=
+- SRC-AG0165: kaGTCFtZqD9jcCOVIZopaNd0H2ixRsDQ1Av_UVZGAsE=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  log.txt shall not contain the full contents of large files or binary blobs; they shall be referenced by path instead.
+verification: inspection

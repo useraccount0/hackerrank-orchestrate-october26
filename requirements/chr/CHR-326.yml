@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Report every violation and risk
+issues: ''
+kind: functional
+level: 3.26
+links:
+- SRC-AG0033: H5lL9gyy6OgZcEkarhI-WTp3quZa8h9fAol9L6OwcvE=
+- SRC-AG0302: qx-5SSUB-1opIdjHbsRugWAkqbccKB-HLZGLJb4dISc=
+- SRC-RM0009: 63eHuzYI6Z7WjMt496s21w3QmksR4KMSDwYiuz6iWV4=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  For an incomplete case, the system shall report every relevant policy violation (remaining records, exposed identifiers) and every recreation risk (active data flows, restore paths) that participant-visible evidence supports.
+verification: test

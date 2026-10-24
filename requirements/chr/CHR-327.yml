@@ -1,0 +1,22 @@
+active: true
+derived: false
+header: |
+  Complete remediation plan
+issues: ''
+kind: functional
+level: 3.27
+links:
+- SRC-AG0033: H5lL9gyy6OgZcEkarhI-WTp3quZa8h9fAol9L6OwcvE=
+- SRC-PS0011: 4gY9o418gWDMfd8WbUFErNqfgROK1AWm3wijpk2G0WQ=
+- SRC-PS0017: LXPMx_DzC0wXBUkrZ8F5bbeVl9_GJgm0buYGYro3poQ=
+- SRC-PS0022: SVwFjaVBH4apeSljXFLDKXiEH3Kg9NU6WSWr-K5kEqs=
+- SRC-RM0009: 63eHuzYI6Z7WjMt496s21w3QmksR4KMSDwYiuz6iWV4=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  For an incomplete case, the system shall produce a safe, complete, ordered remediation plan: the steps required to remove, redact, or anonymize the remaining data and to stop recreation, so that the deletion request is completed.
+verification: test

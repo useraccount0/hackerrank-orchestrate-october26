@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  deletion_rules.csv
+issues: ''
+kind: interface
+level: 2.17
+links:
+- SRC-AG0199: 2rWIDM3Vu6xcBat3bglYzwA-hgNk-sDxPGniZYTT3kk=
+- SRC-PS0043: lN-ujICLBKgl4k1EIY39dzUNqpgsxAGTMR2XJyl-4mE=
+- SRC-RM0055: sc059LvTLhYewajidLNFSyC0iE1qkg_-j-_XoEgcMHs=
+modality: fact
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  dataset/deletion_rules.csv defines the required action (treatment) for each data category and condition; the actions include deleting the whole record, redacting prohibited identifiers, anonymizing the record, retaining it, or preserving an account tombstone with only the permitted stable reference.
+verification: test

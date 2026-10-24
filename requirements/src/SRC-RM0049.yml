@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: README.md
+header: |
+  README.md:49
+level: 3.24
+line_end: '49'
+line_start: '49'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  | `deletion_requests.csv` | 518 requests |

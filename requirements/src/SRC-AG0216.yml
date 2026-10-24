@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: AGENTS.md
+header: |
+  AGENTS.md:216
+level: 1.98
+line_end: '216'
+line_start: '216'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  - `case_id` uniquely identifies the request and its output row.

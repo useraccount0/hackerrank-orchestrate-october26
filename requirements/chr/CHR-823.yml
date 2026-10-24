@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Append only
+issues: ''
+kind: process
+level: 8.23
+links:
+- SRC-AG0021: rqHudXh_EUUKiqEvBScU0uFwH0iUp8eH2wyw2_DQe3Q=
+- SRC-AG0059: YJvlUvQ1Bpsma4OWACZF2qHWDxP6uu00fmYtMJcyacQ=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  log.txt shall only be appended to: earlier entries shall not be rewritten, reordered, or deleted.
+verification: inspection

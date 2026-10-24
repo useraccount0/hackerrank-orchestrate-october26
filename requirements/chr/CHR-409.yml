@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  steps_json is a JSON array
+issues: ''
+kind: interface
+level: 4.9
+links:
+- SRC-AG0240: 0C9rb55ynMe3AojUW8dg5J0BjmwzUWWvEnIhWRB-qTg=
+- SRC-RM0073: sbs2P_wLeG5O2JApRl622RMH3WBhO0Vn1EVhMzInVYw=
+- SRC-RM0152: KKN2PA0BtyHHobgJBOt3LydAjTHRyMxpcj7sdNwgMng=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Every steps_json value shall be a valid JSON array.
+verification: test

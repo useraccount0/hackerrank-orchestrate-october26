@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: heading
+file: README.md
+header: |
+  README.md:15
+level: 3.8
+line_end: '15'
+line_start: '15'
+links: []
+normative: false
+note: 'rule: Markdown heading'
+ref: ''
+reviewed: aHPowKcK7tCimxewJpq_zNBqqQPmQgtAPbkDJPYrWpM=
+text: |
+  ## Quick Start

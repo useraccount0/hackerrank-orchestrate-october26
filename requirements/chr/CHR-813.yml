@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  No invented deadline
+issues: ''
+kind: process
+level: 8.13
+links:
+- SRC-AG0076: u22woh4mb-dJSZ05VHXOwngLyueax5a0vBTiytOn8jw=
+- SRC-AG0415: y-yf9qClyyt2aONnd83g4Dl76Xpl_cXxNO33THfMlt8=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  The coding agent shall treat the October challenge end time as not configured in this repository, and shall not invent a deadline or reuse the September deadline.
+verification: inspection

@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Types of the step fields
+issues: ''
+kind: interface
+level: 4.12
+links:
+- SRC-AG0246: Hl1FYTUf3QLRtanPUKI_4saSfm5Sr7hG92EuouZwfOI=
+- SRC-PS0077: h9vqXJd8i1Oyh1VyqX5XitT7VF-U3IMxzZ5HPtcUNeo=
+modality: shall
+normative: true
+note: |
+  The types are read from the example step object; the sources do not state them in words.
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  In each step object, step_no shall be a JSON integer, and phase, system_id, resource_id, operation, state, and evidence_id shall be JSON strings.
+verification: test

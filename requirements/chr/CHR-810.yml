@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Check the log file path
+issues: ''
+kind: process
+level: '8.10'
+links:
+- SRC-AG0016: vysM4BYLvrvA2Tyj_LNoURv3RtLqD0xUdhVM6yjgAzs=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  At session start, the coding agent shall check the log file path defined in AGENTS.md section 2.
+verification: inspection

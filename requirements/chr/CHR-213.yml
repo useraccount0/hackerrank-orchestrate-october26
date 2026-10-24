@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Sample answers
+issues: ''
+kind: interface
+level: 2.13
+links:
+- SRC-AG0195: f9U0ldqHzGsgt0TZGKnuYdwGzQaG5ftCFs7NyZZoSN8=
+- SRC-PS0039: iCpsx5zxZhmHpeLZzgIks0VeYDQCrnyxoncpWFbPgd4=
+- SRC-RM0051: yseA6zMMAKmnWctqM-OhLg3jwkXk2bvfMp4rsvy0_94=
+modality: fact
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  dataset/sample_output.csv contains the correct outputs for the sample requests and demonstrates the required decision and serialization format.
+verification: inspection

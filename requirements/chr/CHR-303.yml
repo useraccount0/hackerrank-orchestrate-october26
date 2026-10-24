@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Requests in different languages
+issues: ''
+kind: functional
+level: 3.3
+links:
+- SRC-AG0222: -Txr6wHWPGTaxObnvubEMs5w4Fj7KXCbf3G-YL0SfRE=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall determine whether a request authorizes deletion also when the request text is written in a language other than English.
+verification: test

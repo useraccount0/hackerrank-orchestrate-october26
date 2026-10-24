@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  No organizer-only files
+issues: ''
+kind: constraint
+level: 5.5
+links:
+- SRC-AG0085: yx4BFJRs92jH990wu8__537ZDjwsWRvp2RE2gDD_8Hk=
+- SRC-AG0206: 50cqx8kukDtzMvezdkHM-K2w_Q6xmZtb_b7f4z29aU0=
+- SRC-AG0323: a7Pmb5B5jcfXJZgooIC3Eqy4qVACvXW1p0MVSmFBJZ0=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Organizer-only truth, golden answers, review files, generator internals, and any other organizer-only files (they live outside dataset/) shall never be used for predictions, prompt examples, hardcoded labels, or evaluation-time shortcuts.
+verification: inspection

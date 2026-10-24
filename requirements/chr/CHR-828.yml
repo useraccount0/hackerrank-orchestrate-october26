@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  The user prompt, word for word
+issues: ''
+kind: process
+level: 8.28
+links:
+- SRC-AG0128: 1lJ8CVc-VkdoMNELVOxADvuLGGG5gTSlZEIFsx4YmMg=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  A per-turn entry shall contain the exact user message, with secrets replaced by [REDACTED].
+verification: inspection

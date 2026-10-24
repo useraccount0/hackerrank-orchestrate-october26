@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: heading
+file: AGENTS.md
+header: |
+  AGENTS.md:90
+level: 1.52
+line_end: '90'
+line_start: '90'
+links: []
+normative: false
+note: 'rule: Markdown heading'
+ref: ''
+reviewed: 83pSYlcXcSl8eVEq9U-eN6k-vXFY4kq36JtIlXY6QE0=
+text: |
+  ### 4.1 Challenge And Submission Link

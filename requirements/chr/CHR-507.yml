@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Deterministic behavior
+issues: ''
+kind: constraint
+level: 5.7
+links:
+- SRC-AG0324: d4X7cT_FGOXkxmXBIDF-x4iviW2vZAgSDa34Fm_zMNw=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The solution shall keep its behavior deterministic where possible, including ordering and JSON serialization.
+verification: test

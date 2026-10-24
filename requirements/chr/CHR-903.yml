@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Keep the original formats
+issues: ''
+kind: process
+level: 9.3
+links:
+- SRC-AT0005: nZJT3SOTT_eV7cSrgCa4xUWBh-Igs-z8_hEMDAEmqrg=
+- SRC-AT0108: AmLefXjB4g3u5RAzngXDRDuZALNJulxpIEvhJGjK1eg=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  The original files and folder structure shall be kept where practical; JSONL, SQLite, and other structured logs shall not be converted into screenshots or summaries.
+verification: inspection

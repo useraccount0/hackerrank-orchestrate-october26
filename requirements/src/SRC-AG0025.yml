@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: heading
+file: AGENTS.md
+header: |
+  AGENTS.md:25
+level: 1.15
+line_end: '25'
+line_start: '25'
+links: []
+normative: false
+note: 'rule: Markdown heading'
+ref: ''
+reviewed: GNn7H0JDJsYIlFglYe2BBUdHbYua-gFw5wp66xWBQOM=
+text: |
+  ## 1. What This Repo Is

@@ -1,0 +1,23 @@
+active: true
+derived: false
+header: |
+  Read the inputs from dataset/
+issues: ''
+kind: interface
+level: 2.1
+links:
+- SRC-AG0173: JYsRYpCC25NSS1Z3KFKRdMrCXlmbfaD4JvVA3y1H6H0=
+- SRC-AG0321: qGrD143nCDRiMWThl3kjr89tHmRgjjI4whDFVlksw3I=
+- SRC-PS0033: ehWpjGGgylvV-6-eD6ac949uu3QD_aUg_ydJKgECPsQ=
+- SRC-RM0028: anXiYutLjXEBKld4kFe0tcNwiP0l8XKI0IUE4FiL2ZE=
+- SRC-RM0030: M8RjxGjE8iaXcs6sekNBcaobpe8T6x1nKdeD9ECdkaw=
+- SRC-RM0045: f_ZzRRHjf0RCJXhVxwQULRs0VAPQvv9S_23B2cxLvuA=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall read its input files from the dataset/ directory, which holds all participant-facing files.
+verification: test

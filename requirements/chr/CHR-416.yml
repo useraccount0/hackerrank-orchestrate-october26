@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Order inside a phase
+issues: ISS-02
+kind: interface
+level: 4.16
+links:
+- SRC-PS0126: hHvxGLZGePejzWFldXkmWzDmAkQ-iDN09aZ_phBaBYo=
+- SRC-RM0075: itzMZ0GibOZY7O3XP8azEIq3oxJdONdK4TLIke1WD_w=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Inside each phase, steps shall be ordered by the operation order of the allowed-operations table (CHR-418 to CHR-432), then by system_id ascending, then by resource_id ascending.
+verification: test

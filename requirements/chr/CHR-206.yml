@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  email
+issues: ''
+kind: interface
+level: 2.6
+links:
+- SRC-AG0217: ecrIbflUSXD864iA4aQb0J9n25ivzTNaSLw5e7MZn4U=
+modality: fact
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  email is the identity supplied with the request; it may be a current or a historical email address.
+verification: test

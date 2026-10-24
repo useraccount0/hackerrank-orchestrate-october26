@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Step numbers
+issues: ''
+kind: interface
+level: 4.13
+links:
+- SRC-AG0241: 4VLunJZ5tbwcR4eurZ62pn9iCB_HtCHISbSwpJ4G2BI=
+- SRC-PS0089: YN93Qlgc69bVCy6qz6AoMhYnyfhMtYs4-fZ7qTU2J-A=
+- SRC-RM0152: KKN2PA0BtyHHobgJBOt3LydAjTHRyMxpcj7sdNwgMng=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  step_no shall start at 1 and increase by 1 from step to step, in array order.
+verification: test

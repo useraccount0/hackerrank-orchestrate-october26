@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Find the log path relative to AGENTS.md
+issues: ''
+kind: process
+level: 8.21
+links:
+- SRC-AG0054: o4yfaSaoCmh17espU3zQJYhAomA47KhWgeSs8s4W3wY=
+- SRC-AG0400: I9wVQZZZZ-t6Op1WFzYmsFvFPu3IzLNE7XSd-96PL1k=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  The log path shall be resolved relative to AGENTS.md; no folder name, user path, or platform home directory shall be hardcoded, so that the location stays correct across clones, renames, and checkouts.
+verification: inspection

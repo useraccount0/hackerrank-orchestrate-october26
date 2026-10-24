@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  VERIFY_RESTORE_BLOCKED (VERIFICATION)
+issues: ''
+kind: interface
+level: 4.32
+links:
+- SRC-AG0281: r6p4m1CE2_WSEqreE_28UQijElARYEPaXCzl5W1Q9ys=
+- SRC-AG0290: 2QSSk1HVByZKx5sR7Df77GYSEDJavMXFsr7enYCL2Kg=
+- SRC-PS0119: XpzgUEssmscm6YK9a7Hz0_QxkBU3f75wrBur4jwI_s8=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Operation VERIFY_RESTORE_BLOCKED shall be used only in phase VERIFICATION, always with state BLOCKED, and means: confirm that the affected data cannot be restored.
+verification: test

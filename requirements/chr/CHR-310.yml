@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Read images and PDFs
+issues: ''
+kind: functional
+level: '3.10'
+links:
+- SRC-AG0311: U3vkfzwu0K9sF4KeqoAxqpQjCyMP6IwiGsxIwdHA_Fo=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall extract the facts contained in images and PDFs; these are ordinary business artifacts (for example invoices, support records, handover documents, and internal product screens) and do not contain an explicit deletion verdict.
+verification: test

@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  DISABLE_DATA_FLOW (REMEDIATION)
+issues: ''
+kind: interface
+level: 4.22
+links:
+- SRC-AG0271: Xkr_zRgFUV44EpCStMz3dLxnZi3zZnt_hUviZ5H50z4=
+- SRC-AG0275: gb4F3URXlHGTPpZ0m8IxsiwFlJm4t9wL9QK8THOVZNE=
+- SRC-PS0109: t10m_uJghy9ULmmfRLgD_Pul_2aNBWbDhNETKAKDfzA=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Operation DISABLE_DATA_FLOW shall be used only in phase REMEDIATION, always with state DISABLED, and means: stop the process that can copy or recreate the data.
+verification: test

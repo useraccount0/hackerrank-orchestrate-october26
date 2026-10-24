@@ -1,0 +1,34 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: AGENTS.md
+header: |
+  AGENTS.md:175-192
+level: 1.83
+line_end: '192'
+line_start: '175'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  ```text
+  dataset/
+  ├── deletion_requests.csv
+  ├── sample_deletion_requests.csv
+  ├── sample_output.csv
+  ├── user_identities.csv
+  ├── user_audit_log.csv
+  ├── system_activity.csv
+  ├── deletion_rules.csv
+  ├── evidence_files.csv
+  ├── output.csv
+  └── evidence/
+      ├── databases/
+      ├── documents/
+      ├── images/
+      ├── logs/
+      ├── records/
+  ```

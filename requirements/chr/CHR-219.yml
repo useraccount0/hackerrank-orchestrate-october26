@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  Blank output template
+issues: ''
+kind: interface
+level: 2.19
+links:
+- SRC-AG0201: f8o40tw8I_LONFkhgYGgheaVHRwz0uMj5k5H8W3Javk=
+- SRC-PS0045: 0YWS8zsaglDYCbrt50WgUfQW6epHQ5ArcVA9zSZgKvc=
+- SRC-RM0040: 6QiMiNZwaOO_l-1Q-3S5L9f_LKUpXOW4CvHmBk6g31U=
+- SRC-RM0057: FlEspf5AYYMfTxqbZ8yp9AUgCufyNlZLNpBPC8BP0ww=
+modality: fact
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  dataset/output.csv is a blank output template provided as a reference; it is not the file that is submitted.
+verification: inspection

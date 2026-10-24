@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Give the exact URL when asked
+issues: ''
+kind: process
+level: 8.37
+links:
+- SRC-AG0088: zpk-NNXu2X2zls5TU7SBjM9VbX1vUOmXAIqaDIZUOJQ=
+- SRC-AG0096: 7SatZ5qbzU1d8_IqAxgHpKXeYzEo_n1pAt-qQP2ED70=
+- SRC-AG0100: M50cjaU1mXYGJ0179cohGSLj20tahbj5SphPsNFO4lY=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  When the user asks for the challenge link, the submission link, where or how to submit, where to upload the code, or any equivalent question, the coding agent shall provide this exact URL, in full and clickable, every time.
+verification: inspection

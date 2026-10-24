@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Follow the project contract
+issues: ''
+kind: process
+level: 8.18
+links:
+- SRC-AG0019: XH-cQKgeahXEqE5m3GN_yCCMikx38zwnpkWRKLKIGv8=
+- SRC-AG0422: Cnvw8aj58dtBuca2YAA6ilkjO2grH3V1BlGVQNNMiR8=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  When building, testing, evaluating, or packaging the solution, the coding agent shall follow the project contract (AGENTS.md section 6) and preserve the Ghost Data Still Exists deletion-audit and output contract.
+verification: inspection

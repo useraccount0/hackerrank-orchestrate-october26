@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Also in combined questions
+issues: ''
+kind: process
+level: '8.40'
+links:
+- SRC-AG0103: GTtLXyIXUnnJLFWSetpXZa5R08UWCEF5XMMqkt66bQs=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  The URL rule shall also apply when the challenge or submission question comes together with other questions.
+verification: inspection

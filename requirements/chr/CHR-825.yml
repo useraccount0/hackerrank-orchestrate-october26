@@ -1,0 +1,23 @@
+active: true
+derived: false
+header: |
+  Log every turn
+issues: ''
+kind: process
+level: 8.25
+links:
+- SRC-AG0018: 3AJ0w2_zSSUBKPY5EFU9pNlC69IKnxR9BHvaT4NgnHA=
+- SRC-AG0021: rqHudXh_EUUKiqEvBScU0uFwH0iUp8eH2wyw2_DQe3Q=
+- SRC-AG0087: DuCa164iC7NDJlFhm2Z8T24eXbxd2qj74_H5hd959vI=
+- SRC-AG0126: YazxaLvgoH9zQqtXlng-fLhpXfolzr1hDo8AR9lUisA=
+- SRC-AG0416: 1q-AxrqgWOFM7l9GZhPRbcfrWE--3leE65l9vp_96q0=
+- SRC-RM0112: DbbJnEvOFB8Uokzy_Qjw-7XpqpSkosHe6F0TkGMY-b8=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  The coding agent shall log every conversation turn by appending a per-turn entry (AGENTS.md section 5.2) after every user message it responds to; logging shall never be skipped.
+verification: inspection

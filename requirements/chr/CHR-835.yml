@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  UTF-8 and LF line endings
+issues: ''
+kind: process
+level: 8.35
+links:
+- SRC-AG0401: L4w9ELOi9m6UUNObjmdrXZ0TBltfOIdNPGpRNyu6Vtg=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  Logs shall be written in UTF-8 with \n (LF) line endings.
+verification: inspection

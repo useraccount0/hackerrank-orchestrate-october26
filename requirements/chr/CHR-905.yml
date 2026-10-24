@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Staging folder
+issues: ''
+kind: process
+level: 9.5
+links:
+- SRC-AT0010: mP7mFrmHQ8SQEnZOWgp5BnR9x3xKo7GuF97C7lRGDSo=
+- SRC-AT0105: SbfJ9slgLz0Uc7cRP1Bqg5GMchWMf-IzJFoF9fNoaSg=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  A temporary folder named agent-trace shall be created somewhere easy to find; only the relevant trace files shall be copied into it, with one subfolder per tool (for example agent-trace/claude-code/ and agent-trace/codex/).
+verification: inspection

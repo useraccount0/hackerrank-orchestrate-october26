@@ -1,0 +1,18 @@
+active: true
+classified_by: ai
+derived: false
+disposition: context
+file: problem_statement.md
+header: |
+  problem_statement.md:3
+level: 5.2
+line_end: '3'
+line_start: '3'
+links: []
+normative: false
+note: |
+  Background story (Northstar Shop incident) that motivates the challenge; it states no requirement. The facts that matter are repeated in normative lines such as SRC-PS0005 and SRC-PS0007.
+ref: ''
+reviewed: pending-user-review
+text: |
+  Northstar Shop (an imaginary company) lost **$2.4 million** after one supposedly deleted customer came back as a ghost in its systems. Every internal dashboard showed the deletion request as **“Complete.”** Weeks later, the same customer tried to create a new account. The platform refused: **“This email is already registered.”**

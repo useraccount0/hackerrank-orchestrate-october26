@@ -1,0 +1,873 @@
+file,line,src_uid,disposition,chr_uids,text
+AGENTS.md,1,SRC-AG0001,heading,,# AGENTS.md
+AGENTS.md,2,,blank,,
+AGENTS.md,3,SRC-AG0003,context,,HackerRank Orchestrate (October 2026) — Ghost Data Still Exists
+AGENTS.md,4,,blank,,
+AGENTS.md,5,SRC-AG0005,requirement,CHR-801,"This file is the single source of truth for any AI coding agent working in this repo: Claude Code, OpenAI Codex CLI / Codex Cloud, Gemini CLI, Cursor, Windsurf, opencode, Aider, goose, Factory, RooCode, JetBrains Junie, GitHub Copilot, Devin, or any other AGENTS.md-aware tool."
+AGENTS.md,6,,blank,,
+AGENTS.md,7,SRC-AG0007,requirement,CHR-801 CHR-802,Read this file in full before taking any action. Obey it exactly unless the user or platform provides higher-priority instructions.
+AGENTS.md,8,,blank,,
+AGENTS.md,9,SRC-AG0009,formatting,,---
+AGENTS.md,10,,blank,,
+AGENTS.md,11,SRC-AG0011,heading,,## 0. TLDR For The Agent
+AGENTS.md,12,,blank,,
+AGENTS.md,13,SRC-AG0013,requirement,CHR-802 CHR-809,"On every session start, do this in order:"
+AGENTS.md,14,,blank,,
+AGENTS.md,15,SRC-AG0015,requirement,CHR-802,1. Read this file completely.
+AGENTS.md,16,SRC-AG0016,requirement,CHR-810,2. Check the log file path in §2.
+AGENTS.md,17,SRC-AG0017,requirement,CHR-811,3. Append a `SESSION START` entry using §5.1.
+AGENTS.md,18,SRC-AG0018,requirement,CHR-825,"4. For every user turn, append a summary entry using §5.2."
+AGENTS.md,19,SRC-AG0019,requirement,CHR-818,"5. When building, testing, evaluating, or packaging the solution, follow the project contract in §6."
+AGENTS.md,20,,blank,,
+AGENTS.md,21,SRC-AG0021,requirement,CHR-823 CHR-824 CHR-825,Do not skip logging or rewrite old log entries. Sub-agents and worktrees use the same log file.
+AGENTS.md,22,,blank,,
+AGENTS.md,23,SRC-AG0023,formatting,,---
+AGENTS.md,24,,blank,,
+AGENTS.md,25,SRC-AG0025,heading,,## 1. What This Repo Is
+AGENTS.md,26,,blank,,
+AGENTS.md,27,SRC-AG0027,context,,This is a starter repo for the **HackerRank Orchestrate** challenge: **Ghost Data Still Exists**.
+AGENTS.md,28,,blank,,
+AGENTS.md,29,SRC-AG0029,requirement,CHR-101 CHR-301 CHR-304 CHR-307 CHR-317 CHR-321,"Participants must build an AI-powered deletion-audit agent. For every request in `dataset/deletion_requests.csv`, the agent first determines whether the person actually requested deletion. For an authorized deletion, it reconstructs the person's current and historical identifiers, searches global activity and evidence, applies the supplied deletion policy, and decides whether the deletion is complete."
+AGENTS.md,30,,blank,,
+AGENTS.md,31,SRC-AG0031,requirement,CHR-102 CHR-103 CHR-312 CHR-313,"The dataset models a commerce platform where a workflow can report **Complete** while personal data remains in databases, replicas, logs, support attachments, exports, search indexes, analytics records, archives, or backups. Active synchronization and restore processes can also recreate data that was deleted from its original source. Reported statuses and activity results are claims; the agent must establish the state at each case's `audit_at` time from the supplied evidence."
+AGENTS.md,32,,blank,,
+AGENTS.md,33,SRC-AG0033,requirement,CHR-315 CHR-316 CHR-319 CHR-320 CHR-326 CHR-327 CHR-330 CHR-331,"When deletion is incomplete, the agent reports the remaining records and recreation risks, produces a safe ordered remediation plan, and states the verification checks that must pass afterward. When deletion is complete, it returns the evidence-backed verification checks that prove the required state. It must preserve records required by policy and correctly handle account tombstones whose stable internal user reference remains while prohibited direct identifiers are removed."
+AGENTS.md,34,,blank,,
+AGENTS.md,35,SRC-AG0035,requirement,CHR-401 CHR-402,The final submission must produce `output.csv` with:
+AGENTS.md,36,,blank,,
+AGENTS.md,37,SRC-AG0037,requirement,CHR-402,```text
+AGENTS.md,38,SRC-AG0037,requirement,CHR-402,"case_id,deletion_status,steps_json"
+AGENTS.md,39,SRC-AG0037,requirement,CHR-402,```
+AGENTS.md,40,,blank,,
+AGENTS.md,41,SRC-AG0041,requirement,CHR-804,Read `problem_statement.md` for the full participant-facing specification.
+AGENTS.md,42,,blank,,
+AGENTS.md,43,SRC-AG0043,formatting,,---
+AGENTS.md,44,,blank,,
+AGENTS.md,45,SRC-AG0045,heading,,## 2. Log File — Location And Lifecycle
+AGENTS.md,46,,blank,,
+AGENTS.md,47,SRC-AG0047,requirement,CHR-820,The log file is named `log.txt` and lives in the same directory as this `AGENTS.md` file — the repository root.
+AGENTS.md,48,,blank,,
+AGENTS.md,49,SRC-AG0049,formatting,,| Platform | Path |
+AGENTS.md,50,SRC-AG0050,formatting,,|---|---|
+AGENTS.md,51,SRC-AG0051,requirement,CHR-820,| macOS / Linux | `<directory containing AGENTS.md>/log.txt` |
+AGENTS.md,52,SRC-AG0052,requirement,CHR-820,| Windows | `<directory containing AGENTS.md>\log.txt` |
+AGENTS.md,53,,blank,,
+AGENTS.md,54,SRC-AG0054,requirement,CHR-821,"Resolve the path relative to this file. Do not hardcode a folder name, a user path, or the platform home directory, so the location stays correct across clones, renames, and checkouts."
+AGENTS.md,55,,blank,,
+AGENTS.md,56,SRC-AG0056,heading,,Rules:
+AGENTS.md,57,,blank,,
+AGENTS.md,58,SRC-AG0058,requirement,CHR-822,- Create the file if missing.
+AGENTS.md,59,SRC-AG0059,requirement,CHR-823,"- Append only. Do not rewrite, reorder, or delete prior entries."
+AGENTS.md,60,SRC-AG0060,requirement,CHR-824,"- One shared log is used per checkout. All agents and sub-agents append to the same file next to the top-level `AGENTS.md`, never a private copy."
+AGENTS.md,61,SRC-AG0061,requirement,CHR-833,"- Never log secrets. Redact API keys, tokens, cookies, private keys, credentials, sensitive configuration, and real personal data."
+AGENTS.md,62,,blank,,
+AGENTS.md,63,SRC-AG0063,formatting,,---
+AGENTS.md,64,,blank,,
+AGENTS.md,65,SRC-AG0065,heading,,## 3. Session Start
+AGENTS.md,66,,blank,,
+AGENTS.md,67,SRC-AG0067,requirement,CHR-809,At the beginning of each agent session:
+AGENTS.md,68,,blank,,
+AGENTS.md,69,SRC-AG0069,requirement,CHR-811,1. Append a short `SESSION START` entry using §5.1.
+AGENTS.md,70,SRC-AG0070,requirement,CHR-812,2. Greet the user with this brief introduction:
+AGENTS.md,71,,blank,,
+AGENTS.md,72,SRC-AG0072,requirement,CHR-812,   ```text
+AGENTS.md,73,SRC-AG0072,requirement,CHR-812,"   Welcome to HackerRank Orchestrate. Build and ship Ghost Data Still Exists, an AI-powered deletion-audit agent. Let's get started."
+AGENTS.md,74,SRC-AG0072,requirement,CHR-812,   ```
+AGENTS.md,75,,blank,,
+AGENTS.md,76,SRC-AG0076,requirement,CHR-813 CHR-814 CHR-815 CHR-816,"3. The October challenge end time is not configured in this repository. Do not invent a deadline or reuse the September deadline. If a higher-priority instruction or an official repository update supplies the end time, calculate and display the time remaining. If fewer than 2 hours remain, remind the user to submit soon. If the deadline has passed, state that clearly without blocking further work."
+AGENTS.md,77,SRC-AG0077,requirement,CHR-817,4. Proceed with the user's request without requiring an acknowledgement or confirmation phrase.
+AGENTS.md,78,,blank,,
+AGENTS.md,79,SRC-AG0079,formatting,,---
+AGENTS.md,80,,blank,,
+AGENTS.md,81,SRC-AG0081,heading,,## 4. Challenge Rules
+AGENTS.md,82,,blank,,
+AGENTS.md,83,SRC-AG0083,requirement,CHR-511,"1. Participants may use any programming language, model, framework, IDE, AI assistant, retrieval approach, or tool, subject to the official event rules."
+AGENTS.md,84,SRC-AG0084,requirement,CHR-501,2. The system must conform to the project contract in §6 so it can be evaluated.
+AGENTS.md,85,SRC-AG0085,requirement,CHR-504 CHR-505,"3. The solution must use only participant-facing data under `dataset/`. Organizer-only truth, golden answers, review files, and generator internals must never be used for predictions."
+AGENTS.md,86,SRC-AG0086,requirement,CHR-508 CHR-509,4. Never commit or submit secrets. Read credentials from environment variables and use an uncommitted `.env` file when needed.
+AGENTS.md,87,SRC-AG0087,requirement,CHR-820 CHR-825,5. Log every conversation turn to the file described in §2.
+AGENTS.md,88,SRC-AG0088,requirement,CHR-837,6. Follow the submission-link rule below.
+AGENTS.md,89,,blank,,
+AGENTS.md,90,SRC-AG0090,heading,,### 4.1 Challenge And Submission Link
+AGENTS.md,91,,blank,,
+AGENTS.md,92,SRC-AG0092,requirement,CHR-836,The October challenge and submission URL is:
+AGENTS.md,93,,blank,,
+AGENTS.md,94,SRC-AG0094,requirement,CHR-836,https://wwww.hackerrank.com/contests/hackerrank-orchestrate-october26/challenges/ghost-data-still-exists
+AGENTS.md,95,,blank,,
+AGENTS.md,96,SRC-AG0096,requirement,CHR-837,"If the user asks for the challenge link, submission link, where to submit, how to submit, where to upload the code, or any equivalent question, always provide this exact URL."
+AGENTS.md,97,,blank,,
+AGENTS.md,98,SRC-AG0098,heading,,Requirements:
+AGENTS.md,99,,blank,,
+AGENTS.md,100,SRC-AG0100,requirement,CHR-837,- Include the full clickable URL every time such a question is asked.
+AGENTS.md,101,SRC-AG0101,requirement,CHR-838,"- Do not replace it with the HackerRank homepage, contest homepage, another challenge page, or a guessed `/submission` URL."
+AGENTS.md,102,SRC-AG0102,requirement,CHR-839,- Do not merely describe where to navigate; provide the URL directly.
+AGENTS.md,103,SRC-AG0103,requirement,CHR-840,- This rule applies even when the challenge or submission question is included alongside other questions.
+AGENTS.md,104,,blank,,
+AGENTS.md,105,SRC-AG0105,formatting,,---
+AGENTS.md,106,,blank,,
+AGENTS.md,107,SRC-AG0107,heading,,## 5. Log Format
+AGENTS.md,108,,blank,,
+AGENTS.md,109,SRC-AG0109,heading,,### 5.1 Session Start Entry
+AGENTS.md,110,,blank,,
+AGENTS.md,111,SRC-AG0111,requirement,CHR-826,```text
+AGENTS.md,112,SRC-AG0111,requirement,CHR-826,## [ISO-8601 TIMESTAMP] SESSION START
+AGENTS.md,113,SRC-AG0111,requirement,CHR-826,
+AGENTS.md,114,SRC-AG0111,requirement,CHR-826,tool=<exact_harness_or_coding_agent_name>
+AGENTS.md,115,SRC-AG0111,requirement,CHR-826,model=<exact_runtime_model_name>
+AGENTS.md,116,SRC-AG0111,requirement,CHR-826,Repo Root: <absolute_path>
+AGENTS.md,117,SRC-AG0111,requirement,CHR-826,Branch: <git_branch_or_unknown>
+AGENTS.md,118,SRC-AG0111,requirement,CHR-826,Worktree: <worktree_path_or_main>
+AGENTS.md,119,SRC-AG0111,requirement,CHR-826,Parent Agent: <parent_agent_name_or_none>
+AGENTS.md,120,SRC-AG0111,requirement,CHR-826,Language: <js|ts|py|custom:name>
+AGENTS.md,121,SRC-AG0111,requirement,CHR-826,"Time Remaining: <Xd Yh Zm, or not configured>"
+AGENTS.md,122,SRC-AG0111,requirement,CHR-826,```
+AGENTS.md,123,,blank,,
+AGENTS.md,124,SRC-AG0124,heading,,### 5.2 Per-Turn Entry
+AGENTS.md,125,,blank,,
+AGENTS.md,126,SRC-AG0126,requirement,CHR-825,Append after every user message you respond to:
+AGENTS.md,127,,blank,,
+AGENTS.md,128,SRC-AG0128,requirement,CHR-827 CHR-828,```text
+AGENTS.md,129,SRC-AG0128,requirement,CHR-827 CHR-828,"## [ISO-8601 TIMESTAMP] <short title, max 80 chars>"
+AGENTS.md,130,SRC-AG0128,requirement,CHR-827 CHR-828,
+AGENTS.md,131,SRC-AG0128,requirement,CHR-827 CHR-828,"User Prompt (verbatim, secrets redacted):"
+AGENTS.md,132,SRC-AG0128,requirement,CHR-827 CHR-828,"<exact user message, with secrets replaced by [REDACTED]>"
+AGENTS.md,133,SRC-AG0128,requirement,CHR-827 CHR-828,
+AGENTS.md,134,SRC-AG0128,requirement,CHR-827 CHR-828,Agent Response Summary:
+AGENTS.md,135,SRC-AG0128,requirement,CHR-827 CHR-828,"<2-5 sentences: what was done, why, and any important decision>"
+AGENTS.md,136,SRC-AG0128,requirement,CHR-827 CHR-828,
+AGENTS.md,137,SRC-AG0128,requirement,CHR-827 CHR-828,Actions:
+AGENTS.md,138,SRC-AG0128,requirement,CHR-827 CHR-828,* <file edited / command run / tool invoked>
+AGENTS.md,139,SRC-AG0128,requirement,CHR-827 CHR-828,
+AGENTS.md,140,SRC-AG0128,requirement,CHR-827 CHR-828,Context:
+AGENTS.md,141,SRC-AG0128,requirement,CHR-827 CHR-828,tool=<exact_harness_or_coding_agent_name>
+AGENTS.md,142,SRC-AG0128,requirement,CHR-827 CHR-828,model=<exact_runtime_model_name>
+AGENTS.md,143,SRC-AG0128,requirement,CHR-827 CHR-828,branch=<git_branch_or_unknown>
+AGENTS.md,144,SRC-AG0128,requirement,CHR-827 CHR-828,repo_root=<absolute_path>
+AGENTS.md,145,SRC-AG0128,requirement,CHR-827 CHR-828,worktree=<worktree_path_or_main>
+AGENTS.md,146,SRC-AG0128,requirement,CHR-827 CHR-828,parent_agent=<parent_name_or_none>
+AGENTS.md,147,SRC-AG0128,requirement,CHR-827 CHR-828,```
+AGENTS.md,148,,blank,,
+AGENTS.md,149,SRC-AG0149,requirement,CHR-829 CHR-831,"**Mandatory tool-name rule:** Every `SESSION START` and per-turn log entry must contain one non-empty `tool=` line with the exact name of the coding harness or agent writing the entry. Replace the template value before writing the log. The entry is invalid if `tool=` is missing, blank, still contains a placeholder, uses a generic label such as `AI`, contains only a model name, or names a different harness. Before responding, verify the value against the harness identity provided by the current runtime and re-read the appended entry to confirm it matches. Never guess the tool name. Correct any mismatch before responding to the user."
+AGENTS.md,150,,blank,,
+AGENTS.md,151,SRC-AG0151,requirement,CHR-830,"**Mandatory model-name rule:** Every `SESSION START` and per-turn log entry must contain one non-empty `model=` line with the exact model identifier used for that turn. Always make sure that model name is correct & not made up. `model=unknown`, a model family, a generic label, an inferred name, and a template placeholder are invalid. Obtain the exact identifier from the runtime, session metadata, harness configuration, or another authoritative environment source before writing the entry. Never guess the model name. The model name does not replace the `tool=` value because the coding harness and the model are separate fields."
+AGENTS.md,152,,blank,,
+AGENTS.md,153,SRC-AG0153,requirement,CHR-829 CHR-830 CHR-831,"**Required harness-and-model check:** Both `tool=` and `model=` must always be present in every `SESSION START` and per-turn entry. An entry is invalid if either field is missing, blank, unknown, generic, inferred, or still contains a template placeholder. Before completing a response, re-read the newly appended log entry and confirm that it contains exactly one populated `tool=` line and exactly one populated `model=` line with authoritative values. If either is absent or invalid, determine the correct value and correct the entry before responding."
+AGENTS.md,154,,blank,,
+AGENTS.md,155,SRC-AG0155,heading,,### 5.3 Sub-Agent And Worktree Rules
+AGENTS.md,156,,blank,,
+AGENTS.md,157,SRC-AG0157,requirement,CHR-824 CHR-832,- Sub-agents must log their own entries using the same file.
+AGENTS.md,158,SRC-AG0158,requirement,CHR-832,- Set `parent_agent=` to the parent agent's name.
+AGENTS.md,159,SRC-AG0159,requirement,CHR-824,"- Worktrees use the same shared log file, not a per-worktree copy."
+AGENTS.md,160,,blank,,
+AGENTS.md,161,SRC-AG0161,requirement,CHR-833 CHR-834,### 5.4 What Not To Log
+AGENTS.md,162,,blank,,
+AGENTS.md,163,SRC-AG0163,requirement,CHR-833,"- API keys, tokens, session cookies, OAuth codes, credentials, or private keys."
+AGENTS.md,164,SRC-AG0164,requirement,CHR-833,- Sensitive configuration or real personal data.
+AGENTS.md,165,SRC-AG0165,requirement,CHR-834,- Full contents of large files or binary blobs. Reference them by path instead.
+AGENTS.md,166,,blank,,
+AGENTS.md,167,SRC-AG0167,formatting,,---
+AGENTS.md,168,,blank,,
+AGENTS.md,169,SRC-AG0169,heading,,## 6. Project Contract
+AGENTS.md,170,,blank,,
+AGENTS.md,171,SRC-AG0171,heading,,### 6.1 Dataset Contract
+AGENTS.md,172,,blank,,
+AGENTS.md,173,SRC-AG0173,requirement,CHR-201,Participant-facing files are inside `dataset/`.
+AGENTS.md,174,,blank,,
+AGENTS.md,175,SRC-AG0175,requirement,CHR-202,```text
+AGENTS.md,176,SRC-AG0175,requirement,CHR-202,dataset/
+AGENTS.md,177,SRC-AG0175,requirement,CHR-202,├── deletion_requests.csv
+AGENTS.md,178,SRC-AG0175,requirement,CHR-202,├── sample_deletion_requests.csv
+AGENTS.md,179,SRC-AG0175,requirement,CHR-202,├── sample_output.csv
+AGENTS.md,180,SRC-AG0175,requirement,CHR-202,├── user_identities.csv
+AGENTS.md,181,SRC-AG0175,requirement,CHR-202,├── user_audit_log.csv
+AGENTS.md,182,SRC-AG0175,requirement,CHR-202,├── system_activity.csv
+AGENTS.md,183,SRC-AG0175,requirement,CHR-202,├── deletion_rules.csv
+AGENTS.md,184,SRC-AG0175,requirement,CHR-202,├── evidence_files.csv
+AGENTS.md,185,SRC-AG0175,requirement,CHR-202,├── output.csv
+AGENTS.md,186,SRC-AG0175,requirement,CHR-202,└── evidence/
+AGENTS.md,187,SRC-AG0175,requirement,CHR-202,    ├── databases/
+AGENTS.md,188,SRC-AG0175,requirement,CHR-202,    ├── documents/
+AGENTS.md,189,SRC-AG0175,requirement,CHR-202,    ├── images/
+AGENTS.md,190,SRC-AG0175,requirement,CHR-202,    ├── logs/
+AGENTS.md,191,SRC-AG0175,requirement,CHR-202,    ├── records/
+AGENTS.md,192,SRC-AG0175,requirement,CHR-202,```
+AGENTS.md,193,,blank,,
+AGENTS.md,194,SRC-AG0194,requirement,CHR-203 CHR-403,- `deletion_requests.csv` contains 518 evaluation requests. Produce exactly one output row for every `case_id` in this file.
+AGENTS.md,195,SRC-AG0195,requirement,CHR-212 CHR-213 CHR-439,- `sample_deletion_requests.csv` contains 32 public requests. `sample_output.csv` contains their correct outputs and demonstrates the required decision and serialization format.
+AGENTS.md,196,SRC-AG0196,requirement,CHR-214,"- `user_identities.csv` contains the current identity snapshot for each user, including the stable `user_id`, name, email, phone, email hash, and snapshot update time."
+AGENTS.md,197,SRC-AG0197,requirement,CHR-215 CHR-306,- `user_audit_log.csv` records historical changes to identity fields. Use it with the current snapshot to recover identifiers that may still appear in older systems and evidence.
+AGENTS.md,198,SRC-AG0198,requirement,CHR-216 CHR-223 CHR-312,"- `system_activity.csv` is a global stream of deletion, synchronization, export, backup, restore, indexing, and audit events. Its rows may describe unrelated people. Determine resource state from the available evidence rather than trusting workflow or operation results alone."
+AGENTS.md,199,SRC-AG0199,requirement,CHR-217,"- `deletion_rules.csv` defines the required action for each data category and condition. Actions include deleting the whole record, redacting prohibited identifiers, anonymizing the record, retaining it, or preserving an account tombstone with only the permitted stable reference."
+AGENTS.md,200,SRC-AG0200,requirement,CHR-218 CHR-308 CHR-309,"- `evidence_files.csv` is the manifest for evidence under `dataset/evidence/`. It maps each `file_id` to its path, source origin, and capture time. The manifest does not identify which case or user a file concerns; the solution must connect evidence through its contents and identifiers."
+AGENTS.md,201,SRC-AG0201,requirement,CHR-219 CHR-401,- `output.csv` is the blank prediction template. The final completed `output.csv` must be written at the repository root for submission.
+AGENTS.md,202,SRC-AG0202,requirement,CHR-220 CHR-221,"- Evidence may be provided as PDF documents, application screenshots, logs, JSON, plain-text records, and SQLite-compatible SQL snapshot exports. SQL files are readable text and may be executed with SQLite."
+AGENTS.md,203,,blank,,
+AGENTS.md,204,SRC-AG0204,requirement,CHR-222 CHR-223,"Only `deletion_requests.csv` requires predictions. Other participant-facing files provide identity, policy, activity, and evidence context. Global data can contain decoys and unrelated records."
+AGENTS.md,205,,blank,,
+AGENTS.md,206,SRC-AG0206,requirement,CHR-505,"Organizer-only files live outside `dataset/` and must never be used for predictions, prompt examples, hardcoded labels, or evaluation-time shortcuts."
+AGENTS.md,207,,blank,,
+AGENTS.md,208,SRC-AG0208,heading,,### 6.2 Input And Time Contract
+AGENTS.md,209,,blank,,
+AGENTS.md,210,SRC-AG0210,requirement,CHR-204,Each request has these fields:
+AGENTS.md,211,,blank,,
+AGENTS.md,212,SRC-AG0212,requirement,CHR-204,```text
+AGENTS.md,213,SRC-AG0212,requirement,CHR-204,"case_id,email,requested_at,reported_status,reported_at,audit_at,request_text"
+AGENTS.md,214,SRC-AG0212,requirement,CHR-204,```
+AGENTS.md,215,,blank,,
+AGENTS.md,216,SRC-AG0216,requirement,CHR-205 CHR-403,- `case_id` uniquely identifies the request and its output row.
+AGENTS.md,217,SRC-AG0217,requirement,CHR-206 CHR-305,- `email` is the identity supplied with the request. It may be a current or historical email address.
+AGENTS.md,218,SRC-AG0218,requirement,CHR-207,- `requested_at` is when the request was submitted.
+AGENTS.md,219,SRC-AG0219,requirement,CHR-208,"- `reported_status` is the deletion workflow's claim: `COMPLETE`, `PARTIALLY_COMPLETE`, or `NOT_STARTED`."
+AGENTS.md,220,SRC-AG0220,requirement,CHR-209,- `reported_at` is when that claim was reported.
+AGENTS.md,221,SRC-AG0221,requirement,CHR-210,- `audit_at` is the cutoff for the required answer.
+AGENTS.md,222,SRC-AG0222,requirement,CHR-211 CHR-301 CHR-303,- `request_text` contains the person's request and may be written in different languages. Determine whether it actually authorizes deletion.
+AGENTS.md,223,,blank,,
+AGENTS.md,224,SRC-AG0224,requirement,CHR-314,Use only information available at or before `audit_at` when deciding the case. Evidence created later must not change the answer for that case.
+AGENTS.md,225,,blank,,
+AGENTS.md,226,SRC-AG0226,heading,,### 6.3 Required Output
+AGENTS.md,227,,blank,,
+AGENTS.md,228,SRC-AG0228,requirement,CHR-402,"The solution must write `output.csv` with these exact columns, in this order:"
+AGENTS.md,229,,blank,,
+AGENTS.md,230,SRC-AG0230,requirement,CHR-402,```text
+AGENTS.md,231,SRC-AG0230,requirement,CHR-402,"case_id,deletion_status,steps_json"
+AGENTS.md,232,SRC-AG0230,requirement,CHR-402,```
+AGENTS.md,233,,blank,,
+AGENTS.md,234,SRC-AG0234,heading,,Requirements:
+AGENTS.md,235,,blank,,
+AGENTS.md,236,SRC-AG0236,requirement,CHR-403 CHR-404,- Produce exactly 518 data rows: one for every `case_id` in `dataset/deletion_requests.csv`.
+AGENTS.md,237,SRC-AG0237,requirement,CHR-405,- Sort rows by `case_id`.
+AGENTS.md,238,SRC-AG0238,requirement,CHR-407,"- Set `deletion_status` to `COMPLETE`, `INCOMPLETE`, or `NOT_APPLICABLE`."
+AGENTS.md,239,SRC-AG0239,requirement,CHR-408,- Use `NOT_APPLICABLE` with `steps_json=[]` when the request does not authorize deletion.
+AGENTS.md,240,SRC-AG0240,requirement,CHR-409 CHR-410,- Encode `steps_json` as a valid JSON array. The grader ignores JSON object-key order and whitespace but preserves array order.
+AGENTS.md,241,SRC-AG0241,requirement,CHR-413,- Number steps consecutively from `1`.
+AGENTS.md,242,SRC-AG0242,requirement,CHR-415,"- Order phases as `FINDING`, then `REMEDIATION`, then `VERIFICATION`."
+AGENTS.md,243,,blank,,
+AGENTS.md,244,SRC-AG0244,requirement,CHR-411,Each step contains exactly these fields:
+AGENTS.md,245,,blank,,
+AGENTS.md,246,SRC-AG0246,requirement,CHR-411 CHR-412,```json
+AGENTS.md,247,SRC-AG0246,requirement,CHR-411 CHR-412,{
+AGENTS.md,248,SRC-AG0246,requirement,CHR-411 CHR-412,"  ""step_no"": 1,"
+AGENTS.md,249,SRC-AG0246,requirement,CHR-411 CHR-412,"  ""phase"": ""FINDING"","
+AGENTS.md,250,SRC-AG0246,requirement,CHR-411 CHR-412,"  ""system_id"": ""account_service"","
+AGENTS.md,251,SRC-AG0246,requirement,CHR-411 CHR-412,"  ""resource_id"": ""account_005"","
+AGENTS.md,252,SRC-AG0246,requirement,CHR-411 CHR-412,"  ""operation"": ""REPORT_REMAINING_RECORD"","
+AGENTS.md,253,SRC-AG0246,requirement,CHR-411 CHR-412,"  ""state"": ""PRESENT"","
+AGENTS.md,254,SRC-AG0246,requirement,CHR-411 CHR-412,"  ""evidence_id"": ""evidence_01"""
+AGENTS.md,255,SRC-AG0246,requirement,CHR-411 CHR-412,}
+AGENTS.md,256,SRC-AG0246,requirement,CHR-411 CHR-412,```
+AGENTS.md,257,,blank,,
+AGENTS.md,258,SRC-AG0258,requirement,CHR-433 CHR-434 CHR-435 CHR-437,"For a `COMPLETE` case, include only evidence-backed verification steps proving the state at `audit_at`. For an `INCOMPLETE` case, include the findings, the complete ordered remediation plan, and the checks that must pass after remediation. Findings cite participant-visible evidence. Proposed remediation and future verification steps use an empty `evidence_id`."
+AGENTS.md,259,,blank,,
+AGENTS.md,260,SRC-AG0260,heading,,### 6.4 Allowed Step Operations
+AGENTS.md,261,,blank,,
+AGENTS.md,262,SRC-AG0262,requirement,CHR-418 CHR-419 CHR-420 CHR-421,Findings:
+AGENTS.md,263,,blank,,
+AGENTS.md,264,SRC-AG0264,formatting,,| Operation | State | Meaning |
+AGENTS.md,265,SRC-AG0265,formatting,,|---|---|---|
+AGENTS.md,266,SRC-AG0266,requirement,CHR-418,| `REPORT_REMAINING_RECORD` | `PRESENT` | A record that should have been deleted still exists. |
+AGENTS.md,267,SRC-AG0267,requirement,CHR-419,"| `REPORT_EXPOSED_PII` | `PRESENT` | A record may remain, but identifiers that policy requires to be redacted or anonymized are still exposed. |"
+AGENTS.md,268,SRC-AG0268,requirement,CHR-420,| `REPORT_ACTIVE_DATA_FLOW` | `ACTIVE` | An active process can copy or recreate the user's data. |
+AGENTS.md,269,SRC-AG0269,requirement,CHR-421,| `REPORT_RESTORE_RISK` | `ACTIVE` | A backup or restore path can bring deleted data back. |
+AGENTS.md,270,,blank,,
+AGENTS.md,271,SRC-AG0271,requirement,CHR-422 CHR-423 CHR-424 CHR-425 CHR-426,Remediation:
+AGENTS.md,272,,blank,,
+AGENTS.md,273,SRC-AG0273,formatting,,| Operation | State | Meaning |
+AGENTS.md,274,SRC-AG0274,formatting,,|---|---|---|
+AGENTS.md,275,SRC-AG0275,requirement,CHR-422,| `DISABLE_DATA_FLOW` | `DISABLED` | Stop a process that can copy or recreate the data. |
+AGENTS.md,276,SRC-AG0276,requirement,CHR-423,| `BLOCK_RESTORE` | `BLOCKED` | Prevent the affected backup from restoring the user's data. |
+AGENTS.md,277,SRC-AG0277,requirement,CHR-424,| `DELETE_RECORD` | `ABSENT` | Remove the entire record. |
+AGENTS.md,278,SRC-AG0278,requirement,CHR-425,| `REDACT_RECORD` | `REDACTED` | Keep the record but remove the identifying fields required by policy. |
+AGENTS.md,279,SRC-AG0279,requirement,CHR-426,| `ANONYMIZE_RECORD` | `ANONYMIZED` | Keep the record after irreversibly unlinking it from the user. |
+AGENTS.md,280,,blank,,
+AGENTS.md,281,SRC-AG0281,requirement,CHR-427 CHR-428 CHR-429 CHR-430 CHR-431 CHR-432,Verification:
+AGENTS.md,282,,blank,,
+AGENTS.md,283,SRC-AG0283,formatting,,| Operation | State | Meaning |
+AGENTS.md,284,SRC-AG0284,formatting,,|---|---|---|
+AGENTS.md,285,SRC-AG0285,requirement,CHR-427,| `VERIFY_RECORD_ABSENT` | `ABSENT` | Confirm that a record no longer exists. |
+AGENTS.md,286,SRC-AG0286,requirement,CHR-428,| `VERIFY_RECORD_PRESENT` | `PRESENT` | Confirm that a policy-required retained record still exists. |
+AGENTS.md,287,SRC-AG0287,requirement,CHR-429,| `VERIFY_RECORD_REDACTED` | `REDACTED` | Confirm that required identifying fields were removed. |
+AGENTS.md,288,SRC-AG0288,requirement,CHR-430,| `VERIFY_RECORD_ANONYMIZED` | `ANONYMIZED` | Confirm that the record can no longer be linked to the user. |
+AGENTS.md,289,SRC-AG0289,requirement,CHR-431,| `VERIFY_DATA_FLOW_DISABLED` | `DISABLED` | Confirm that the relevant data flow is inactive. |
+AGENTS.md,290,SRC-AG0290,requirement,CHR-432,| `VERIFY_RESTORE_BLOCKED` | `BLOCKED` | Confirm that the affected data cannot be restored. |
+AGENTS.md,291,,blank,,
+AGENTS.md,292,SRC-AG0292,requirement,CHR-417,"Do not invent additional phases, operations, or states."
+AGENTS.md,293,,blank,,
+AGENTS.md,294,SRC-AG0294,heading,,### 6.5 Deletion Decision Rules
+AGENTS.md,295,,blank,,
+AGENTS.md,296,SRC-AG0296,requirement,CHR-301 CHR-302,"- First determine whether `request_text` authorizes deletion. A request for access, correction, export, marketing opt-out, or another non-deletion action is `NOT_APPLICABLE`, even if other fields resemble a deletion case."
+AGENTS.md,297,SRC-AG0297,requirement,CHR-304 CHR-305,- Resolve both current and historical identifiers for the subject. The request email may match either form.
+AGENTS.md,298,SRC-AG0298,requirement,CHR-312 CHR-313 CHR-314,- Reconstruct the true state at `audit_at`. Ignore later evidence and do not accept `reported_status` or `reported_result` as proof.
+AGENTS.md,299,SRC-AG0299,requirement,CHR-317 CHR-318,"- Apply `deletion_rules.csv` to every relevant record. Do not delete data that policy requires to be retained, redacted, anonymized, or preserved as a tombstone."
+AGENTS.md,300,SRC-AG0300,requirement,CHR-320,"- For an `ACCOUNT_TOMBSTONE`, preserve the stable subject reference and remove the name, email, phone, email hash, and any other direct identifiers required by the applicable `REDACT` rule."
+AGENTS.md,301,SRC-AG0301,requirement,CHR-322 CHR-323 CHR-325,"- A deletion is `COMPLETE` only when every relevant copy has the required treatment, every required retained record remains available, and no active sync, import, or restore path can recreate prohibited data."
+AGENTS.md,302,SRC-AG0302,requirement,CHR-326,"- For an incomplete case, report every relevant policy violation and recreation risk supported by participant-visible evidence."
+AGENTS.md,303,SRC-AG0303,requirement,CHR-328 CHR-329,"- Within remediation, disable data flows and block unsafe restores before changing dependent records. Process downstream copies before their source records when the dependency requires it."
+AGENTS.md,304,SRC-AG0304,requirement,CHR-330,- Verification must cover the required final state for each remediated record or process.
+AGENTS.md,305,,blank,,
+AGENTS.md,306,SRC-AG0306,heading,,### 6.6 Evidence Rules
+AGENTS.md,307,,blank,,
+AGENTS.md,308,SRC-AG0308,requirement,CHR-312,"- Treat activity logs, workflow statuses, and system messages as claims unless the available evidence establishes the resulting state."
+AGENTS.md,309,SRC-AG0309,requirement,CHR-308,"- Use `evidence_files.csv` to locate files, then inspect their contents. Do not infer case membership from the manifest alone."
+AGENTS.md,310,SRC-AG0310,requirement,CHR-309,"- Match evidence through current identifiers, historical identifiers, hashes, resource IDs, system IDs, timestamps, and other grounded links."
+AGENTS.md,311,SRC-AG0311,requirement,CHR-310,"- Images and PDFs are ordinary business artifacts such as invoices, support records, handover documents, and internal product screens. Extract the facts they contain; do not expect an explicit deletion verdict."
+AGENTS.md,312,SRC-AG0312,requirement,CHR-221 CHR-311,"- SQL evidence can contain primary, regional, reporting, or failover replicas. Compare the relevant tables and snapshot time when investigating replication drift."
+AGENTS.md,313,SRC-AG0313,requirement,CHR-435,"- A finding must use the participant-visible `file_id`, `activity_id`, or `audit_id` that proves it."
+AGENTS.md,314,SRC-AG0314,requirement,CHR-436,- A verification step for a `COMPLETE` case must cite the evidence that proves the current compliant state.
+AGENTS.md,315,SRC-AG0315,requirement,CHR-437,- Remediation steps and post-remediation verification steps for an `INCOMPLETE` case describe future work and therefore use `evidence_id` as an empty string.
+AGENTS.md,316,SRC-AG0316,requirement,CHR-438,- Never cite organizer-only truth or an evidence item captured after the case's `audit_at`.
+AGENTS.md,317,,blank,,
+AGENTS.md,318,SRC-AG0318,heading,,### 6.7 Constraints That Make The Submission Evaluable
+AGENTS.md,319,,blank,,
+AGENTS.md,320,SRC-AG0320,requirement,CHR-502,- Be runnable from the terminal.
+AGENTS.md,321,SRC-AG0321,requirement,CHR-201,- Read the provided files from `dataset/`.
+AGENTS.md,322,SRC-AG0322,requirement,CHR-401,- Write the completed `output.csv` at the repository root.
+AGENTS.md,323,SRC-AG0323,requirement,CHR-505 CHR-506,"- Do not use organizer-only files, hardcoded golden labels, or case-family shortcuts."
+AGENTS.md,324,SRC-AG0324,requirement,CHR-507,"- Keep behavior deterministic where possible, including ordering and JSON serialization."
+AGENTS.md,325,SRC-AG0325,requirement,CHR-508,- Read secrets from environment variables only.
+AGENTS.md,326,SRC-AG0326,requirement,CHR-606,- Include clear setup and run instructions in the submitted `README.md`.
+AGENTS.md,327,SRC-AG0327,requirement,CHR-503,- Ensure a clean run can process all 518 cases and produce exactly one valid row per case.
+AGENTS.md,328,,blank,,
+AGENTS.md,329,SRC-AG0329,heading,,### 6.8 Evaluation And Token Usage
+AGENTS.md,330,,blank,,
+AGENTS.md,331,SRC-AG0331,requirement,CHR-607 CHR-608,The submitted `code.zip` must include:
+AGENTS.md,332,,blank,,
+AGENTS.md,333,SRC-AG0333,requirement,CHR-607 CHR-608,```text
+AGENTS.md,334,SRC-AG0333,requirement,CHR-607 CHR-608,evaluation/evaluation_report.md
+AGENTS.md,335,SRC-AG0333,requirement,CHR-607 CHR-608,evaluation/usage_report.md
+AGENTS.md,336,SRC-AG0333,requirement,CHR-607 CHR-608,```
+AGENTS.md,337,,blank,,
+AGENTS.md,338,SRC-AG0338,requirement,CHR-610 CHR-611 CHR-612 CHR-613 CHR-614,`evaluation/evaluation_report.md` must contain:
+AGENTS.md,339,,blank,,
+AGENTS.md,340,SRC-AG0340,requirement,CHR-610,- case-level deletion-status accuracy;
+AGENTS.md,341,SRC-AG0341,requirement,CHR-611,- step-level and field-level accuracy;
+AGENTS.md,342,SRC-AG0342,requirement,CHR-612,- sequence accuracy;
+AGENTS.md,343,SRC-AG0343,requirement,CHR-613,- at least three additional evaluation cases created by the participant; and
+AGENTS.md,344,SRC-AG0344,requirement,CHR-614,- failures found and improvements made.
+AGENTS.md,345,,blank,,
+AGENTS.md,346,SRC-AG0346,requirement,CHR-615 CHR-616 CHR-617 CHR-618 CHR-619 CHR-620 CHR-621,"`evaluation/usage_report.md` must summarize the final full-dataset run that produced `output.csv`, including:"
+AGENTS.md,347,,blank,,
+AGENTS.md,348,SRC-AG0348,requirement,CHR-616,- model providers and model names;
+AGENTS.md,349,SRC-AG0349,requirement,CHR-617,- model-call counts;
+AGENTS.md,350,SRC-AG0350,requirement,CHR-618,- input and output tokens;
+AGENTS.md,351,SRC-AG0351,requirement,CHR-619,- total and average tokens per request;
+AGENTS.md,352,SRC-AG0352,requirement,CHR-620,- estimated total and per-request cost; and
+AGENTS.md,353,SRC-AG0353,requirement,CHR-621,- per-model and overall totals when multiple models are used.
+AGENTS.md,354,,blank,,
+AGENTS.md,355,SRC-AG0355,requirement,CHR-509 CHR-622,"Write the required evaluation metrics, custom cases, and usage details directly in these Markdown files. Never include API keys, credentials, or sensitive configuration values."
+AGENTS.md,356,,blank,,
+AGENTS.md,357,SRC-AG0357,heading,,### 6.9 Submission Artifacts
+AGENTS.md,358,,blank,,
+AGENTS.md,359,SRC-AG0359,requirement,CHR-601,The participant submission contains:
+AGENTS.md,360,,blank,,
+AGENTS.md,361,SRC-AG0361,formatting,,| Item | Description |
+AGENTS.md,362,SRC-AG0362,formatting,,|---|---|
+AGENTS.md,363,SRC-AG0363,requirement,CHR-601 CHR-602,"| `code.zip` | Runnable solution, prompts, configuration, `README.md`, and the `evaluation/` reports |"
+AGENTS.md,364,SRC-AG0364,requirement,CHR-601 CHR-603,| `output.csv` | One answer row for every evaluation request |
+AGENTS.md,365,SRC-AG0365,requirement,CHR-601 CHR-604,| `chat_transcript` | The root `log.txt` file generated by the coding agent |
+AGENTS.md,366,SRC-AG0366,requirement,CHR-601 CHR-605,"| AI interview | Explanation of the architecture, investigation approach, remediation planning, and evaluation |"
+AGENTS.md,367,,blank,,
+AGENTS.md,368,SRC-AG0368,requirement,CHR-625 CHR-626,"Do not include `dataset/`, virtual environments, dependency caches, nested archives, API keys, credentials, real personal data, or sensitive configuration in `code.zip`."
+AGENTS.md,369,,blank,,
+AGENTS.md,370,SRC-AG0370,heading,,### 6.10 Reasonable Entry Points
+AGENTS.md,371,,blank,,
+AGENTS.md,372,SRC-AG0372,requirement,CHR-511 CHR-512 CHR-513,"There is no required language. If using Python, `code/main.py` is a good entry point. If using another language, document the exact setup and run command clearly in the submitted README."
+AGENTS.md,373,,blank,,
+AGENTS.md,374,SRC-AG0374,formatting,,---
+AGENTS.md,375,,blank,,
+AGENTS.md,376,SRC-AG0376,heading,,## 7. Dataset Development Rules
+AGENTS.md,377,,blank,,
+AGENTS.md,378,SRC-AG0378,not-applicable,,These rules apply when maintaining or regenerating the challenge dataset itself:
+AGENTS.md,379,,blank,,
+AGENTS.md,380,SRC-AG0380,not-applicable,,- Generate participant data from private structured truth.
+AGENTS.md,381,SRC-AG0381,not-applicable,,"- Keep every person, organization, identifier, and record fictional. Do not use real personal data."
+AGENTS.md,382,SRC-AG0382,not-applicable,,"- Use realistic and diverse names, identifiers, request language, timestamps, systems, business records, and evidence formats. Avoid repetitive placeholder patterns that reveal synthetic generation."
+AGENTS.md,383,SRC-AG0383,not-applicable,,- Keep generation deterministic through a fixed seed.
+AGENTS.md,384,SRC-AG0384,not-applicable,,"- Preserve referential and temporal consistency across identities, audit history, activity, evidence, sample answers, and hidden golden answers."
+AGENTS.md,385,SRC-AG0385,not-applicable,,"- Never hand-edit generated participant data or golden output. Update the private truth or generator logic, regenerate, and validate."
+AGENTS.md,386,SRC-AG0386,not-applicable,,"- Do not expose case families, actual statuses, relevant resource lists, expected operations, or golden steps in participant-facing files."
+AGENTS.md,387,SRC-AG0387,not-applicable,,"- After generation or contract changes, run:"
+AGENTS.md,388,,blank,,
+AGENTS.md,389,SRC-AG0389,not-applicable,,  ```text
+AGENTS.md,390,SRC-AG0389,not-applicable,,  python3 generator/validate_samples.py
+AGENTS.md,391,SRC-AG0389,not-applicable,,  python3 generator/validate_dataset.py
+AGENTS.md,392,SRC-AG0389,not-applicable,,  ```
+AGENTS.md,393,,blank,,
+AGENTS.md,394,SRC-AG0394,not-applicable,,"- Review representative PDFs, screenshots, logs, JSON, text records, and SQL snapshots visually or structurally after regeneration."
+AGENTS.md,395,,blank,,
+AGENTS.md,396,SRC-AG0396,formatting,,---
+AGENTS.md,397,,blank,,
+AGENTS.md,398,SRC-AG0398,heading,,## 8. Cross-Platform And Agent-Compatibility Notes
+AGENTS.md,399,,blank,,
+AGENTS.md,400,SRC-AG0400,requirement,CHR-821,"- Resolve the log path relative to this `AGENTS.md` file, as described in §2. Do not use the platform home directory or hardcode a user path."
+AGENTS.md,401,SRC-AG0401,requirement,CHR-835,- Write logs in UTF-8 with `\n` line endings.
+AGENTS.md,402,SRC-AG0402,requirement,CHR-807 CHR-808,- Do not assume bash. Prefer language-native APIs when possible.
+AGENTS.md,403,SRC-AG0403,requirement,CHR-805,- Keep tool-specific config minimal and point back to this `AGENTS.md`.
+AGENTS.md,404,SRC-AG0404,requirement,CHR-510,"- Resolve dataset and output paths relative to the repository root so the solution works on macOS, Linux, and Windows."
+AGENTS.md,405,SRC-AG0405,requirement,CHR-806,"- If a nested `AGENTS.md` exists, the closest one wins for files inside that sub-project, but §2 and §5 remain global: keep logging to the `log.txt` beside the top-level `AGENTS.md`, not beside the nested one."
+AGENTS.md,406,,blank,,
+AGENTS.md,407,SRC-AG0407,formatting,,---
+AGENTS.md,408,,blank,,
+AGENTS.md,409,SRC-AG0409,heading,,## 9. Quick Checklist For The Agent
+AGENTS.md,410,,blank,,
+AGENTS.md,411,SRC-AG0411,requirement,CHR-819,"Before responding to any user message, confirm:"
+AGENTS.md,412,,blank,,
+AGENTS.md,413,SRC-AG0413,requirement,CHR-802 CHR-819,- [ ] I have read this file in this session.
+AGENTS.md,414,SRC-AG0414,requirement,CHR-811 CHR-819,- [ ] I have appended the session-start entry.
+AGENTS.md,415,SRC-AG0415,requirement,CHR-813 CHR-819,- [ ] I know that the challenge end time is not configured unless an official source has supplied it.
+AGENTS.md,416,SRC-AG0416,requirement,CHR-819 CHR-825,- [ ] I will append a §5.2 entry after this turn.
+AGENTS.md,417,SRC-AG0417,requirement,CHR-819 CHR-829,- [ ] I have verified that `tool=` exactly matches the harness or coding agent currently running.
+AGENTS.md,418,SRC-AG0418,requirement,CHR-819 CHR-830,"- [ ] I have recorded the exact runtime model identifier in `model=`; it is never `unknown`, inferred, or generic."
+AGENTS.md,419,SRC-AG0419,requirement,CHR-819 CHR-829 CHR-830 CHR-831,- [ ] I have confirmed that both the harness name and model name are present and non-empty in the new log entry.
+AGENTS.md,420,SRC-AG0420,requirement,CHR-819 CHR-833,- [ ] I will not log secrets or real personal data.
+AGENTS.md,421,SRC-AG0421,requirement,CHR-504 CHR-819,- [ ] I will use only participant-facing files for predictions.
+AGENTS.md,422,SRC-AG0422,requirement,CHR-818 CHR-819,- [ ] I will preserve the Ghost Data Still Exists deletion-audit and output contract in §6.
+CLAUDE.md,1,SRC-CL0001,requirement,CHR-802 CHR-805,@AGENTS.md
+README.md,1,SRC-RM0001,heading,,# HackerRank Orchestrate - October 2026
+README.md,2,,blank,,
+README.md,3,SRC-RM0003,heading,,## Ghost Data Still Exists
+README.md,4,,blank,,
+README.md,5,SRC-RM0005,requirement,CHR-101,Build an AI agent that audits whether a user's personal data was actually deleted.
+README.md,6,,blank,,
+README.md,7,SRC-RM0007,requirement,CHR-102 CHR-103,"A deletion workflow may report **Complete** while data still exists in databases, logs, support attachments, exports, search indexes, archives, or backups. Sync and restore processes may also bring deleted data back."
+README.md,8,,blank,,
+README.md,9,SRC-RM0009,requirement,CHR-301 CHR-321 CHR-326 CHR-327 CHR-330 CHR-407,"For each request, the agent must first determine whether deletion was actually requested. It then returns `COMPLETE`, `INCOMPLETE`, or `NOT_APPLICABLE`, reports any remaining data or recreation risk, and produces the ordered remediation and verification steps required to finish an authorized deletion safely."
+README.md,10,,blank,,
+README.md,11,SRC-RM0011,requirement,CHR-804,Read [`problem_statement.md`](./problem_statement.md) for the complete challenge contract.
+README.md,12,,blank,,
+README.md,13,SRC-RM0013,formatting,,---
+README.md,14,,blank,,
+README.md,15,SRC-RM0015,heading,,## Quick Start
+README.md,16,,blank,,
+README.md,17,SRC-RM0017,context,,Clone the repository and move into the project directory:
+README.md,18,,blank,,
+README.md,19,SRC-RM0019,context,,```bash
+README.md,20,SRC-RM0019,context,,git clone https://github.com/interviewstreet/hackerrank-orchestrate-october26.git
+README.md,21,SRC-RM0019,context,,cd hackerrank-orchestrate-october26
+README.md,22,SRC-RM0019,context,,```
+README.md,23,,blank,,
+README.md,24,SRC-RM0024,requirement,CHR-803 CHR-820,Start your AI coding tool from the **repository root** so it automatically reads [`AGENTS.md`](./AGENTS.md) and logs your session turns to `log.txt` in the root directory.
+README.md,25,,blank,,
+README.md,26,SRC-RM0026,requirement,CHR-512 CHR-513,"Build your solution in `code/main.py`, or use another language and document its setup and run command clearly in your README."
+README.md,27,,blank,,
+README.md,28,SRC-RM0028,requirement,CHR-201 CHR-401 CHR-403,Your solution must:
+README.md,29,,blank,,
+README.md,30,SRC-RM0030,requirement,CHR-201,- Read the input files from `dataset/`
+README.md,31,SRC-RM0031,requirement,CHR-403,- Generate one prediction row for every request in `dataset/deletion_requests.csv`
+README.md,32,SRC-RM0032,requirement,CHR-401,- Write the final predictions to `output.csv` in the repository root
+README.md,33,,blank,,
+README.md,34,SRC-RM0034,requirement,CHR-512,Run the starter Python entry point with:
+README.md,35,,blank,,
+README.md,36,SRC-RM0036,requirement,CHR-512,```bash
+README.md,37,SRC-RM0036,requirement,CHR-512,python3 code/main.py
+README.md,38,SRC-RM0036,requirement,CHR-512,```
+README.md,39,,blank,,
+README.md,40,SRC-RM0040,requirement,CHR-219 CHR-401,The blank template at `dataset/output.csv` is provided as a reference. Your final generated file for submission must be the root-level `output.csv`.
+README.md,41,,blank,,
+README.md,42,,blank,,
+README.md,43,SRC-RM0043,heading,,## Dataset
+README.md,44,,blank,,
+README.md,45,SRC-RM0045,requirement,CHR-201 CHR-202,All participant-facing files are in `dataset/`:
+README.md,46,,blank,,
+README.md,47,SRC-RM0047,formatting,,| File | Contents |
+README.md,48,SRC-RM0048,formatting,,| --- | --- |
+README.md,49,SRC-RM0049,requirement,CHR-203,| `deletion_requests.csv` | 518 requests |
+README.md,50,SRC-RM0050,requirement,CHR-212,| `sample_deletion_requests.csv` | 32 sample requests |
+README.md,51,SRC-RM0051,requirement,CHR-213,| `sample_output.csv` | Correct sample answers |
+README.md,52,SRC-RM0052,requirement,CHR-214,| `user_identities.csv` | Current user identities |
+README.md,53,SRC-RM0053,requirement,CHR-215,| `user_audit_log.csv` | Historical identity changes |
+README.md,54,SRC-RM0054,requirement,CHR-216,| `system_activity.csv` | Activity across services and data processes |
+README.md,55,SRC-RM0055,requirement,CHR-217,| `deletion_rules.csv` | Required treatment for each data category |
+README.md,56,SRC-RM0056,requirement,CHR-218,| `evidence_files.csv` | Manifest of supplied evidence files |
+README.md,57,SRC-RM0057,requirement,CHR-219,| `output.csv` | Blank output template |
+README.md,58,,blank,,
+README.md,59,SRC-RM0059,requirement,CHR-220 CHR-221 CHR-311,"Evidence is stored under `dataset/evidence/` and may include PDFs, images, logs, JSON, plain text, or SQL snapshot exports. SQL captures may contain a primary database, regional replicas, a reporting replica, or a failover replica so replication drift can be investigated directly. The `.sql` files are readable as text and executable with SQLite."
+README.md,60,,blank,,
+README.md,61,SRC-RM0061,requirement,CHR-222,Only `deletion_requests.csv` requires answers. The other files provide evidence and context.
+README.md,62,,blank,,
+README.md,63,SRC-RM0063,formatting,,---
+README.md,64,,blank,,
+README.md,65,SRC-RM0065,heading,,## Output
+README.md,66,,blank,,
+README.md,67,SRC-RM0067,requirement,CHR-402,Create `output.csv` with these columns in this exact order:
+README.md,68,,blank,,
+README.md,69,SRC-RM0069,requirement,CHR-402,```text
+README.md,70,SRC-RM0069,requirement,CHR-402,"case_id,deletion_status,steps_json"
+README.md,71,SRC-RM0069,requirement,CHR-402,```
+README.md,72,,blank,,
+README.md,73,SRC-RM0073,requirement,CHR-312 CHR-313 CHR-403 CHR-406 CHR-407 CHR-408 CHR-409 CHR-434 CHR-435 CHR-436 CHR-439,"Produce exactly one row per request. `deletion_status` is `COMPLETE`, `INCOMPLETE`, or `NOT_APPLICABLE`. `steps_json` is an ordered JSON array containing findings, remediation actions, and verification checks. Use an empty array (`[]`) for `NOT_APPLICABLE`. Evidence references may be a `file_id`, `activity_id`, or `audit_id`. Determine the resource state at `audit_at` from the available evidence; reported workflow statuses and operation results are claims. Use `dataset/sample_output.csv` as the format reference."
+README.md,74,,blank,,
+README.md,75,SRC-RM0075,requirement,CHR-404 CHR-405 CHR-410 CHR-415 CHR-416,"The final file must contain 518 data rows sorted by `case_id` (plus the header row). The grader parses `steps_json` as JSON, so object-key order and whitespace do not matter; array order does. Order findings, remediation, and verification in that phase order. Within a phase, follow the operation order in the problem statement, then sort by `system_id` and `resource_id`."
+README.md,76,,blank,,
+README.md,77,SRC-RM0077,formatting,,---
+README.md,78,,blank,,
+README.md,79,SRC-RM0079,heading,,## Evaluation
+README.md,80,,blank,,
+README.md,81,SRC-RM0081,requirement,CHR-701 CHR-702 CHR-703 CHR-704 CHR-705 CHR-706 CHR-707,`output.csv` will be compared with hidden canonical answers. Scoring considers:
+README.md,82,,blank,,
+README.md,83,SRC-RM0083,requirement,CHR-702,- deletion assessment accuracy;
+README.md,84,SRC-RM0084,requirement,CHR-703,- current and historical identity resolution;
+README.md,85,SRC-RM0085,requirement,CHR-704,- discovery of remaining data and recreation risks;
+README.md,86,SRC-RM0086,requirement,CHR-705 CHR-706,- correct policy application and evidence references; and
+README.md,87,SRC-RM0087,requirement,CHR-707,- completeness and ordering of remediation and verification steps.
+README.md,88,,blank,,
+README.md,89,SRC-RM0089,requirement,CHR-607 CHR-608,Your `code.zip` must include:
+README.md,90,,blank,,
+README.md,91,SRC-RM0091,requirement,CHR-607 CHR-608,```text
+README.md,92,SRC-RM0091,requirement,CHR-607 CHR-608,code/evaluation/evaluation_report.md
+README.md,93,SRC-RM0091,requirement,CHR-607 CHR-608,code/evaluation/usage_report.md
+README.md,94,SRC-RM0091,requirement,CHR-607 CHR-608,```
+README.md,95,,blank,,
+README.md,96,SRC-RM0096,requirement,CHR-610 CHR-611 CHR-612 CHR-613 CHR-614,"- `evaluation_report.md` must cover case, row, field, and sequence accuracy, at least three additional evaluation cases created by you, failures found, and improvements made."
+README.md,97,SRC-RM0097,requirement,CHR-615 CHR-616 CHR-617 CHR-618 CHR-619 CHR-620 CHR-621,"- `usage_report.md` must cover the final full-dataset run, including model providers and names, model calls, input and output tokens, total and average tokens per request, and estimated total and per-request cost. Include per-model and overall totals when using multiple models."
+README.md,98,,blank,,
+README.md,99,SRC-RM0099,requirement,CHR-609 CHR-622 CHR-623 CHR-624,"**Important:** Place `evaluation_report.md` and `usage_report.md` inside `code/evaluation/` (matching `code/evaluation/main.py` in this starter layout), write your complete evaluation metrics, custom evaluation test cases, and token/cost breakdowns directly inside those Markdown files, and keep prompts in source code or Markdown files. Automated code evaluation ignores raw data files (`.csv`, `.tsv`, `.json`, `.jsonl`, `.sql`, `.log`), so content stored only in those formats will not be visible to the code judge or AI interviewer."
+README.md,100,,blank,,
+README.md,101,SRC-RM0101,formatting,,---
+README.md,102,,blank,,
+README.md,103,SRC-RM0103,heading,,## Chat Transcript
+README.md,104,,blank,,
+README.md,105,SRC-RM0105,requirement,CHR-820,"This repository includes [`AGENTS.md`](./AGENTS.md), which instructs compatible AI coding tools to append conversation summaries to `log.txt` in the repository root:"
+README.md,106,,blank,,
+README.md,107,SRC-RM0107,formatting,,| Platform | Path |
+README.md,108,SRC-RM0108,formatting,,| --- | --- |
+README.md,109,SRC-RM0109,requirement,CHR-820,| macOS / Linux | `<repo root>/log.txt` |
+README.md,110,SRC-RM0110,requirement,CHR-820,| Windows | `<repo root>\log.txt` |
+README.md,111,,blank,,
+README.md,112,SRC-RM0112,requirement,CHR-803 CHR-825 CHR-827,"- Always launch your AI coding agent from the repository root (or explicitly ask it to read `./AGENTS.md` first) so every turn is logged to `log.txt` with the required `User Prompt`, `Agent Response Summary`, `Actions`, and `Context` sections."
+README.md,113,SRC-RM0113,requirement,CHR-604,- Upload `log.txt` directly as your `chat_transcript` submission on HackerRank.
+README.md,114,SRC-RM0114,requirement,CHR-509 CHR-833,"- Do not include API keys, tokens, credentials, or secrets in prompts, code, configuration, or `log.txt`."
+README.md,115,,blank,,
+README.md,116,SRC-RM0116,formatting,,---
+README.md,117,,blank,,
+README.md,118,SRC-RM0118,heading,,## Packaging `code.zip` and Submission
+README.md,119,,blank,,
+README.md,120,SRC-RM0120,formatting,,| Item | Description |
+README.md,121,SRC-RM0121,formatting,,| --- | --- |
+README.md,122,SRC-RM0122,requirement,CHR-601 CHR-602,"| `code.zip` | Runnable solution, prompts, configuration, `README.md`, and `evaluation/` reports |"
+README.md,123,SRC-RM0123,requirement,CHR-601 CHR-603,| `output.csv` | One answer row for each of the 518 requests in `dataset/deletion_requests.csv` |
+README.md,124,SRC-RM0124,requirement,CHR-601 CHR-604,| `chat_transcript` | The root `log.txt` file generated by your coding agent |
+README.md,125,SRC-RM0125,requirement,CHR-601 CHR-605,"| AI interview | Live explanation of your architecture, approach, and evaluation |"
+README.md,126,,blank,,
+README.md,127,SRC-RM0127,requirement,CHR-511 CHR-606,"You may use any programming language, model, framework, or retrieval approach. Include clear setup and execution instructions in `README.md` inside `code.zip`."
+README.md,128,,blank,,
+README.md,129,SRC-RM0129,requirement,CHR-625 CHR-627,To package `code.zip` from the repository root without bundling the dataset:
+README.md,130,,blank,,
+README.md,131,SRC-RM0131,heading,,**macOS / Linux:**
+README.md,132,,blank,,
+README.md,133,SRC-RM0133,requirement,CHR-627,```bash
+README.md,134,SRC-RM0133,requirement,CHR-627,"zip -r code.zip README.md code -x ""*/__pycache__/*"" ""*/.venv/*"" ""*/venv/*"" ""*/node_modules/*"" ""*/.git/*"" ""*/.DS_Store"""
+README.md,135,SRC-RM0133,requirement,CHR-627,```
+README.md,136,,blank,,
+README.md,137,SRC-RM0137,heading,,**Windows (PowerShell):**
+README.md,138,,blank,,
+README.md,139,SRC-RM0139,requirement,CHR-627,```powershell
+README.md,140,SRC-RM0139,requirement,CHR-627,"Compress-Archive -Path README.md, code -DestinationPath code.zip -Force"
+README.md,141,SRC-RM0139,requirement,CHR-627,```
+README.md,142,,blank,,
+README.md,143,SRC-RM0143,requirement,CHR-609 CHR-625 CHR-626 CHR-628,When packaging `code.zip`:
+README.md,144,,blank,,
+README.md,145,SRC-RM0145,requirement,CHR-609,- Keep your evaluation reports in `code/evaluation/` so they are bundled automatically with `code` (or add `evaluation` to the archive command above if you placed them in a top-level `evaluation/` directory).
+README.md,146,SRC-RM0146,requirement,CHR-625 CHR-628,"- Do **not** include `dataset/`, virtual environments (`.venv`, `venv`, `node_modules`), or build caches (`__pycache__`). On Windows, keep `.venv` at the repository root (outside `code/`) and remove any `code/__pycache__` folders before running `Compress-Archive`."
+README.md,147,SRC-RM0147,requirement,CHR-626,"- Do **not** include nested archives (`.zip`, `.tar`, `.gz`, `.tgz`, `.7z`, `.rar`) inside `code.zip` — submissions containing nested archive files will be rejected."
+README.md,148,,blank,,
+README.md,149,SRC-RM0149,requirement,CHR-629,"Before submitting, confirm that:"
+README.md,150,,blank,,
+README.md,151,SRC-RM0151,requirement,CHR-402 CHR-404 CHR-405 CHR-629,"- `output.csv` has the exact header `case_id,deletion_status,steps_json` and contains all 518 data rows sorted by `case_id`;"
+README.md,152,SRC-RM0152,requirement,CHR-409 CHR-413 CHR-629,- every `steps_json` value is a valid JSON array with consecutive step numbers starting at `1`;
+README.md,153,SRC-RM0153,requirement,CHR-435 CHR-436 CHR-629,"- findings cite valid evidence IDs, and `COMPLETE` verification steps cite evidence proving the current state;"
+README.md,154,SRC-RM0154,requirement,CHR-437 CHR-629,"- proposed remediation and future verification steps use an empty `evidence_id` (`""""`);"
+README.md,155,SRC-RM0155,requirement,CHR-602 CHR-607 CHR-608 CHR-629,"- `code.zip` includes your runnable code, `README.md`, `code/evaluation/evaluation_report.md`, and `code/evaluation/usage_report.md`;"
+README.md,156,SRC-RM0156,requirement,CHR-604 CHR-629 CHR-827,- `log.txt` follows the `AGENTS.md` turn format and is uploaded to the `chat_transcript` slot; and
+README.md,157,SRC-RM0157,requirement,CHR-509 CHR-625 CHR-629,"- no API keys, credentials, real personal data, or sensitive configuration values are included."
+agent_trace_instructions.md,1,SRC-AT0001,heading,,# Agent Trace Instructions
+agent_trace_instructions.md,2,,blank,,
+agent_trace_instructions.md,3,SRC-AT0003,requirement,CHR-901,"Please submit the complete agent trace for the work you did on this challenge as a **ZIP file**. A trace helps us understand the prompts, model responses, tool calls, and work performed during the session and improve our evaluation from the next time."
+agent_trace_instructions.md,4,,blank,,
+agent_trace_instructions.md,5,SRC-AT0005,requirement,CHR-902 CHR-903,"Include every session you used for this challenge, including sessions in which you planned, coded, debugged, or reviewed the solution. If you used more than one agent harness, include traces from each one. Keep the original files and folder structure where practical; do not convert JSONL, SQLite, or other structured logs into screenshots or summaries."
+agent_trace_instructions.md,6,,blank,,
+agent_trace_instructions.md,7,SRC-AT0007,heading,,## Before you start
+agent_trace_instructions.md,8,,blank,,
+agent_trace_instructions.md,9,SRC-AT0009,requirement,CHR-904,"1. Finish the session(s) you intend to submit, then quit the app or CLI before copying its files. This helps ensure logs are written completely."
+agent_trace_instructions.md,10,SRC-AT0010,requirement,CHR-905,"2. Create a temporary folder named `agent-trace` somewhere easy to find, such as your Desktop. Copy only the relevant trace files into it. Keep each tool in its own subfolder, for example `agent-trace/claude-code/` and `agent-trace/codex/`."
+agent_trace_instructions.md,11,SRC-AT0011,requirement,CHR-906,"3. Include the session files for this challenge, not your entire home directory or application-data folder."
+agent_trace_instructions.md,12,SRC-AT0012,requirement,CHR-907,"4. Review the staged files before sharing. Traces can contain source code, local file paths, prompts, tool arguments and output, screenshots, and other private information. Remove or redact secrets (API keys, tokens, passwords, cookies, private keys), personal information, and material you are not allowed to share. Do not include authentication files, settings, or credentials."
+agent_trace_instructions.md,13,SRC-AT0013,requirement,CHR-901 CHR-908,5. Zip the `agent-trace` folder using your operating system’s built-in archive tool. Name the result `agent-trace.zip`.
+agent_trace_instructions.md,14,,blank,,
+agent_trace_instructions.md,15,SRC-AT0015,heading,,## Claude Code
+agent_trace_instructions.md,16,,blank,,
+agent_trace_instructions.md,17,SRC-AT0017,heading,,### Where traces are stored
+agent_trace_instructions.md,18,,blank,,
+agent_trace_instructions.md,19,SRC-AT0019,requirement,CHR-910,Claude Code stores session transcripts by project under:
+agent_trace_instructions.md,20,,blank,,
+agent_trace_instructions.md,21,SRC-AT0021,requirement,CHR-910,- **macOS/Linux:** `~/.claude/projects/`
+agent_trace_instructions.md,22,SRC-AT0022,requirement,CHR-910,- **Windows:** `%USERPROFILE%\.claude\projects\`
+agent_trace_instructions.md,23,,blank,,
+agent_trace_instructions.md,24,SRC-AT0024,requirement,CHR-910,"Each project folder contains session files, commonly JSONL files named with a session ID. Find the folder corresponding to your challenge checkout and copy the session files you created for this challenge into `agent-trace/claude-code/`. The folder name may encode the project path, so check the session content and timestamps to identify the right files."
+agent_trace_instructions.md,25,,blank,,
+agent_trace_instructions.md,26,SRC-AT0026,heading,,### Export a readable transcript
+agent_trace_instructions.md,27,,blank,,
+agent_trace_instructions.md,28,SRC-AT0028,requirement,CHR-911,"In each Claude Code session, run:"
+agent_trace_instructions.md,29,,blank,,
+agent_trace_instructions.md,30,SRC-AT0030,requirement,CHR-911,```text
+agent_trace_instructions.md,31,SRC-AT0030,requirement,CHR-911,/export
+agent_trace_instructions.md,32,SRC-AT0030,requirement,CHR-911,```
+agent_trace_instructions.md,33,,blank,,
+agent_trace_instructions.md,34,SRC-AT0034,requirement,CHR-911,Save the exported transcript in `agent-trace/claude-code/`. `/export` produces a readable conversation export; include the original session JSONL files as well when available because they preserve the structured trace.
+agent_trace_instructions.md,35,,blank,,
+agent_trace_instructions.md,36,SRC-AT0036,requirement,CHR-912,"If you used Claude in the Claude web app or desktop chat rather than Claude Code, that is a different product history: use **Settings → Privacy → Export data** and follow the download instructions. Include only the relevant conversation export."
+agent_trace_instructions.md,37,,blank,,
+agent_trace_instructions.md,38,SRC-AT0038,heading,,## OpenAI Codex
+agent_trace_instructions.md,39,,blank,,
+agent_trace_instructions.md,40,SRC-AT0040,heading,,### Where traces are stored
+agent_trace_instructions.md,41,,blank,,
+agent_trace_instructions.md,42,SRC-AT0042,requirement,CHR-913,Codex CLI and local Codex app sessions commonly store structured rollout files under:
+agent_trace_instructions.md,43,,blank,,
+agent_trace_instructions.md,44,SRC-AT0044,requirement,CHR-913,- **macOS/Linux:** `~/.codex/sessions/`
+agent_trace_instructions.md,45,SRC-AT0045,requirement,CHR-913,- **Windows:** `%USERPROFILE%\.codex\sessions\`
+agent_trace_instructions.md,46,,blank,,
+agent_trace_instructions.md,47,SRC-AT0047,requirement,CHR-913,"The files are organized into date folders and are typically named `rollout-*.jsonl`. If you set `CODEX_HOME`, look under `$CODEX_HOME/sessions/` instead. Copy the rollout JSONL files for the challenge sessions into `agent-trace/codex/`. You can use their timestamps and session IDs to identify them. Include a matching `session_index.jsonl` only if useful for mapping session IDs to titles; review it for unrelated information first."
+agent_trace_instructions.md,48,,blank,,
+agent_trace_instructions.md,49,SRC-AT0049,requirement,CHR-913,"Do **not** copy `auth.json`, `config.toml`, credential stores, or the whole `.codex` directory."
+agent_trace_instructions.md,50,,blank,,
+agent_trace_instructions.md,51,SRC-AT0051,requirement,CHR-913,"If you used Codex only in a hosted/cloud interface and there is no local rollout file, use the interface’s conversation export or share/download option if available. If no transcript download is available, submit the conversation transcript in the format the interface provides and note that it was a hosted session with no local trace file."
+agent_trace_instructions.md,52,,blank,,
+agent_trace_instructions.md,53,SRC-AT0053,heading,,## Google Antigravity
+agent_trace_instructions.md,54,,blank,,
+agent_trace_instructions.md,55,SRC-AT0055,requirement,CHR-914,Antigravity writes a `transcript.jsonl` for each conversation under that conversation’s `brain` folder. The transcript includes agent activity; the same folder can also contain artifacts and screenshots associated with the conversation. Preserve the full relevant conversation folder when you need its artifacts to understand the trace.
+agent_trace_instructions.md,56,,blank,,
+agent_trace_instructions.md,57,SRC-AT0057,requirement,CHR-914,Typical locations:
+agent_trace_instructions.md,58,,blank,,
+agent_trace_instructions.md,59,SRC-AT0059,requirement,CHR-914,- **Antigravity app:** `~/.gemini/antigravity/brain/<conversation-id>/`
+agent_trace_instructions.md,60,SRC-AT0060,requirement,CHR-914,- **Antigravity CLI:** `~/.gemini/antigravity-cli/brain/<conversation-id>/`
+agent_trace_instructions.md,61,SRC-AT0061,requirement,CHR-914,- **Antigravity IDE:** `~/.gemini/antigravity-ide/brain/<conversation-id>/`
+agent_trace_instructions.md,62,SRC-AT0062,requirement,CHR-914,"- **Windows:** look under `%USERPROFILE%\.gemini\antigravity\brain\`, `%USERPROFILE%\.gemini\antigravity-cli\brain\`, or `%USERPROFILE%\.gemini\antigravity-ide\brain\`, depending on the product used."
+agent_trace_instructions.md,63,,blank,,
+agent_trace_instructions.md,64,SRC-AT0064,requirement,CHR-914,"Within the relevant conversation folder, the transcript is at:"
+agent_trace_instructions.md,65,,blank,,
+agent_trace_instructions.md,66,SRC-AT0066,requirement,CHR-914,```text
+agent_trace_instructions.md,67,SRC-AT0066,requirement,CHR-914,.system_generated/logs/transcript.jsonl
+agent_trace_instructions.md,68,SRC-AT0066,requirement,CHR-914,```
+agent_trace_instructions.md,69,,blank,,
+agent_trace_instructions.md,70,SRC-AT0070,requirement,CHR-914,"Copy the complete `<conversation-id>` folder(s) for this challenge to `agent-trace/antigravity/`. Do not copy the entire `.gemini` directory: it may contain unrelated data. Antigravity CLI’s `last_conversations.json` is a session lookup cache, not the transcript itself."
+agent_trace_instructions.md,71,,blank,,
+agent_trace_instructions.md,72,SRC-AT0072,heading,,## OpenCode
+agent_trace_instructions.md,73,,blank,,
+agent_trace_instructions.md,74,SRC-AT0074,requirement,CHR-915,OpenCode stores session and message data in a local SQLite database. Its default application-data directory is:
+agent_trace_instructions.md,75,,blank,,
+agent_trace_instructions.md,76,SRC-AT0076,requirement,CHR-915,- **macOS/Linux:** `~/.local/share/opencode/`
+agent_trace_instructions.md,77,SRC-AT0077,requirement,CHR-915,- **Windows:** `%USERPROFILE%\.local\share\opencode\`
+agent_trace_instructions.md,78,,blank,,
+agent_trace_instructions.md,79,SRC-AT0079,requirement,CHR-915,"The database is usually `opencode.db`. To find its active path (including custom XDG or `OPENCODE_DB` locations), run:"
+agent_trace_instructions.md,80,,blank,,
+agent_trace_instructions.md,81,SRC-AT0081,requirement,CHR-915,```sh
+agent_trace_instructions.md,82,SRC-AT0081,requirement,CHR-915,opencode db path
+agent_trace_instructions.md,83,SRC-AT0081,requirement,CHR-915,```
+agent_trace_instructions.md,84,,blank,,
+agent_trace_instructions.md,85,SRC-AT0085,requirement,CHR-915,Prefer exporting each relevant session as JSON rather than copying the database. List sessions and export each challenge session:
+agent_trace_instructions.md,86,,blank,,
+agent_trace_instructions.md,87,SRC-AT0087,requirement,CHR-915,```sh
+agent_trace_instructions.md,88,SRC-AT0087,requirement,CHR-915,opencode session list --format json
+agent_trace_instructions.md,89,SRC-AT0087,requirement,CHR-915,opencode session export <session-id> > <session-id>.json
+agent_trace_instructions.md,90,SRC-AT0087,requirement,CHR-915,```
+agent_trace_instructions.md,91,,blank,,
+agent_trace_instructions.md,92,SRC-AT0092,requirement,CHR-915,"To redact sensitive transcript and file data during export, add `--sanitize`:"
+agent_trace_instructions.md,93,,blank,,
+agent_trace_instructions.md,94,SRC-AT0094,requirement,CHR-915,```sh
+agent_trace_instructions.md,95,SRC-AT0094,requirement,CHR-915,opencode session export <session-id> --sanitize > <session-id>.json
+agent_trace_instructions.md,96,SRC-AT0094,requirement,CHR-915,```
+agent_trace_instructions.md,97,,blank,,
+agent_trace_instructions.md,98,SRC-AT0098,requirement,CHR-915,"Place the exported files in `agent-trace/opencode/`. If the CLI is unavailable and you need to provide the raw database instead, quit OpenCode first, copy only `opencode.db` into the staging folder, and inspect the copy for unrelated/private data. Never include `auth.json`, which can contain provider credentials. The default OpenCode data folder also contains logs and snapshots; those are not substitutes for the session exports."
+agent_trace_instructions.md,99,,blank,,
+agent_trace_instructions.md,100,SRC-AT0100,heading,,## Other Harnesses
+agent_trace_instructions.md,101,,blank,,
+agent_trace_instructions.md,102,SRC-AT0102,requirement,CHR-916,"If you used an agent harness or coding tool that is not listed above (for example, Aider, Goose, RooCode, Cline, Devin, Factory, or JetBrains Junie):"
+agent_trace_instructions.md,103,,blank,,
+agent_trace_instructions.md,104,SRC-AT0104,requirement,CHR-904 CHR-916,1. **Finish and quit the session** so all logs and session files are completely written to disk.
+agent_trace_instructions.md,105,SRC-AT0105,requirement,CHR-905 CHR-916,"2. **Create a tool subfolder** inside `agent-trace/` named after the harness (for example, `agent-trace/cursor/`, `agent-trace/windsurf/`, `agent-trace/copilot/`, `agent-trace/aider/`, or `agent-trace/goose/`)."
+agent_trace_instructions.md,106,SRC-AT0106,requirement,CHR-916,3. **Export and copy the session traces for this challenge:**
+agent_trace_instructions.md,107,SRC-AT0107,requirement,CHR-916,"   - Use the tool’s built-in session, chat, or trajectory export feature (UI or CLI) to save a readable or structured export into `agent-trace/<harness-name>/`."
+agent_trace_instructions.md,108,SRC-AT0108,requirement,CHR-903 CHR-906 CHR-916,"   - Copy the raw structured trace files for this challenge from the tool’s local storage directory (such as `.jsonl`, `.json`, `.db`, or chat history files) into `agent-trace/<harness-name>/`, preserving original file formats and any subagent folders. Include only the sessions from this challenge."
+agent_trace_instructions.md,109,SRC-AT0109,requirement,CHR-907 CHR-916,"4. **Redact secrets and exclude credentials:** Remove or redact any API keys, tokens, passwords, cookies, private keys, or personal data. Do **not** include authentication files, settings, or credential stores (such as `auth.json`, `config.json`, `mcp.json`, `mcp_config.json`, or `.env`)."
+agent_trace_instructions.md,110,SRC-AT0110,requirement,CHR-908 CHR-916,5. **Package and upload:** Follow the steps below to create `agent-trace.zip` and upload it with your challenge submission.
+agent_trace_instructions.md,111,,blank,,
+agent_trace_instructions.md,112,SRC-AT0112,heading,,## Create the ZIP
+agent_trace_instructions.md,113,,blank,,
+agent_trace_instructions.md,114,SRC-AT0114,heading,,### macOS or Linux
+agent_trace_instructions.md,115,,blank,,
+agent_trace_instructions.md,116,SRC-AT0116,requirement,CHR-908,From the directory containing `agent-trace/`:
+agent_trace_instructions.md,117,,blank,,
+agent_trace_instructions.md,118,SRC-AT0118,requirement,CHR-908,```sh
+agent_trace_instructions.md,119,SRC-AT0118,requirement,CHR-908,zip -r agent-trace.zip agent-trace
+agent_trace_instructions.md,120,SRC-AT0118,requirement,CHR-908,```
+agent_trace_instructions.md,121,,blank,,
+agent_trace_instructions.md,122,SRC-AT0122,heading,,### Windows PowerShell
+agent_trace_instructions.md,123,,blank,,
+agent_trace_instructions.md,124,SRC-AT0124,requirement,CHR-908,From the directory containing `agent-trace/`:
+agent_trace_instructions.md,125,,blank,,
+agent_trace_instructions.md,126,SRC-AT0126,requirement,CHR-908,```powershell
+agent_trace_instructions.md,127,SRC-AT0126,requirement,CHR-908,Compress-Archive -Path .\agent-trace -DestinationPath .\agent-trace.zip -Force
+agent_trace_instructions.md,128,SRC-AT0126,requirement,CHR-908,```
+agent_trace_instructions.md,129,,blank,,
+agent_trace_instructions.md,130,SRC-AT0130,requirement,CHR-901 CHR-909,Open the ZIP once after creating it and confirm it contains the intended traces and no credentials or unrelated files. Submit `agent-trace.zip` with your challenge submission.
+problem_statement.md,1,SRC-PS0001,heading,,# Ghost Data Still Exists
+problem_statement.md,2,,blank,,
+problem_statement.md,3,SRC-PS0003,context,,"Northstar Shop (an imaginary company) lost **$2.4 million** after one supposedly deleted customer came back as a ghost in its systems. Every internal dashboard showed the deletion request as **“Complete.”** Weeks later, the same customer tried to create a new account. The platform refused: **“This email is already registered.”**"
+problem_statement.md,4,,blank,,
+problem_statement.md,5,SRC-PS0005,requirement,CHR-102 CHR-103,"What looked like a simple signup bug exposed a much larger failure. The investigation uncovered personal data across secondary databases, support attachments, search indexes, analytics exports, logs, archives, and backups. A synchronization job had even recreated information that the primary account service had successfully deleted."
+problem_statement.md,6,,blank,,
+problem_statement.md,7,SRC-PS0007,requirement,CHR-101 CHR-331,Northstar Shop now needs an AI-powered deletion audit agent that can prove whether a user's personal data is truly gone before another failure causes financial and reputational damage.
+problem_statement.md,8,,blank,,
+problem_statement.md,9,SRC-PS0009,requirement,CHR-304 CHR-307 CHR-313 CHR-321,"For deletion requests, the agent must investigate the supplied records, determine the user's current and historical identifiers, reconstruct what happened across systems, and decide whether the deletion is actually complete."
+problem_statement.md,10,,blank,,
+problem_statement.md,11,SRC-PS0011,requirement,CHR-319 CHR-327 CHR-331,"When data remains, the agent must produce the ordered remediation steps required to remove, redact, or anonymize it. When deletion has already been completed, the agent must produce the checks that prove it. The agent must also preserve records that the supplied policy requires the organization to retain."
+problem_statement.md,12,,blank,,
+problem_statement.md,13,SRC-PS0013,requirement,CHR-320,"Some systems preserve an account tombstone so permitted records can continue to reference the same internal `user_id`. In these records, the stable user reference may remain, but direct identifiers such as name, email, phone, and email hash must be removed."
+problem_statement.md,14,,blank,,
+problem_statement.md,15,SRC-PS0015,heading,,## What You Need to Build
+problem_statement.md,16,,blank,,
+problem_statement.md,17,SRC-PS0017,requirement,CHR-315 CHR-316 CHR-321 CHR-327,"For each request, build a system that determines:"
+problem_statement.md,18,,blank,,
+problem_statement.md,19,SRC-PS0019,requirement,CHR-302 CHR-321 CHR-407,"- whether the deletion is `COMPLETE`, `INCOMPLETE`, or `NOT_APPLICABLE` because the person did not request deletion;"
+problem_statement.md,20,SRC-PS0020,requirement,CHR-315,- which records or identifiers still expose the user;
+problem_statement.md,21,SRC-PS0021,requirement,CHR-316,- which active processes can recreate deleted data;
+problem_statement.md,22,SRC-PS0022,requirement,CHR-327,- the ordered remediation steps required to complete the request.
+problem_statement.md,23,,blank,,
+problem_statement.md,24,SRC-PS0024,requirement,CHR-322 CHR-323 CHR-324 CHR-325,A deletion is complete only when:
+problem_statement.md,25,,blank,,
+problem_statement.md,26,SRC-PS0026,requirement,CHR-322,- every relevant copy has received the treatment required by `deletion_rules.csv`;
+problem_statement.md,27,SRC-PS0027,requirement,CHR-323,"- no active sync, import, or restore path can recreate the data;"
+problem_statement.md,28,SRC-PS0028,requirement,CHR-324,- retained records contain only the identifiers permitted by the rules; and
+problem_statement.md,29,SRC-PS0029,requirement,CHR-325,- records that must be retained remain available.
+problem_statement.md,30,,blank,,
+problem_statement.md,31,SRC-PS0031,heading,,## Files Provided
+problem_statement.md,32,,blank,,
+problem_statement.md,33,SRC-PS0033,requirement,CHR-201,All participant-facing files are inside `dataset/`.
+problem_statement.md,34,,blank,,
+problem_statement.md,35,SRC-PS0035,formatting,,| File | Contents |
+problem_statement.md,36,SRC-PS0036,formatting,,| --- | --- |
+problem_statement.md,37,SRC-PS0037,requirement,CHR-203,| `deletion_requests.csv` | Requests that must be audited |
+problem_statement.md,38,SRC-PS0038,requirement,CHR-212,| `sample_deletion_requests.csv` | Sample requests |
+problem_statement.md,39,SRC-PS0039,requirement,CHR-213,| `sample_output.csv` | Correct answers for the sample requests |
+problem_statement.md,40,SRC-PS0040,requirement,CHR-214,| `user_identities.csv` | Current user identities |
+problem_statement.md,41,SRC-PS0041,requirement,CHR-215,| `user_audit_log.csv` | Historical identity changes |
+problem_statement.md,42,SRC-PS0042,requirement,CHR-216,"| `system_activity.csv` | Deletion, sync, export, backup, restore, indexing, and related operational activity |"
+problem_statement.md,43,SRC-PS0043,requirement,CHR-217,| `deletion_rules.csv` | Required treatment for each data category |
+problem_statement.md,44,SRC-PS0044,requirement,CHR-218,| `evidence_files.csv` | Manifest of the supplied evidence files |
+problem_statement.md,45,SRC-PS0045,requirement,CHR-219,| `output.csv` | Blank submission template |
+problem_statement.md,46,,blank,,
+problem_statement.md,47,SRC-PS0047,requirement,CHR-220,"Evidence may be stored as PDFs, images, logs, JSON, or SQLite-compatible SQL snapshot exports under `dataset/evidence/`."
+problem_statement.md,48,,blank,,
+problem_statement.md,49,SRC-PS0049,heading,,## Input
+problem_statement.md,50,,blank,,
+problem_statement.md,51,SRC-PS0051,requirement,CHR-203 CHR-204,Each row in `deletion_requests.csv` is one case:
+problem_statement.md,52,,blank,,
+problem_statement.md,53,SRC-PS0053,requirement,CHR-204,```text
+problem_statement.md,54,SRC-PS0053,requirement,CHR-204,"case_id,email,requested_at,reported_status,reported_at,audit_at,request_text"
+problem_statement.md,55,SRC-PS0053,requirement,CHR-204,```
+problem_statement.md,56,,blank,,
+problem_statement.md,57,SRC-PS0057,requirement,CHR-208 CHR-312,"`reported_status` may be `COMPLETE`, `PARTIALLY_COMPLETE`, or `NOT_STARTED`. It is a claim from the existing deletion workflow, not proof of the true state."
+problem_statement.md,58,,blank,,
+problem_statement.md,59,SRC-PS0059,heading,,## Required Output
+problem_statement.md,60,,blank,,
+problem_statement.md,61,SRC-PS0061,requirement,CHR-402 CHR-403,Produce exactly one row in `output.csv` for every case in `deletion_requests.csv`:
+problem_statement.md,62,,blank,,
+problem_statement.md,63,SRC-PS0063,requirement,CHR-402,```text
+problem_statement.md,64,SRC-PS0063,requirement,CHR-402,"case_id,deletion_status,steps_json"
+problem_statement.md,65,SRC-PS0063,requirement,CHR-402,```
+problem_statement.md,66,,blank,,
+problem_statement.md,67,SRC-PS0067,formatting,,| Column | Meaning |
+problem_statement.md,68,SRC-PS0068,formatting,,| --- | --- |
+problem_statement.md,69,SRC-PS0069,requirement,CHR-406,| `case_id` | Case being audited |
+problem_statement.md,70,SRC-PS0070,requirement,CHR-406 CHR-407,"| `deletion_status` | `COMPLETE`, `INCOMPLETE`, or `NOT_APPLICABLE` |"
+problem_statement.md,71,SRC-PS0071,requirement,CHR-406,"| `steps_json` | Ordered JSON array of findings, remediation actions, and verification checks |"
+problem_statement.md,72,,blank,,
+problem_statement.md,73,SRC-PS0073,requirement,CHR-404 CHR-405,"The final file must contain exactly 518 data rows, sorted by `case_id`."
+problem_statement.md,74,,blank,,
+problem_statement.md,75,SRC-PS0075,requirement,CHR-411,Each object in `steps_json` must contain:
+problem_statement.md,76,,blank,,
+problem_statement.md,77,SRC-PS0077,requirement,CHR-411 CHR-412,```json
+problem_statement.md,78,SRC-PS0077,requirement,CHR-411 CHR-412,{
+problem_statement.md,79,SRC-PS0077,requirement,CHR-411 CHR-412,"  ""step_no"": 1,"
+problem_statement.md,80,SRC-PS0077,requirement,CHR-411 CHR-412,"  ""phase"": ""FINDING"","
+problem_statement.md,81,SRC-PS0077,requirement,CHR-411 CHR-412,"  ""system_id"": ""account_service"","
+problem_statement.md,82,SRC-PS0077,requirement,CHR-411 CHR-412,"  ""resource_id"": ""account_005"","
+problem_statement.md,83,SRC-PS0077,requirement,CHR-411 CHR-412,"  ""operation"": ""REPORT_REMAINING_RECORD"","
+problem_statement.md,84,SRC-PS0077,requirement,CHR-411 CHR-412,"  ""state"": ""PRESENT"","
+problem_statement.md,85,SRC-PS0077,requirement,CHR-411 CHR-412,"  ""evidence_id"": ""evidence_01"""
+problem_statement.md,86,SRC-PS0077,requirement,CHR-411 CHR-412,}
+problem_statement.md,87,SRC-PS0077,requirement,CHR-411 CHR-412,```
+problem_statement.md,88,,blank,,
+problem_statement.md,89,SRC-PS0089,requirement,CHR-410 CHR-413 CHR-414,"`phase` must be `FINDING`, `REMEDIATION`, or `VERIFICATION`. Step numbers start at `1` and increase consecutively. Array order is significant."
+problem_statement.md,90,,blank,,
+problem_statement.md,91,SRC-PS0091,requirement,CHR-408 CHR-433 CHR-434,"For `COMPLETE`, include only verification steps proving the current state. For `INCOMPLETE`, include findings, the complete remediation plan, and the checks that must pass afterward. For `NOT_APPLICABLE`, use an empty JSON array (`[]`) because no deletion or deletion verification is authorized."
+problem_statement.md,92,,blank,,
+problem_statement.md,93,SRC-PS0093,requirement,CHR-408,A non-deletion row therefore has this form:
+problem_statement.md,94,,blank,,
+problem_statement.md,95,SRC-PS0095,requirement,CHR-408,```csv
+problem_statement.md,96,SRC-PS0095,requirement,CHR-408,"case_000,NOT_APPLICABLE,[]"
+problem_statement.md,97,SRC-PS0095,requirement,CHR-408,```
+problem_statement.md,98,,blank,,
+problem_statement.md,99,SRC-PS0099,requirement,CHR-410,The grader parses `steps_json` as JSON. JSON object-key order and whitespace are ignored; array order is not.
+problem_statement.md,100,,blank,,
+problem_statement.md,101,SRC-PS0101,heading,,## Allowed Operations
+problem_statement.md,102,,blank,,
+problem_statement.md,103,SRC-PS0103,formatting,,| Phase | Operation | State | Meaning |
+problem_statement.md,104,SRC-PS0104,formatting,,| --- | --- | --- | --- |
+problem_statement.md,105,SRC-PS0105,requirement,CHR-418,| `FINDING` | `REPORT_REMAINING_RECORD` | `PRESENT` | A record that should have been deleted still exists. |
+problem_statement.md,106,SRC-PS0106,requirement,CHR-419,"| `FINDING` | `REPORT_EXPOSED_PII` | `PRESENT` | A record may remain, but it still contains identifiers that should have been redacted or anonymized. |"
+problem_statement.md,107,SRC-PS0107,requirement,CHR-420,| `FINDING` | `REPORT_ACTIVE_DATA_FLOW` | `ACTIVE` | An active process can copy or recreate the user's data. |
+problem_statement.md,108,SRC-PS0108,requirement,CHR-421,| `FINDING` | `REPORT_RESTORE_RISK` | `ACTIVE` | A backup or restore path can bring deleted data back. |
+problem_statement.md,109,SRC-PS0109,requirement,CHR-422,| `REMEDIATION` | `DISABLE_DATA_FLOW` | `DISABLED` | Stop the process that can copy or recreate the data. |
+problem_statement.md,110,SRC-PS0110,requirement,CHR-423,| `REMEDIATION` | `BLOCK_RESTORE` | `BLOCKED` | Prevent the affected backup from restoring the user's data. |
+problem_statement.md,111,SRC-PS0111,requirement,CHR-424,| `REMEDIATION` | `DELETE_RECORD` | `ABSENT` | Remove the entire record. |
+problem_statement.md,112,SRC-PS0112,requirement,CHR-425,| `REMEDIATION` | `REDACT_RECORD` | `REDACTED` | Keep the record but remove the identifying fields required by policy. |
+problem_statement.md,113,SRC-PS0113,requirement,CHR-426,| `REMEDIATION` | `ANONYMIZE_RECORD` | `ANONYMIZED` | Keep the record after irreversibly unlinking it from the user. |
+problem_statement.md,114,SRC-PS0114,requirement,CHR-427,| `VERIFICATION` | `VERIFY_RECORD_ABSENT` | `ABSENT` | Confirm that a record no longer exists. |
+problem_statement.md,115,SRC-PS0115,requirement,CHR-428,| `VERIFICATION` | `VERIFY_RECORD_PRESENT` | `PRESENT` | Confirm that a policy-required retained record still exists. |
+problem_statement.md,116,SRC-PS0116,requirement,CHR-429,| `VERIFICATION` | `VERIFY_RECORD_REDACTED` | `REDACTED` | Confirm that required identifying fields have been removed. |
+problem_statement.md,117,SRC-PS0117,requirement,CHR-430,| `VERIFICATION` | `VERIFY_RECORD_ANONYMIZED` | `ANONYMIZED` | Confirm that the record can no longer be linked to the user. |
+problem_statement.md,118,SRC-PS0118,requirement,CHR-431,| `VERIFICATION` | `VERIFY_DATA_FLOW_DISABLED` | `DISABLED` | Confirm that the relevant data flow is inactive. |
+problem_statement.md,119,SRC-PS0119,requirement,CHR-432,| `VERIFICATION` | `VERIFY_RESTORE_BLOCKED` | `BLOCKED` | Confirm that the affected data cannot be restored. |
+problem_statement.md,120,,blank,,
+problem_statement.md,121,SRC-PS0121,heading,,## Rules
+problem_statement.md,122,,blank,,
+problem_statement.md,123,SRC-PS0123,requirement,CHR-304,- Resolve the user’s current and historical identifiers.
+problem_statement.md,124,SRC-PS0124,requirement,CHR-312 CHR-313,- Determine the resource state at `audit_at` using the available evidence. Reported workflow statuses and operation results are claims.
+problem_statement.md,125,SRC-PS0125,requirement,CHR-317,"- Apply `deletion_rules.csv` to every relevant record, including account tombstones, active data flows, and restore risks."
+problem_statement.md,126,SRC-PS0126,requirement,CHR-415 CHR-416,"- Order steps by phase: findings, remediation, then verification. Within each phase, follow the operation order in the table above, followed by `system_id` and `resource_id` in ascending order."
+problem_statement.md,127,SRC-PS0127,requirement,CHR-435 CHR-436 CHR-437,"- Findings and verification steps for `COMPLETE` cases must cite a `file_id`, `activity_id`, or `audit_id`. Proposed remediation and future verification steps for `INCOMPLETE` cases use an empty `evidence_id`."
+problem_statement.md,128,,blank,,
+problem_statement.md,129,SRC-PS0129,heading,,## Evaluation
+problem_statement.md,130,,blank,,
+problem_statement.md,131,SRC-PS0131,requirement,CHR-701 CHR-702 CHR-703 CHR-704 CHR-705 CHR-706 CHR-707,"`output.csv` will be compared with hidden canonical answers. Scoring will consider the correctness of `deletion_status`, identity resolution, discovered records and risks, cited evidence, policy decisions, and the completeness and order of `steps_json`."
+problem_statement.md,132,,blank,,
+problem_statement.md,133,SRC-PS0133,requirement,CHR-607 CHR-610 CHR-611 CHR-612 CHR-613 CHR-614,Your `code.zip` must include `evaluation/evaluation_report.md` containing:
+problem_statement.md,134,,blank,,
+problem_statement.md,135,SRC-PS0135,requirement,CHR-610,- case-level status accuracy;
+problem_statement.md,136,SRC-PS0136,requirement,CHR-611,- step-level and field-level accuracy;
+problem_statement.md,137,SRC-PS0137,requirement,CHR-612,- sequence accuracy;
+problem_statement.md,138,SRC-PS0138,requirement,CHR-613,- at least three additional evaluation cases created by your team; and
+problem_statement.md,139,SRC-PS0139,requirement,CHR-614,- failures found and improvements made.
+problem_statement.md,140,,blank,,
+problem_statement.md,141,SRC-PS0141,heading,,## Submission
+problem_statement.md,142,,blank,,
+problem_statement.md,143,SRC-PS0143,formatting,,| Item | Description |
+problem_statement.md,144,SRC-PS0144,formatting,,| --- | --- |
+problem_statement.md,145,SRC-PS0145,requirement,CHR-601 CHR-602,"| `code.zip` | Runnable solution, prompts, configuration, README, and `evaluation/` folder |"
+problem_statement.md,146,SRC-PS0146,requirement,CHR-601 CHR-603,| `output.csv` | One answer row for every request |
+problem_statement.md,147,SRC-PS0147,requirement,CHR-601 CHR-604,| `chat_transcript` | Transcript showing how the system was developed or used |
+problem_statement.md,148,SRC-PS0148,requirement,CHR-601 CHR-605,| AI interview | Explanation of the approach and evaluation |
+problem_statement.md,149,,blank,,
+problem_statement.md,150,SRC-PS0150,heading,,### Token Usage and Cost Analysis
+problem_statement.md,151,,blank,,
+problem_statement.md,152,SRC-PS0152,requirement,CHR-608,Your `code.zip` must include one token-usage file:
+problem_statement.md,153,,blank,,
+problem_statement.md,154,SRC-PS0154,requirement,CHR-608,```text
+problem_statement.md,155,SRC-PS0154,requirement,CHR-608,evaluation/usage_report.md
+problem_statement.md,156,SRC-PS0154,requirement,CHR-608,```
+problem_statement.md,157,,blank,,
+problem_statement.md,158,SRC-PS0158,requirement,CHR-615 CHR-616 CHR-617 CHR-618 CHR-619 CHR-620 CHR-621,"The report must summarize the final full-dataset run that produced `output.csv`, including model providers and names, model calls, input and output tokens, total and average tokens per request, and estimated total and per-request cost. If multiple models are used, include both per-model and overall totals in the same file."
+problem_statement.md,159,,blank,,
+problem_statement.md,160,SRC-PS0160,requirement,CHR-509,"Do not include API keys, credentials, or sensitive configuration values in the submission."
+problem_statement.md,161,,blank,,
+problem_statement.md,162,SRC-PS0162,requirement,CHR-601 CHR-708,"These are the required deliverables. Participants are encouraged to improve retrieval, multimodal interpretation, identity and deletion-state reconstruction, remediation planning, deterministic verification, batching, caching, and token efficiency."

@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: formatting
+file: AGENTS.md
+header: |
+  AGENTS.md:49
+level: 1.26
+line_end: '49'
+line_start: '49'
+links: []
+normative: false
+note: 'rule: table header row'
+ref: ''
+reviewed: m8dxNXAC6hLk31OIDuasGRELtA8xFX38MzsfvjZJfgk=
+text: |
+  | Platform | Path |

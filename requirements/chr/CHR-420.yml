@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  REPORT_ACTIVE_DATA_FLOW (FINDING)
+issues: ''
+kind: interface
+level: '4.20'
+links:
+- SRC-AG0262: WkM9KE122-rbIUZMoaHgAcBREjqz78kArmJxl1Ob9tw=
+- SRC-AG0268: kuciNjXnrmL48DMTAelpQAJPEi_ENBGismbtWS0U4Z0=
+- SRC-PS0107: tXE7tVJ5CnJ00VND4LWxXlaEjP49mgrcD1NUnYQbJHY=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Operation REPORT_ACTIVE_DATA_FLOW shall be used only in phase FINDING, always with state ACTIVE, and means: an active process can copy or recreate the user's data.
+verification: test

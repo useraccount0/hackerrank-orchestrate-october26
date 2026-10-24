@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Grounded matching
+issues: ''
+kind: functional
+level: 3.9
+links:
+- SRC-AG0200: DyIjYeZ2hSagPkqRPMmJjMvHyp7qJjNHNguitS-PbUE=
+- SRC-AG0310: ClQzEBHQiOzSHsgjr2X3favVshtch_yrPe1EYZmHuas=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall match evidence to the subject through current identifiers, historical identifiers, hashes, resource IDs, system IDs, timestamps, and other grounded links in the contents.
+verification: test

@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Use the identity history
+issues: ''
+kind: functional
+level: 3.6
+links:
+- SRC-AG0197: O03f7yVvfsnnoLyGE3SCaSwYyTi2bo2szlUCaCl1Ey0=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall use user_audit_log.csv together with the current snapshot in user_identities.csv to recover identifiers that may still appear in older systems and evidence.
+verification: test

@@ -1,0 +1,24 @@
+active: true
+derived: false
+header: |
+  Usage report file
+issues: ISS-01
+kind: deliverable
+level: 6.8
+links:
+- SRC-AG0331: An8gDtGWmRNYnYWlGDlxo6FcGANVakCcGSUpQxjUc4I=
+- SRC-AG0333: 3p2setjIR-SdnPMZ1AGzgdWQrGQak973IaKLO1VUFu8=
+- SRC-PS0152: 7Se0WBbo9uO3G5GOrTjD4Iqqixihzz_V4dKFZBBKkqo=
+- SRC-PS0154: u8xfKiTyz_Xzge3m-o6mOie38bTXhMDYavy2yrxwu7s=
+- SRC-RM0089: rhkgfud4WK341k9a9DfCWGR81CEt80ebSOlgmpKE2-o=
+- SRC-RM0091: _X5sPkfrR3X05X4UqB25vPsQcakoOzDK9i-AICPeh6A=
+- SRC-RM0155: E6s5pp9mpHy2eGtOwmjkxhQz1XDqDqTQ3w4NWHKzrsU=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  code.zip shall include the token-usage report usage_report.md in the evaluation/ folder.
+verification: inspection

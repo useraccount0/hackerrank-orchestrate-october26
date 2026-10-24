@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Deleted data can come back
+issues: ''
+kind: purpose
+level: 1.3
+links:
+- SRC-AG0031: YdjqcWwCaofup7jlupLdlbiIJqpG3_nabRzehctBW98=
+- SRC-PS0005: 93TVap-CYFO2k45JmsCMJJhVYpeYgENtFB4SBfM0XNI=
+- SRC-RM0007: z37VERoYdH7ZMVmoxCRTFgYf3TNOVIfCeng1_fcgFww=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The audit shall take into account that active synchronization and restore processes can copy or recreate data that was already deleted from its original source.
+verification: analysis

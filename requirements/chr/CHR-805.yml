@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Minimal tool-specific configuration
+issues: ''
+kind: process
+level: 8.5
+links:
+- SRC-AG0403: bC18gqbtCEA-rLd-d0xHXjeF8iHBdLLoVZdDs8tyngI=
+- SRC-CL0001: CxqLWDKH8k1EZw56MKRhaVCbmCKCdv0gcnhBMgQEtsY=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  Tool-specific configuration (for example CLAUDE.md, which only imports AGENTS.md) shall be kept minimal and point back to AGENTS.md.
+verification: inspection

@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: formatting
+file: problem_statement.md
+header: |
+  problem_statement.md:104
+level: 5.55
+line_end: '104'
+line_start: '104'
+links: []
+normative: false
+note: 'rule: table delimiter row'
+ref: ''
+reviewed: r5ZAguNXkVcyh1UlVzoYadZOJ6k8Uf5DQaNUMw2lx3U=
+text: |
+  | --- | --- | --- | --- |

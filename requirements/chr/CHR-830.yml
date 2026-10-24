@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  The model= line
+issues: ''
+kind: process
+level: '8.30'
+links:
+- SRC-AG0151: Uh-X9lkRho8KA3g2AsnSIBWynXcc6tkuWLMowJwaxhw=
+- SRC-AG0153: w9mB0AgOyEz7hqufD2SlOZdHhp6LE418mRdCwt7aOow=
+- SRC-AG0418: 6SZgIPOCQqgBzHlCB5dVtPz9gn4Fma14ZpJlPDJ6ogM=
+- SRC-AG0419: iJgnf1y_l4nQf5VqXVJu5-vzEj7rpRMJGdv8nZFQCro=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  Every SESSION START and per-turn entry shall contain exactly one non-empty model= line with the exact model identifier used for that turn, taken from the runtime, session metadata, harness configuration, or another authoritative source; unknown, a model family, a generic label, an inferred name, or a placeholder is invalid; the model name shall never be guessed and does not replace tool=.
+verification: inspection

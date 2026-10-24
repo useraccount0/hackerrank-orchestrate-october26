@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: heading
+file: README.md
+header: |
+  README.md:137
+level: 3.76
+line_end: '137'
+line_start: '137'
+links: []
+normative: false
+note: Label for the command block below it (SRC-RM0139).
+ref: ''
+reviewed: pending-user-review
+text: |
+  **Windows (PowerShell):**

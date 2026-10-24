@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Non-deletion requests
+issues: ''
+kind: functional
+level: 3.2
+links:
+- SRC-AG0296: AFlKpCeB0M5o0dSOky3_iaW1lbdz1bKW_zikuM-ruJE=
+- SRC-PS0019: sJiWquhEAfUHoURYYUL_GHE7LyQmS-Q3GtW1JhgX-w8=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall classify a request for access, correction, export, marketing opt-out, or any other non-deletion action as NOT_APPLICABLE, even if other fields of the request resemble a deletion case.
+verification: test

@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  COMPLETE needs: nothing can recreate the data
+issues: ''
+kind: functional
+level: 3.23
+links:
+- SRC-AG0301: FowMsKQTwiSQv5hmLWjr-m-sdAgHgRNvFxFrU58wWVs=
+- SRC-PS0024: owj-F9ZlHM5aQ_cwro7BjzTmWynbWGrAZMhHmxyTCPY=
+- SRC-PS0027: 0Buh8il6ybnd_lwx0khkiKSfgpoidVXTviXmA7r9fJ4=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall judge a deletion COMPLETE only if no active sync, import, or restore path can recreate the prohibited data.
+verification: test

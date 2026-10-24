@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  BLOCK_RESTORE (REMEDIATION)
+issues: ''
+kind: interface
+level: 4.23
+links:
+- SRC-AG0271: Xkr_zRgFUV44EpCStMz3dLxnZi3zZnt_hUviZ5H50z4=
+- SRC-AG0276: sOAQ47z8goa4CdznvBBifKxjMYUa2Mwl8YIvC58xJM0=
+- SRC-PS0110: 4_Pa2cX4sMKKTCjf6MF-2nvRkSJeQS1j6eCq6ACa3AY=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Operation BLOCK_RESTORE shall be used only in phase REMEDIATION, always with state BLOCKED, and means: prevent the affected backup from restoring the user's data.
+verification: test

@@ -1,0 +1,19 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: agent_trace_instructions.md
+header: |
+  agent_trace_instructions.md:118-120
+level: 4.62
+line_end: '120'
+line_start: '118'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  ```sh
+  zip -r agent-trace.zip agent-trace
+  ```

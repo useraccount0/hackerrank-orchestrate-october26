@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Nested AGENTS.md files
+issues: ''
+kind: process
+level: 8.6
+links:
+- SRC-AG0405: 3M_j84f0WIYBwh9fTH6jy4M3-RETOs7DIvYdB42kUxk=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  If a nested AGENTS.md exists, the closest one governs the files inside that sub-project, but the logging rules (AGENTS.md sections 2 and 5) stay global: logging goes to the log.txt beside the top-level AGENTS.md.
+verification: inspection

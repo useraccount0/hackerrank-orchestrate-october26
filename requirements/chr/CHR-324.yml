@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  COMPLETE needs: only permitted identifiers kept
+issues: ''
+kind: functional
+level: 3.24
+links:
+- SRC-PS0024: owj-F9ZlHM5aQ_cwro7BjzTmWynbWGrAZMhHmxyTCPY=
+- SRC-PS0028: MAZ2xYgvzZg0hsLR24Ymzef1OS4ZsGqdAYct3sUAghM=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall judge a deletion COMPLETE only if the retained records contain only the identifiers permitted by the rules.
+verification: test

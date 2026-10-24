@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  audit_at
+issues: ''
+kind: interface
+level: '2.10'
+links:
+- SRC-AG0221: fhNEpL941vt1GnpLipThK3PVt3ZMMf2nuqP-UPkZDb0=
+modality: fact
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  audit_at is the cutoff time for which the answer of the case is required.
+verification: test

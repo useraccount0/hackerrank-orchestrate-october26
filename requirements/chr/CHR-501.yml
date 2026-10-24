@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Conform to the project contract
+issues: ''
+kind: constraint
+level: 5.1
+links:
+- SRC-AG0084: X-lj0Jpc0-Z1QyC0JNG3ghM98WuzG2Abs5XhbyE52zE=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall conform to the project contract (AGENTS.md section 6) so that it can be evaluated.
+verification: inspection

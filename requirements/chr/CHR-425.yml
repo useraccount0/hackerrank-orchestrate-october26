@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  REDACT_RECORD (REMEDIATION)
+issues: ''
+kind: interface
+level: 4.25
+links:
+- SRC-AG0271: Xkr_zRgFUV44EpCStMz3dLxnZi3zZnt_hUviZ5H50z4=
+- SRC-AG0278: ImveGIu4CbQ12G-zHoaco-kUS65bNbb18FLQiHsay34=
+- SRC-PS0112: AFbpyem8oMvebxdZI4AjeMBsBDhASTXTuWeaxuLVT3I=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Operation REDACT_RECORD shall be used only in phase REMEDIATION, always with state REDACTED, and means: keep the record but remove the identifying fields required by the policy.
+verification: test

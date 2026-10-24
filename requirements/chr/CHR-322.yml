@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  COMPLETE needs: every copy treated
+issues: ''
+kind: functional
+level: 3.22
+links:
+- SRC-AG0301: FowMsKQTwiSQv5hmLWjr-m-sdAgHgRNvFxFrU58wWVs=
+- SRC-PS0024: owj-F9ZlHM5aQ_cwro7BjzTmWynbWGrAZMhHmxyTCPY=
+- SRC-PS0026: rL9aWO1qsNBDJlIKCJfupfVhq7RfU9Hmcg4OlxsmcfI=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall judge a deletion COMPLETE only if every relevant copy has received the treatment required by deletion_rules.csv.
+verification: test

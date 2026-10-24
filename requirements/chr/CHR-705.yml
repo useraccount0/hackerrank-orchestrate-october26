@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Scored: policy decisions
+issues: ''
+kind: evaluation
+level: 7.5
+links:
+- SRC-PS0131: ASlX0Hni1n_6cbvGrTyyfuUwH5_xPDS1BrM3kK07HpE=
+- SRC-RM0081: YRtfx3mYh62RHYxn1QXg9aC17zsanHnvFnRWZz0xGQA=
+- SRC-RM0086: WmJOx0XRpvl84LRhXuAYCW2a-wWN5I6UGJFdsIUiucA=
+modality: fact
+normative: true
+note: ''
+party: organizer
+ref: ''
+reviewed: pending-user-review
+text: |
+  Scoring considers correct policy application (policy decisions).
+verification: n/a

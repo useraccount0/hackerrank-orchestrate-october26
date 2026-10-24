@@ -1,0 +1,36 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: AGENTS.md
+header: |
+  AGENTS.md:128-147
+level: 1.67
+line_end: '147'
+line_start: '128'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  ```text
+  ## [ISO-8601 TIMESTAMP] <short title, max 80 chars>
+
+  User Prompt (verbatim, secrets redacted):
+  <exact user message, with secrets replaced by [REDACTED]>
+
+  Agent Response Summary:
+  <2-5 sentences: what was done, why, and any important decision>
+
+  Actions:
+  * <file edited / command run / tool invoked>
+
+  Context:
+  tool=<exact_harness_or_coding_agent_name>
+  model=<exact_runtime_model_name>
+  branch=<git_branch_or_unknown>
+  repo_root=<absolute_path>
+  worktree=<worktree_path_or_main>
+  parent_agent=<parent_name_or_none>
+  ```

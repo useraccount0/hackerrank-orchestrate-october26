@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Check the ZIP
+issues: ''
+kind: process
+level: 9.9
+links:
+- SRC-AT0130: MS6nqR_ltKEezZ37hf_qyYsXfpc73dS-LWhPMV3uChI=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  The ZIP shall be opened once after it is created, to confirm that it contains the intended traces and no credentials or unrelated files.
+verification: inspection

@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: formatting
+file: README.md
+header: |
+  README.md:107
+level: 3.57
+line_end: '107'
+line_start: '107'
+links: []
+normative: false
+note: 'rule: table header row'
+ref: ''
+reviewed: 2z4cP-N1E0MdYm3HhXj6yiAfQfzyrwNDqpR6owskDqA=
+text: |
+  | Platform | Path |

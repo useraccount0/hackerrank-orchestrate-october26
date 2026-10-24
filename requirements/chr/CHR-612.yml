@@ -1,0 +1,22 @@
+active: true
+derived: false
+header: |
+  Report: sequence accuracy
+issues: ''
+kind: deliverable
+level: 6.12
+links:
+- SRC-AG0338: 2X239aTChSnofRNbWYDi0M9WojBJY1LUwR770kl5Mas=
+- SRC-AG0342: 4JDSWYslxqWIwvCVObt2ZMNtOuUaElIgMBIh5plIxvc=
+- SRC-PS0133: rS9u9km8lZlCA4Sq0gwgwZJgbWq5yOYt11dRyGfts7c=
+- SRC-PS0137: kDjsa-6gP7xVgOsmIn8CscaRJMic5k8xouDDLEjE3j0=
+- SRC-RM0096: tnH4I6gyKm3pbSu-GnxPfdu0Uv6tBAWToz27_PX01X0=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  evaluation_report.md shall contain the sequence accuracy.
+verification: inspection

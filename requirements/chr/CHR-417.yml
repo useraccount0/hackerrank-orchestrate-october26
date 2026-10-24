@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  No invented phases, operations, or states
+issues: ''
+kind: interface
+level: 4.17
+links:
+- SRC-AG0292: F1amLlGiJWBq7w-TVlwiY6Z6w2eNw38F5ixP_SUKCp4=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Steps shall use only the allowed combinations of phase, operation, and state (CHR-418 to CHR-432); no other phases, operations, or states shall be invented.
+verification: test

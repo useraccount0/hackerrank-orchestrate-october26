@@ -1,0 +1,37 @@
+# Baseline of the challenge input files that were converted into requirements.
+#
+# The files are read from git at `baseline_commit`, NOT from the working tree.
+# Reason: README.md must later be replaced by our own submission README, and the
+# organizers may update their files. The baseline must not change silently.
+#
+# code   = 2-letter file code used in source-unit IDs: SRC-<code><first line, 4 digits>
+# level  = first number of the Doorstop level of the file's units (units are <level>.<n>)
+# sha256 = SHA-256 of the file content stored in git (LF line endings)
+# lines  = number of lines in the file
+baseline_commit: acb3dfca6e94e4803a26e72c49074a488de93c93
+files:
+  - path: AGENTS.md
+    code: AG
+    level: 1
+    sha256: 290b327083d21bc0a37d820a417bc2060e2f0c2127104868aa4b9451b5a92910
+    lines: 422
+  - path: CLAUDE.md
+    code: CL
+    level: 2
+    sha256: 336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49
+    lines: 1
+  - path: README.md
+    code: RM
+    level: 3
+    sha256: 9f88c1c852a2ec94461775bf7a4f1ab6d6cfebd98e4031d961ef8b8146389c20
+    lines: 157
+  - path: agent_trace_instructions.md
+    code: AT
+    level: 4
+    sha256: 51acd5ed499c3071e7987c1f8a17d6dd643afd1e5fdab4da8a024ea7bc5f63a5
+    lines: 130
+  - path: problem_statement.md
+    code: PS
+    level: 5
+    sha256: dd478250158b4fe387159ea924493e2dda0404edbbb585c92d9f9bb25237156b
+    lines: 162

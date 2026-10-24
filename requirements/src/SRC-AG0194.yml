@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: AGENTS.md
+header: |
+  AGENTS.md:194
+level: 1.84
+line_end: '194'
+line_start: '194'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  - `deletion_requests.csv` contains 518 evaluation requests. Produce exactly one output row for every `case_id` in this file.

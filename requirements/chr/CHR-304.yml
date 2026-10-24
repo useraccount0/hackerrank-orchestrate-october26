@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  Resolve current and historical identifiers
+issues: ''
+kind: functional
+level: 3.4
+links:
+- SRC-AG0029: 9Z4eohFI6Ljmo65rm8m5CCUucxH5eYB5o92mZmrDhTo=
+- SRC-AG0297: It83QGF6AcDjF8aEY7RBCYBaUsVNGvJmG5d6ObaPTvQ=
+- SRC-PS0009: VqzSQxYqjIS6rNycWMmXxhAPvEgghxN7tWgwgKe-ZTo=
+- SRC-PS0123: WBGscm13FBOkX83dmJCVCOONteSw-J9CYRcOpwaWem4=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  For an authorized deletion, the system shall resolve the subject's current and historical identifiers.
+verification: test

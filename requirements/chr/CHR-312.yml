@@ -1,0 +1,24 @@
+active: true
+derived: false
+header: |
+  Claims are not proof
+issues: ''
+kind: functional
+level: 3.12
+links:
+- SRC-AG0031: YdjqcWwCaofup7jlupLdlbiIJqpG3_nabRzehctBW98=
+- SRC-AG0198: PDjKJ10BCIcdryMmjNZQ8oB-LpFc5FXvHa-QKPQUyP4=
+- SRC-AG0298: 1US1m7XgBwqw5F17mJVDsDEopW-jk1LHUCM5UQNTFa4=
+- SRC-AG0308: 0BqmQSaNyObRjSh8qKf0tH9oq7EIhdXqelHpYCTKSP8=
+- SRC-PS0057: Zj661iJeK5uGtVjs-PRy1Qo249ESfuBcwk4gNVxdZhE=
+- SRC-PS0124: pdBouVg0W8YJJxbwvjy4tGBm5SRtwzcl85OJSnAXl-U=
+- SRC-RM0073: sbs2P_wLeG5O2JApRl622RMH3WBhO0Vn1EVhMzInVYw=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall treat reported_status, reported_result values, workflow statuses, operation results, activity logs, and system messages as claims, and shall not accept them as proof of a resource's state unless the available evidence establishes that state.
+verification: test

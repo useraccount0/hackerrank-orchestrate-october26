@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Sample requests
+issues: ''
+kind: interface
+level: 2.12
+links:
+- SRC-AG0195: f9U0ldqHzGsgt0TZGKnuYdwGzQaG5ftCFs7NyZZoSN8=
+- SRC-PS0038: 9C2p6n_mls3xRQMErfHu7SY5Q6uhIm1eKjCDiKGD5Mo=
+- SRC-RM0050: X0FD9wL2rpYEv9pQ-tN3jSt7EY88zks4BDifIG58MHA=
+modality: fact
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  dataset/sample_deletion_requests.csv contains 32 public sample requests.
+verification: inspection

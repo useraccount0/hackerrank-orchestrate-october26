@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  VERIFY_DATA_FLOW_DISABLED (VERIFICATION)
+issues: ''
+kind: interface
+level: 4.31
+links:
+- SRC-AG0281: r6p4m1CE2_WSEqreE_28UQijElARYEPaXCzl5W1Q9ys=
+- SRC-AG0289: Do0fAjcOrWhTDVljPDZpOe20ikor-sCLgiFCUkjEHyQ=
+- SRC-PS0118: MpcTzG0SYKhvYrlFl4sSK22C0WK8mRbdyo_KhJuM3T4=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Operation VERIFY_DATA_FLOW_DISABLED shall be used only in phase VERIFICATION, always with state DISABLED, and means: confirm that the relevant data flow is inactive.
+verification: test

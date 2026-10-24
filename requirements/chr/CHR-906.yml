@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Only this challenge's sessions
+issues: ''
+kind: process
+level: 9.6
+links:
+- SRC-AT0011: qFWBUan9RaQOJVpLM4bGoJVVOMtms3BG5jnO6HMZ36M=
+- SRC-AT0108: AmLefXjB4g3u5RAzngXDRDuZALNJulxpIEvhJGjK1eg=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  Only the session files for this challenge shall be included, not the entire home directory or application-data folder.
+verification: inspection

@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  No substitute URLs
+issues: ''
+kind: process
+level: 8.38
+links:
+- SRC-AG0101: MGFfD-czcnUHaBQ83qvSJI2ycvXRXZSF4qjT-LXDqLg=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  The coding agent shall not replace the URL with the HackerRank homepage, the contest homepage, another challenge page, or a guessed /submission URL.
+verification: inspection

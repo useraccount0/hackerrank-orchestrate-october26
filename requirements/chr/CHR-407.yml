@@ -1,0 +1,22 @@
+active: true
+derived: false
+header: |
+  deletion_status values
+issues: ''
+kind: interface
+level: 4.7
+links:
+- SRC-AG0238: Gee1Dfr55-XN0kDxecjDKJLdkzpL4Iti75J3xQNazYQ=
+- SRC-PS0019: sJiWquhEAfUHoURYYUL_GHE7LyQmS-Q3GtW1JhgX-w8=
+- SRC-PS0070: _i6IHLvtq5R4TqV4-ZSLuM0d2wSLU6odtEPxwv0ijQw=
+- SRC-RM0009: 63eHuzYI6Z7WjMt496s21w3QmksR4KMSDwYiuz6iWV4=
+- SRC-RM0073: sbs2P_wLeG5O2JApRl622RMH3WBhO0Vn1EVhMzInVYw=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  deletion_status shall be one of COMPLETE, INCOMPLETE, or NOT_APPLICABLE.
+verification: test

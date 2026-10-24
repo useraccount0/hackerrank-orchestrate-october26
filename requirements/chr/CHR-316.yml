@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Find what can recreate the data
+issues: ''
+kind: functional
+level: 3.16
+links:
+- SRC-AG0033: H5lL9gyy6OgZcEkarhI-WTp3quZa8h9fAol9L6OwcvE=
+- SRC-PS0017: LXPMx_DzC0wXBUkrZ8F5bbeVl9_GJgm0buYGYro3poQ=
+- SRC-PS0021: jP1bO7sWIz84GyT5gcZL9v98n9Yo6eu0Zw6xEYnVxPc=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall determine which active processes can copy or recreate the user's deleted data, and which backup or restore paths can bring deleted data back.
+verification: test

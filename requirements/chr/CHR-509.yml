@@ -1,0 +1,22 @@
+active: true
+derived: false
+header: |
+  Never commit or submit secrets
+issues: ''
+kind: constraint
+level: 5.9
+links:
+- SRC-AG0086: iyefV9t1IpqvAOpF999MUYikevX5zd72ArrRaWDu04Q=
+- SRC-AG0355: o5H0eAWlQJbB2sw5pR8_toxPiYbkUQ5kM8dUd9-faYQ=
+- SRC-PS0160: FZfvJlx8rHapl0FznQc-X3eHiMd7XYJRq06rBgO3cs8=
+- SRC-RM0114: 5wsdk9aOcuYlSpXDYsrYLPWK--MaPIhKJxVtn-NKwQI=
+- SRC-RM0157: lE2QZiCmVXzs-9-KvYfp8NxCsxfyAFlXi8sJcoRiAjI=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  Secrets (API keys, tokens, credentials) and sensitive configuration values shall never be committed or submitted: not in prompts, code, configuration, log.txt, the reports, or any other part of the submission.
+verification: inspection

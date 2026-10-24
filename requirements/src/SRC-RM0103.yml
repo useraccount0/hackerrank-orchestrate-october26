@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: heading
+file: README.md
+header: |
+  README.md:103
+level: 3.55
+line_end: '103'
+line_start: '103'
+links: []
+normative: false
+note: 'rule: Markdown heading'
+ref: ''
+reviewed: f_DGOy9ur7QXKg3fR0rKVtYgyvXOMHy8nIdJXmdE1kU=
+text: |
+  ## Chat Transcript

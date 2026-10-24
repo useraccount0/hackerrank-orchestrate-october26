@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Free choice of technology
+issues: ''
+kind: constraint
+level: 5.11
+links:
+- SRC-AG0083: 7cFXueGPAYTkWXpn4jug3oG80SPNrj15jYj1k2qd3yQ=
+- SRC-AG0372: P9-0Q2l1DlnVmLMh_Af1oClka2ibMxjd3TQdFbEtj2M=
+- SRC-RM0127: zbocLNOYd1y9sNbtfiV5XkmlfFcyFeQczD4MSWTXDjQ=
+modality: may
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  The participant may use any programming language, model, framework, IDE, AI assistant, retrieval approach, or tool, subject to the official event rules; there is no required language.
+verification: n/a

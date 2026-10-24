@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  No nested archives
+issues: ''
+kind: deliverable
+level: 6.26
+links:
+- SRC-AG0368: 9bS477RycnEMQhnA7E7TxfdLyRIEnGQvLiDonYmH2Ak=
+- SRC-RM0143: Ax3OKxtpiDYU664fJz0aSmJKuPCq3KSje2U3x5Frxu0=
+- SRC-RM0147: QLmLrsxs6Bvelm_2dak6vVbuw0C0h3vDJNSqovbiInM=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  code.zip shall not contain nested archive files (.zip, .tar, .gz, .tgz, .7z, .rar); submissions that contain them are rejected.
+verification: inspection

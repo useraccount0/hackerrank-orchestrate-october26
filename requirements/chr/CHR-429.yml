@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  VERIFY_RECORD_REDACTED (VERIFICATION)
+issues: ''
+kind: interface
+level: 4.29
+links:
+- SRC-AG0281: r6p4m1CE2_WSEqreE_28UQijElARYEPaXCzl5W1Q9ys=
+- SRC-AG0287: 79lSmfCLmsHesAapkbm5tC6j1165knPBN-6sNgWAsiA=
+- SRC-PS0116: t8ta7lE5RFowIUWpmism6JYLNLoWSlL5xG1tzRpOfK0=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Operation VERIFY_RECORD_REDACTED shall be used only in phase VERIFICATION, always with state REDACTED, and means: confirm that the required identifying fields have been removed.
+verification: test

@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  AI-powered deletion-audit agent
+issues: ''
+kind: purpose
+level: 1.1
+links:
+- SRC-AG0029: 9Z4eohFI6Ljmo65rm8m5CCUucxH5eYB5o92mZmrDhTo=
+- SRC-PS0007: q-ifoC3tu_5oZFfYqaDcMcAtdQGc5pUq3aftEZ1NtHY=
+- SRC-RM0005: ItWlBt9j_81r6MoLYbUgc5blNH6A6WOqFXCZ4LQwtnw=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall be an AI-powered deletion-audit agent that audits, for each request, whether a user's personal data was actually deleted, and that can prove whether the data is truly gone.
+verification: inspection

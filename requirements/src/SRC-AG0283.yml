@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: formatting
+file: AGENTS.md
+header: |
+  AGENTS.md:283
+level: 1.137
+line_end: '283'
+line_start: '283'
+links: []
+normative: false
+note: 'rule: table header row'
+ref: ''
+reviewed: ysb4_-hYV94SxM6lqbOK5GSHcxu7Br-UG1XM9NYSA6M=
+text: |
+  | Operation | State | Meaning |

@@ -1,0 +1,22 @@
+active: true
+derived: false
+header: |
+  Report: step-level and field-level accuracy
+issues: ISS-04
+kind: deliverable
+level: 6.11
+links:
+- SRC-AG0338: 2X239aTChSnofRNbWYDi0M9WojBJY1LUwR770kl5Mas=
+- SRC-AG0341: UlHX8yr8hCTTKU0LJFn4sx3-dmj82GTYtGMguD8yU5g=
+- SRC-PS0133: rS9u9km8lZlCA4Sq0gwgwZJgbWq5yOYt11dRyGfts7c=
+- SRC-PS0136: _-AeYkYwLUjHaKPPoV36vN0xUFYVCLx47s-N_P93cYE=
+- SRC-RM0096: tnH4I6gyKm3pbSu-GnxPfdu0Uv6tBAWToz27_PX01X0=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  evaluation_report.md shall contain the step-level (row-level) and the field-level accuracy.
+verification: inspection

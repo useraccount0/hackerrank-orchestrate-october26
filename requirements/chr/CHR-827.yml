@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Format of the per-turn entry
+issues: ''
+kind: process
+level: 8.27
+links:
+- SRC-AG0128: 1lJ8CVc-VkdoMNELVOxADvuLGGG5gTSlZEIFsx4YmMg=
+- SRC-RM0112: DbbJnEvOFB8Uokzy_Qjw-7XpqpSkosHe6F0TkGMY-b8=
+- SRC-RM0156: EeJlr1RKDK__3YbgHS0G34AiWm49hZAGLKxSqYDB1po=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  A per-turn entry shall follow the AGENTS.md section 5.2 template: the heading "## [ISO-8601 TIMESTAMP] <short title, max 80 chars>", then the sections "User Prompt (verbatim, secrets redacted):", "Agent Response Summary:" (2-5 sentences: what was done, why, and any important decision), "Actions:" (one bullet per file edited, command run, or tool invoked), and "Context:" with the lines tool=, model=, branch=, repo_root=, worktree=, parent_agent=.
+verification: inspection

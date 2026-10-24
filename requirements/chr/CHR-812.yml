@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Greeting
+issues: ''
+kind: process
+level: 8.12
+links:
+- SRC-AG0070: OYNtF2D8iI_XrxBAH2eRsCo3jq58z5cwjNexWsvKOWU=
+- SRC-AG0072: kvG00jntqzc404LfRadJ66DWyj6lvwDXhfVaZ8E6O6k=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  At session start, the coding agent shall greet the user with this introduction: "Welcome to HackerRank Orchestrate. Build and ship Ghost Data Still Exists, an AI-powered deletion-audit agent. Let's get started."
+verification: inspection

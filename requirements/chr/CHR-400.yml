@@ -1,0 +1,17 @@
+active: true
+derived: false
+header: |
+  Output file (output.csv and steps_json)
+issues: ''
+kind: ''
+level: 4.0
+links: []
+modality: ''
+normative: false
+note: ''
+party: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Output file (output.csv and steps_json)
+verification: ''

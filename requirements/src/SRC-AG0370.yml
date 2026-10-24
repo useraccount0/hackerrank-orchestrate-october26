@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: heading
+file: AGENTS.md
+header: |
+  AGENTS.md:370
+level: 1.201
+line_end: '370'
+line_start: '370'
+links: []
+normative: false
+note: 'rule: Markdown heading'
+ref: ''
+reviewed: VxFSNye6g09EeKorGK1YpqzTQIClScwTpdNMZtICjWw=
+text: |
+  ### 6.10 Reasonable Entry Points

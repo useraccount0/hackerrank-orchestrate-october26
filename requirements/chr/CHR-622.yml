@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Details written in the Markdown files
+issues: ''
+kind: deliverable
+level: 6.22
+links:
+- SRC-AG0355: o5H0eAWlQJbB2sw5pR8_toxPiYbkUQ5kM8dUd9-faYQ=
+- SRC-RM0099: Szg9WR-vQ1rRzCLCfCNVCt9ZUCyD1tjpIZPjtQJXiuM=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  The evaluation metrics, the custom evaluation cases, and the token and cost details shall be written directly inside the Markdown report files.
+verification: inspection

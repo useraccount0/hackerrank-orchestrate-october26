@@ -1,0 +1,22 @@
+active: true
+derived: false
+header: |
+  Reconstruct the state at audit_at
+issues: ''
+kind: functional
+level: 3.13
+links:
+- SRC-AG0031: YdjqcWwCaofup7jlupLdlbiIJqpG3_nabRzehctBW98=
+- SRC-AG0298: 1US1m7XgBwqw5F17mJVDsDEopW-jk1LHUCM5UQNTFa4=
+- SRC-PS0009: VqzSQxYqjIS6rNycWMmXxhAPvEgghxN7tWgwgKe-ZTo=
+- SRC-PS0124: pdBouVg0W8YJJxbwvjy4tGBm5SRtwzcl85OJSnAXl-U=
+- SRC-RM0073: sbs2P_wLeG5O2JApRl622RMH3WBhO0Vn1EVhMzInVYw=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall reconstruct what happened across systems and determine the true state of each relevant resource at the case's audit_at from the available evidence.
+verification: test

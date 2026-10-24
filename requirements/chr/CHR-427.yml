@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  VERIFY_RECORD_ABSENT (VERIFICATION)
+issues: ''
+kind: interface
+level: 4.27
+links:
+- SRC-AG0281: r6p4m1CE2_WSEqreE_28UQijElARYEPaXCzl5W1Q9ys=
+- SRC-AG0285: I60lNBQRlBybZP5fO6vl6MUrDOl_C5-AifJCdXj7yb4=
+- SRC-PS0114: BGlQqMj09qbGP6lL59Z9ucyfD25aRyMoTkqoHmVCmZc=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Operation VERIFY_RECORD_ABSENT shall be used only in phase VERIFICATION, always with state ABSENT, and means: confirm that a record no longer exists.
+verification: test

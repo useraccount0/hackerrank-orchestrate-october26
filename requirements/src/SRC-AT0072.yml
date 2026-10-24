@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: heading
+file: agent_trace_instructions.md
+header: |
+  agent_trace_instructions.md:72
+level: 4.39
+line_end: '72'
+line_start: '72'
+links: []
+normative: false
+note: 'rule: Markdown heading'
+ref: ''
+reviewed: pnjR3_5c4T_F9pWvX_THiy0m6nwshtmzUN3Bien0IIc=
+text: |
+  ## OpenCode

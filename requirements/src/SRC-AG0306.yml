@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: heading
+file: AGENTS.md
+header: |
+  AGENTS.md:306
+level: 1.156
+line_end: '306'
+line_start: '306'
+links: []
+normative: false
+note: 'rule: Markdown heading'
+ref: ''
+reviewed: atTx0Nudn89DTwoSt-m25OnJfYJ1sRly5Qmx2-uq8Ls=
+text: |
+  ### 6.6 Evidence Rules

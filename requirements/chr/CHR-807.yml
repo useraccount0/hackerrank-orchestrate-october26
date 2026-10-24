@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Do not assume bash
+issues: ''
+kind: constraint
+level: 8.7
+links:
+- SRC-AG0402: CWt0vHt_bzkDYAiG_m29vAXca1hQjsnJxK_ECX4dZM8=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  The coding agent shall not assume that bash is available.
+verification: inspection

@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  Contents of code.zip
+issues: ''
+kind: deliverable
+level: 6.2
+links:
+- SRC-AG0363: -uQIlWaWSYTOFD3KaTSmGI1CgIpBH9oaRldIb8gY6xA=
+- SRC-PS0145: fvlWTAkTzSuLquf1KV3_Kk-ARC4ZvZoXA3J1FhghgBA=
+- SRC-RM0122: -3hk6LFIIEJ6I4tOwIKviaSGT1ne4TvGMiX-Rr_hl50=
+- SRC-RM0155: E6s5pp9mpHy2eGtOwmjkxhQz1XDqDqTQ3w4NWHKzrsU=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  code.zip shall contain the runnable solution, the prompts, the configuration, README.md, and the evaluation/ reports.
+verification: inspection

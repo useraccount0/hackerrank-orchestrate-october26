@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  REPORT_REMAINING_RECORD (FINDING)
+issues: ''
+kind: interface
+level: 4.18
+links:
+- SRC-AG0262: WkM9KE122-rbIUZMoaHgAcBREjqz78kArmJxl1Ob9tw=
+- SRC-AG0266: r32p9bJhF8tcSkCDtwlO501rEV7ySR3Bt7CDoZT6r2Q=
+- SRC-PS0105: gt1L2ODeVrMTJa0UHmKas7IwCw4UTPHpoNO9aWRA2yk=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Operation REPORT_REMAINING_RECORD shall be used only in phase FINDING, always with state PRESENT, and means: a record that should have been deleted still exists.
+verification: test

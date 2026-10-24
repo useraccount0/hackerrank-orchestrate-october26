@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Review and redact
+issues: ''
+kind: process
+level: 9.7
+links:
+- SRC-AT0012: YgxxzCnrVseZf5JKgraLxMnlO4nRtL26WMhbCIv4Hak=
+- SRC-AT0109: JPK0k5O8AZfKtPbUO9MSia_AOWwxOum8KD_HpF1deT0=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  The staged files shall be reviewed before sharing: secrets (API keys, tokens, passwords, cookies, private keys), personal information, and material that may not be shared shall be removed or redacted, and authentication files, settings, and credentials shall not be included.
+verification: inspection

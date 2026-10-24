@@ -1,0 +1,23 @@
+active: true
+derived: false
+header: |
+  Create the ZIP
+issues: ''
+kind: process
+level: 9.8
+links:
+- SRC-AT0013: Xo6pRyi2Nw89Kdn3jlwwVYPjUij3x16dn-uHxY-pL8Y=
+- SRC-AT0110: eQ9NicqIIDuDuqwXF3Xkh_aGr-seFOO5bjQhooba-Ps=
+- SRC-AT0116: MryPPqIHFDbqZJeZ8iERptg2XJbl_Vt9TY9_gSpo2sY=
+- SRC-AT0118: aI_L5legqP7A5OZkY9VuCmTfP2Gyo_zfexR8p-2ZVIg=
+- SRC-AT0124: O0zTdJyHa6p8Q5rExlD8sTtCRJpY9K8fNtw09aCA8QM=
+- SRC-AT0126: OVhJY1S3Bx1jnHmqu6zWeLrx-E-ZLHh3flq8nWr5k4c=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  The agent-trace folder shall be zipped with the operating system's built-in archive tool, from the directory that contains agent-trace/: zip -r agent-trace.zip agent-trace on macOS/Linux, or Compress-Archive -Path .\agent-trace -DestinationPath .\agent-trace.zip -Force in Windows PowerShell.
+verification: inspection

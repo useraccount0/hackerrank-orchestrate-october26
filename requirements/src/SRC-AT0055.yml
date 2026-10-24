@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: agent_trace_instructions.md
+header: |
+  agent_trace_instructions.md:55
+level: '4.30'
+line_end: '55'
+line_start: '55'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Antigravity writes a `transcript.jsonl` for each conversation under that conversation’s `brain` folder. The transcript includes agent activity; the same folder can also contain artifacts and screenshots associated with the conversation. Preserve the full relevant conversation folder when you need its artifacts to understand the trace.

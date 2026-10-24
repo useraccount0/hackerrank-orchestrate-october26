@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Apply the deletion policy everywhere
+issues: ''
+kind: functional
+level: 3.17
+links:
+- SRC-AG0029: 9Z4eohFI6Ljmo65rm8m5CCUucxH5eYB5o92mZmrDhTo=
+- SRC-AG0299: Sr2EkWs1efnoXnbQULJVKLltQBKgl337q_tny7f7wI4=
+- SRC-PS0125: E_dWxHa9UOinvaKDxQ0bHlLAy73EDLSzMV-Drpv--4U=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall apply deletion_rules.csv to every relevant record, including account tombstones, active data flows, and restore risks.
+verification: test

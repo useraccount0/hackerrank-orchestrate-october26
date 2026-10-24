@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Encouraged improvements
+issues: ''
+kind: evaluation
+level: 7.8
+links:
+- SRC-PS0162: eSQqCEGh6ZY7-YmuDYBl2JJhoLNDBI_GvlRT6VsZpTU=
+modality: should
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  Participants are encouraged to improve retrieval, multimodal interpretation, identity and deletion-state reconstruction, remediation planning, deterministic verification, batching, caching, and token efficiency.
+verification: n/a

@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  COMPLETE checks cite evidence
+issues: ISS-07
+kind: interface
+level: 4.36
+links:
+- SRC-AG0314: sy4ZMOJWGIpkMi6_wgT9IgQUhJ8V9leYSGoDT3RO1vE=
+- SRC-PS0127: RFG_J9TZlk6yxfdbZENL0ObbCldP477O1NN9G0zTPPk=
+- SRC-RM0073: sbs2P_wLeG5O2JApRl622RMH3WBhO0Vn1EVhMzInVYw=
+- SRC-RM0153: T7ZQCAWdErDrr18x230N36-IWAxDchHzWpNx78lSXh0=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Every VERIFICATION step of a COMPLETE case shall cite in evidence_id the file_id, activity_id, or audit_id of the evidence that proves the current compliant state.
+verification: test

@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Evidence formats
+issues: ISS-09
+kind: interface
+level: '2.20'
+links:
+- SRC-AG0202: qPwGVtenBnAT-GFmv-N0uHcO5V8naSp-yLXg4GlyDdo=
+- SRC-PS0047: L9XYQYf9XxDNI5kmvkctuPf7j6iGhQbilmDETsdFQgw=
+- SRC-RM0059: ijXErmLH_dGlFZqcxQhMDMKfpvUO_5mut2AU8P62Tog=
+modality: fact
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Evidence under dataset/evidence/ may be PDF documents, images (application screenshots), logs, JSON, plain-text records, and SQLite-compatible SQL snapshot exports.
+verification: test

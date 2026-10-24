@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: README.md
+header: |
+  README.md:54
+level: 3.29
+line_end: '54'
+line_start: '54'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  | `system_activity.csv` | Activity across services and data processes |

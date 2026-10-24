@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  Usage report: providers and models
+issues: ''
+kind: deliverable
+level: 6.16
+links:
+- SRC-AG0346: c1EDWjWPDghN9KdF7wdMMTbiWQiPwLhVHHIYQPrPyGc=
+- SRC-AG0348: LCVAGZbrbQEJemHYR15vXjO4UtoOjQJJQEtHNf4xEIc=
+- SRC-PS0158: aIka7geFC1KzIUjaMjr9Fmcy2OqXVFy6HzdJuq5N_ks=
+- SRC-RM0097: h5EHxDMFUanK--Ct8PwkblJ7lwERCF8zPl_tZQ09Cq8=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  usage_report.md shall list the model providers and the model names.
+verification: inspection

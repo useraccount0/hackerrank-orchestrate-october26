@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Secrets from environment variables
+issues: ''
+kind: constraint
+level: 5.8
+links:
+- SRC-AG0086: iyefV9t1IpqvAOpF999MUYikevX5zd72ArrRaWDu04Q=
+- SRC-AG0325: oiojW4v95qkGXExAlm7dQZgIX6fh2roF3fYKCyWp5p8=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The solution shall read secrets and credentials only from environment variables; an uncommitted .env file may be used when needed.
+verification: inspection

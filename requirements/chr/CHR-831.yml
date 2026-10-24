@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Re-read and correct the entry
+issues: ''
+kind: process
+level: 8.31
+links:
+- SRC-AG0149: 6Gir0oztrlicw5aHFOJQv0JIcNYICOqkMVyJ5h8oaKQ=
+- SRC-AG0153: w9mB0AgOyEz7hqufD2SlOZdHhp6LE418mRdCwt7aOow=
+- SRC-AG0419: iJgnf1y_l4nQf5VqXVJu5-vzEj7rpRMJGdv8nZFQCro=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  Before completing a response, the coding agent shall re-read the newly appended log entry, confirm that it has exactly one populated tool= line and exactly one populated model= line with authoritative values, and correct any problem before responding.
+verification: inspection

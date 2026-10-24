@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  Request fields
+issues: ''
+kind: interface
+level: 2.4
+links:
+- SRC-AG0210: WzNMXCDyrgK1-K1MuTmYdBFhVAZUL6Y3kdxm-5K-tBE=
+- SRC-AG0212: KkutZt_Uek96gA92L40zOrJWonRJN-K24HmNIXb9KTM=
+- SRC-PS0051: 4wNTkJWSUekxM-k_A2IfNu8WHYIVDDrzQgmCVI6iyKM=
+- SRC-PS0053: 635g5ou3KoQyARiMcNTC0xG0-hbr3JWVZ9uwzh-DycU=
+modality: fact
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Each request has the fields case_id, email, requested_at, reported_status, reported_at, audit_at, request_text, in this order.
+verification: test

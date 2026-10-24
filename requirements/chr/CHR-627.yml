@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Packaging commands
+issues: ''
+kind: deliverable
+level: 6.27
+links:
+- SRC-RM0129: _Qb39JIEW77SxCRcB9IBPAESl7svNVnh54CS5ZuNx_Q=
+- SRC-RM0133: 3dbwIh6SOYh0iJbEyDhXhBH7-wbreCb2lEHgVajrTww=
+- SRC-RM0139: lqyXDduViZ0AzurBkUnZD0fTiyDBb7BmaiA5lkghW6Q=
+modality: should
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  code.zip should be created from the repository root with the provided command, which bundles README.md and code/ but not the dataset: zip -r code.zip README.md code -x (exclusions) on macOS/Linux, or Compress-Archive -Path README.md, code -DestinationPath code.zip -Force in Windows PowerShell.
+verification: demonstration

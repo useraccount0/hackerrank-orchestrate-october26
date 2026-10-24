@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Keep records the policy requires
+issues: ''
+kind: functional
+level: 3.19
+links:
+- SRC-AG0033: H5lL9gyy6OgZcEkarhI-WTp3quZa8h9fAol9L6OwcvE=
+- SRC-PS0011: 4gY9o418gWDMfd8WbUFErNqfgROK1AWm3wijpk2G0WQ=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall preserve the records that the supplied policy requires the organization to retain.
+verification: test

@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Where personal data can remain
+issues: ''
+kind: purpose
+level: 1.2
+links:
+- SRC-AG0031: YdjqcWwCaofup7jlupLdlbiIJqpG3_nabRzehctBW98=
+- SRC-PS0005: 93TVap-CYFO2k45JmsCMJJhVYpeYgENtFB4SBfM0XNI=
+- SRC-RM0007: z37VERoYdH7ZMVmoxCRTFgYf3TNOVIfCeng1_fcgFww=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The audit shall cover every place where personal data can remain although a deletion workflow reports "Complete": primary and secondary databases and their replicas, logs, support attachments, exports, search indexes, analytics records and exports, archives, and backups.
+verification: analysis

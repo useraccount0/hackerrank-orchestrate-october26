@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  DELETE_RECORD (REMEDIATION)
+issues: ''
+kind: interface
+level: 4.24
+links:
+- SRC-AG0271: Xkr_zRgFUV44EpCStMz3dLxnZi3zZnt_hUviZ5H50z4=
+- SRC-AG0277: sZSvMtjc4EpQ1s-9mhpDhTC1gg_lM-vYfSkIN__TcbA=
+- SRC-PS0111: SSFB8bz7AdML8mqSPKLfsu-qPMiUNefx04mVlF8daWQ=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Operation DELETE_RECORD shall be used only in phase REMEDIATION, always with state ABSENT, and means: remove the entire record.
+verification: test

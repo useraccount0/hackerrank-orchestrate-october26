@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: agent_trace_instructions.md
+header: |
+  agent_trace_instructions.md:47
+level: 4.26
+line_end: '47'
+line_start: '47'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  The files are organized into date folders and are typically named `rollout-*.jsonl`. If you set `CODEX_HOME`, look under `$CODEX_HOME/sessions/` instead. Copy the rollout JSONL files for the challenge sessions into `agent-trace/codex/`. You can use their timestamps and session IDs to identify them. Include a matching `session_index.jsonl` only if useful for mapping session IDs to titles; review it for unrelated information first.

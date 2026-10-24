@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Hidden canonical answers
+issues: ''
+kind: evaluation
+level: 7.1
+links:
+- SRC-PS0131: ASlX0Hni1n_6cbvGrTyyfuUwH5_xPDS1BrM3kK07HpE=
+- SRC-RM0081: YRtfx3mYh62RHYxn1QXg9aC17zsanHnvFnRWZz0xGQA=
+modality: fact
+normative: true
+note: ''
+party: organizer
+ref: ''
+reviewed: pending-user-review
+text: |
+  output.csv will be compared with hidden canonical answers.
+verification: n/a

@@ -1,0 +1,20 @@
+settings:
+  digits: '4'
+  itemformat: yaml
+  prefix: SRC
+  sep: '-'
+attributes:
+  # Custom attributes that are part of an item's fingerprint: changing one of
+  # them marks the item "unreviewed" and the links to it "suspect".
+  reviewed:
+  - file
+  - line_start
+  - line_end
+  - disposition
+  - classified_by
+  - note
+  # Custom attributes shown in published documents.
+  publish:
+  - disposition
+  - classified_by
+  - note

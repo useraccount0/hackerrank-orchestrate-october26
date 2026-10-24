@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: README.md
+header: |
+  README.md:31
+level: 3.15
+line_end: '31'
+line_start: '31'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  - Generate one prediction row for every request in `dataset/deletion_requests.csv`

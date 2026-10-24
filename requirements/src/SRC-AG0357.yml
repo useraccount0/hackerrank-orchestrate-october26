@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: heading
+file: AGENTS.md
+header: |
+  AGENTS.md:357
+level: 1.192
+line_end: '357'
+line_start: '357'
+links: []
+normative: false
+note: 'rule: Markdown heading'
+ref: ''
+reviewed: gSyYMXZ-zerSkRn-iixGRB7MSRGJ4RVcRhzLkckDQbc=
+text: |
+  ### 6.9 Submission Artifacts

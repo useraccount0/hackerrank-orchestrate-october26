@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Only participant-facing data
+issues: ''
+kind: constraint
+level: 5.4
+links:
+- SRC-AG0085: yx4BFJRs92jH990wu8__537ZDjwsWRvp2RE2gDD_8Hk=
+- SRC-AG0421: y3jBe6LiHHfYOsKz6uoqutzT_ZS_f67oAJbq9Isg5M4=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The solution shall use only the participant-facing data under dataset/ for its predictions.
+verification: inspection

@@ -1,0 +1,23 @@
+active: true
+derived: false
+header: |
+  No secrets or personal data in the log
+issues: ''
+kind: process
+level: 8.33
+links:
+- SRC-AG0061: BkfKnO_7vL624bZcd-u9HaYe6zE5S2Al7-axnlmdldo=
+- SRC-AG0161: wudYGS7Sg1cufwYq_pEOX0Fiy1dNtVsnjB-yRD25FGg=
+- SRC-AG0163: hJaFZYMyfi9O6Qk1feo1hZ7_faLB9BBkRBadBKe6wdg=
+- SRC-AG0164: -qUYmepJxdRmXc5NLnHVf0JX3xMPPhYmEVJc9LEdHgE=
+- SRC-AG0420: PYtXR0SjFK9mTDsIlIwE0L5OwSiMjidWenlukLwNha8=
+- SRC-RM0114: 5wsdk9aOcuYlSpXDYsrYLPWK--MaPIhKJxVtn-NKwQI=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  log.txt shall not contain API keys, tokens, session cookies, OAuth codes, credentials, private keys, sensitive configuration, or real personal data; such values shall be redacted.
+verification: inspection

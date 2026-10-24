@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  case_id
+issues: ''
+kind: interface
+level: 2.5
+links:
+- SRC-AG0216: 61V2anaWa1U4rjTBdQbKmppS2XbtjFQOdpH9Om9WTEw=
+modality: fact
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  case_id uniquely identifies a request and its output row.
+verification: test

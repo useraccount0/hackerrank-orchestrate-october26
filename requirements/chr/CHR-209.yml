@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  reported_at
+issues: ''
+kind: interface
+level: 2.9
+links:
+- SRC-AG0220: CCOgEeEoHDEsqxS3LRpuVM2IQUgWcrZh7mJKA0BjVZY=
+modality: fact
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  reported_at is the time when the workflow's claim was reported.
+verification: test

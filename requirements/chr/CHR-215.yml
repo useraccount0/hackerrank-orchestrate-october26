@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  user_audit_log.csv
+issues: ''
+kind: interface
+level: 2.15
+links:
+- SRC-AG0197: O03f7yVvfsnnoLyGE3SCaSwYyTi2bo2szlUCaCl1Ey0=
+- SRC-PS0041: SPxH8kZyzE5xWxANzpUfrDbz-1vdETH7quZWC8yiZfM=
+- SRC-RM0053: F9yBY7ejgfMVL_HVZUIQHnC5targOtGH23CVxu0k5EQ=
+modality: fact
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  dataset/user_audit_log.csv records historical changes to identity fields.
+verification: test

@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Replication drift
+issues: ''
+kind: functional
+level: 3.11
+links:
+- SRC-AG0312: 76hjqRemRJRTQ5_CN21D36uciMNW9ZzL-fc3y4qZOWc=
+- SRC-RM0059: ijXErmLH_dGlFZqcxQhMDMKfpvUO_5mut2AU8P62Tog=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  When investigating replication drift, the system shall compare the relevant tables and the snapshot times of the SQL replicas (primary, regional, reporting, failover).
+verification: test

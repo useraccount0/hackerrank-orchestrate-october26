@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: formatting
+file: AGENTS.md
+header: |
+  AGENTS.md:43
+level: 1.23
+line_end: '43'
+line_start: '43'
+links: []
+normative: false
+note: 'rule: horizontal rule'
+ref: ''
+reviewed: f4ivCnACtIcs4NjqVxLcJWu9l1Wd9puf3HGI8FTapro=
+text: |
+  ---

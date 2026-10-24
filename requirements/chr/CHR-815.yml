@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Remind to submit
+issues: ''
+kind: process
+level: 8.15
+links:
+- SRC-AG0076: u22woh4mb-dJSZ05VHXOwngLyueax5a0vBTiytOn8jw=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  If fewer than 2 hours remain, the coding agent shall remind the user to submit soon.
+verification: inspection

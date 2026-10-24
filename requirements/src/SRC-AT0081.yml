@@ -1,0 +1,19 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: agent_trace_instructions.md
+header: |
+  agent_trace_instructions.md:81-83
+level: 4.44
+line_end: '83'
+line_start: '81'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  ```sh
+  opencode db path
+  ```

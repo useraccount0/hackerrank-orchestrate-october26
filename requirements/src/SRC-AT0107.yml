@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: agent_trace_instructions.md
+header: |
+  agent_trace_instructions.md:107
+level: 4.55
+line_end: '107'
+line_start: '107'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |2
+     - Use the tool’s built-in session, chat, or trajectory export feature (UI or CLI) to save a readable or structured export into `agent-trace/<harness-name>/`.

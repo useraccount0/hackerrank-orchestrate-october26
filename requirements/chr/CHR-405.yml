@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  Sorted by case_id
+issues: ISS-03
+kind: interface
+level: 4.5
+links:
+- SRC-AG0237: ycRoo21A_cq1XqPPEbnn4BY66ESeYZcyFaURlG677qI=
+- SRC-PS0073: cJPYh5ygRFy6xabq1F-qZN1gTqEBOHDQgR5UD9u8UUY=
+- SRC-RM0075: itzMZ0GibOZY7O3XP8azEIq3oxJdONdK4TLIke1WD_w=
+- SRC-RM0151: 9MmGA-lltrkXE5zarKeLsllm7cEwJLbF93ZwFQtjG3M=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The data rows of output.csv shall be sorted by case_id.
+verification: test

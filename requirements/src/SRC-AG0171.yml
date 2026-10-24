@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: heading
+file: AGENTS.md
+header: |
+  AGENTS.md:171
+level: 1.81
+line_end: '171'
+line_start: '171'
+links: []
+normative: false
+note: 'rule: Markdown heading'
+ref: ''
+reviewed: UwUZDatfkRYWWyeWRL0eJV1mjCR44sjG61eH51ZiROg=
+text: |
+  ### 6.1 Dataset Contract

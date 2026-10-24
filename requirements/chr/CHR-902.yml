@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Every session and every harness
+issues: ''
+kind: process
+level: 9.2
+links:
+- SRC-AT0005: nZJT3SOTT_eV7cSrgCa4xUWBh-Igs-z8_hEMDAEmqrg=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  The trace shall include every session used for this challenge (including planning, coding, debugging, and review sessions) and, if more than one agent harness was used, the traces of each one.
+verification: inspection

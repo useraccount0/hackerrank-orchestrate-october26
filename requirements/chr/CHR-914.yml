@@ -1,0 +1,26 @@
+active: true
+derived: false
+header: |
+  Google Antigravity, if used
+issues: ''
+kind: process
+level: 9.14
+links:
+- SRC-AT0055: vSfUeR8pGUltBGaXSL1LWJGzmDR2sWB-qAMTx-lsrg4=
+- SRC-AT0057: Bxftz43CTKSRP5uNmw-lRRJ4Px4R6ON1W4Ma5plwSxw=
+- SRC-AT0059: twwYhMoiYVCPWw7Jw6ZO9-q4KcPOC603mHdFxsulU_A=
+- SRC-AT0060: DVc6moBTM5r9qFiBkn-k7DpgpSYvdZBaCKQPR6f0Wv0=
+- SRC-AT0061: i1JoMQbz170F5kZgLTVjD3YGJ9cmmAF_cFulUzQryP8=
+- SRC-AT0062: aGhvnFD8ptYwLEh5TwmVKxUiSVMUqvfPRJnEDwW3Je8=
+- SRC-AT0064: 2dF17MlcKYZQtJ21vnNq61LJ7WWS607_Lxx_UTWLir4=
+- SRC-AT0066: dl7U_IXCM6JT7Ibvj3rOnlO569cWzS9hiuPFjhRgA3E=
+- SRC-AT0070: Q33a6BOBEl6FR3dA-8seLRnZAD6LQKHZY1mMoPhkDyc=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  If Google Antigravity was used, the complete conversation folder(s) of this challenge under the product's brain directory (with .system_generated/logs/transcript.jsonl) shall be copied to agent-trace/antigravity/, not the entire .gemini directory; last_conversations.json is only a lookup cache, not the transcript.
+verification: inspection

@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Append a SESSION START entry
+issues: ''
+kind: process
+level: 8.11
+links:
+- SRC-AG0017: 9-sjNwqdI7n0ZRsvCcPRYjfkRgu70l7_NaTXALiVpQA=
+- SRC-AG0069: lci_gPUaXDo2SZKfz9MaKizLJLZSyKLseE4DtrERRO0=
+- SRC-AG0414: JDtyqec4xf-zGf9UAbMmfOYvrSvaKRtnKc1aNo0YVkM=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  At the beginning of each session, the coding agent shall append a short SESSION START entry in the format of AGENTS.md section 5.1.
+verification: inspection

@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: AGENTS.md
+header: |
+  AGENTS.md:297
+level: 1.148
+line_end: '297'
+line_start: '297'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  - Resolve both current and historical identifiers for the subject. The request email may match either form.

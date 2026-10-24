@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  AGENTS.md is the source of truth
+issues: ''
+kind: process
+level: 8.1
+links:
+- SRC-AG0005: jZrCPdPRgZUblArofLjs22BxmNXBtNzDiy_VNiIRatY=
+- SRC-AG0007: bv3pioMfUHqrNLt0tpDOAtOuMx3K0DZuYYPVc6NoJBY=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  AGENTS.md is the single source of truth for any AI coding agent working in this repository; the coding agent shall obey it exactly unless the user or the platform gives higher-priority instructions.
+verification: inspection

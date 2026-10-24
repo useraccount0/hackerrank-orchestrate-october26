@@ -1,0 +1,22 @@
+active: true
+derived: false
+header: |
+  Report: case-level accuracy
+issues: ''
+kind: deliverable
+level: '6.10'
+links:
+- SRC-AG0338: 2X239aTChSnofRNbWYDi0M9WojBJY1LUwR770kl5Mas=
+- SRC-AG0340: GZY_FgDkyjhULBWNzVadWbBuRMHbVprTok6OMr3D3-0=
+- SRC-PS0133: rS9u9km8lZlCA4Sq0gwgwZJgbWq5yOYt11dRyGfts7c=
+- SRC-PS0135: q4E7qUyJZWnEAD_iWY_6ZzEQA6a-K8tTTU3lDhr_Jf4=
+- SRC-RM0096: tnH4I6gyKm3pbSu-GnxPfdu0Uv6tBAWToz27_PX01X0=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  evaluation_report.md shall contain the case-level deletion-status accuracy.
+verification: inspection

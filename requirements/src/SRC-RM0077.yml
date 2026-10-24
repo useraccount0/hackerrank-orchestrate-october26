@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: formatting
+file: README.md
+header: |
+  README.md:77
+level: 3.41
+line_end: '77'
+line_start: '77'
+links: []
+normative: false
+note: 'rule: horizontal rule'
+ref: ''
+reviewed: aPYqn0UURYpO3Nlam-IRsTEQP_aQk1C2YBi2DeaSV5k=
+text: |
+  ---

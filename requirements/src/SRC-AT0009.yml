@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: agent_trace_instructions.md
+header: |
+  agent_trace_instructions.md:9
+level: 4.5
+line_end: '9'
+line_start: '9'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  1. Finish the session(s) you intend to submit, then quit the app or CLI before copying its files. This helps ensure logs are written completely.

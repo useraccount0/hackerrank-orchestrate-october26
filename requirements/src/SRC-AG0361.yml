@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: formatting
+file: AGENTS.md
+header: |
+  AGENTS.md:361
+level: 1.194
+line_end: '361'
+line_start: '361'
+links: []
+normative: false
+note: 'rule: table header row'
+ref: ''
+reviewed: kfdowMwMVj6INxLJ-IBL0ZoExK0OuCExLAdf1SPXlOA=
+text: |
+  | Item | Description |

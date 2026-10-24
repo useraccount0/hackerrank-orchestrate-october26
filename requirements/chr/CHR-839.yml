@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  The URL, not directions
+issues: ''
+kind: process
+level: 8.39
+links:
+- SRC-AG0102: J3TPSLKHrIO28Z6U_Vv1n35gMnjNGADqHZvByWv6_K8=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  The coding agent shall give the URL directly and not merely describe where to navigate.
+verification: inspection

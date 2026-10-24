@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Proof for complete deletions
+issues: ''
+kind: functional
+level: 3.31
+links:
+- SRC-AG0033: H5lL9gyy6OgZcEkarhI-WTp3quZa8h9fAol9L6OwcvE=
+- SRC-PS0007: q-ifoC3tu_5oZFfYqaDcMcAtdQGc5pUq3aftEZ1NtHY=
+- SRC-PS0011: 4gY9o418gWDMfd8WbUFErNqfgROK1AWm3wijpk2G0WQ=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  For a complete case, the system shall produce the evidence-backed verification checks that prove the required state.
+verification: test

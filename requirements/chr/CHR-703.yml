@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Scored: identity resolution
+issues: ''
+kind: evaluation
+level: 7.3
+links:
+- SRC-PS0131: ASlX0Hni1n_6cbvGrTyyfuUwH5_xPDS1BrM3kK07HpE=
+- SRC-RM0081: YRtfx3mYh62RHYxn1QXg9aC17zsanHnvFnRWZz0xGQA=
+- SRC-RM0084: p11A93-fVzhJfo1Wt3F8HHo8Mk08Ce1tYl7TNC9uMEk=
+modality: fact
+normative: true
+note: ''
+party: organizer
+ref: ''
+reviewed: pending-user-review
+text: |
+  Scoring considers current and historical identity resolution.
+verification: n/a

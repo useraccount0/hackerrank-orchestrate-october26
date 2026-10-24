@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Claude web or desktop chat, if used
+issues: ''
+kind: process
+level: 9.12
+links:
+- SRC-AT0036: 35CAZ-t2nN_2PjrufxKI5BPHhYKjTESOFTfQ9X2ocFw=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  If Claude was used in the web app or the desktop chat for this challenge, only the relevant conversation export (Settings, Privacy, Export data) shall be included.
+verification: inspection

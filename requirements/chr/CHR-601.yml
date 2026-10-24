@@ -1,0 +1,31 @@
+active: true
+derived: false
+header: |
+  What is submitted
+issues: ISS-05
+kind: deliverable
+level: 6.1
+links:
+- SRC-AG0359: Gj1Mb9mUIlgSZgK9t3KFQHD6obS4XNbEflJX1lr6WN0=
+- SRC-AG0363: -uQIlWaWSYTOFD3KaTSmGI1CgIpBH9oaRldIb8gY6xA=
+- SRC-AG0364: BFRpWqq47K-9L9DKK76deZQ5P0mJIklIcaNb-orT5DA=
+- SRC-AG0365: nnWrvljIAVt_xjfGeluFPx0rS77vyzEHv4pRf-L11MA=
+- SRC-AG0366: ILDeHhhzvOTDKbBCG-7Z38tB5oH_JHGvnOXFghd5dDY=
+- SRC-PS0145: fvlWTAkTzSuLquf1KV3_Kk-ARC4ZvZoXA3J1FhghgBA=
+- SRC-PS0146: VnOxTFniXdsY3C_XaqmLheMnZWhalgGaR-JZZbUvzQE=
+- SRC-PS0147: 0pSHpo5K4rEFIZUcfgn7kbrH_EiiW21aEhI4aidd4FY=
+- SRC-PS0148: RnXJfUm8pWHB20bZMrrA3seF_BtdCMIJTp5cmYRt97w=
+- SRC-PS0162: eSQqCEGh6ZY7-YmuDYBl2JJhoLNDBI_GvlRT6VsZpTU=
+- SRC-RM0122: -3hk6LFIIEJ6I4tOwIKviaSGT1ne4TvGMiX-Rr_hl50=
+- SRC-RM0123: Cn7gS2XNZGzfL_p0czraEZk6AgaVg1VkGeVQE8UHIYk=
+- SRC-RM0124: J7KmIfZClkE2uePKCkaUpVfWnUUFVyugOdzfnB8Lw2Q=
+- SRC-RM0125: Yqxn6gFL0_yhDS-o2I1zeL0Xjv6ZvuqCeo-keRGXqJM=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  The participant submission shall consist of: code.zip, output.csv, the chat transcript (chat_transcript), and an AI interview.
+verification: inspection

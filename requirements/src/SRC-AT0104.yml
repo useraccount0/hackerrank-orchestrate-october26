@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: agent_trace_instructions.md
+header: |
+  agent_trace_instructions.md:104
+level: 4.52
+line_end: '104'
+line_start: '104'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  1. **Finish and quit the session** so all logs and session files are completely written to disk.

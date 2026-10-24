@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Runs from the terminal
+issues: ''
+kind: constraint
+level: 5.2
+links:
+- SRC-AG0320: RlKM19yfn4YmFLebbtWTED4NUvKZnU2J25y0a2tB1DA=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The solution shall be runnable from the terminal.
+verification: demonstration

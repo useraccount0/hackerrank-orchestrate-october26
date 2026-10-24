@@ -1,0 +1,22 @@
+active: true
+derived: false
+header: |
+  Rows for non-deletion requests
+issues: ''
+kind: interface
+level: 4.8
+links:
+- SRC-AG0239: mETHuwVKbbrcGOkumPFlbY-YHqYQllhO5BwX8ohkbq0=
+- SRC-PS0091: -IC9i-7BuSRbQsCUH8p0we3Cu_2AdDHHYYjLgZZSo0E=
+- SRC-PS0093: xeWcovkm87NQ2eLqIfjTieEW9zFFihwCJ3gDWYmMfUI=
+- SRC-PS0095: lv5YCJfHSUe3YFXR7Y4X2E7GsquIlDcTEkqKiIw9Lxs=
+- SRC-RM0073: sbs2P_wLeG5O2JApRl622RMH3WBhO0Vn1EVhMzInVYw=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  When the request does not authorize deletion, the row shall have deletion_status NOT_APPLICABLE and steps_json [] (an empty JSON array), for example case_000,NOT_APPLICABLE,[], because no deletion or deletion verification is authorized.
+verification: test

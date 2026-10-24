@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: AGENTS.md
+header: |
+  AGENTS.md:266
+level: 1.124
+line_end: '266'
+line_start: '266'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  | `REPORT_REMAINING_RECORD` | `PRESENT` | A record that should have been deleted still exists. |

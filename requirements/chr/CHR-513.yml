@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Run instructions for other languages
+issues: ''
+kind: deliverable
+level: 5.13
+links:
+- SRC-AG0372: P9-0Q2l1DlnVmLMh_Af1oClka2ibMxjd3TQdFbEtj2M=
+- SRC-RM0026: rsbnt85sT5VOnUbo4A28j3DnJna6TAoERGe1fh_Z97o=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  If another language is used, its exact setup and run command shall be documented clearly in the submitted README.md.
+verification: inspection

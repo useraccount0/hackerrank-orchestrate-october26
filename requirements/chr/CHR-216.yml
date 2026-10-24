@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  system_activity.csv
+issues: ''
+kind: interface
+level: 2.16
+links:
+- SRC-AG0198: PDjKJ10BCIcdryMmjNZQ8oB-LpFc5FXvHa-QKPQUyP4=
+- SRC-PS0042: fDVb55om5p91FFPHfSb8zor5-2JB5r11R_xGGRclfGg=
+- SRC-RM0054: Ci5eq4wWRw1pKX67bdCLGXYkILuIaFlpDDdNjEOtM68=
+modality: fact
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  dataset/system_activity.csv is a global stream of deletion, synchronization, export, backup, restore, indexing, audit, and related operational events across services and data processes; its rows may describe unrelated people.
+verification: test

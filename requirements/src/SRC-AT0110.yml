@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: agent_trace_instructions.md
+header: |
+  agent_trace_instructions.md:110
+level: 4.58
+line_end: '110'
+line_start: '110'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  5. **Package and upload:** Follow the steps below to create `agent-trace.zip` and upload it with your challenge submission.

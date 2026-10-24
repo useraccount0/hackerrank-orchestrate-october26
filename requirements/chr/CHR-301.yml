@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  Decide first whether deletion was requested
+issues: ''
+kind: functional
+level: 3.1
+links:
+- SRC-AG0029: 9Z4eohFI6Ljmo65rm8m5CCUucxH5eYB5o92mZmrDhTo=
+- SRC-AG0222: -Txr6wHWPGTaxObnvubEMs5w4Fj7KXCbf3G-YL0SfRE=
+- SRC-AG0296: AFlKpCeB0M5o0dSOky3_iaW1lbdz1bKW_zikuM-ruJE=
+- SRC-RM0009: 63eHuzYI6Z7WjMt496s21w3QmksR4KMSDwYiuz6iWV4=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  For each request, the system shall first determine from request_text whether the person actually requested (authorized) deletion, before auditing any deletion state.
+verification: test

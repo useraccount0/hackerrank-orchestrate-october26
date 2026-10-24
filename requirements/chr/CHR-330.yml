@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Checks after remediation
+issues: ''
+kind: functional
+level: '3.30'
+links:
+- SRC-AG0033: H5lL9gyy6OgZcEkarhI-WTp3quZa8h9fAol9L6OwcvE=
+- SRC-AG0304: MlrRhAazipAZ3cfqc7TLSe9uGczjxegWMor0ITflNik=
+- SRC-RM0009: 63eHuzYI6Z7WjMt496s21w3QmksR4KMSDwYiuz6iWV4=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  For an incomplete case, the system shall state the verification checks that must pass after remediation; together they shall cover the required final state of every remediated record or process.
+verification: test

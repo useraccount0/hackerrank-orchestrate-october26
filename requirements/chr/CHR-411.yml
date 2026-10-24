@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  Fields of a step
+issues: ''
+kind: interface
+level: 4.11
+links:
+- SRC-AG0244: CAeJUFwYqHlV9tZp2Dfdlz0608zYAYoxPR7zjOoHiqg=
+- SRC-AG0246: Hl1FYTUf3QLRtanPUKI_4saSfm5Sr7hG92EuouZwfOI=
+- SRC-PS0075: -ZlIJZzvl-KpAcwxNuXQvruZKLzig7prTs7cvASM7qU=
+- SRC-PS0077: h9vqXJd8i1Oyh1VyqX5XitT7VF-U3IMxzZ5HPtcUNeo=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Each step object shall contain exactly the fields step_no, phase, system_id, resource_id, operation, state, and evidence_id.
+verification: test

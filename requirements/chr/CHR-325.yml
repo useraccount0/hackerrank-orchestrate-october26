@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  COMPLETE needs: required records still available
+issues: ''
+kind: functional
+level: 3.25
+links:
+- SRC-AG0301: FowMsKQTwiSQv5hmLWjr-m-sdAgHgRNvFxFrU58wWVs=
+- SRC-PS0024: owj-F9ZlHM5aQ_cwro7BjzTmWynbWGrAZMhHmxyTCPY=
+- SRC-PS0029: Lm02Chf9COY5z7yB7xeRjLmjbmf3no4znGsPzXZbkmY=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall judge a deletion COMPLETE only if every record that must be retained remains available.
+verification: test

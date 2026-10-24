@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Packaging on Windows
+issues: ''
+kind: deliverable
+level: 6.28
+links:
+- SRC-RM0143: Ax3OKxtpiDYU664fJz0aSmJKuPCq3KSje2U3x5Frxu0=
+- SRC-RM0146: 7EQS3u-u4shDt4T3hU4WMJoRi4jHtXnboAYcX0_LHHM=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  On Windows, .venv shall be kept at the repository root (outside code/), and any code/__pycache__ folders shall be removed before running Compress-Archive.
+verification: inspection

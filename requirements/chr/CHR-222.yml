@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Only the requests need answers
+issues: ''
+kind: interface
+level: 2.22
+links:
+- SRC-AG0204: Jn0Udr4mRQ-y1AMnA5FaF3DAbAoL_N4h-EatZ8i8HeE=
+- SRC-RM0061: 5h7GQTtyb7RxNlUiubndhegpzyWic2T4OTpn6wgFreQ=
+modality: fact
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Only deletion_requests.csv requires predictions (answers); the other participant-facing files provide identity, policy, activity, and evidence context.
+verification: inspection

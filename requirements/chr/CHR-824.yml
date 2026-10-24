@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  One shared log
+issues: ''
+kind: process
+level: 8.24
+links:
+- SRC-AG0021: rqHudXh_EUUKiqEvBScU0uFwH0iUp8eH2wyw2_DQe3Q=
+- SRC-AG0060: HaIlIHUA2eiCGk7NN6Apia_kGfY3jPuWjR_3Ny60cps=
+- SRC-AG0157: DphORO4HHrrahim68ZpIAkI3Fh-BY7Elr0EKhsiU81M=
+- SRC-AG0159: NBddchsA6Bkj9UBk7qepwMMLJSPuRRNcZDKhUqiu1_Q=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  One shared log.txt is used per checkout: all agents, sub-agents, and worktrees append to the same file next to the top-level AGENTS.md, never to a private or per-worktree copy.
+verification: inspection

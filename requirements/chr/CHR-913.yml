@@ -1,0 +1,23 @@
+active: true
+derived: false
+header: |
+  OpenAI Codex, if used
+issues: ''
+kind: process
+level: 9.13
+links:
+- SRC-AT0042: Ok4_aE5dhzyQS2zITACaNKuv3EtV5Jj1WeOH-nQ-NhY=
+- SRC-AT0044: clle7Z4xkHXyhOBX_UfKJAQGY-mHzHFAsOj4wCCMSj4=
+- SRC-AT0045: 09z8RE6XbRAsOgPrEpq1nMRAg9lKxWfiOgxHgci7ANQ=
+- SRC-AT0047: PfGK16uB7qwTFXdXfekjC8SpjVoCllI0vKLeAJh1jlY=
+- SRC-AT0049: Huz8qbqzSkSJqN8YdIw8ZRRmMGI06Yo5wVRDz2F6-do=
+- SRC-AT0051: LVDWBZy0A5ljA1bvlCmQtefzJCW6O-Mih_nisj5O47A=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  If OpenAI Codex was used, the rollout files of the challenge sessions (rollout-*.jsonl in date folders under ~/.codex/sessions/, %USERPROFILE%\.codex\sessions\, or $CODEX_HOME/sessions/) shall be copied into agent-trace/codex/ (plus a reviewed session_index.jsonl only if useful), never auth.json, config.toml, credential stores, or the whole .codex directory; for hosted-only sessions, the interface's export shall be used, with a note that no local trace file exists.
+verification: inspection

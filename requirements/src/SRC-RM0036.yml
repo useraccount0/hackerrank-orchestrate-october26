@@ -1,0 +1,19 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: README.md
+header: |
+  README.md:36-38
+level: 3.18
+line_end: '38'
+line_start: '36'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  ```bash
+  python3 code/main.py
+  ```

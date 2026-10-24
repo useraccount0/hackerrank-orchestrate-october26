@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  evidence_files.csv
+issues: ''
+kind: interface
+level: 2.18
+links:
+- SRC-AG0200: DyIjYeZ2hSagPkqRPMmJjMvHyp7qJjNHNguitS-PbUE=
+- SRC-PS0044: I_G1GwYQohmRELcl6_sLYiq5TU3jjV5bfNDfhCd70nQ=
+- SRC-RM0056: mAS3cgIiGMk52acGHKuTx0w1Lr7U4WYX5B2bhQB5Dp8=
+modality: fact
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  dataset/evidence_files.csv is the manifest of the evidence files under dataset/evidence/: it maps each file_id to its path, source origin, and capture time; it does not say which case or user a file concerns.
+verification: test

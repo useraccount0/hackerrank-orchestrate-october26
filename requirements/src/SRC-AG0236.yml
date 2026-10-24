@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: AGENTS.md
+header: |
+  AGENTS.md:236
+level: '1.110'
+line_end: '236'
+line_start: '236'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  - Produce exactly 518 data rows: one for every `case_id` in `dataset/deletion_requests.csv`.

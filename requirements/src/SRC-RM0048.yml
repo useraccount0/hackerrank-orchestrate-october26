@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: formatting
+file: README.md
+header: |
+  README.md:48
+level: 3.23
+line_end: '48'
+line_start: '48'
+links: []
+normative: false
+note: 'rule: table delimiter row'
+ref: ''
+reviewed: e72YCj2OuF0TDiOHxuG8SZh-0HwW1NMgx4CcLfIt22U=
+text: |
+  | --- | --- |

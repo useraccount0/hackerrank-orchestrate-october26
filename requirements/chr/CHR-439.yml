@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Format reference
+issues: ''
+kind: interface
+level: 4.39
+links:
+- SRC-AG0195: f9U0ldqHzGsgt0TZGKnuYdwGzQaG5ftCFs7NyZZoSN8=
+- SRC-RM0073: sbs2P_wLeG5O2JApRl622RMH3WBhO0Vn1EVhMzInVYw=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  output.csv shall follow the decision and serialization format demonstrated by dataset/sample_output.csv, which is the format reference.
+verification: test

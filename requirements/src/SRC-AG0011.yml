@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: heading
+file: AGENTS.md
+header: |
+  AGENTS.md:11
+level: 1.6
+line_end: '11'
+line_start: '11'
+links: []
+normative: false
+note: 'rule: Markdown heading'
+ref: ''
+reviewed: tEnBf0u1Ie3pUbxuH9WKpbWhcWcjk237fcy2tXPZsh8=
+text: |
+  ## 0. TLDR For The Agent

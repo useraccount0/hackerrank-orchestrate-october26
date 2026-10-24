@@ -1,0 +1,22 @@
+active: true
+derived: false
+header: |
+  Report: own evaluation cases
+issues: ''
+kind: deliverable
+level: 6.13
+links:
+- SRC-AG0338: 2X239aTChSnofRNbWYDi0M9WojBJY1LUwR770kl5Mas=
+- SRC-AG0343: UUGDtzJGohpT2VeI873bcX5WT0J7UUuynsnRSbuuBYY=
+- SRC-PS0133: rS9u9km8lZlCA4Sq0gwgwZJgbWq5yOYt11dRyGfts7c=
+- SRC-PS0138: _zbLmbi3YicJgdhEbcq50KqML4gzAULo1ADsoV2oxLk=
+- SRC-RM0096: tnH4I6gyKm3pbSu-GnxPfdu0Uv6tBAWToz27_PX01X0=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  evaluation_report.md shall contain at least three additional evaluation cases created by the participant (team).
+verification: inspection

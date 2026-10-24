@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: AGENTS.md
+header: |
+  AGENTS.md:7
+level: 1.4
+line_end: '7'
+line_start: '7'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Read this file in full before taking any action. Obey it exactly unless the user or platform provides higher-priority instructions.

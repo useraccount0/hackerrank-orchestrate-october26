@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Scored: records and risks found
+issues: ''
+kind: evaluation
+level: 7.4
+links:
+- SRC-PS0131: ASlX0Hni1n_6cbvGrTyyfuUwH5_xPDS1BrM3kK07HpE=
+- SRC-RM0081: YRtfx3mYh62RHYxn1QXg9aC17zsanHnvFnRWZz0xGQA=
+- SRC-RM0085: owNw0GsrdctEAszRREeT07y7eLU85OUEuvK_FlOo09I=
+modality: fact
+normative: true
+note: ''
+party: organizer
+ref: ''
+reviewed: pending-user-review
+text: |
+  Scoring considers the discovery of remaining data (records) and recreation risks.
+verification: n/a

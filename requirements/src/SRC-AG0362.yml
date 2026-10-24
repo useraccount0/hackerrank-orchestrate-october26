@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: formatting
+file: AGENTS.md
+header: |
+  AGENTS.md:362
+level: 1.195
+line_end: '362'
+line_start: '362'
+links: []
+normative: false
+note: 'rule: table delimiter row'
+ref: ''
+reviewed: LCYmO8ZUqveu2VB6JTdWkQySBXGzdxnC3tE7QpatyT4=
+text: |
+  |---|---|

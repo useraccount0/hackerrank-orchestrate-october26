@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Prefer language-native APIs
+issues: ''
+kind: constraint
+level: 8.8
+links:
+- SRC-AG0402: CWt0vHt_bzkDYAiG_m29vAXca1hQjsnJxK_ECX4dZM8=
+modality: should
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  The coding agent should prefer language-native APIs when possible.
+verification: inspection

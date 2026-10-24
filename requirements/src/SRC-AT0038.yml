@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: heading
+file: agent_trace_instructions.md
+header: |
+  agent_trace_instructions.md:38
+level: 4.21
+line_end: '38'
+line_start: '38'
+links: []
+normative: false
+note: 'rule: Markdown heading'
+ref: ''
+reviewed: TD0b5OrbuHNgIHFHhdnh-lm3STM5IhlTWgDqn1-CGxA=
+text: |
+  ## OpenAI Codex

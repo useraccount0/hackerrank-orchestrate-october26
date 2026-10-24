@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: agent_trace_instructions.md
+header: |
+  agent_trace_instructions.md:11
+level: 4.7
+line_end: '11'
+line_start: '11'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  3. Include the session files for this challenge, not your entire home directory or application-data folder.

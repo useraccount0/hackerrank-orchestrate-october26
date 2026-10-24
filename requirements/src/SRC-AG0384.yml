@@ -1,0 +1,18 @@
+active: true
+classified_by: ai
+derived: false
+disposition: not-applicable
+file: AGENTS.md
+header: |
+  AGENTS.md:384
+level: '1.210'
+line_end: '384'
+line_start: '384'
+links: []
+normative: false
+note: |
+  AGENTS.md section 7 applies to the organizers when they maintain or regenerate the challenge dataset; participants do not do that. It may still guide our own test data (step 2), but it is not a challenge requirement for us.
+ref: ''
+reviewed: pending-user-review
+text: |
+  - Preserve referential and temporal consistency across identities, audit history, activity, evidence, sample answers, and hidden golden answers.

@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  requested_at
+issues: ''
+kind: interface
+level: 2.7
+links:
+- SRC-AG0218: gTaDpRC884_YEuhi44GZF3O7iAp3YaW5O-SG9C5kQpg=
+modality: fact
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  requested_at is the time when the request was submitted.
+verification: test

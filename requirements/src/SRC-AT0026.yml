@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: heading
+file: agent_trace_instructions.md
+header: |
+  agent_trace_instructions.md:26
+level: 4.16
+line_end: '26'
+line_start: '26'
+links: []
+normative: false
+note: 'rule: Markdown heading'
+ref: ''
+reviewed: hYDzYHuLOiXpC5EpAssk6NKadIMAMw2QFjsXEkKry7s=
+text: |
+  ### Export a readable transcript

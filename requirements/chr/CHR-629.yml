@@ -1,0 +1,25 @@
+active: true
+derived: false
+header: |
+  Checklist before submitting
+issues: ''
+kind: process
+level: 6.29
+links:
+- SRC-RM0149: fTSaZf717ObGLiL6CVt1B3AIaUBNbBxVhKrcUtrfBH0=
+- SRC-RM0151: 9MmGA-lltrkXE5zarKeLsllm7cEwJLbF93ZwFQtjG3M=
+- SRC-RM0152: KKN2PA0BtyHHobgJBOt3LydAjTHRyMxpcj7sdNwgMng=
+- SRC-RM0153: T7ZQCAWdErDrr18x230N36-IWAxDchHzWpNx78lSXh0=
+- SRC-RM0154: W2RTCbM2IL0zS2DMzLVD56-fhMB65m9iomEC3QAMP3w=
+- SRC-RM0155: E6s5pp9mpHy2eGtOwmjkxhQz1XDqDqTQ3w4NWHKzrsU=
+- SRC-RM0156: EeJlr1RKDK__3YbgHS0G34AiWm49hZAGLKxSqYDB1po=
+- SRC-RM0157: lE2QZiCmVXzs-9-KvYfp8NxCsxfyAFlXi8sJcoRiAjI=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  Before submitting, the participant shall confirm: the output.csv header and its 518 sorted rows; valid JSON arrays with consecutive step numbers from 1; valid evidence IDs in findings and evidence in COMPLETE verification steps; an empty evidence_id in proposed steps; the required code.zip contents; the log.txt format and upload; and that no API keys, credentials, real personal data, or sensitive configuration values are included.
+verification: inspection

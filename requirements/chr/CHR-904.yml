@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Quit before copying
+issues: ''
+kind: process
+level: 9.4
+links:
+- SRC-AT0009: iz79XZAWazxAgJFgtQrNmylnux9bVB81kpOfy6157Ac=
+- SRC-AT0104: R2ItZuhiFTetgUEIrLpD3P3ocS5dZbsT5kbT7iKiyu0=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  The sessions to be submitted shall be finished and the app or CLI quit before its files are copied, so that the logs are completely written.
+verification: inspection

@@ -1,0 +1,23 @@
+active: true
+derived: false
+header: |
+  Write output.csv in the repository root
+issues: ''
+kind: interface
+level: 4.1
+links:
+- SRC-AG0035: P9bjA_bm1trgxxTYTG0i_engY4gxkyGRqQYjkEc0q2s=
+- SRC-AG0201: f8o40tw8I_LONFkhgYGgheaVHRwz0uMj5k5H8W3Javk=
+- SRC-AG0322: BaOg7qMH3rzVwWBtYaguICkUMBxU5GiJxQBTrbGF_8c=
+- SRC-RM0028: anXiYutLjXEBKld4kFe0tcNwiP0l8XKI0IUE4FiL2ZE=
+- SRC-RM0032: WoH5ImZSMZ2_P6MA2Xs8F0VA1AsLrpis6ZLWLIXOrL8=
+- SRC-RM0040: 6QiMiNZwaOO_l-1Q-3S5L9f_LKUpXOW4CvHmBk6g31U=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall write its final predictions to output.csv in the repository root; this root-level file, not dataset/output.csv, is the file that is submitted.
+verification: test

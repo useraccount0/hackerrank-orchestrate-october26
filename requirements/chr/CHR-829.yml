@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  The tool= line
+issues: ''
+kind: process
+level: 8.29
+links:
+- SRC-AG0149: 6Gir0oztrlicw5aHFOJQv0JIcNYICOqkMVyJ5h8oaKQ=
+- SRC-AG0153: w9mB0AgOyEz7hqufD2SlOZdHhp6LE418mRdCwt7aOow=
+- SRC-AG0417: cOgUeFH8abHoMPiJ1oHaLb3mm4w6DaKEYkhR8A2ienU=
+- SRC-AG0419: iJgnf1y_l4nQf5VqXVJu5-vzEj7rpRMJGdv8nZFQCro=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  Every SESSION START and per-turn entry shall contain exactly one non-empty tool= line with the exact name of the coding harness or agent that writes the entry, checked against the harness identity given by the runtime; a missing or blank value, a placeholder, a generic label such as "AI", a model name, or another harness makes the entry invalid; the tool name shall never be guessed.
+verification: inspection

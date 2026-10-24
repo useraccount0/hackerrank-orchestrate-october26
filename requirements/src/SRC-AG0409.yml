@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: heading
+file: AGENTS.md
+header: |
+  AGENTS.md:409
+level: 1.225
+line_end: '409'
+line_start: '409'
+links: []
+normative: false
+note: 'rule: Markdown heading'
+ref: ''
+reviewed: 2qWv-1FFsd0RLKOr6F6DZisjlQMvGeVVJGs_wOkuQ_I=
+text: |
+  ## 9. Quick Checklist For The Agent

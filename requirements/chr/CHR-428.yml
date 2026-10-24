@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  VERIFY_RECORD_PRESENT (VERIFICATION)
+issues: ''
+kind: interface
+level: 4.28
+links:
+- SRC-AG0281: r6p4m1CE2_WSEqreE_28UQijElARYEPaXCzl5W1Q9ys=
+- SRC-AG0286: 4OhyFwbvC9Nq8ohnpDlfRsSsNMbne3kvE3FL8VYZkCw=
+- SRC-PS0115: tgzqIdowlV5SkwD-3XLqxTOxYrecSglRb2v1_MLAp2Q=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Operation VERIFY_RECORD_PRESENT shall be used only in phase VERIFICATION, always with state PRESENT, and means: confirm that a record that the policy requires to be retained still exists.
+verification: test

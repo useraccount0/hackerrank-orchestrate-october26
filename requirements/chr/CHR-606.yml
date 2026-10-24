@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  README with setup and run instructions
+issues: ISS-10
+kind: deliverable
+level: 6.6
+links:
+- SRC-AG0326: E2bW1C9NkQoZ-4kaXCN9bbQ0oHF_mkHXTeq1Db6BgUY=
+- SRC-RM0127: zbocLNOYd1y9sNbtfiV5XkmlfFcyFeQczD4MSWTXDjQ=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  The README.md submitted inside code.zip shall contain clear setup and run instructions.
+verification: inspection

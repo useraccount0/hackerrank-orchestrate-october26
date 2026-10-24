@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  deletion_requests.csv
+issues: ''
+kind: interface
+level: 2.3
+links:
+- SRC-AG0194: zYMg83w2jTiBhSo0Wc1szRcmtRi7Y3tzrgk56G2Pmmk=
+- SRC-PS0037: A0fR6AHRo9rixa-ABBbJhKyEIrpDG3w2Ioa4bU1i4vc=
+- SRC-PS0051: 4wNTkJWSUekxM-k_A2IfNu8WHYIVDDrzQgmCVI6iyKM=
+- SRC-RM0049: ora2EEqRCLSzEP4HA5ZaFvY9QdFSnEyEuqBnqVE7V8E=
+modality: fact
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  dataset/deletion_requests.csv contains the 518 evaluation requests that must be audited; each row is one case.
+verification: test

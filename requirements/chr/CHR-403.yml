@@ -1,0 +1,24 @@
+active: true
+derived: false
+header: |
+  One row per case
+issues: ''
+kind: interface
+level: 4.3
+links:
+- SRC-AG0194: zYMg83w2jTiBhSo0Wc1szRcmtRi7Y3tzrgk56G2Pmmk=
+- SRC-AG0216: 61V2anaWa1U4rjTBdQbKmppS2XbtjFQOdpH9Om9WTEw=
+- SRC-AG0236: B3Ji0lPYsTCGDUmQXdbEMWfur5wET3AVAPHmf9Hdbzc=
+- SRC-PS0061: 7Ndr4CdSpEoo4SiLw3-_ZqDqSDHSzJId1NEjZr2gzDU=
+- SRC-RM0028: anXiYutLjXEBKld4kFe0tcNwiP0l8XKI0IUE4FiL2ZE=
+- SRC-RM0031: vutea5gQkhnAjobRG_1sHKqFn8RBt4vwmdOmuhrS7fo=
+- SRC-RM0073: sbs2P_wLeG5O2JApRl622RMH3WBhO0Vn1EVhMzInVYw=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  output.csv shall contain exactly one data row for every case_id in dataset/deletion_requests.csv.
+verification: test

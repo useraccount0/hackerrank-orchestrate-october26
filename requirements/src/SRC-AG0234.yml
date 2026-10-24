@@ -1,0 +1,18 @@
+active: true
+classified_by: ai
+derived: false
+disposition: heading
+file: AGENTS.md
+header: |
+  AGENTS.md:234
+level: 1.109
+line_end: '234'
+line_start: '234'
+links: []
+normative: false
+note: |
+  Label that introduces the list below; the list items carry the requirements.
+ref: ''
+reviewed: pending-user-review
+text: |
+  Requirements:

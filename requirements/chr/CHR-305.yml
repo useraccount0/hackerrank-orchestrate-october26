@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  The request email may be old
+issues: ''
+kind: functional
+level: 3.5
+links:
+- SRC-AG0217: ecrIbflUSXD864iA4aQb0J9n25ivzTNaSLw5e7MZn4U=
+- SRC-AG0297: It83QGF6AcDjF8aEY7RBCYBaUsVNGvJmG5d6ObaPTvQ=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall identify the subject when the request email matches either a current or a historical email address.
+verification: test

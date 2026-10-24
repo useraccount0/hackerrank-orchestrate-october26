@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Find evidence via the manifest, then read it
+issues: ''
+kind: functional
+level: 3.8
+links:
+- SRC-AG0200: DyIjYeZ2hSagPkqRPMmJjMvHyp7qJjNHNguitS-PbUE=
+- SRC-AG0309: kT3H8OKrBf8oDL98KNRnqgkg3ZoLpghoQoXgFZXICKE=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall use evidence_files.csv to locate evidence files and then inspect their contents; it shall not infer which case a file belongs to from the manifest alone.
+verification: test

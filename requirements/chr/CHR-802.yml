@@ -1,0 +1,22 @@
+active: true
+derived: false
+header: |
+  Read AGENTS.md first
+issues: ''
+kind: process
+level: 8.2
+links:
+- SRC-AG0007: bv3pioMfUHqrNLt0tpDOAtOuMx3K0DZuYYPVc6NoJBY=
+- SRC-AG0013: 9PZZ_ftvBxA8FjP3lIHSbal25EenAGolNIiYEK14Lcw=
+- SRC-AG0015: yEMKXG5xezxHV7JSzOGMVfF2zdcYMrjhakSMQcKeubc=
+- SRC-AG0413: 2x1tPtvx-6SJFfLGyaSF9-sAeeTCADtoQogzFiM3d-U=
+- SRC-CL0001: CxqLWDKH8k1EZw56MKRhaVCbmCKCdv0gcnhBMgQEtsY=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  At the start of each session, the coding agent shall read AGENTS.md completely before taking any action.
+verification: inspection

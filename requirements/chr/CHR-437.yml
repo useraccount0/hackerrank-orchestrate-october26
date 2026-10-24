@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  Future steps have an empty evidence_id
+issues: ''
+kind: interface
+level: 4.37
+links:
+- SRC-AG0258: MaLhKs56sKg3MtwBNPtYq5zmAEk80gJ8auJpafv8df4=
+- SRC-AG0315: Su0JvHVKB3Z-04GjAgvASgIO-t2eG9R-AgMiREr_kmk=
+- SRC-PS0127: RFG_J9TZlk6yxfdbZENL0ObbCldP477O1NN9G0zTPPk=
+- SRC-RM0154: W2RTCbM2IL0zS2DMzLVD56-fhMB65m9iomEC3QAMP3w=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  REMEDIATION steps and post-remediation VERIFICATION steps of an INCOMPLETE case describe future work and shall use the empty string "" as evidence_id.
+verification: test

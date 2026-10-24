@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Phase order
+issues: ''
+kind: interface
+level: 4.15
+links:
+- SRC-AG0242: JkQttVP5vMyfuH6ncJvbdDnek6M_3Auy2BYRn5Y2MPw=
+- SRC-PS0126: hHvxGLZGePejzWFldXkmWzDmAkQ-iDN09aZ_phBaBYo=
+- SRC-RM0075: itzMZ0GibOZY7O3XP8azEIq3oxJdONdK4TLIke1WD_w=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Steps shall be ordered by phase: all FINDING steps first, then all REMEDIATION steps, then all VERIFICATION steps.
+verification: test

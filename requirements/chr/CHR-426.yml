@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  ANONYMIZE_RECORD (REMEDIATION)
+issues: ''
+kind: interface
+level: 4.26
+links:
+- SRC-AG0271: Xkr_zRgFUV44EpCStMz3dLxnZi3zZnt_hUviZ5H50z4=
+- SRC-AG0279: c0LrvkheyAUHSIWFHVxxELCvTgQcVGrP2iMp5scv5jw=
+- SRC-PS0113: pRWDGJuJwCQXnzFs2NDCghkW5CFaPbi9YkBAMANnTd4=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Operation ANONYMIZE_RECORD shall be used only in phase REMEDIATION, always with state ANONYMIZED, and means: keep the record after irreversibly unlinking it from the user.
+verification: test

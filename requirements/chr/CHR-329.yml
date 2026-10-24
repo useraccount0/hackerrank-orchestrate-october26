@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Downstream copies before their sources
+issues: ISS-02
+kind: functional
+level: 3.29
+links:
+- SRC-AG0303: 9TC_1UGwzJc0uS8d5aNmgKZ7js91yBeG0nCtR2x_Dfw=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Within remediation, the system shall process downstream copies before their source records when the dependency requires it.
+verification: test

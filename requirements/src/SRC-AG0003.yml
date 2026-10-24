@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: context
+file: AGENTS.md
+header: |
+  AGENTS.md:3
+level: 1.2
+line_end: '3'
+line_start: '3'
+links: []
+normative: false
+note: Title line that names the challenge; it states no requirement.
+ref: ''
+reviewed: pending-user-review
+text: |
+  HackerRank Orchestrate (October 2026) — Ghost Data Still Exists

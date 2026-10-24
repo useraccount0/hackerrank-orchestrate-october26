@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Do not over-delete
+issues: ''
+kind: functional
+level: 3.18
+links:
+- SRC-AG0299: Sr2EkWs1efnoXnbQULJVKLltQBKgl337q_tny7f7wI4=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall not delete, or propose deleting, data that the policy requires to be retained, redacted, anonymized, or preserved as a tombstone.
+verification: test

@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Prompts in source code or Markdown
+issues: ''
+kind: deliverable
+level: 6.23
+links:
+- SRC-RM0099: Szg9WR-vQ1rRzCLCfCNVCt9ZUCyD1tjpIZPjtQJXiuM=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  Prompts shall be kept in source code or Markdown files.
+verification: inspection

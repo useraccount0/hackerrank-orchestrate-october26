@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Account tombstones
+issues: ''
+kind: functional
+level: '3.20'
+links:
+- SRC-AG0033: H5lL9gyy6OgZcEkarhI-WTp3quZa8h9fAol9L6OwcvE=
+- SRC-AG0300: 1UTZp9Dt8UXp7CyYezfgJ6llao1dDNf8ab_bx07gKgc=
+- SRC-PS0013: jwOm-4IoowEVoEIWyNG_IdI5OdK0aRtI6gTuUy98v8s=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  For an ACCOUNT_TOMBSTONE, the system shall keep the stable internal user reference (user_id), so that permitted records can still reference it, and shall require the removal of the name, email, phone, email hash, and any other direct identifiers required by the applicable REDACT rule.
+verification: test

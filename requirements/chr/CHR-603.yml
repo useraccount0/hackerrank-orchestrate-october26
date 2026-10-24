@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  output.csv is submitted
+issues: ''
+kind: deliverable
+level: 6.3
+links:
+- SRC-AG0364: BFRpWqq47K-9L9DKK76deZQ5P0mJIklIcaNb-orT5DA=
+- SRC-PS0146: VnOxTFniXdsY3C_XaqmLheMnZWhalgGaR-JZZbUvzQE=
+- SRC-RM0123: Cn7gS2XNZGzfL_p0czraEZk6AgaVg1VkGeVQE8UHIYk=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  output.csv, with one answer row for each of the 518 evaluation requests, shall be submitted.
+verification: inspection

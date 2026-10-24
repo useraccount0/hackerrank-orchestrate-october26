@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Stop flows and restores first
+issues: ''
+kind: functional
+level: 3.28
+links:
+- SRC-AG0303: 9TC_1UGwzJc0uS8d5aNmgKZ7js91yBeG0nCtR2x_Dfw=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  Within remediation, the system shall disable data flows and block unsafe restores before changing dependent records.
+verification: test

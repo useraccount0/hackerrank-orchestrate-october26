@@ -1,0 +1,18 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: AGENTS.md
+header: |
+  AGENTS.md:161
+level: 1.75
+line_end: '161'
+line_start: '161'
+links: []
+normative: true
+note: |
+  Heading 'What Not To Log' carries the obligation for the list below it; the list items have no verb of their own.
+ref: ''
+reviewed: pending-user-review
+text: |
+  ### 5.4 What Not To Log

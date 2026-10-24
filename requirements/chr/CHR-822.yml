@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Create the log if missing
+issues: ''
+kind: process
+level: 8.22
+links:
+- SRC-AG0058: w_lmp8kZkxDaz3HDS5VwaiO5tkgsGnN8dVtj9teH8s0=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  The coding agent shall create log.txt if it is missing.
+verification: inspection

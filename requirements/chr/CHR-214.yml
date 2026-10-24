@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  user_identities.csv
+issues: ''
+kind: interface
+level: 2.14
+links:
+- SRC-AG0196: ijzH3vFHq-hLuzUfCrQXDHIvHvo_j28uSjKfWN_jIB0=
+- SRC-PS0040: IMinPsCKV2QqoMe45owJTg6eb33e12CG6CdxFqxdf8A=
+- SRC-RM0052: OGBWOkHxCYDbcyu6u3K3rDpdrzgR74XBvn1q3Os8lh0=
+modality: fact
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  dataset/user_identities.csv contains the current identity snapshot for each user: the stable user_id, name, email, phone, email hash, and the snapshot update time.
+verification: test

@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  AI interview
+issues: ''
+kind: deliverable
+level: 6.5
+links:
+- SRC-AG0366: ILDeHhhzvOTDKbBCG-7Z38tB5oH_JHGvnOXFghd5dDY=
+- SRC-PS0148: RnXJfUm8pWHB20bZMrrA3seF_BtdCMIJTp5cmYRt97w=
+- SRC-RM0125: Yqxn6gFL0_yhDS-o2I1zeL0Xjv6ZvuqCeo-keRGXqJM=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  The participant shall explain, live in an AI interview, the architecture, the investigation approach, the remediation planning, and the evaluation.
+verification: demonstration

@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Deadline passed
+issues: ''
+kind: process
+level: 8.16
+links:
+- SRC-AG0076: u22woh4mb-dJSZ05VHXOwngLyueax5a0vBTiytOn8jw=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  If the deadline has passed, the coding agent shall state that clearly, without blocking further work.
+verification: inspection

@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Format of the SESSION START entry
+issues: ''
+kind: process
+level: 8.26
+links:
+- SRC-AG0111: zWwZVKnpg0D7OrMADnPLRXp8MhyH7IJH8YOt6mROPf8=
+modality: shall
+normative: true
+note: ''
+party: coding-agent
+ref: ''
+reviewed: pending-user-review
+text: |
+  A SESSION START entry shall follow the AGENTS.md section 5.1 template: the heading "## [ISO-8601 TIMESTAMP] SESSION START", then the lines tool=, model=, Repo Root:, Branch:, Worktree:, Parent Agent:, Language: (js, ts, py, or custom:name), and Time Remaining: (Xd Yh Zm, or not configured).
+verification: inspection

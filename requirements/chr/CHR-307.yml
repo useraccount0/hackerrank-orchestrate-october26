@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Search activity and evidence
+issues: ''
+kind: functional
+level: 3.7
+links:
+- SRC-AG0029: 9Z4eohFI6Ljmo65rm8m5CCUucxH5eYB5o92mZmrDhTo=
+- SRC-PS0009: VqzSQxYqjIS6rNycWMmXxhAPvEgghxN7tWgwgKe-ZTo=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  For an authorized deletion, the system shall investigate the supplied records by searching the global activity stream and the evidence for data about the subject.
+verification: test

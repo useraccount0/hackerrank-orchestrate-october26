@@ -1,0 +1,22 @@
+active: true
+derived: false
+header: |
+  What code.zip must not contain
+issues: ''
+kind: deliverable
+level: 6.25
+links:
+- SRC-AG0368: 9bS477RycnEMQhnA7E7TxfdLyRIEnGQvLiDonYmH2Ak=
+- SRC-RM0129: _Qb39JIEW77SxCRcB9IBPAESl7svNVnh54CS5ZuNx_Q=
+- SRC-RM0143: Ax3OKxtpiDYU664fJz0aSmJKuPCq3KSje2U3x5Frxu0=
+- SRC-RM0146: 7EQS3u-u4shDt4T3hU4WMJoRi4jHtXnboAYcX0_LHHM=
+- SRC-RM0157: lE2QZiCmVXzs-9-KvYfp8NxCsxfyAFlXi8sJcoRiAjI=
+modality: shall
+normative: true
+note: ''
+party: participant
+ref: ''
+reviewed: pending-user-review
+text: |
+  code.zip shall not include dataset/, virtual environments (.venv, venv, node_modules), dependency or build caches (such as __pycache__), API keys, credentials, real personal data, or sensitive configuration.
+verification: inspection

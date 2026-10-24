@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  SQL snapshots
+issues: ''
+kind: interface
+level: 2.21
+links:
+- SRC-AG0202: qPwGVtenBnAT-GFmv-N0uHcO5V8naSp-yLXg4GlyDdo=
+- SRC-AG0312: 76hjqRemRJRTQ5_CN21D36uciMNW9ZzL-fc3y4qZOWc=
+- SRC-RM0059: ijXErmLH_dGlFZqcxQhMDMKfpvUO_5mut2AU8P62Tog=
+modality: fact
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  SQL evidence files are readable text and can be executed with SQLite; a capture may contain a primary database, regional replicas, a reporting replica, or a failover replica, so that replication drift can be investigated directly.
+verification: test
