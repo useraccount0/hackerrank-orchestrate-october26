@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Bad input data does not stop the run
+issues: ''
+kind: constraint
+level: 5.1
+links:
+- CHR-503: 5O_AelA6nJ_fizy7YsTFzCz_Tg4vDmCWnkSv8_F3e5Q=
+modality: shall
+normative: true
+note: |
+  Your words: "protect the solution from unexpected, omitted or intentionally missleading inputs from dataset". Sharpens CHR-503 (one valid row per case in a clean run) for runs on imperfect data.
+party: system
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Unexpected, missing, or malformed data in dataset/ shall not stop the run: every case still gets a valid output row, and every problem found is reported.
+verification: test

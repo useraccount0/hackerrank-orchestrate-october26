@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  rule_09: USER_EXPORT -> DELETE
+issues: ''
+kind: functional
+level: 10.9
+links:
+- SRC-DR0010: 8xqXo-YeMPnPAYAkPVMzIkDiy08Gr3NgORmNrucEU-Q=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall apply the required treatment DELETE to every relevant USER_EXPORT record, under the condition "Always" (rule_09).
+verification: test

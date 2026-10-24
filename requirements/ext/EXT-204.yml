@@ -1,0 +1,23 @@
+active: true
+derived: false
+header: |
+  Agent trace prepared at the end
+issues: ISS-05
+kind: deliverable
+level: 2.4
+links:
+- CHR-601: krE2wQR3ZaYB3SiL9_gAE5pYOlaKu1YCRoPy5We277c=
+- CHR-901: 17iBwXCvk1yxtkxVd7S59fbG_yAYM6cwCwPmVnz2trg=
+- SRC-LG0215: mwmCmGr7htR8TwDnoEz6i44ThsIBNE1-2J9KS2yhwgo=
+- SRC-LG0237: eVKtnu7t9ikDMEhfMTjxWtQ7aXlNPOdlCgumiJgBDz4=
+modality: shall
+normative: true
+note: |
+  Your words: first "iss-05 agent trace will be the log.txt from root that organizers requested", then revised: "agent_trace_instructions are provided by org and thats what will be done at the end." Where to upload the ZIP is checked at the end.
+party: participant
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  At the end of the challenge, the agent trace shall be prepared as agent-trace.zip exactly as agent_trace_instructions.md describes, in addition to the four submission items; log.txt stays the chat_transcript.
+verification: inspection

@@ -489,6 +489,39 @@
     * 5.95 problem_statement.md:158 (SRC-PS0158)
     * 5.96 problem_statement.md:160 (SRC-PS0160)
     * 5.97 problem_statement.md:162 (SRC-PS0162)
+    * 6.1 dataset/deletion_rules.csv:1
+    * 6.2 dataset/deletion_rules.csv:2 (SRC-DR0002)
+    * 6.3 dataset/deletion_rules.csv:3 (SRC-DR0003)
+    * 6.4 dataset/deletion_rules.csv:4 (SRC-DR0004)
+    * 6.5 dataset/deletion_rules.csv:5 (SRC-DR0005)
+    * 6.6 dataset/deletion_rules.csv:6 (SRC-DR0006)
+    * 6.7 dataset/deletion_rules.csv:7 (SRC-DR0007)
+    * 6.8 dataset/deletion_rules.csv:8 (SRC-DR0008)
+    * 6.9 dataset/deletion_rules.csv:9 (SRC-DR0009)
+    * 6.10 dataset/deletion_rules.csv:10 (SRC-DR0010)
+    * 6.11 dataset/deletion_rules.csv:11 (SRC-DR0011)
+    * 6.12 dataset/deletion_rules.csv:12 (SRC-DR0012)
+    * 6.13 dataset/deletion_rules.csv:13 (SRC-DR0013)
+    * 6.14 dataset/deletion_rules.csv:14 (SRC-DR0014)
+    * 6.15 dataset/deletion_rules.csv:15 (SRC-DR0015)
+    * 6.16 dataset/deletion_rules.csv:16 (SRC-DR0016)
+    * 7.1 log.txt:15 (SRC-LG0015)
+    * 7.2 log.txt:42
+    * 7.3 log.txt:62 (SRC-LG0062)
+    * 7.4 log.txt:89
+    * 7.5 log.txt:111
+    * 7.6 log.txt:131 (SRC-LG0131)
+    * 7.7 log.txt:152 (SRC-LG0152)
+    * 7.8 log.txt:172
+    * 7.9 log.txt:192
+    * 7.10 log.txt:215 (SRC-LG0215)
+    * 7.11 log.txt:237 (SRC-LG0237)
+    * 7.12 log.txt:258
+    * 7.13 log.txt:280
+    * 7.14 log.txt:301
+    * 7.15 log.txt:322
+    * 7.16 log.txt:343
+    * 7.17 log.txt:364
 
 ## 1.1 AGENTS.md:1 _(SRC-AG0001)_ {#SRC-AG0001}
 
@@ -6377,5 +6410,400 @@ These are the required deliverables. Participants are encouraged to improve retr
 | --------- | ----- |
 | disposition | requirement |
 | classified_by | ai |
+
+
+## 6.1 dataset/deletion_rules.csv:1 _(SRC-DR0001)_ {#SRC-DR0001}
+
+rule_id,data_category,condition,required_action
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | formatting |
+| classified_by | rule |
+| note | rule: CSV header row |
+
+
+## 6.2 dataset/deletion_rules.csv:2 _(SRC-DR0002)_ {#SRC-DR0002}
+
+rule_01,USER_PROFILE,Always,DELETE
+
+*Child links: CHR-1001*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 6.3 dataset/deletion_rules.csv:3 _(SRC-DR0003)_ {#SRC-DR0003}
+
+rule_02,SECONDARY_IDENTIFIER,Always,DELETE
+
+*Child links: CHR-1002*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 6.4 dataset/deletion_rules.csv:4 _(SRC-DR0004)_ {#SRC-DR0004}
+
+rule_03,SEARCH_INDEX_ENTRY,Always,DELETE
+
+*Child links: CHR-1003*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 6.5 dataset/deletion_rules.csv:5 _(SRC-DR0005)_ {#SRC-DR0005}
+
+rule_04,CACHE_ENTRY,Always,DELETE
+
+*Child links: CHR-1004*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 6.6 dataset/deletion_rules.csv:6 _(SRC-DR0006)_ {#SRC-DR0006}
+
+rule_05,SUPPORT_MESSAGE,"Conversation contains shared customer, agent, or order context that must be retained",REDACT
+
+*Child links: CHR-1005*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 6.7 dataset/deletion_rules.csv:7 _(SRC-DR0007)_ {#SRC-DR0007}
+
+rule_06,SUPPORT_ATTACHMENT,Attachment belongs only to the deletion subject,DELETE
+
+*Child links: CHR-1006*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 6.8 dataset/deletion_rules.csv:8 _(SRC-DR0008)_ {#SRC-DR0008}
+
+rule_07,ANALYTICS_PROFILE,Record is still attributable to a user,ANONYMIZE
+
+*Child links: CHR-1007*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 6.9 dataset/deletion_rules.csv:9 _(SRC-DR0009)_ {#SRC-DR0009}
+
+rule_08,PRODUCT_TELEMETRY,Record is still attributable to a user,ANONYMIZE
+
+*Child links: CHR-1008*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 6.10 dataset/deletion_rules.csv:10 _(SRC-DR0010)_ {#SRC-DR0010}
+
+rule_09,USER_EXPORT,Always,DELETE
+
+*Child links: CHR-1009*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 6.11 dataset/deletion_rules.csv:11 _(SRC-DR0011)_ {#SRC-DR0011}
+
+rule_10,MARKETING_PROFILE,Always,DELETE
+
+*Child links: CHR-1010*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 6.12 dataset/deletion_rules.csv:12 _(SRC-DR0012)_ {#SRC-DR0012}
+
+rule_11,EMAIL_DELIVERY_LOG,Log contains a user email address,REDACT
+
+*Child links: CHR-1011*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 6.13 dataset/deletion_rules.csv:13 _(SRC-DR0013)_ {#SRC-DR0013}
+
+rule_12,SECURITY_AUDIT_LOG,Record is within the supplied retention period,RETAIN
+
+*Child links: CHR-1012*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 6.14 dataset/deletion_rules.csv:14 _(SRC-DR0014)_ {#SRC-DR0014}
+
+rule_13,LEGAL_HOLD_RECORD,A supplied legal hold is active,RETAIN
+
+*Child links: CHR-1013*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 6.15 dataset/deletion_rules.csv:15 _(SRC-DR0015)_ {#SRC-DR0015}
+
+rule_14,BACKUP_ARCHIVE,Restore access can be blocked,RETAIN
+
+*Child links: CHR-1014*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 6.16 dataset/deletion_rules.csv:16 _(SRC-DR0016)_ {#SRC-DR0016}
+
+rule_15,ACCOUNT_TOMBSTONE,Account is deleted and only a stable internal user_id is needed to preserve references to retained records,REDACT
+
+*Child links: CHR-1015*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 7.1 log.txt:15 _(SRC-LG0015)_ {#SRC-LG0015}
+
+I'm working on this challenge. I want to understand it completely first. I have already read the files in root. I want to convert all these inputs into structured requirements. I want to do this project using V model. I want them to be traceable and to know exactly which requirements are satisfied at every moment. If any part of the task can be solved or is repeatable by opensource tool I want to use that tool instead of AI. Specifically to this project, I must be able to trace that all input files in the root are completely converted to requirements, that no line is skipped, so that I can go back and forward between imput files and requirements deterministically. I don't want to produce any code results during this step. Next step will be expanding requirements beyond what is given by hackathon, but that part should be clearly differentiated and tracable. Actual coding will come at later stages. I want all the performed steps summarized and written down clearly and in simple terms, stored within the repository. I will work iteratively untill I understand everything produced in this step, before continuing to the next one.
+
+*Child links: EXT-101, EXT-102, EXT-103, EXT-104, EXT-105, EXT-106, EXT-107, EXT-108, EXT-109, EXT-401, EXT-403*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 7.2 log.txt:42 _(SRC-LG0042)_ {#SRC-LG0042}
+
+Start your AI coding tool from the **repository root** so it automatically reads [`AGENTS.md`](./AGENTS.md) and logs your session turns to `log.txt` in the root directory.
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | context |
+| classified_by | ai |
+| note | Your paste of README.md line 24 (SRC-RM0024), sent while the agent was working, as a reminder to log every turn. The requirement is covered there (CHR-803).
+ |
+
+
+## 7.3 log.txt:62 _(SRC-LG0062)_ {#SRC-LG0062}
+
+agents.md was fixed by organisers, the wwww part. Update everything that is affected
+
+*Child links: EXT-110*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 7.4 log.txt:89 _(SRC-LG0089)_ {#SRC-LG0089}
+
+(same message as the previous entry, continued work) agents.md was fixed by organisers, the wwww part. Update everything that is affected
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | context |
+| classified_by | ai |
+| note | The same message as SRC-LG0062, logged a second time for the continued work of the same turn. The words in parentheses were added by the coding agent.
+ |
+
+
+## 7.5 log.txt:111 _(SRC-LG0111)_ {#SRC-LG0111}
+
+Did you update the hackathon deadline?
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | context |
+| classified_by | ai |
+| note | A question. The rules on the deadline come from AGENTS.md (CHR-813 to CHR-816); the end times were then given in SRC-LG0131 and SRC-LG0152.
+ |
+
+
+## 7.6 log.txt:131 _(SRC-LG0131)_ {#SRC-LG0131}
+
+https://www.hackerrank.com/contests/hackerrank-orchestrate-october26/challenges/ghost-data-still-exists
+
+*Child links: EXT-301*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 7.7 log.txt:152 _(SRC-LG0152)_ {#SRC-LG0152}
+
+Interview ends inOctober 26, 2026, 1:30 AM CET
+
+*Child links: EXT-302*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 7.8 log.txt:172 _(SRC-LG0172)_ {#SRC-LG0172}
+
+guide me thorough what I have to review
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | context |
+| classified_by | ai |
+| note | A one-time request: the review guide of step 1, done in step 1.2. It states no requirement.
+ |
+
+
+## 7.9 log.txt:192 _(SRC-LG0192)_ {#SRC-LG0192}
+
+part 1 ok
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | context |
+| classified_by | ai |
+| note | Your approval of one part of the step 1 review. It is recorded in the Doorstop review fingerprints and in docs/steps/step-01.2-review.md; it states no requirement.
+ |
+
+
+## 7.10 log.txt:215 _(SRC-LG0215)_ {#SRC-LG0215}
+
+iss-01 a; iss-03 b; iss-05 agent trace will be the log.txt from root that organizers requested; iss-08 is there a way to enable python3 also on my machine?; iss-10 keep original readme, my readme will be in code folder
+
+*Child links: EXT-201, EXT-203, EXT-204, EXT-205, EXT-206*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 7.11 log.txt:237 _(SRC-LG0237)_ {#SRC-LG0237}
+
+agent_trace_instructions are provided by org and thats what will be done at the end. others are ok. use python as is for now
+
+*Child links: EXT-202, EXT-204, EXT-205*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 7.12 log.txt:258 _(SRC-LG0258)_ {#SRC-LG0258}
+
+section 3 ok
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | context |
+| classified_by | ai |
+| note | Your approval of one part of the step 1 review. It is recorded in the Doorstop review fingerprints and in docs/steps/step-01.2-review.md; it states no requirement.
+ |
+
+
+## 7.13 log.txt:280 _(SRC-LG0280)_ {#SRC-LG0280}
+
+section 4 ok
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | context |
+| classified_by | ai |
+| note | Your approval of one part of the step 1 review. It is recorded in the Doorstop review fingerprints and in docs/steps/step-01.2-review.md; it states no requirement.
+ |
+
+
+## 7.14 log.txt:301 _(SRC-LG0301)_ {#SRC-LG0301}
+
+sections 5 and 6 ok
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | context |
+| classified_by | ai |
+| note | Your approval of one part of the step 1 review. It is recorded in the Doorstop review fingerprints and in docs/steps/step-01.2-review.md; it states no requirement.
+ |
+
+
+## 7.15 log.txt:322 _(SRC-LG0322)_ {#SRC-LG0322}
+
+sections 1 2 and 7 ok
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | context |
+| classified_by | ai |
+| note | Your approval of one part of the step 1 review. It is recorded in the Doorstop review fingerprints and in docs/steps/step-01.2-review.md; it states no requirement.
+ |
+
+
+## 7.16 log.txt:343 _(SRC-LG0343)_ {#SRC-LG0343}
+
+sections 8 and 9 ok
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | context |
+| classified_by | ai |
+| note | Your approval of one part of the step 1 review. It is recorded in the Doorstop review fingerprints and in docs/steps/step-01.2-review.md; it states no requirement.
+ |
+
+
+## 7.17 log.txt:364 _(SRC-LG0364)_ {#SRC-LG0364}
+
+source lines ok part 4 ok
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | context |
+| classified_by | ai |
+| note | Your approval of one part of the step 1 review. It is recorded in the Doorstop review fingerprints and in docs/steps/step-01.2-review.md; it states no requirement.
+ |
 
 

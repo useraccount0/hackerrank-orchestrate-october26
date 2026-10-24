@@ -1,0 +1,17 @@
+active: true
+classified_by: rule
+derived: false
+disposition: formatting
+file: dataset/deletion_rules.csv
+header: |
+  dataset/deletion_rules.csv:1
+level: 6.1
+line_end: '1'
+line_start: '1'
+links: []
+normative: false
+note: 'rule: CSV header row'
+ref: ''
+reviewed: H52W7XgjqdKTc03cnMCDtswEmR6b6v8CY-ntYSDvmBk=
+text: |
+  rule_id,data_category,condition,required_action

@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  AGENTS.md stays unchanged
+issues: ''
+kind: constraint
+level: 1.11
+links: []
+modality: shall
+normative: true
+note: |
+  Your words: "don't change agents.md I dont want this to be complicated any further", in answer to a proposal to shorten it (2026-10-24).
+party: coding-agent
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  AGENTS.md shall stay as the organizers wrote it: it is not shortened, split, or rewritten.
+verification: inspection

@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Open-source tools before AI
+issues: ''
+kind: process
+level: 1.5
+links:
+- SRC-LG0015: NtcsdsnUi0PcmIEQ7yVvm8OWdQi5McuDUj9-mW0YXnE=
+modality: shall
+normative: true
+note: |
+  Your words: "If any part of the task can be solved or is repeatable by opensource tool I want to use that tool instead of AI." Where AI is used for judgment, its result is marked for your review. Read as applying to the solution as well: see EXT-401.
+party: coding-agent
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Any part of the work that an open-source tool can solve or repeat shall be done with that tool instead of AI.
+verification: inspection

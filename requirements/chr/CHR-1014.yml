@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  rule_14: BACKUP_ARCHIVE -> RETAIN
+issues: ISS-11
+kind: functional
+level: 10.14
+links:
+- SRC-DR0015: aCko6cEFJrkc-y0Zg9wuCmg7ssWa8QYacyWD7xs9JCY=
+modality: shall
+normative: true
+note: |
+  The file does not say what applies when the condition does not hold (ISS-11). Retaining the backup goes together with blocking its restore path (BLOCK_RESTORE, VERIFY_RESTORE_BLOCKED; CHR-317 names restore risks).
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall apply the required treatment RETAIN to every relevant BACKUP_ARCHIVE record, under the condition "Restore access can be blocked" (rule_14).
+verification: test

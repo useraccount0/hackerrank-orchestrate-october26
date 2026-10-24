@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: dataset/deletion_rules.csv
+header: |
+  dataset/deletion_rules.csv:15
+level: 6.15
+line_end: '15'
+line_start: '15'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  rule_14,BACKUP_ARCHIVE,Restore access can be blocked,RETAIN

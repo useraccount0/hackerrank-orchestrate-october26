@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  No solution code in requirement steps
+issues: ''
+kind: process
+level: 1.6
+links:
+- SRC-LG0015: NtcsdsnUi0PcmIEQ7yVvm8OWdQi5McuDUj9-mW0YXnE=
+modality: shall
+normative: true
+note: |
+  Your words: "I don't want to produce any code results during this step." and "Actual coding will come at later stages." The tools that manage the requirements (requirements/tools/) are not solution code.
+party: coding-agent
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Steps that produce requirements shall produce no solution code; coding starts at a later stage.
+verification: inspection

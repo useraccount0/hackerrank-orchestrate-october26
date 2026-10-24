@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  rule_08: PRODUCT_TELEMETRY -> ANONYMIZE
+issues: ISS-11
+kind: functional
+level: 10.8
+links:
+- SRC-DR0009: kZ0A1G5-OQconq7NDhO09D3xdlmMYaPa0nnnwgFRkxE=
+modality: shall
+normative: true
+note: |
+  The file does not say what applies when the condition does not hold (ISS-11).
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall apply the required treatment ANONYMIZE to every relevant PRODUCT_TELEMETRY record, under the condition "Record is still attributable to a user" (rule_08).
+verification: test

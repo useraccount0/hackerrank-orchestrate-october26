@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  rule_01: USER_PROFILE -> DELETE
+issues: ''
+kind: functional
+level: 10.1
+links:
+- SRC-DR0002: kM94tXNjB2142Wa3A9cw_zCnnlCoRvWxZjILDGho7ro=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall apply the required treatment DELETE to every relevant USER_PROFILE record, under the condition "Always" (rule_01).
+verification: test

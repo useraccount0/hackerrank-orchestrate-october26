@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  Contest end
+issues: ''
+kind: constraint
+level: 3.1
+links:
+- CHR-814: cOsaqgaThwD0V2TZvYnmg94pKlRA1gVDp_7wBqG0t_0=
+- SRC-LG0131: KbtfidRY7yOPFF5S7hp7dY8WmyWwzOJlCX-EJqdOeqo=
+modality: fact
+normative: true
+note: |
+  You gave the challenge page. The time comes from HackerRank's contest data for it (https://www.hackerrank.com/rest/contests/hackerrank-orchestrate-october26: epoch_endtime 1792935000, no extension), read on 2026-10-24. With an end time known, CHR-814 to CHR-816 apply: the coding agent shows the time remaining and reminds you to submit when fewer than 2 hours remain.
+party: participant
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  The contest, and with it the submission, ends on 2026-10-25 at 13:30 UTC (14:30 CET).
+verification: inspection

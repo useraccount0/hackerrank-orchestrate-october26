@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Code quality (your instructions)
+issues: ''
+kind: ''
+level: 5.0
+links: []
+modality: ''
+normative: false
+note: |
+  Applies to the solution code in code/. The requirements tool srctrace.py was written before these rules and does not fully follow them yet: its docstrings say what functions do.
+party: ''
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Code quality (your instructions)
+verification: ''

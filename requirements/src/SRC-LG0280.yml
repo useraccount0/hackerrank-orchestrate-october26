@@ -1,0 +1,18 @@
+active: true
+classified_by: ai
+derived: false
+disposition: context
+file: log.txt
+header: |
+  log.txt:280
+level: 7.13
+line_end: '280'
+line_start: '280'
+links: []
+normative: false
+note: |
+  Your approval of one part of the step 1 review. It is recorded in the Doorstop review fingerprints and in docs/steps/step-01.2-review.md; it states no requirement.
+ref: ''
+reviewed: pending-user-review
+text: |
+  section 4 ok

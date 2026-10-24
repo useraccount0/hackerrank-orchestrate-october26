@@ -14,7 +14,7 @@ yet?", and get an exact answer from the links.
 ```text
  LEFT: what we want and how we build it                    RIGHT: how we prove it
 
- SRC  source units: the challenge files, line by line   (input; nothing to test)
+ SRC  source units: the input files, line by line       (input; nothing to test)
   |
  CHR  challenge requirements (given by the hackathon)  <-- proven by -->  ACC  acceptance checks
   |                                                                         (output.csv format, 518 rows,
@@ -31,9 +31,9 @@ yet?", and get an exact answer from the links.
 
 | Level | Holds | Step | State |
 |---|---|---|---|
-| SRC | The five challenge files, cut into 489 verbatim source units | 1 | done, waiting for your review |
-| CHR | 202 requirements stated by the hackathon files | 1 | done, waiting for your review |
-| EXT | Requirements we add ourselves, kept apart from CHR | 2 | next |
+| SRC | The five challenge files, `dataset/deletion_rules.csv`, and your prompts in `log.txt`, cut into 522 verbatim source units | 1, 2 | 489 approved by you; the 32 added in step 2 wait for your review |
+| CHR | 217 requirements stated by the hackathon files | 1, 2 | 202 approved by you; section 10 (the 15 policy rules, step 2) waits for your review |
+| EXT | 29 requirements we decided ourselves, kept apart from CHR | 2 | done, waiting for your review; 5 still need their link to your words (after your next commit) |
 | SYS, ARC, DES | System requirements, architecture, module design | later | not started |
 | CODE | The solution | later | not started (`code/` is untouched) |
 | UNT, INT, SYT, ACC | The checks for each level | later | not started |
@@ -47,8 +47,8 @@ tool, not by memory:
 
 | Question | Answered by | Today |
 |---|---|---|
-| 1. Did you approve it? | Doorstop review fingerprints (`doorstop review`; `pending-user-review` means "not yet") | 605 items wait for you |
-| 2. Is it connected? Every input line has a requirement, every requirement has a source, and later every requirement has a design element and a check | `srctrace.py check` and Doorstop's link checks | complete for SRC to CHR |
+| 1. Did you approve it? | Doorstop review fingerprints (`doorstop review`; `pending-user-review` means "not yet") | 82 items from step 2 wait for you |
+| 2. Is it connected? Every input line has a requirement, every requirement has a source, and later every requirement has a design element and a check | `srctrace.py check` and Doorstop's link checks | complete for SRC to CHR; EXT-111 and EXT-503 to EXT-506 wait for their source link |
 | 3. Is it proven? The checks linked to it passed on the latest run | test results that carry requirement IDs (set up when the right side starts) | nothing proven yet: no code and no tests exist |
 
 Because Doorstop fingerprints each item, a later change is never silent. If a source line or a
@@ -59,13 +59,15 @@ organizers fixed one line of AGENTS.md, exactly one requirement was flagged
 
 ## Keeping "beyond the hackathon" requirements apart (step 2)
 
-You asked for the extension requirements to be clearly separated and traceable. Proposal for
-step 2:
+You asked for the extension requirements to be clearly separated and traceable. This is how it
+was done in step 2 ([record](steps/step-02-extension-requirements.md)):
 
-1. Your own instructions (for example: V-model, line-level traceability, open-source tools before
-   AI) are written into an input file of their own, word for word, and you confirm it. That file
-   is added to the source baseline with its own file code. Then your requirements are traceable
-   to your words exactly like the challenge requirements are traceable to the organizers' words.
+1. Your own instructions are input lines like the organizers' lines, so your requirements are
+   traceable to your words exactly like the challenge requirements are traceable to theirs. The
+   plan was to copy your instructions into a file of their own. Instead, the tool reads them
+   straight from `log.txt`, where AGENTS.md already requires every prompt to be logged word for
+   word: only the lines of its "User Prompt" sections become source units (file code `LG`), by a
+   fixed rule. So no AI retypes your words, and there is no second copy that could drift.
 2. Extension requirements go into their own Doorstop document, `EXT`, never into `CHR`. A
    requirement that comes from our own analysis rather than from any input text is marked
    `derived: true` (Doorstop's built-in flag for this) and gets a written rationale.
@@ -79,7 +81,7 @@ step 2:
 | git | yes (GPL-2.0) | Freezing the baseline: inputs read from the commit recorded in [requirements/sources.yml](../requirements/sources.yml) | Already the project's version control; exact and repeatable |
 | Doorstop 3.2 | yes (LGPL-3.0) | Storing items, links, review fingerprints, validation, publishing (Markdown, HTML, traceability matrix) | Plain YAML files in git (clean diffs); built-in parent/child coverage checks; `derived` flag for extensions; pure Python, so it runs here on Python 3.15 |
 | PyYAML, Python | yes | Running Doorstop and the small checker | |
-| `requirements/tools/srctrace.py` | ours, about 300 lines | Cutting files into units; proving line coverage; the line map | No existing tool checks that *every line* of a Markdown file is covered |
+| `requirements/tools/srctrace.py` | ours, about 430 lines | Cutting files into units; proving line coverage; the line map | No existing tool checks that *every line* of a Markdown file is covered |
 
 Considered but not chosen: **StrictDoc** (good tool, but needs many compiled packages that
 are not yet available for Python 3.15 on Windows), **sphinx-needs** (needs a whole Sphinx
@@ -91,7 +93,7 @@ documentation build), **OpenFastTrace** (needs Java, which is not installed).
 |---|---|
 | Baseline | The exact version of the input files that was converted (git commit + SHA-256 per file) |
 | Source unit (SRC) | One non-blank line of an input file, or one whole code block, copied verbatim |
-| Requirement (CHR) | One short statement of something that must be true, written from source units |
+| Requirement (CHR, EXT) | One short statement of something that must be true, written from source units (CHR: the hackathon's; EXT: ours) |
 | Normative | "Contains a requirement" (Doorstop's word). Normative units must be linked from a requirement |
 | Disposition | Our label for what a source unit is: requirement, heading, formatting, context, not-applicable |
 | Link | "This requirement comes from that source unit." Stored in the requirement (the child) |

@@ -1,6 +1,6 @@
 # Open issues found while converting the challenge files
 
-While turning the five challenge files into requirements, some statements turned out to
+While turning the input files into requirements, some statements turned out to
 disagree with each other, to be unclear, or to clash with facts in `dataset/`.
 They are listed here instead of being silently "fixed" inside a requirement.
 
@@ -24,6 +24,7 @@ They are listed here instead of being silently "fixed" inside a requirement.
 | [ISS-08](#iss-08) | `python3` does not work on this Windows machine | CHR-512 | decided: use `python` as is for now |
 | [ISS-09](#iss-09) | The lists of evidence formats differ | CHR-220 | decided: union of the lists |
 | [ISS-10](#iss-10) | `README.md` is both an input and a deliverable | CHR-513, CHR-606, CHR-627 | decided: keep theirs; ours is `code/README.md` |
+| [ISS-11](#iss-11) | A policy rule's condition does not hold: what then? | CHR-1005 to CHR-1008, CHR-1011 to CHR-1015 | open (found in step 2) |
 
 ---
 
@@ -255,3 +256,36 @@ submitted README.md").
 `code/`, so code.zip would hold the organizers' README at the top and ours at `code/README.md`,
 and a reader might open the wrong one. To be decided at packaging time, for example by zipping
 only `code/`.
+
+## ISS-11
+
+**A policy rule's condition does not hold: what then?**
+
+Found in step 2, when `dataset/deletion_rules.csv` was added to the baseline.
+
+- Each rule gives one required treatment for one data category under one condition
+  (SRC-DR0002 to SRC-DR0016, CHR-1001 to CHR-1015).
+- For 6 rules the condition is `Always`. For the other 9 it can be false, and the file does not
+  say what applies then:
+
+| Rule | Category | Condition | Treatment | Open case |
+|---|---|---|---|---|
+| rule_05 | SUPPORT_MESSAGE | conversation contains shared context that must be retained | REDACT | a message without such context |
+| rule_06 | SUPPORT_ATTACHMENT | attachment belongs only to the deletion subject | DELETE | an attachment shared with others |
+| rule_07, rule_08 | ANALYTICS_PROFILE, PRODUCT_TELEMETRY | record is still attributable to a user | ANONYMIZE | a record that is no longer attributable |
+| rule_11 | EMAIL_DELIVERY_LOG | log contains a user email address | REDACT | a log without the email address |
+| rule_12 | SECURITY_AUDIT_LOG | record is within the supplied retention period | RETAIN | a record after its retention period |
+| rule_13 | LEGAL_HOLD_RECORD | a supplied legal hold is active | RETAIN | a hold that is no longer active |
+| rule_14 | BACKUP_ARCHIVE | restore access can be blocked | RETAIN | a restore path that cannot be blocked |
+| rule_15 | ACCOUNT_TOMBSTONE | account is deleted and only `user_id` is needed for references | REDACT | any other tombstone |
+
+**Why it matters:** an audit that meets such a record must still decide whether it is compliant,
+and which finding, remediation, and verification steps it needs.
+
+**Reading used for now:** the requirements state only what the file says. For rule_07, rule_08,
+and rule_11, a false condition most likely means the record already complies (nothing left to
+anonymize or redact).
+
+**Proposal:** settle it in step 3 (design) with evidence: find records of these categories in the
+32 sample cases and see which steps the official sample answers contain for them, as was done for
+ISS-02 and ISS-07.

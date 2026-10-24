@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Status of every requirement at any moment
+issues: ''
+kind: process
+level: 1.4
+links:
+- SRC-LG0015: NtcsdsnUi0PcmIEQ7yVvm8OWdQi5McuDUj9-mW0YXnE=
+modality: shall
+normative: true
+note: |
+  Your words: "and to know exactly which requirements are satisfied at every moment." For the third part, every check (test) will name the requirement IDs it proves; this is set up when the right side of the V starts.
+party: coding-agent
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  At any moment, a tool shall tell for every requirement whether it is satisfied: approved by you, linked to the design and the checks below it, and proven by those checks in the latest run.
+verification: demonstration

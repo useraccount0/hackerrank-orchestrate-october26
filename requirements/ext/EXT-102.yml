@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Traceable in both directions
+issues: ''
+kind: process
+level: 1.2
+links:
+- SRC-LG0015: NtcsdsnUi0PcmIEQ7yVvm8OWdQi5McuDUj9-mW0YXnE=
+modality: shall
+normative: true
+note: |
+  Your words: "I want them to be traceable" and "so that I can go back and forward between imput files and requirements deterministically."
+party: coding-agent
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Every requirement shall be traceable to the input lines it comes from, and every input line to the requirements made from it, in both directions and deterministically.
+verification: test

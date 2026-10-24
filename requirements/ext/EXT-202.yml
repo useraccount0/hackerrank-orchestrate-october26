@@ -1,0 +1,22 @@
+active: true
+derived: false
+header: |
+  Sort order wins inside a phase
+issues: ISS-02
+kind: functional
+level: 2.2
+links:
+- CHR-329: 1lzwWWRN8yGHz1taWGz0L-s9gs4NyuEDkVh573ltYV8=
+- CHR-416: vGUHuOHgIN9Atb7Y1H4Uii7qK9vD01J54yR05sJq2XM=
+- SRC-LG0237: eVKtnu7t9ikDMEhfMTjxWtQ7aXlNPOdlCgumiJgBDz4=
+modality: shall
+normative: true
+note: |
+  Your words: "others are ok", which accepted proposal (a) of ISS-02. All 32 sample answers follow the sort order.
+party: system
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Inside each phase, steps shall always be in the sort order of CHR-416, also where processing downstream copies before their source records (CHR-329) would give another order.
+verification: test

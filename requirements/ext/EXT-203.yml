@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  case_id in number order
+issues: ISS-03
+kind: interface
+level: 2.3
+links:
+- CHR-405: 4c2-NsMVMjLPd1iZ_tgRB0HbpIwNL8sVp5_3TvvRHEk=
+- SRC-LG0215: mwmCmGr7htR8TwDnoEz6i44ThsIBNE1-2J9KS2yhwgo=
+modality: shall
+normative: true
+note: 'Your words: "iss-03 b" (option (b) of ISS-03).'
+party: system
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  The data rows of output.csv shall be sorted by the number after "case_", which is the order of dataset/deletion_requests.csv.
+verification: test

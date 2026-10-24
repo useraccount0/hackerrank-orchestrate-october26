@@ -1,18 +1,23 @@
-# Baseline of the challenge input files that were converted into requirements.
+# Baseline of the input files that were converted into requirements.
 #
 # The files are read from git at `baseline_commit`, NOT from the working tree.
-# Reason: README.md must later be replaced by our own submission README, and the
-# organizers may update their files. The baseline must not change silently.
+# Reason: the organizers may update their files, and log.txt grows with every turn.
+# The baseline must not change silently.
 #
 # code   = 2-letter file code used in source-unit IDs: SRC-<code><first line, 4 digits>
 # level  = first number of the Doorstop level of the file's units (units are <level>.<n>)
+# units  = optional; `user-prompts` means only the lines of the "User Prompt" sections are
+#          source units (your own words); every other line of the file was written by the
+#          coding agent and belongs to no unit, by rule
 # sha256 = SHA-256 of the file content stored in git (LF line endings)
 # lines  = number of lines in the file
 #
 # Baseline history (newest last):
 #   acb3dfca6e94e4803a26e72c49074a488de93c93  step 1: first baseline
 #   0eddbbd33f682eae0a2770d67412af8a3cf4af20  step 1.1: organizers fixed the URL in AGENTS.md line 94 (wwww -> www)
-baseline_commit: 0eddbbd33f682eae0a2770d67412af8a3cf4af20
+#   032a936cb393597668d4b6cef1dca03f3e3c6a36  step 2: adds dataset/deletion_rules.csv and your prompts in log.txt;
+#                                             the five organizer files are byte-identical to 0eddbbd
+baseline_commit: 032a936cb393597668d4b6cef1dca03f3e3c6a36
 files:
   - path: AGENTS.md
     code: AG
@@ -39,3 +44,14 @@ files:
     level: 5
     sha256: dd478250158b4fe387159ea924493e2dda0404edbbb585c92d9f9bb25237156b
     lines: 162
+  - path: dataset/deletion_rules.csv
+    code: DR
+    level: 6
+    sha256: e12d47ca4cbecc4a3c924b52705d9c5b1ebcfa71d6a28f58d988571eeccb32f7
+    lines: 16
+  - path: log.txt
+    code: LG
+    level: 7
+    units: user-prompts
+    sha256: bdd009e915cebb82ea17cdbacf6435c36443a3d62b0306d492b12e29a7e3f22e
+    lines: 381

@@ -211,6 +211,22 @@
     * 9.14 Google Antigravity, if used (CHR-914)
     * 9.15 OpenCode, if used (CHR-915)
     * 9.16 Other harnesses, if used (CHR-916)
+ * 10 Deletion policy (deletion_rules.csv)
+    * 10.1 rule_01: USER_PROFILE -> DELETE (CHR-1001)
+    * 10.2 rule_02: SECONDARY_IDENTIFIER -> DELETE (CHR-1002)
+    * 10.3 rule_03: SEARCH_INDEX_ENTRY -> DELETE (CHR-1003)
+    * 10.4 rule_04: CACHE_ENTRY -> DELETE (CHR-1004)
+    * 10.5 rule_05: SUPPORT_MESSAGE -> REDACT (CHR-1005)
+    * 10.6 rule_06: SUPPORT_ATTACHMENT -> DELETE (CHR-1006)
+    * 10.7 rule_07: ANALYTICS_PROFILE -> ANONYMIZE (CHR-1007)
+    * 10.8 rule_08: PRODUCT_TELEMETRY -> ANONYMIZE (CHR-1008)
+    * 10.9 rule_09: USER_EXPORT -> DELETE (CHR-1009)
+    * 10.10 rule_10: MARKETING_PROFILE -> DELETE (CHR-1010)
+    * 10.11 rule_11: EMAIL_DELIVERY_LOG -> REDACT (CHR-1011)
+    * 10.12 rule_12: SECURITY_AUDIT_LOG -> RETAIN (CHR-1012)
+    * 10.13 rule_13: LEGAL_HOLD_RECORD -> RETAIN (CHR-1013)
+    * 10.14 rule_14: BACKUP_ARCHIVE -> RETAIN (CHR-1014)
+    * 10.15 rule_15: ACCOUNT_TOMBSTONE -> REDACT (CHR-1015)
 
 # 1.0 Purpose and scope {#CHR-100}
 
@@ -3135,5 +3151,252 @@ If another agent harness or coding tool was used (for example Aider, Goose, RooC
 | kind | process |
 | modality | shall |
 | verification | inspection |
+
+
+# 10 Deletion policy (deletion_rules.csv) {#CHR-1000}
+
+Deletion policy (deletion_rules.csv)
+
+| Attribute | Value |
+| --------- | ----- |
+| note | One requirement per rule of dataset/deletion_rules.csv, CHR-1001 to CHR-1015 = rule_01 to rule_15, written as problem_statement.md states the file: the required treatment for each data category (SRC-PS0043), applied to every relevant record (SRC-PS0125, CHR-317). The category, the action, and the condition are copied from the file. The file is read at run time from dataset/ (CHR-201); these requirements are what its content requires.
+ |
+
+
+## 10.1 rule_01: USER_PROFILE -> DELETE _(CHR-1001)_ {#CHR-1001}
+
+The system shall apply the required treatment DELETE to every relevant USER_PROFILE record, under the condition "Always" (rule_01).
+
+*Parent links: SRC-DR0002*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | functional |
+| modality | shall |
+| verification | test |
+
+
+## 10.2 rule_02: SECONDARY_IDENTIFIER -> DELETE _(CHR-1002)_ {#CHR-1002}
+
+The system shall apply the required treatment DELETE to every relevant SECONDARY_IDENTIFIER record, under the condition "Always" (rule_02).
+
+*Parent links: SRC-DR0003*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | functional |
+| modality | shall |
+| verification | test |
+
+
+## 10.3 rule_03: SEARCH_INDEX_ENTRY -> DELETE _(CHR-1003)_ {#CHR-1003}
+
+The system shall apply the required treatment DELETE to every relevant SEARCH_INDEX_ENTRY record, under the condition "Always" (rule_03).
+
+*Parent links: SRC-DR0004*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | functional |
+| modality | shall |
+| verification | test |
+
+
+## 10.4 rule_04: CACHE_ENTRY -> DELETE _(CHR-1004)_ {#CHR-1004}
+
+The system shall apply the required treatment DELETE to every relevant CACHE_ENTRY record, under the condition "Always" (rule_04).
+
+*Parent links: SRC-DR0005*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | functional |
+| modality | shall |
+| verification | test |
+
+
+## 10.5 rule_05: SUPPORT_MESSAGE -> REDACT _(CHR-1005)_ {#CHR-1005}
+
+The system shall apply the required treatment REDACT to every relevant SUPPORT_MESSAGE record, under the condition "Conversation contains shared customer, agent, or order context that must be retained" (rule_05).
+
+*Parent links: SRC-DR0006*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | functional |
+| modality | shall |
+| verification | test |
+| issues | ISS-11 |
+| note | The file does not say what applies when the condition does not hold (ISS-11).
+ |
+
+
+## 10.6 rule_06: SUPPORT_ATTACHMENT -> DELETE _(CHR-1006)_ {#CHR-1006}
+
+The system shall apply the required treatment DELETE to every relevant SUPPORT_ATTACHMENT record, under the condition "Attachment belongs only to the deletion subject" (rule_06).
+
+*Parent links: SRC-DR0007*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | functional |
+| modality | shall |
+| verification | test |
+| issues | ISS-11 |
+| note | The file does not say what applies when the condition does not hold (ISS-11).
+ |
+
+
+## 10.7 rule_07: ANALYTICS_PROFILE -> ANONYMIZE _(CHR-1007)_ {#CHR-1007}
+
+The system shall apply the required treatment ANONYMIZE to every relevant ANALYTICS_PROFILE record, under the condition "Record is still attributable to a user" (rule_07).
+
+*Parent links: SRC-DR0008*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | functional |
+| modality | shall |
+| verification | test |
+| issues | ISS-11 |
+| note | The file does not say what applies when the condition does not hold (ISS-11).
+ |
+
+
+## 10.8 rule_08: PRODUCT_TELEMETRY -> ANONYMIZE _(CHR-1008)_ {#CHR-1008}
+
+The system shall apply the required treatment ANONYMIZE to every relevant PRODUCT_TELEMETRY record, under the condition "Record is still attributable to a user" (rule_08).
+
+*Parent links: SRC-DR0009*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | functional |
+| modality | shall |
+| verification | test |
+| issues | ISS-11 |
+| note | The file does not say what applies when the condition does not hold (ISS-11).
+ |
+
+
+## 10.9 rule_09: USER_EXPORT -> DELETE _(CHR-1009)_ {#CHR-1009}
+
+The system shall apply the required treatment DELETE to every relevant USER_EXPORT record, under the condition "Always" (rule_09).
+
+*Parent links: SRC-DR0010*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | functional |
+| modality | shall |
+| verification | test |
+
+
+## 10.10 rule_10: MARKETING_PROFILE -> DELETE _(CHR-1010)_ {#CHR-1010}
+
+The system shall apply the required treatment DELETE to every relevant MARKETING_PROFILE record, under the condition "Always" (rule_10).
+
+*Parent links: SRC-DR0011*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | functional |
+| modality | shall |
+| verification | test |
+
+
+## 10.11 rule_11: EMAIL_DELIVERY_LOG -> REDACT _(CHR-1011)_ {#CHR-1011}
+
+The system shall apply the required treatment REDACT to every relevant EMAIL_DELIVERY_LOG record, under the condition "Log contains a user email address" (rule_11).
+
+*Parent links: SRC-DR0012*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | functional |
+| modality | shall |
+| verification | test |
+| issues | ISS-11 |
+| note | The file does not say what applies when the condition does not hold (ISS-11).
+ |
+
+
+## 10.12 rule_12: SECURITY_AUDIT_LOG -> RETAIN _(CHR-1012)_ {#CHR-1012}
+
+The system shall apply the required treatment RETAIN to every relevant SECURITY_AUDIT_LOG record, under the condition "Record is within the supplied retention period" (rule_12).
+
+*Parent links: SRC-DR0013*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | functional |
+| modality | shall |
+| verification | test |
+| issues | ISS-11 |
+| note | The file does not say what applies when the condition does not hold (ISS-11). The retention period is supplied in the evidence, for example the column retention_until of the table security_audit_records in the SQL snapshots under dataset/evidence/databases/.
+ |
+
+
+## 10.13 rule_13: LEGAL_HOLD_RECORD -> RETAIN _(CHR-1013)_ {#CHR-1013}
+
+The system shall apply the required treatment RETAIN to every relevant LEGAL_HOLD_RECORD record, under the condition "A supplied legal hold is active" (rule_13).
+
+*Parent links: SRC-DR0014*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | functional |
+| modality | shall |
+| verification | test |
+| issues | ISS-11 |
+| note | The file does not say what applies when the condition does not hold (ISS-11). Legal holds appear in the evidence as resources such as legal_hold_8017; how 'active' is established is worked out in the design step.
+ |
+
+
+## 10.14 rule_14: BACKUP_ARCHIVE -> RETAIN _(CHR-1014)_ {#CHR-1014}
+
+The system shall apply the required treatment RETAIN to every relevant BACKUP_ARCHIVE record, under the condition "Restore access can be blocked" (rule_14).
+
+*Parent links: SRC-DR0015*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | functional |
+| modality | shall |
+| verification | test |
+| issues | ISS-11 |
+| note | The file does not say what applies when the condition does not hold (ISS-11). Retaining the backup goes together with blocking its restore path (BLOCK_RESTORE, VERIFY_RESTORE_BLOCKED; CHR-317 names restore risks).
+ |
+
+
+## 10.15 rule_15: ACCOUNT_TOMBSTONE -> REDACT _(CHR-1015)_ {#CHR-1015}
+
+The system shall apply the required treatment REDACT to every relevant ACCOUNT_TOMBSTONE record, under the condition "Account is deleted and only a stable internal user_id is needed to preserve references to retained records" (rule_15).
+
+*Parent links: SRC-DR0016*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | functional |
+| modality | shall |
+| verification | test |
+| issues | ISS-11 |
+| note | The file does not say what applies when the condition does not hold (ISS-11). Which identifiers are removed and which reference stays is stated in CHR-320.
+ |
 
 

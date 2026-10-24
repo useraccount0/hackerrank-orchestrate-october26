@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Step by step, with your go-ahead
+issues: ''
+kind: process
+level: 1.9
+links:
+- SRC-LG0015: NtcsdsnUi0PcmIEQ7yVvm8OWdQi5McuDUj9-mW0YXnE=
+modality: shall
+normative: true
+note: |
+  Your words: "I will work iteratively untill I understand everything produced in this step, before continuing to the next one."
+party: coding-agent
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  The next step shall start only after you have understood and approved everything the current step produced.
+verification: inspection

@@ -1,0 +1,22 @@
+active: true
+derived: false
+header: |
+  Reports only in code/evaluation/
+issues: ISS-01
+kind: deliverable
+level: 2.1
+links:
+- CHR-607: kUjn_yWVhS3n6o4K8-ea1Cfa1pCbHsNUiY9akUsx9BA=
+- CHR-608: h6Cq1FLV8xgeUVgH1qbzM9hk461jaPQv_WuoOeWb1rM=
+- CHR-609: Xt31vdVLkjSqCl3SbthJfvdwleznxp2OeIrHNdgps48=
+- SRC-LG0215: mwmCmGr7htR8TwDnoEz6i44ThsIBNE1-2J9KS2yhwgo=
+modality: shall
+normative: true
+note: 'Your words: "iss-01 a" (option (a) of ISS-01).'
+party: participant
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  The evaluation reports shall be code/evaluation/evaluation_report.md and code/evaluation/usage_report.md; there shall be no top-level evaluation/ folder.
+verification: inspection

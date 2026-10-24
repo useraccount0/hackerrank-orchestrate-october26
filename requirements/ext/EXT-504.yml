@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Simple, descriptive function names
+issues: ''
+kind: constraint
+level: 5.4
+links: []
+modality: shall
+normative: true
+note: 'Your words: "I want simple descriptive function names".'
+party: system
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Function names shall be simple and descriptive.
+verification: inspection

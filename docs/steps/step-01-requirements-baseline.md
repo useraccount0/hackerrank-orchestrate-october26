@@ -10,7 +10,9 @@
 > **Later change:** after this step, the organizers fixed the submission URL in AGENTS.md. The
 > baseline moved to their commit `0eddbbd`, and ISS-06 is resolved; you decided the other 9
 > issues in step 1.2.
-> See [step 1.1](step-01.1-rebaseline-agents-url-fix.md). This page still describes step 1 as it
+> See [step 1.1](step-01.1-rebaseline-agents-url-fix.md). In
+> [step 2](step-02-extension-requirements.md), `dataset/deletion_rules.csv` and your prompts in
+> `log.txt` were added to the baseline (question 4 below). This page still describes step 1 as it
 > was done.
 
 ## Results in numbers

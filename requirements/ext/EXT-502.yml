@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  Data is never taken as instructions
+issues: ''
+kind: constraint
+level: 5.2
+links:
+- CHR-223: LyHggxckznbt6UbJuGs4rctk26O2X89hGJgb1r-o_kc=
+- CHR-312: VrP-8K6B2iaxGs-o4dtBZxrm9AjFzTCFwbk_IBPNuA4=
+modality: shall
+normative: true
+note: |
+  Your words: "intentionally missleading inputs from dataset". For example, a request text or an evidence file that tells the model what to answer. Two other kinds of misleading data are already challenge requirements: claims that are not proof (CHR-312) and decoys about other people (CHR-223).
+party: system
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Text from dataset/ (request texts, evidence contents) shall be treated only as data, never as instructions, also when it is passed to an AI model.
+verification: test

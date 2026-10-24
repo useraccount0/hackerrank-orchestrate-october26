@@ -1,0 +1,22 @@
+active: true
+derived: false
+header: |
+  Report numbers computed by tools
+issues: ''
+kind: deliverable
+level: 4.3
+links:
+- CHR-607: kUjn_yWVhS3n6o4K8-ea1Cfa1pCbHsNUiY9akUsx9BA=
+- CHR-608: h6Cq1FLV8xgeUVgH1qbzM9hk461jaPQv_WuoOeWb1rM=
+- SRC-LG0015: NtcsdsnUi0PcmIEQ7yVvm8OWdQi5McuDUj9-mW0YXnE=
+modality: shall
+normative: true
+note: |
+  Your words: "If any part of the task can be solved or is repeatable by opensource tool I want to use that tool instead of AI." The recorded data are the 32 sample answers and the model-call records of the run. The texts around the numbers (custom cases, failures and improvements) are written.
+party: system
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  The numbers in evaluation_report.md (accuracies) and in usage_report.md (model calls, tokens, costs) shall be computed by scripts from recorded data, not typed by hand or by AI.
+verification: inspection

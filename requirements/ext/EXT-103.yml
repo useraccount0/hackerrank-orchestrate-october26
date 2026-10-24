@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  No input line skipped
+issues: ''
+kind: process
+level: 1.3
+links:
+- SRC-LG0015: NtcsdsnUi0PcmIEQ7yVvm8OWdQi5McuDUj9-mW0YXnE=
+modality: shall
+normative: true
+note: |
+  Your words: "I must be able to trace that all input files in the root are completely converted to requirements, that no line is skipped". The input files are listed in requirements/sources.yml: the five challenge files in the root, dataset/deletion_rules.csv (your decision of 2026-10-24), and your prompts in log.txt.
+party: coding-agent
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  A tool shall prove that every line of every input file is accounted for: each non-blank line is a source unit, and each source unit is either linked from a requirement or labelled with the reason why it needs none.
+verification: test

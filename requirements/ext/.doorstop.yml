@@ -1,0 +1,26 @@
+settings:
+  digits: '3'
+  itemformat: yaml
+  parent: SRC
+  prefix: EXT
+  sep: '-'
+attributes:
+  # Custom attributes that are part of an item's fingerprint: changing one of
+  # them marks the item "unreviewed".
+  reviewed:
+  - party
+  - kind
+  - modality
+  - verification
+  - issues
+  - rationale
+  - note
+  # Custom attributes shown in published documents.
+  publish:
+  - party
+  - kind
+  - modality
+  - verification
+  - issues
+  - rationale
+  - note

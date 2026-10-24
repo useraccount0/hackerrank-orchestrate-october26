@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  rule_03: SEARCH_INDEX_ENTRY -> DELETE
+issues: ''
+kind: functional
+level: 10.3
+links:
+- SRC-DR0004: wip8CbL9QZu3GRQ8LpTvLZgLBRaePlxisKOJLZABNNk=
+modality: shall
+normative: true
+note: ''
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall apply the required treatment DELETE to every relevant SEARCH_INDEX_ENTRY record, under the condition "Always" (rule_03).
+verification: test

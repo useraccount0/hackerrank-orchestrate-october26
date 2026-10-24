@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  V-model
+issues: ''
+kind: process
+level: 1.1
+links:
+- SRC-LG0015: NtcsdsnUi0PcmIEQ7yVvm8OWdQi5McuDUj9-mW0YXnE=
+modality: shall
+normative: true
+note: 'Your words: "I want to do this project using V model."'
+party: coding-agent
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  The project shall follow the V-model: every level on the left side (requirements, design, code) gets a matching level of checks on the right side, and every item is linked to the item it comes from.
+verification: inspection

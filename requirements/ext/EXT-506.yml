@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Comments say why, not what
+issues: ''
+kind: constraint
+level: 5.6
+links: []
+modality: shall
+normative: true
+note: |
+  Your words: "Comments in code shall not describe what it does, that should be obvious by reading it, but why is some solution chosen if it is not obvious."
+party: system
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Comments shall not describe what the code does; a comment explains why a solution was chosen, and only where that is not obvious.
+verification: inspection

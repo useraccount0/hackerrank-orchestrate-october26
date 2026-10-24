@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Simple error handling
+issues: ''
+kind: constraint
+level: 5.3
+links: []
+modality: shall
+normative: true
+note: |
+  Your words: "I want error handling to be done in a simple way". Checking in one place per entry point is our reading of "simple". Model answers are included because they come from the same data and can be just as unexpected.
+party: system
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Error handling shall be simple: data is checked once, where it enters the solution (when a file from dataset/ is read, or when an AI model answers), and the rest of the code relies on those checks.
+verification: inspection

@@ -1,0 +1,18 @@
+active: true
+derived: false
+header: |
+  Deletion policy (deletion_rules.csv)
+issues: ''
+kind: ''
+level: 10.0
+links: []
+modality: ''
+normative: false
+note: |
+  One requirement per rule of dataset/deletion_rules.csv, CHR-1001 to CHR-1015 = rule_01 to rule_15, written as problem_statement.md states the file: the required treatment for each data category (SRC-PS0043), applied to every relevant record (SRC-PS0125, CHR-317). The category, the action, and the condition are copied from the file. The file is read at run time from dataset/ (CHR-201); these requirements are what its content requires.
+party: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Deletion policy (deletion_rules.csv)
+verification: ''

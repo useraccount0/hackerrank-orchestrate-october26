@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Extensions kept apart and traceable
+issues: ''
+kind: process
+level: 1.7
+links:
+- SRC-LG0015: NtcsdsnUi0PcmIEQ7yVvm8OWdQi5McuDUj9-mW0YXnE=
+modality: shall
+normative: true
+note: |
+  Your words: "Next step will be expanding requirements beyond what is given by hackathon, but that part should be clearly differentiated and tracable." Done with this document, EXT; CHR holds only what the challenge files say.
+party: coding-agent
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Requirements that go beyond what the hackathon gives shall be kept clearly apart from the hackathon's requirements, and shall be traceable.
+verification: inspection

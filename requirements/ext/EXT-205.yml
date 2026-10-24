@@ -1,0 +1,22 @@
+active: true
+derived: false
+header: |
+  Run command for python and python3
+issues: ISS-08
+kind: deliverable
+level: 2.5
+links:
+- CHR-512: 6xFAw4b9tXFnW3Fsb8XzsBu3TVcylVWR_U-rjIiaMlI=
+- SRC-LG0215: mwmCmGr7htR8TwDnoEz6i44ThsIBNE1-2J9KS2yhwgo=
+- SRC-LG0237: eVKtnu7t9ikDMEhfMTjxWtQ7aXlNPOdlCgumiJgBDz4=
+modality: shall
+normative: true
+note: |
+  Your words: "iss-08 is there a way to enable python3 also on my machine?" and "use python as is for now".
+party: participant
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  code/README.md shall give the run command both as python3 code/main.py (macOS, Linux) and as python code/main.py (Windows); on this machine, python is used as it is.
+verification: inspection

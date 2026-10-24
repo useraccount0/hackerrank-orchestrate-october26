@@ -1,0 +1,23 @@
+active: true
+derived: false
+header: |
+  Our README is code/README.md
+issues: ISS-10
+kind: deliverable
+level: 2.6
+links:
+- CHR-513: eceCYiStkvmrJd6NOUli32AoMnPTtL7ulTYnDAW3UmE=
+- CHR-606: Io7QsjyZOe1KYcJ_dtbT-dUFmnaYNFFXfbYMiYVN4lk=
+- CHR-627: M8VuDt-v85ejPt8cCTzR57vN5IicKqN681oQufq4fd4=
+- SRC-LG0215: mwmCmGr7htR8TwDnoEz6i44ThsIBNE1-2J9KS2yhwgo=
+modality: shall
+normative: true
+note: |
+  Your words: "iss-10 keep original readme, my readme will be in code folder". Still open: the provided zip command would pack both READMEs; this is decided at packaging time (ISS-10).
+party: participant
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  The organizers' README.md shall stay unchanged at the repository root; our README with the setup and run instructions shall be code/README.md.
+verification: inspection

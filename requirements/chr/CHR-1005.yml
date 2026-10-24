@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  rule_05: SUPPORT_MESSAGE -> REDACT
+issues: ISS-11
+kind: functional
+level: 10.5
+links:
+- SRC-DR0006: UUfI8bfu2hfIjrVigCGUdbsRYIT8g-XIKDLD85AMZZU=
+modality: shall
+normative: true
+note: |
+  The file does not say what applies when the condition does not hold (ISS-11).
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall apply the required treatment REDACT to every relevant SUPPORT_MESSAGE record, under the condition "Conversation contains shared customer, agent, or order context that must be retained" (rule_05).
+verification: test

@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Every step written down
+issues: ''
+kind: process
+level: 1.8
+links:
+- SRC-LG0015: NtcsdsnUi0PcmIEQ7yVvm8OWdQi5McuDUj9-mW0YXnE=
+modality: shall
+normative: true
+note: |
+  Your words: "I want all the performed steps summarized and written down clearly and in simple terms, stored within the repository." Done in docs/steps/.
+party: coding-agent
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Every performed step shall be summarized clearly and in simple terms, and stored in the repository.
+verification: inspection

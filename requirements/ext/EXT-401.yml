@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  Deterministic code first, AI where needed
+issues: ''
+kind: constraint
+level: 4.1
+links:
+- CHR-507: 53FjKbOfL7WdmHcpLXBmy_1E7zXvZ8zMlue_V98Bruo=
+- SRC-LG0015: NtcsdsnUi0PcmIEQ7yVvm8OWdQi5McuDUj9-mW0YXnE=
+modality: shall
+normative: true
+note: |
+  Your words: "If any part of the task can be solved or is repeatable by opensource tool I want to use that tool instead of AI", read as applying to the solution too. It also serves CHR-507 (deterministic where possible) and keeps the cost in usage_report.md low. The solution stays an AI-powered agent (CHR-101); which parts need a model is decided in the design step.
+party: system
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  The solution shall decide with deterministic code wherever the participant data allows it, and shall call an AI model only for what code cannot decide reliably.
+verification: inspection

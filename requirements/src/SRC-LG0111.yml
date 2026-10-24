@@ -1,0 +1,18 @@
+active: true
+classified_by: ai
+derived: false
+disposition: context
+file: log.txt
+header: |
+  log.txt:111
+level: 7.5
+line_end: '111'
+line_start: '111'
+links: []
+normative: false
+note: |
+  A question. The rules on the deadline come from AGENTS.md (CHR-813 to CHR-816); the end times were then given in SRC-LG0131 and SRC-LG0152.
+ref: ''
+reviewed: pending-user-review
+text: |
+  Did you update the hackathon deadline?

@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  AI interview end
+issues: ''
+kind: constraint
+level: 3.2
+links:
+- CHR-814: cOsaqgaThwD0V2TZvYnmg94pKlRA1gVDp_7wBqG0t_0=
+- SRC-LG0152: K0GmAf2zIMhwMproox61wRJOpQnz8SxCjmtEsSPtjhU=
+modality: fact
+normative: true
+note: 'Your words: "Interview ends inOctober 26, 2026, 1:30 AM CET".'
+party: participant
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  The AI interview ends on 2026-10-26 at 00:30 UTC (01:30 CET).
+verification: inspection

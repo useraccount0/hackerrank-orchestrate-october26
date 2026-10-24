@@ -1,0 +1,18 @@
+active: true
+classified_by: ai
+derived: false
+disposition: context
+file: log.txt
+header: |
+  log.txt:89
+level: 7.4
+line_end: '89'
+line_start: '89'
+links: []
+normative: false
+note: |
+  The same message as SRC-LG0062, logged a second time for the continued work of the same turn. The words in parentheses were added by the coding agent.
+ref: ''
+reviewed: pending-user-review
+text: |
+  (same message as the previous entry, continued work) agents.md was fixed by organisers, the wwww part. Update everything that is affected

@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  rule_13: LEGAL_HOLD_RECORD -> RETAIN
+issues: ISS-11
+kind: functional
+level: 10.13
+links:
+- SRC-DR0014: 8Fv8ve7RRKYc9_2ZndqC7_VgNUeNS2hOh_orPpkgYss=
+modality: shall
+normative: true
+note: |
+  The file does not say what applies when the condition does not hold (ISS-11). Legal holds appear in the evidence as resources such as legal_hold_8017; how 'active' is established is worked out in the design step.
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall apply the required treatment RETAIN to every relevant LEGAL_HOLD_RECORD record, under the condition "A supplied legal hold is active" (rule_13).
+verification: test

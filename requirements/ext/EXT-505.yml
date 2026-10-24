@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  Readable without extra documentation
+issues: ''
+kind: constraint
+level: 5.5
+links: []
+modality: shall
+normative: true
+note: |
+  Your words: "readable code that doesnt need additional documentation". The README with the setup and run instructions is still required (CHR-606, EXT-206); this is about understanding the code.
+party: system
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  The code shall be readable on its own, so that it needs no additional documentation to be understood.
+verification: inspection

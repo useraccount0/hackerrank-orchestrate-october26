@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  rule_15: ACCOUNT_TOMBSTONE -> REDACT
+issues: ISS-11
+kind: functional
+level: 10.15
+links:
+- SRC-DR0016: 77743yLOvFVdRuMThS8HVnMcLyAcdjU6dKPtz_WryTk=
+modality: shall
+normative: true
+note: |
+  The file does not say what applies when the condition does not hold (ISS-11). Which identifiers are removed and which reference stays is stated in CHR-320.
+party: system
+ref: ''
+reviewed: pending-user-review
+text: |
+  The system shall apply the required treatment REDACT to every relevant ACCOUNT_TOMBSTONE record, under the condition "Account is deleted and only a stable internal user_id is needed to preserve references to retained records" (rule_15).
+verification: test

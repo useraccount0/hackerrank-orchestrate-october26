@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  Same inputs, same output.csv
+issues: ''
+kind: constraint
+level: 4.2
+links:
+- CHR-507: 53FjKbOfL7WdmHcpLXBmy_1E7zXvZ8zMlue_V98Bruo=
+modality: shall
+normative: true
+note: |
+  Makes CHR-507 (deterministic where possible) exact and testable. A repeatable result lets a failure found in the evaluation be reproduced and its fix be proven.
+party: system
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Running the solution again on the same inputs shall produce a byte-identical output.csv.
+verification: test
