@@ -11,3 +11,5 @@ own_req_09,"Bitte löschen Sie mein Konto und alle Daten, die Sie über mich ges
 own_req_10,Forget me. Wipe everything you store about me.,true,"A deletion request without the words delete, account, or erase"
 own_req_11,"I am not leaving, so please do not erase anything; I just want to update my billing address.",false,"Mentions erasing, but asks for a correction"
 own_req_12,"Please remove me from your systems entirely, including the old email addresses I used.",true,"""Remove me"" from all systems, not only from a list"
+own_req_13,"If you cannot fix my login by Friday, maybe just delete the account. I'm not sure yet.",false,"Conditional and unsure: no certain request for deletion (EXT-409)"
+own_req_14,"I'm thinking about deleting my account. What would happen to my order history?",false,"Only a question about deletion, not a request (EXT-409)"

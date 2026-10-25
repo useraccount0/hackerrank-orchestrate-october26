@@ -31,6 +31,10 @@ Send = Callable[[str, Mapping[str, str], bytes, float], object]
 class TemporaryError(Exception):
     """A failure that may pass when the call is repeated: a rate limit, a server error, a timeout."""
 
+    def __init__(self, reason: str, wait_seconds: float | None = None):
+        super().__init__(reason)
+        self.wait_seconds = wait_seconds  # what the provider asked for (Retry-After), when it said
+
 
 class RefuseRedirects(urllib.request.HTTPRedirectHandler):
     """urllib would send the API key along to whatever server a redirect names, so none is followed."""
@@ -111,7 +115,7 @@ class ModelGatewayOverHttp:
             except TemporaryError as error:
                 if attempt == self.settings.attempts:
                     raise ModelError(f"the model did not answer in {attempt} attempts ({error})") from None
-                self.sleep(min(60.0, 2.0 ** attempt))
+                self.sleep(error.wait_seconds if error.wait_seconds is not None else min(60.0, 2.0 ** attempt))
         raise ModelError("the model was not called")
 
     def wait_for_turn(self) -> None:
@@ -168,7 +172,8 @@ def post_json(url: str, headers: Mapping[str, str], body: bytes, timeout: float)
     except urllib.error.HTTPError as error:
         error.close()
         if error.code in (408, 429) or error.code >= 500:
-            raise TemporaryError(f"HTTP {error.code}") from None
+            retry_after = error.headers.get("Retry-After") if error.headers else None
+            raise TemporaryError(f"HTTP {error.code}", seconds_to_wait(retry_after)) from None
         if 300 <= error.code < 400:
             raise ModelError(f"the provider answered with a redirect (HTTP {error.code}), which is not followed "
                              "so that the key goes nowhere else; check base_url") from None
@@ -179,6 +184,15 @@ def post_json(url: str, headers: Mapping[str, str], body: bytes, timeout: float)
         raise TemporaryError(type(error).__name__) from None
     except ValueError:
         raise ModelError("the provider's answer is not JSON") from None
+
+
+def seconds_to_wait(retry_after: str | None) -> float | None:
+    """Retry-After in seconds, at most two minutes; None when the provider gave none, or a date."""
+    try:
+        seconds = float(retry_after or "")
+    except ValueError:
+        return None
+    return min(120.0, seconds) if seconds >= 0 else None
 
 
 def cache_key(base_url: str, request: Mapping[str, object]) -> str:

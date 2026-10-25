@@ -847,3 +847,69 @@ repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
 
+## [2026-10-25T03:10:02+01:00] ISS-11 decided; baseline moved to Step7; component c04 built
+
+User Prompt (verbatim, secrets redacted):
+I agree with ISS-11 proposal. Continue with c04
+
+Agent Response Summary:
+Recorded the ISS-11 decision (settle it from the sample answers in c08) and moved the requirements baseline to the commit "Step7", which added two of the user's prompts as context units. Built c04_request_classifier: each distinct request text (375 of 518) goes to the model once, on its own and only as data, and the answer is a JSON object whose English reading is kept as the reason; an empty text asks for nothing, and when the model gives no usable answer the request is audited as a deletion request, a design decision noted in ARC-04 for review. Added 12 own request cases in code/evaluation/request_cases.csv; the real model decided 12 of 12 correctly, and the full run on the 518 requests was started.
+
+Actions:
+* Scratch scripts: requirements/sources.yml moved to 70cbdb3, srctrace.py update and split --new-only, Doorstop import of SRC-LG0766 and SRC-LG0789 (no git add)
+* Edited requirements/ISSUES.md (ISS-11 decision); Doorstop API: ARC-04 linked to EXT-401 and EXT-501, note added
+* Created code/c04_request_classifier/ (request_classifier.py, test_request_classifier.py), code/evaluation/request_cases.csv, docs/steps/step-08-request-classifier.md; edited docs/v-model.md
+* Read-only scripts over dataset/deletion_requests.csv (distinct texts, first sentences); live run through the model gateway in the background
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+
+## [2026-10-25T03:10:02+01:00] Recheck of c04: second question, length limit, flaky c02 test fixed
+
+User Prompt (verbatim, secrets redacted):
+recheck c04
+
+Agent Response Summary:
+The recheck found that an unusable model answer would be cached by c02 and decide every later run, so c04 now asks once more with a stricter question that has its own cached answer. It also found that a huge request text could make the provider refuse calls until c02 stops calling the model for the whole run, so only the first 4,000 characters are sent and the reason says so. Running the test suites in parallel exposed a flaky c02 test whose local server answered without reading the request, which made Windows reset the connection; the test server now reads the request first (0 of 24 parallel runs failed afterwards). A wrong claim in the step record was corrected, and breaking each c04 rule on a scratch copy made its tests fail.
+
+Actions:
+* Edited code/c04_request_classifier/request_classifier.py and test_request_classifier.py, code/c02_model_gateway/test_model_gateway.py
+* Ran the test suites repeatedly in parallel; mutation checks on a scratch copy; mypy and ruff
+* Read the cached classifier answers (format check only); Doorstop API: ARC-04 note extended (no git add)
+* Edited docs/steps/step-08-request-classifier.md
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+
+## [2026-10-25T03:10:03+01:00] c04 live run: the 10 non-deletions found; c02 now waits out rate limits
+
+User Prompt (verbatim, secrets redacted):
+continue
+
+Agent Response Summary:
+The full live run decided that exactly the 10 non-deletion texts (case_533 to case_542) are not deletions and all other 508 are, with accurate English readings, but 8 questions failed with HTTP 429 after 5 attempts and fell back to the deletion guess. A rerun asked those 8 again, and a second run made no model call and repeated all 518 decisions exactly. The cause was traced up to c02, whose retries waited only 30 seconds in all, shorter than a one-minute rate window: the gateway now follows the provider's Retry-After (at most two minutes) and the settings allow 7 attempts, with two new tests and a note in ARC-02. Results: 91 tests OK, mypy and ruff clean, doorstop -F -W clean, srctrace.py check PASS, and 4 items wait for review.
+
+Actions:
+* Live reruns of c04 through the model gateway (scratch scripts)
+* Edited code/c02_model_gateway/model_gateway.py, test_model_gateway.py and code/model_settings.toml
+* Doorstop API: ARC-02 note extended (no git add); doorstop -F -W, srctrace.py check
+* Edited docs/steps/step-08-request-classifier.md, docs/steps/step-07-model-gateway.md, docs/v-model.md
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+

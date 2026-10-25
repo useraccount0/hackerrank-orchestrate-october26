@@ -1,4 +1,4 @@
-"""ARC-04_request_classifier: CHR-301, CHR-302, CHR-303, EXT-501, EXT-502."""
+"""ARC-04_request_classifier: CHR-301, CHR-302, CHR-303, EXT-409, EXT-501, EXT-502."""
 
 import unittest
 from datetime import UTC, datetime
@@ -65,30 +65,58 @@ class Decisions(unittest.TestCase):
 
 
 class NoUsableAnswer(unittest.TestCase):
-    def test_an_unusable_answer_audits_the_request_as_a_deletion_and_says_so(self) -> None:
-        for answer in ("Yes, this is a deletion request.", '{"asks_for_deletion": "true", "request_in_english": "x"}',
-                       '{"asks_for_deletion": false}', '{"asks_for_deletion": false, "request_in_english": " "}',
-                       "[true]", '{"asks_for_deletion": tru'):
-            decision = classify_requests([request("case_1", OPT_OUT)], answer_with(answer))["case_1"]
-            self.assertTrue(decision.authorizes_deletion, answer)
-            self.assertIn("no usable answer from the model", decision.reason)
+    def test_an_unusable_answer_is_asked_again_once_with_a_stricter_question(self) -> None:
+        def unusable_first(question: ModelQuestion) -> str:
+            if question.purpose == "classify_request":
+                return "This customer does not want deletion."
+            return '{"asks_for_deletion": false, "request_in_english": "Stop promotional emails."}'
 
-    def test_a_failed_model_call_costs_only_its_own_text(self) -> None:
+        gateway = FakeModelGateway(unusable_first)
+        decision = classify_requests([request("case_1", OPT_OUT)], gateway)["case_1"]
+        self.assertFalse(decision.authorizes_deletion)
+        self.assertEqual([question.purpose for question in gateway.questions],
+                         ["classify_request", "classify_request_again"])
+        stricter = gateway.questions[1]
+        self.assertEqual(stricter.data, OPT_OUT)
+        self.assertTrue(stricter.instructions.startswith(CLASSIFICATION_INSTRUCTIONS))
+        self.assertNotEqual(stricter.instructions, CLASSIFICATION_INSTRUCTIONS)
+
+    def test_without_a_usable_answer_not_even_a_clear_deletion_text_is_audited_and_a_person_is_asked(self) -> None:
+        for answer in ("Yes, this is a deletion request.", '{"asks_for_deletion": "true", "request_in_english": "x"}',
+                       '{"asks_for_deletion": true}', '{"asks_for_deletion": true, "request_in_english": " "}',
+                       "[true]", '{"asks_for_deletion": tru'):
+            gateway = answer_with(answer)
+            decision = classify_requests([request("case_1", DELETE)], gateway)["case_1"]
+            self.assertFalse(decision.authorizes_deletion, answer)
+            self.assertIn("no usable answer from the model", decision.reason)
+            self.assertIn("a person must check this request", decision.reason)
+            self.assertEqual(len(gateway.questions), 2)
+
+    def test_a_failed_model_call_costs_only_its_own_text_and_is_not_asked_again(self) -> None:
         def fail_on_korean(question: ModelQuestion) -> str:
             if question.data == KOREAN:
                 raise ModelError("HTTP 503")
             return answer_by_text(question)
 
-        decisions = classify_requests([request("case_1", KOREAN), request("case_2", OPT_OUT)],
-                                      FakeModelGateway(fail_on_korean))
-        self.assertTrue(decisions["case_1"].authorizes_deletion)
+        gateway = FakeModelGateway(fail_on_korean)
+        decisions = classify_requests([request("case_1", KOREAN), request("case_2", DELETE)], gateway)
+        self.assertFalse(decisions["case_1"].authorizes_deletion)
         self.assertIn("HTTP 503", decisions["case_1"].reason)
-        self.assertFalse(decisions["case_2"].authorizes_deletion)
+        self.assertTrue(decisions["case_2"].authorizes_deletion)
+        self.assertEqual([question.data for question in gateway.questions], [KOREAN, DELETE])
 
     def test_a_long_reading_is_cut_so_that_the_record_stays_small(self) -> None:
         answer = '{"asks_for_deletion": true, "request_in_english": "' + "very " * 200 + 'long"}'
         decision = classify_requests([request("case_1", DELETE)], answer_with(answer))["case_1"]
         self.assertLessEqual(len(decision.reason), len("the model reads it as: ") + 300)
+
+    def test_only_the_start_of_a_huge_text_goes_to_the_model_and_the_reason_says_so(self) -> None:
+        gateway = FakeModelGateway(answer_by_text)
+        decision = classify_requests([request("case_1", DELETE + " x" * 100_000)], gateway)["case_1"]
+        self.assertEqual(len(gateway.questions[0].data), 4000)
+        self.assertTrue(gateway.questions[0].data.startswith(DELETE))
+        self.assertTrue(decision.authorizes_deletion)
+        self.assertIn("only its first 4000 characters were read", decision.reason)
 
 
 class RealRequests(unittest.TestCase):

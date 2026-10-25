@@ -47,7 +47,7 @@ text model's quality on real requests is measured in c04.
 | One adapter for the OpenAI-compatible chat API, over Python's own `urllib` | NVIDIA, OpenAI, Anthropic (compatibility endpoint), and local servers speak it, so "any model" is a setting (EXT-405); no new dependency |
 | Instructions and dataset text go in separate messages; temperature 0 | Dataset text is data, never instructions (EXT-502); answers repeat |
 | **Every answer is cached** in `.cache/model_answers/` (ignored by git, never in `code.zip`) | A second run gives byte-identical output without calls (EXT-402) and costs nothing; the cache holds text from `dataset/`, so it stays local |
-| Calls are spaced 1.6 s apart; a rate limit, server error, or timeout is retried up to 5 times with growing pauses | The free tier allows about 40 calls a minute |
+| Calls are spaced 1.6 s apart; a rate limit, server error, or timeout is retried up to 5 times with growing pauses (since [step 8](step-08-request-classifier.md): 7 times, and as long as the provider's Retry-After asks) | The free tier allows about 40 calls a minute |
 | A refusal (wrong key, model not available) fails at once, without the provider's error text | NVIDIA's error text names the account behind the key, and problems end up in logs |
 | No redirect is followed (added in the recheck) | Otherwise the key would travel to whatever server a redirect names (REV-010) |
 | After 3 questions failed in a row, the run stops calling; cached answers still come (added in the recheck) | A provider that is down would otherwise cost every remaining question all its attempts, hours in all |

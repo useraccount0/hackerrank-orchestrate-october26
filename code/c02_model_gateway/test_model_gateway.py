@@ -122,6 +122,11 @@ class HandlesFailures(GatewayTest):
         self.assertEqual(len(provider.requests), 2)
         self.assertIn(2.0, self.sleeps)
 
+    def test_the_wait_the_provider_asks_for_is_kept(self) -> None:
+        provider = FakeProvider(TemporaryError("HTTP 429", 7.0), reply("yes"))
+        self.assertEqual(self.gateway(provider).ask(QUESTION), "yes")
+        self.assertEqual(self.sleeps, [7.0, 1.0])  # the provider's wait, then the usual spacing
+
     def test_a_model_that_keeps_failing_gives_a_model_error(self) -> None:
         provider = FakeProvider(*[TemporaryError("HTTP 503")] * 3)
         with self.assertRaisesRegex(ModelError, "3 attempts"):
@@ -152,10 +157,13 @@ class HandlesFailures(GatewayTest):
         self.assertEqual(list(self.cache_dir.iterdir()), [])
 
 
-def send(handler: BaseHTTPRequestHandler, status: int, body: bytes = b"", location: str = "") -> None:
+def send(handler: BaseHTTPRequestHandler, status: int, body: bytes = b"", location: str = "",
+         retry_after: str = "") -> None:
     handler.send_response(status)
     if location:
         handler.send_header("Location", location)
+    if retry_after:
+        handler.send_header("Retry-After", retry_after)
     handler.end_headers()
     handler.wfile.write(body)
 
@@ -166,6 +174,9 @@ class HttpErrors(unittest.TestCase):
 
         class Handler(BaseHTTPRequestHandler):
             def do_POST(self) -> None:
+                # Closing with the request unread makes Windows reset the connection, which the
+                # client can see before it has read the answer.
+                self.rfile.read(int(self.headers.get("Content-Length", 0)))
                 respond(self)
 
             def do_GET(self) -> None:
@@ -190,6 +201,17 @@ class HttpErrors(unittest.TestCase):
         status["code"] = 503
         with self.assertRaises(TemporaryError):
             post_json(url, {}, b"{}", 5.0)
+
+    def test_a_rate_limit_carries_the_wait_the_provider_asks_for(self) -> None:
+        header = {"retry_after": ""}
+        url = self.serve(lambda handler: send(handler, 429, retry_after=header["retry_after"]))
+        for retry_after, expected in (("7", 7.0), ("100000", 120.0), ("Sun, 25 Oct 2026 07:28:00 GMT", None),
+                                      ("", None), ("-3", None)):
+            header["retry_after"] = retry_after
+            with self.subTest(retry_after=retry_after):
+                with self.assertRaises(TemporaryError) as limited:
+                    post_json(url, {}, b"{}", 5.0)
+                self.assertEqual(limited.exception.wait_seconds, expected)
 
     def test_a_redirect_is_not_followed_so_the_key_reaches_no_other_server(self) -> None:
         received: list[str | None] = []

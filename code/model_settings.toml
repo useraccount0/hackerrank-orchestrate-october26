@@ -17,7 +17,9 @@ vision = "nvidia/nemotron-3.5-super-vl-120b-a12b"
 [calls]
 max_answer_tokens = 4000
 timeout_seconds = 120
-attempts = 5                          # for rate limits, server errors, and timeouts
+# For rate limits, server errors, and timeouts. Between 7 attempts the gateway waits 2, 4, 8, 16, 32,
+# and 60 seconds (or what the provider asks for), longer than a one-minute rate window.
+attempts = 7
 seconds_between_calls = 1.6           # the free tier allows about 40 calls a minute
 give_up_after_failures = 3            # questions failed in a row before the run stops calling
 

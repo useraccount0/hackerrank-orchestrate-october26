@@ -26,7 +26,7 @@ links:
 normative: true
 note: |
   Models chosen on 2026-10-25 by trying those the NVIDIA key can use: text nvidia/nemotron-3-ultra-550b-a55b, vision nvidia/nemotron-3.5-super-vl-120b-a12b (step 7).
-   Follows no redirect (REV-010); stops calling after 3 questions failed in a row; the provider's answers differ between calls even at temperature 0, so byte-identical reruns rely on the answer cache (EXT-402).
+   Follows no redirect (REV-010); stops calling after 3 questions failed in a row; the provider's answers differ between calls even at temperature 0, so byte-identical reruns rely on the answer cache (EXT-402). Step 8: the full run of c04 met HTTP 429 often enough that 8 of 375 questions failed after 5 attempts (30 seconds of waiting in all). The gateway now waits as long as the provider's Retry-After asks (at most two minutes), and the settings allow 7 attempts, about two minutes in all, longer than a one-minute rate window.
 ref: ''
 reviewed: Rxw8PDLHx3O3T6bD9z5qBqoi1hy-j4ry8Vna1Uc3ljo=
 text: |

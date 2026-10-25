@@ -1,0 +1,19 @@
+active: true
+derived: false
+header: |
+  No deletion audit without certainty
+issues: ''
+kind: functional
+level: 4.9
+links: []
+modality: shall
+normative: true
+note: |
+  Your words: "if the model gives no usable answer don't treat it as deletion request immediately, choose a safer option. Automatic deletion should be done only if 100% certain that it is requested." Linked to them after your next commit (until then Doorstop shows 1 expected warning).
+party: system
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  The solution shall audit a request as a deletion only when it is certain that deletion is requested: the AI model has answered that the request text leaves no doubt. A request whose text is unclear, conditional, or contradictory, or for which the model gives no usable answer, shall not be audited as a deletion; when the model gave no usable answer, the decision's reason shall say that a person must check the request.
+verification: test
