@@ -21,8 +21,10 @@ USER_REF = re.compile(r"(?<!\w)user_\d+(?!\w)")
 PHONE = re.compile(r"\+\d[\d ()-]{5,}\d")
 NAME_FIELDS = ("name", "full_name", "display_name", "requester_name")
 
-# Ids of the dataset's own files and tables look like resource ids but never name a resource.
-RESOURCE_ID = re.compile(r"(?<!\w)(?!(?:user|case|evidence|activity|audit|rule)_\d)[a-z]+(?:_[a-z]+)*_\d+(?!\w)")
+# Ids of the dataset's own files and tables look like resource ids but never name a resource, and
+# neither does a file name such as customer_export_7364.zip.
+RESOURCE_ID = re.compile(
+    r"(?<!\w)(?!(?:user|case|evidence|activity|audit|rule)_\d)[a-z]+(?:_[a-z]+)*_\d+(?!\w)(?!\.\w)")
 
 NOT_FOUND_RESULTS = ("NOT_FOUND", "MISS")
 FOUND_RESULTS = ("FOUND", "HIT", "IDENTIFIABLE", "ANONYMIZED", "REDACTED", "ACTIVE", "DISABLED", "BLOCKED")
@@ -34,13 +36,14 @@ EXCERPT_LENGTH = 600
 
 @dataclass(frozen=True)
 class RecordSeen:
-    """One record as a format reader found it. found is what the format itself says, such as
-    True for a row of a complete table; None leaves it to the record's fields."""
+    """One record as a format reader found it. A source that shows a record's content shows that
+    the record exists, so found is True unless the format cannot tell (a lookup that was only
+    started); the record's own fields can still say that it is missing."""
 
     store: str
     observed_at: datetime
     fields: Mapping[str, str] = field(hash=False)
-    found: bool | None = None
+    found: bool | None = True
     excerpt: str = ""
 
 

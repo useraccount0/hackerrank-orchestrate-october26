@@ -130,8 +130,14 @@ class JsonRecords(unittest.TestCase):
                                "subject_reference": "x@example.com"}]}
         contents = records_in_json(ledger, NOON)
         self.assertEqual(contents.listings, [])
-        self.assertIsNone(contents.records[0].found)
+        self.assertIs(found_in(contents.records[0].fields, contents.records[0].found), False)
         self.assertEqual(contents.records[0].store, "account_service")
+
+    def test_a_record_that_a_source_returns_exists(self) -> None:
+        export = {"service_exports": {"analytics_platform": {"profiles": [
+            {"observed_at": "2026-09-15T09:58:44Z", "resource_id": "analytics_1895", "audience_cohort": "home"}]}}}
+        record = records_in_json(export, NOON).records[0]
+        self.assertIs(found_in(record.fields, record.found), True)
 
 
 class LogLines(unittest.TestCase):
@@ -168,6 +174,15 @@ class LogLines(unittest.TestCase):
                           ("account_service", "account_7947", False), ("security_service", "audit_record_4413", True),
                           ("account_service", "account_1785", True)])
 
+    def test_a_lookup_that_was_only_started_proves_nothing(self) -> None:
+        log = ("2026-02-18T05:47:12Z level=DEBUG service=integration_service trace_id=rb-1 "
+               "event=connector_config_read_started resource_id=data_flow_3669 lookup_key=t@example.com\n"
+               "2026-02-18T05:47:13Z level=INFO service=integration_service trace_id=rb-2 "
+               "event=connector_config_read_completed resource_id=data_flow_3670 enabled=true\n")
+        records = records_in_log(log, "default").records
+        self.assertEqual([(record.fields["resource_id"], record.found) for record in records],
+                         [("data_flow_3669", None), ("data_flow_3670", True)])
+
     def test_a_line_without_a_time_is_reported(self) -> None:
         contents = records_in_log("continued text without a time\n", "default")
         self.assertEqual(contents.problems, [("line 1", "has no time at its start; skipped")])
@@ -186,6 +201,11 @@ class TextDocuments(unittest.TestCase):
         self.assertEqual(record.fields["resource_id"], "support_001")
         self.assertEqual(identifiers_in(record.fields), {"email": frozenset({"priya@example.com"}),
                                                          "phone": frozenset({"+91 98765 73142"})})
+
+    def test_a_file_name_is_not_a_resource(self) -> None:
+        text = "Export export_7364 ready as customer_export_7364.zip, see archive/backup_5061.tar.zst"
+        records = records_in_text(text, "export_service", NOON).records
+        self.assertEqual([record.fields["resource_id"] for record in records], ["export_7364"])
 
     def test_each_resource_of_a_table_gets_the_identifiers_of_its_own_rows(self) -> None:
         text = ("Customer-platform archives\nbackup_9291 blue@example.com ap-southeast-1\n"

@@ -35,7 +35,7 @@ others 5, screenshots 0.
 | `log_lines.py` | One line reader for all log formats; joins the lines of one trace |
 | `text_documents.py` | Handover lines, and free text (from PDFs and screenshots) |
 | `document_text.py` | The text of a PDF (pypdf) and of a screenshot (model gateway) |
-| `test_evidence_reader.py` | 23 tests |
+| `test_evidence_reader.py` | 26 tests |
 
 ## The rules, and why
 
@@ -44,12 +44,12 @@ others 5, screenshots 0.
 | Identifiers are recognized by the **shape of their values**, wherever they are: email, 64-hex hash, `user_N`, phone with `+`. Names only from fields called a name | The formats name the same thing in many ways (`email`, `customer_email`, `lookup_key`, `subject_reference`), and emails also hide in message texts ("Please send the delivery update to ...") |
 | Emails and hashes are lower-cased (REV-001) | Some evidence writes emails in upper case |
 | A hash after `sha256:` is not an email hash | Integrity seals are file checksums |
-| Whether a record exists comes only from explicit signals: HTTP 404/200, NOT_FOUND/FOUND and other results, `rows=0`, hit counts, a row in a complete table. If any signal says "missing", it is missing; with no signal it stays unknown | The reader says what a file shows and never guesses |
+| A source that shows a record's content shows that it exists. Explicit signals say that it is missing (HTTP 404, NOT_FOUND, `rows=0`, no hits), and a "missing" signal wins. A lookup that was only started proves nothing (unknown) | The reader says what a file shows and never guesses (changed in the recheck, see below) |
 | Log lines with the same trace id are one request; the identifiers it looked up reach the resource it found | Otherwise the email and the resource of a lookup are never connected (case_10, case_12) |
 | Every SQL table and JSON collection is a **complete listing**, for each kind of record its store holds in any file | Proves absence (REV-005); a table that is empty in one snapshot still proves that everything is gone |
 | Free text: a document about one resource gives it all its identifiers; otherwise each resource gets the lines from its mention to the next one, after the document's heading | A PDF names the support record once and the customer's email lines below it (case_07); a screenshot table has one resource per row |
 | The model only **writes down** the text of a screenshot; the same rules then read it | The judgment stays in code (EXT-401), and the model's answer is easy to check |
-| SQLite may only create tables and indexes, insert, and run `json_valid`; everything else is refused | A snapshot is data (EXT-502); an `ATTACH` could otherwise make SQLite write files anywhere. A test proves it: with the guard removed on purpose, the test fails |
+| SQLite may only do what loading a snapshot needs (create tables and indexes, insert, update, read, transactions, `PRAGMA foreign_keys`, `json_valid`); everything else is refused | A snapshot is data (EXT-502); an `ATTACH` could otherwise make SQLite write files anywhere. A test proves it: with the guard removed on purpose, the test fails |
 | One failing SQL statement, one unreadable file, or one model failure costs only itself, and is reported | EXT-501 |
 
 ## Two interface gaps, fixed at the top (c00)
@@ -92,10 +92,30 @@ by ARC-06. Decoy emails (`....jr@gmail.com`) are already safe, because emails ar
 Results: 53 tests OK; mypy (strict) and ruff clean; `doorstop -F -W` clean; `srctrace.py check`
 PASS; 134 items wait for your review.
 
+## Recheck of c03 (your request "recheck c03")
+
+The recheck compared what the reader says about every cited record with what the 32 sample
+answers say about it, and tried inputs the tests had not covered. Found and fixed:
+
+| # | Problem | Fix |
+|---|---|---|
+| 1 | **About 40 cited records were "unknown"** although the answers treat them as existing (PRESENT, ANONYMIZED, DISABLED, ...): full records in service exports, and log lines that read or scan a record (`analytics_profile_read_completed`, `message_pii_scan`, `connector_heartbeat`). The rule "no explicit signal, no answer" was too strict | A source that shows a record's content shows that it exists; only a lookup that was only started stays unknown. Now every one of the 76 cited records agrees with the answers: the 6 ABSENT ones read as missing, the 70 others as existing |
+| 2 | **A file name in free text became a resource**: `customer_export_7364.zip` gave a record of kind `customer_export`, which could have produced a wrong step | A name followed by a file extension is not a resource id |
+| 3 | **Two ledger records are dated two days after their file was captured** (evidence_13, evidence_36). A case audited in between could use a record from its own future if only the file's capture time were checked | Kept as it is (the reader reports what the file says). New revealed requirement **REV-009**: a record counts only when both the file's capture time and the record's own time are at or before `audit_at`; implemented by ARC-07 (state reconstructor) |
+
+Notes for later components: booleans are written `1`/`0` in SQL and `true`/`false` elsewhere
+(c07); names stay in the text of free-text records and must match whole (REV-008, c06).
+
+The screenshots could not be checked yet: their text comes from the model. The rules for free
+text will be checked again on the real transcriptions in step 7 (c02).
+
+Results: 56 tests OK; mypy (strict) and ruff clean; `doorstop -F -W` clean; `srctrace.py check`
+PASS.
+
 ## How to check
 
 ```powershell
-.venv\Scripts\python -m unittest discover -s code -t code -p "test_*.py"     # must end with OK (53 tests)
+.venv\Scripts\python -m unittest discover -s code -t code -p "test_*.py"     # must end with OK (56 tests)
 cd code; ..\.venv\Scripts\python -m mypy c00_interfaces c01_input_reader c03_evidence_reader; ..\.venv\Scripts\ruff check .; cd ..
 .venv-req\Scripts\python requirements\tools\srctrace.py check   # must end with RESULT: PASS
 ```

@@ -1,0 +1,21 @@
+active: true
+derived: true
+header: |
+  A record dated after audit_at does not count, even in an earlier file
+issues: ''
+kind: functional
+level: 9
+links:
+- CHR-314: dxHlhuakvEncgeNhqBzi8_qcPGwjbCr5mi6FfS-1Nto=
+- CHR-438: K4D96IfiCqDzlrWWHV__RlQvdxLX7DG5Ud94EV0pYUQ=
+modality: shall
+normative: true
+note: ''
+party: system
+rationale: |
+  Revealed in step 6, in the recheck of c03: two ledger records are recorded two days after their file was captured (evidence_13: account_1417 recorded 2026-08-14 in a file captured 2026-08-12; evidence_36: account_5043 recorded 2026-04-11 in a file captured 2026-04-09). Checking only the file's capture time would let a case audited in between use them.
+ref: ''
+reviewed: pending-user-review
+text: |
+  An observation shall count for a case only when both the evidence item's capture time and the record's own time (when it was observed or recorded) are at or before the case's audit_at.
+verification: test

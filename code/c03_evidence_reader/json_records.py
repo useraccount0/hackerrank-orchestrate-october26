@@ -21,11 +21,10 @@ def records_in_json(document: object, captured_at: datetime) -> FileContents:
 
 
 def walk(node: object, observed_at: datetime, store_names: tuple[str, ...], path: tuple[str, ...],
-         contents: FileContents, listed: bool = False) -> None:
-    """listed is True for the items of a complete listing: they are in the collection."""
+         contents: FileContents) -> None:
     if isinstance(node, list):
         for item in node:
-            walk(item, observed_at, store_names, path, contents, listed)
+            walk(item, observed_at, store_names, path, contents)
         return
     if not isinstance(node, Mapping):
         return
@@ -39,11 +38,11 @@ def walk(node: object, observed_at: datetime, store_names: tuple[str, ...], path
                                  if isinstance(item, Mapping) and item.get("resource_id"))
         contents.listings.append(ListingSeen(store, observed_at, resource_ids))
     if node.get("resource_id"):
-        contents.records.append(RecordSeen(store, observed_at, flat_fields(node), found=True if listed else None))
+        contents.records.append(RecordSeen(store, observed_at, flat_fields(node)))
         # A record nested in another one, such as a search hit, belongs to the same store.
         store_names = (store,)
     for key, value in node.items():
-        walk(value, observed_at, store_names, path + (str(key),), contents, listed=is_listing and key == "records")
+        walk(value, observed_at, store_names, path + (str(key),), contents)
 
 
 def own_time(node: Mapping[str, object]) -> datetime | None:

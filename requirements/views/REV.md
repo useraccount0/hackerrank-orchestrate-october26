@@ -8,6 +8,7 @@
  * 6 A request row that cannot be read still gets its output row (REV-006)
  * 7 The same files are read the same way on every supported Python version (REV-007)
  * 8 A name links a record only when the whole name matches (REV-008)
+ * 9 A record dated after audit_at does not count, even in an earlier file (REV-009)
 
 # 1 Emails are matched without regard to case _(REV-001)_ {#REV-001}
 
@@ -137,6 +138,22 @@ A name shall link a record to the subject only when the whole name matches one o
 | modality | shall |
 | verification | test |
 | rationale | Revealed in step 6, while building the evidence reader: the evidence holds names next to the subjects' names that would match as substrings, such as Priya Ramanathan (Priya Raman, case_07) and Jonas Berglund (Jonas Berg, case_06). Found by comparing every identifier the reader extracted with the identity data.
+ |
+
+
+# 9 A record dated after audit_at does not count, even in an earlier file _(REV-009)_ {#REV-009}
+
+An observation shall count for a case only when both the evidence item's capture time and the record's own time (when it was observed or recorded) are at or before the case's audit_at.
+
+*Parent links: CHR-314, CHR-438*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | functional |
+| modality | shall |
+| verification | test |
+| rationale | Revealed in step 6, in the recheck of c03: two ledger records are recorded two days after their file was captured (evidence_13: account_1417 recorded 2026-08-14 in a file captured 2026-08-12; evidence_36: account_5043 recorded 2026-04-11 in a file captured 2026-04-09). Checking only the file's capture time would let a case audited in between use them.
  |
 
 

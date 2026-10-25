@@ -61,8 +61,12 @@ def records_of_request(lines: list[LogLine], default_store: str) -> list[RecordS
         fields = {name: value for name, value in lookup_values.items() if name not in own_fields} | own_fields
         store = next((fields[name] for name in STORE_NAMES if fields.get(name)), default_store)
         observed_at = utc_time(fields["time"])
+        # A lookup that was only started shows that someone looked, not that the record exists.
+        only_started = all(line.fields.get("event", "").endswith("_started") for line in lines
+                           if line.fields.get("resource_id") == resource_id)
         if observed_at is not None:
-            records.append(RecordSeen(store, observed_at, fields, excerpt=last_line[resource_id].text))
+            records.append(RecordSeen(store, observed_at, fields, found=None if only_started else True,
+                                      excerpt=last_line[resource_id].text))
     return records
 
 

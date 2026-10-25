@@ -65,7 +65,7 @@ Opens each file of the evidence manifest and turns its contents into observation
 | code | code/c03_evidence_reader/ |
 | interface | EvidenceReader: evidence files, dataset_dir, ModelGateway -> EvidenceReading (Observations, StoreListings, input problems)
  |
-| note | Design: one reader per format (sql_snapshots, json_records, log_lines, text_documents) and one set of rules for all of them (record_fields). The text of a PDF comes from pypdf, and the text of a screenshot from the model gateway, which only writes down what it sees. Identifiers are recognized by the shape of their values wherever they appear (emails and hashes lower-cased, REV-001); names only from fields that are called a name. Whether a record exists comes from explicit signals (404, NOT_FOUND, rows=0, result values), and a missing signal wins. Log lines of one trace are joined. Every SQL table and every JSON collection is a complete listing, for each kind of record its store holds in any file (REV-005). SQLite may only load a snapshot (EXT-502). A file that cannot be read is reported and skipped.
+| note | Design: one reader per format (sql_snapshots, json_records, log_lines, text_documents) and one set of rules for all of them (record_fields). The text of a PDF comes from pypdf, and the text of a screenshot from the model gateway, which only writes down what it sees. Identifiers are recognized by the shape of their values wherever they appear (emails and hashes lower-cased, REV-001); names only from fields that are called a name. A source that shows a record's content shows that it exists; explicit signals (404, NOT_FOUND, rows=0, result values) say that it is missing, and a missing signal wins; a lookup that was only started proves nothing. Log lines of one trace are joined. Every SQL table and every JSON collection is a complete listing, for each kind of record its store holds in any file (REV-005). SQLite may only load a snapshot (EXT-502). A file that cannot be read is reported and skipped.
  |
 
 
@@ -112,7 +112,7 @@ Finds every record, data flow, and backup of the subject in the observations and
 
 Decides the state of each resource at audit_at from the evidence captured at or before audit_at (activity results are claims), and names the evidence item that proves it.
 
-*Parent links: CHR-208, CHR-311, CHR-312, CHR-313, CHR-314, CHR-438, EXT-504, EXT-505, EXT-506, EXT-601, EXT-602, EXT-603, REV-005*
+*Parent links: CHR-208, CHR-311, CHR-312, CHR-313, CHR-314, CHR-438, EXT-504, EXT-505, EXT-506, EXT-601, EXT-602, EXT-603, REV-005, REV-009*
 
 | Attribute | Value |
 | --------- | ----- |
