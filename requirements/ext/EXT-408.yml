@@ -1,0 +1,20 @@
+active: true
+derived: false
+header: |
+  NVIDIA's hosted API for our runs
+issues: ''
+kind: constraint
+level: 4.8
+links:
+- SRC-LG0743: 5pBrF8OLX8MGhekBCHhnhBq1yd1G_hXc9Oh9PRKgVgc=
+modality: shall
+normative: true
+note: |
+  Your words: "I have created an account with https://build.nvidia.com/ and generated an API key. C02 will use this. Create uncommited .env file".
+party: system
+rationale: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  Our runs of the solution shall use AI models of NVIDIA's hosted API (build.nvidia.com); its API key is read from the environment or from the uncommitted .env file at the repository root.
+verification: inspection

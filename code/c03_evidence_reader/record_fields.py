@@ -14,17 +14,19 @@ from datetime import UTC, datetime
 
 from c00_interfaces.records import EvidenceFile, Observation
 
-EMAIL = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
-# A hash right after "sha256:" is a checksum of a file, not of an email address.
+# A value written right after a colon is a search filter (email:a@b.com on a search page) or a
+# checksum (sha256:...): what someone looked for, not what a record holds. A label such as
+# "Email: a@b.com" has a space after its colon and still counts.
+EMAIL = re.compile(r"(?<![\w.+:-])[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
 EMAIL_HASH = re.compile(r"(?<![\w:])[0-9a-fA-F]{64}(?!\w)")
-USER_REF = re.compile(r"(?<!\w)user_\d+(?!\w)")
-PHONE = re.compile(r"\+\d[\d ()-]{5,}\d")
+USER_REF = re.compile(r"(?<![\w:])user_\d+(?!\w)")
+PHONE = re.compile(r"(?<![\w:])\+\d[\d ()-]{5,}\d")
 NAME_FIELDS = ("name", "full_name", "display_name", "requester_name")
 
 # Ids of the dataset's own files and tables look like resource ids but never name a resource, and
-# neither does a file name such as customer_export_7364.zip.
+# neither does a file name such as customer_export_7364.zip or customer_export_2026-02-10.zip.
 RESOURCE_ID = re.compile(
-    r"(?<!\w)(?!(?:user|case|evidence|activity|audit|rule)_\d)[a-z]+(?:_[a-z]+)*_\d+(?!\w)(?!\.\w)")
+    r"(?<!\w)(?!(?:user|case|evidence|activity|audit|rule)_\d)[a-z]+(?:_[a-z]+)*_\d+(?!\w)(?![.-]\w)")
 
 NOT_FOUND_RESULTS = ("NOT_FOUND", "MISS")
 FOUND_RESULTS = ("FOUND", "HIT", "IDENTIFIABLE", "ANONYMIZED", "REDACTED", "ACTIVE", "DISABLED", "BLOCKED")

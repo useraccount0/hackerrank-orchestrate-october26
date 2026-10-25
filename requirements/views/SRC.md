@@ -538,6 +538,8 @@
     * 7.31 log.txt:652
     * 7.32 log.txt:675
     * 7.33 log.txt:697 (SRC-LG0697)
+    * 7.34 log.txt:719
+    * 7.35 log.txt:743 (SRC-LG0743)
 
 ## 1.1 AGENTS.md:1 _(SRC-AG0001)_ {#SRC-AG0001}
 
@@ -7006,6 +7008,30 @@ recheck c01
 only python 3.15 will be used for this project
 
 *Child links: EXT-407*
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | requirement |
+| classified_by | ai |
+
+
+## 7.34 log.txt:719 _(SRC-LG0719)_ {#SRC-LG0719}
+
+continue with c03
+
+| Attribute | Value |
+| --------- | ----- |
+| disposition | context |
+| classified_by | ai |
+| note | Your go-ahead to start component c03, as EXT-610 asks for; it states no new requirement.
+ |
+
+
+## 7.35 log.txt:743 _(SRC-LG0743)_ {#SRC-LG0743}
+
+recheck c03. I have created an account with https://build.nvidia.com/ and generated an API key. C02 will use this. Create uncommited .env file (i think this was suggested way) and I will paste the api key there. Pause for me to paste it and continue with c02.
+
+*Child links: EXT-408*
 
 | Attribute | Value |
 | --------- | ----- |

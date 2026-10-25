@@ -1,0 +1,21 @@
+active: true
+derived: true
+header: |
+  The API key goes only to the configured provider
+issues: ''
+kind: functional
+level: 10
+links:
+- CHR-508: d-sVBv9O_ffGowtJRL4PnAwvfWtzS4uuemUdTiviny8=
+- EXT-408: NhxY3w8WF2AHPyPmT6_TB-vjyeHpUn_X6AGia610AQc=
+modality: shall
+normative: true
+note: ''
+party: system
+rationale: |
+  Revealed in step 7, in the recheck of c02: Python's urllib sends the Authorization header along to whatever server a redirect names. Shown with two local test servers: the second one received the key. A misconfigured address or proxy could have handed the key to a third party.
+ref: ''
+reviewed: pending-user-review
+text: |
+  The API key shall be sent only to the provider address in the model settings; the model gateway shall not follow a redirect to any other address.
+verification: test

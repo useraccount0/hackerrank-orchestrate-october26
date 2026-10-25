@@ -7,5 +7,9 @@ __pycache__/
 # Local secrets (AGENTS.md: read credentials from environment variables / an uncommitted .env)
 .env
 
+# Cached AI model answers: they hold text taken from dataset/, so they are never committed or put
+# in code.zip; a run with the API key rebuilds them
+.cache/
+
 # Generated HTML views of the requirements (rebuild with the command in requirements/README.md)
 requirements/_build/

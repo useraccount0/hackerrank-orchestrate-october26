@@ -9,6 +9,7 @@
  * 7 The same files are read the same way on every supported Python version (REV-007)
  * 8 A name links a record only when the whole name matches (REV-008)
  * 9 A record dated after audit_at does not count, even in an earlier file (REV-009)
+ * 10 The API key goes only to the configured provider (REV-010)
 
 # 1 Emails are matched without regard to case _(REV-001)_ {#REV-001}
 
@@ -154,6 +155,22 @@ An observation shall count for a case only when both the evidence item's capture
 | modality | shall |
 | verification | test |
 | rationale | Revealed in step 6, in the recheck of c03: two ledger records are recorded two days after their file was captured (evidence_13: account_1417 recorded 2026-08-14 in a file captured 2026-08-12; evidence_36: account_5043 recorded 2026-04-11 in a file captured 2026-04-09). Checking only the file's capture time would let a case audited in between use them.
+ |
+
+
+# 10 The API key goes only to the configured provider _(REV-010)_ {#REV-010}
+
+The API key shall be sent only to the provider address in the model settings; the model gateway shall not follow a redirect to any other address.
+
+*Parent links: CHR-508, EXT-408*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | functional |
+| modality | shall |
+| verification | test |
+| rationale | Revealed in step 7, in the recheck of c02: Python's urllib sends the Authorization header along to whatever server a redirect names. Shown with two local test servers: the second one received the key. A misconfigured address or proxy could have handed the key to a third party.
  |
 
 

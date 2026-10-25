@@ -7,10 +7,11 @@ kind: process
 level: 6.11
 links:
 - SRC-LG0584: RxdjNDTWGIaYPl8dclduHScFuS1osFNacvkaQjrIJW4=
+- SRC-LG0743: 5pBrF8OLX8MGhekBCHhnhBq1yd1G_hXc9Oh9PRKgVgc=
 modality: shall
 normative: true
 note: |
-  Your words: "Now define interfaces between components, so that tests can mock them, and then I will let you work on individual components one at a time. Leave the one that uses AI as the last one for implementation"
+  Changed by you on 2026-10-25 (SRC-LG0743): c02 was built before c04, to use your NVIDIA key; the components that do not call a model came first as planned.
 party: coding-agent
 rationale: ''
 ref: ''

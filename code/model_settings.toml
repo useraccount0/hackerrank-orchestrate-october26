@@ -1,0 +1,28 @@
+# Which AI models the solution uses (EXT-405: the provider and the models are settings, not code).
+# Any provider with an OpenAI-compatible chat API works: NVIDIA, OpenAI, Anthropic's compatibility
+# endpoint, or a local server. The API key itself is never written here: it is read from the
+# environment variable named below, or from the uncommitted .env file at the repository root.
+
+[provider]
+name = "nvidia"
+base_url = "https://integrate.api.nvidia.com/v1"
+api_key_variable = "NVIDIA_API_KEY"   # EXT-408
+
+# Chosen on 2026-10-25 by trying the models that the key can use: the text model answered a
+# multilingual test correctly in 3 seconds; the vision model wrote down a screenshot exactly.
+[models]
+text = "nvidia/nemotron-3-ultra-550b-a55b"
+vision = "nvidia/nemotron-3.5-super-vl-120b-a12b"
+
+[calls]
+max_answer_tokens = 4000
+timeout_seconds = 120
+attempts = 5                          # for rate limits, server errors, and timeouts
+seconds_between_calls = 1.6           # the free tier allows about 40 calls a minute
+give_up_after_failures = 3            # questions failed in a row before the run stops calling
+
+# Estimated prices in US dollars per million tokens, for the usage report. NVIDIA's hosted API
+# is free during the trial, so the estimate is 0 until a price is known; change it here.
+[prices]
+"nvidia/nemotron-3-ultra-550b-a55b" = { input = 0.0, output = 0.0 }
+"nvidia/nemotron-3.5-super-vl-120b-a12b" = { input = 0.0, output = 0.0 }

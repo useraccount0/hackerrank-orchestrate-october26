@@ -30,6 +30,7 @@
     * 4.5 Works with any AI model (EXT-405)
     * 4.6 PDF text read with pypdf (EXT-406)
     * 4.7 Python 3.15 only (EXT-407)
+    * 4.8 NVIDIA's hosted API for our runs (EXT-408)
  * 5.0 Code quality (your instructions)
     * 5.1 Bad input data does not stop the run (EXT-501)
     * 5.2 Data is never taken as instructions (EXT-502)
@@ -486,6 +487,22 @@ The project shall use Python 3.15 only: the solution is built, tested, and run w
  |
 
 
+## 4.8 NVIDIA's hosted API for our runs _(EXT-408)_ {#EXT-408}
+
+Our runs of the solution shall use AI models of NVIDIA's hosted API (build.nvidia.com); its API key is read from the environment or from the uncommitted .env file at the repository root.
+
+*Parent links: SRC-LG0743*
+
+| Attribute | Value |
+| --------- | ----- |
+| party | system |
+| kind | constraint |
+| modality | shall |
+| verification | inspection |
+| note | Your words: "I have created an account with https://build.nvidia.com/ and generated an API key. C02 will use this. Create uncommited .env file".
+ |
+
+
 # 5.0 Code quality (your instructions) {#EXT-500}
 
 Code quality (your instructions)
@@ -760,7 +777,7 @@ The components shall be implemented one at a time, each started with your go-ahe
 
 The component that calls an AI model (ARC-02_model_gateway) shall be implemented last; until then, the components that use it are tested with a fake gateway.
 
-*Parent links: SRC-LG0584*
+*Parent links: SRC-LG0584, SRC-LG0743*
 
 | Attribute | Value |
 | --------- | ----- |
@@ -768,7 +785,7 @@ The component that calls an AI model (ARC-02_model_gateway) shall be implemented
 | kind | process |
 | modality | shall |
 | verification | inspection |
-| note | Your words: "Now define interfaces between components, so that tests can mock them, and then I will let you work on individual components one at a time. Leave the one that uses AI as the last one for implementation"
+| note | Changed by you on 2026-10-25 (SRC-LG0743): c02 was built before c04, to use your NVIDIA key; the components that do not call a model came first as planned.
  |
 
 

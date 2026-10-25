@@ -1,0 +1,17 @@
+active: true
+classified_by: ai
+derived: false
+disposition: requirement
+file: log.txt
+header: |
+  log.txt:743
+level: 7.35
+line_end: '743'
+line_start: '743'
+links: []
+normative: true
+note: ''
+ref: ''
+reviewed: pending-user-review
+text: |
+  recheck c03. I have created an account with https://build.nvidia.com/ and generated an API key. C02 will use this. Create uncommited .env file (i think this was suggested way) and I will paste the api key there. Pause for me to paste it and continue with c02.

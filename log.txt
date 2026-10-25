@@ -760,3 +760,49 @@ repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
 
+## [2026-10-25T02:41:50+02:00] Component c02_model_gateway implemented with NVIDIA's API (EXT-408)
+
+User Prompt (verbatim, secrets redacted):
+pasted, continue
+
+Agent Response Summary:
+Confirmed without showing it that the key in the ignored .env is set, recorded the user's choice of NVIDIA's hosted API as EXT-408, and implemented code/c02_model_gateway: one OpenAI-compatible adapter over urllib with the provider and models in code/model_settings.toml, every answer cached in the ignored .cache/, calls spaced and retried for rate limits, refusals reported without the provider's error text (it names the account), and every failure turned into a ModelError. Models were chosen by trying those the key can use (many were unavailable or timed out): text nvidia/nemotron-3-ultra-550b-a55b, vision nvidia/nemotron-3.5-super-vl-120b-a12b. The first live run transcribed all 11 screenshots (128 s, cached), which checked c03's free-text rules and fixed two more c03 problems: a search query in a page heading linked a decoy hit to the customer, and a dated file name became a resource. Results: 73 tests OK, mypy strict and ruff clean, doorstop -F -W clean, srctrace.py check PASS, 138 items wait for review.
+
+Actions:
+* Checked .env for a set key without printing it; listed NVIDIA's available models and probed text and vision models with the key (scratch scripts, scratch cache)
+* Created code/model_settings.toml and code/c02_model_gateway/ (model_gateway, settings, tests); edited .gitignore (.cache/)
+* Edited code/c03_evidence_reader/record_fields.py and test_evidence_reader.py; ran the 11 screenshots through c03 with the real gateway
+* Edited requirements/sources.yml; srctrace.py update, split --new-only, check, views; scratch scripts with Doorstop's API (no git add): imported SRC-LG0719 and SRC-LG0743, added EXT-408, updated ARC-02 and ARC-03; doorstop -F -W and publish
+* Created docs/steps/step-07-model-gateway.md; edited docs/v-model.md
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+
+## [2026-10-25T02:58:34+02:00] Non-English requests tested on the model (12/12); recheck of c02 (REV-010)
+
+User Prompt (verbatim, secrets redacted):
+case_507, case_495, case_66 in dataset/deletion_requests.csv and a few others are non-english. These look like Korean and Japanese to me. Test the API for this too. Than recheck the c02
+
+Agent Response Summary:
+Grouped the 518 request texts by writing system: 62 are non-English but only 5 distinct texts (Portuguese, Korean, Spanish, Japanese, French), all asking for permanent deletion. The chosen text model decided 12 of 12 correctly, the 6 real texts plus 6 negatives written for the test in the same languages including a Korean prompt injection, with accurate English translations; a second run gave the same decisions but different text, so byte-identical reruns rest on the answer cache. The recheck of c02 found and fixed: urllib forwarded the API key to the server a redirect names (shown with two local servers; now no redirect is followed, REV-010), a provider that is down could stall a run for hours (now the run stops calling after 3 failed questions in a row), a .env with a byte-order mark hid the key, and untested failure paths. Also recorded: the previous entry did not mention that EXT-611's note was updated and linked to SRC-LG0743 after it was written. Results: 78 tests OK, mypy strict and ruff clean, doorstop -F -W clean, srctrace.py check PASS, 139 items wait for review.
+
+Actions:
+* Read-only script over dataset/deletion_requests.csv and sample_deletion_requests.csv (writing systems, distinct texts)
+* Live probe of the text model through the gateway (scratch caches), and one live call after the fixes
+* Edited code/c02_model_gateway/model_gateway.py, settings.py, test_model_gateway.py and code/model_settings.toml; ran python -m unittest, mypy, ruff, and a guard-removal check on a scratch copy
+* Scratch script with Doorstop's API (no git add): added REV-010 (CHR-508, EXT-408), linked and noted ARC-02; doorstop -F -W, srctrace.py check and views, doorstop publish
+* Edited docs/steps/step-07-model-gateway.md and docs/v-model.md
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+

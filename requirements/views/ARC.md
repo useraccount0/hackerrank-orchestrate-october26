@@ -43,14 +43,17 @@ Reads the CSV files of dataset/ (requests, identities, identity history, activit
 
 ## 1.3 Model gateway _(ARC-02_model_gateway)_ {#ARC-02_model_gateway}
 
-The only place that calls an AI model. Provider and model are settings; adapters speak the Anthropic API and the OpenAI-compatible API over plain HTTP. Caches every answer, records calls, tokens, and cost, and checks each answer before handing it on. Reads the API key from the environment only.
+The only place that calls an AI model. The provider and the models are settings (code/model_settings.toml); one adapter speaks the OpenAI-compatible chat API over plain HTTP, which NVIDIA, OpenAI, Anthropic (compatibility endpoint), and local servers offer. Caches every answer, records calls, tokens, and estimated cost, checks that each answer is complete, and turns every failure into a ModelError. Reads the API key from the environment or the uncommitted .env file.
 
-*Parent links: CHR-101, CHR-508, EXT-401, EXT-402, EXT-405, EXT-502, EXT-503, EXT-504, EXT-505, EXT-506, EXT-601, EXT-602, EXT-603, EXT-611*
+*Parent links: CHR-101, CHR-508, EXT-401, EXT-402, EXT-405, EXT-408, EXT-502, EXT-503, EXT-504, EXT-505, EXT-506, EXT-601, EXT-602, EXT-603, EXT-611, REV-010*
 
 | Attribute | Value |
 | --------- | ----- |
 | code | code/c02_model_gateway/ |
-| interface | ModelGateway: ask(ModelQuestion) -> answer text; calls() -> ModelCall records
+| interface | ModelGateway: ask(ModelQuestion) -> answer text; recorded_calls() -> ModelCall records
+ |
+| note | Models chosen on 2026-10-25 by trying those the NVIDIA key can use: text nvidia/nemotron-3-ultra-550b-a55b, vision nvidia/nemotron-3.5-super-vl-120b-a12b (step 7).
+ Follows no redirect (REV-010); stops calling after 3 questions failed in a row; the provider's answers differ between calls even at temperature 0, so byte-identical reruns rely on the answer cache (EXT-402).
  |
 
 
@@ -65,7 +68,7 @@ Opens each file of the evidence manifest and turns its contents into observation
 | code | code/c03_evidence_reader/ |
 | interface | EvidenceReader: evidence files, dataset_dir, ModelGateway -> EvidenceReading (Observations, StoreListings, input problems)
  |
-| note | Design: one reader per format (sql_snapshots, json_records, log_lines, text_documents) and one set of rules for all of them (record_fields). The text of a PDF comes from pypdf, and the text of a screenshot from the model gateway, which only writes down what it sees. Identifiers are recognized by the shape of their values wherever they appear (emails and hashes lower-cased, REV-001); names only from fields that are called a name. A source that shows a record's content shows that it exists; explicit signals (404, NOT_FOUND, rows=0, result values) say that it is missing, and a missing signal wins; a lookup that was only started proves nothing. Log lines of one trace are joined. Every SQL table and every JSON collection is a complete listing, for each kind of record its store holds in any file (REV-005). SQLite may only load a snapshot (EXT-502). A file that cannot be read is reported and skipped.
+| note | Design: one reader per format (sql_snapshots, json_records, log_lines, text_documents) and one set of rules for all of them (record_fields). The text of a PDF comes from pypdf, and the text of a screenshot from the model gateway, which only writes down what it sees. Identifiers are recognized by the shape of their values wherever they appear (emails and hashes lower-cased, REV-001); names only from fields that are called a name. A source that shows a record's content shows that it exists; explicit signals (404, NOT_FOUND, rows=0, result values) say that it is missing, and a missing signal wins; a lookup that was only started proves nothing. Log lines of one trace are joined. A value written as a search filter (email:a@b.com) is not an identifier of the record; a file name is not a resource id. Every SQL table and every JSON collection is a complete listing, for each kind of record its store holds in any file (REV-005). SQLite may only load a snapshot (EXT-502). A file that cannot be read is reported and skipped.
  |
 
 

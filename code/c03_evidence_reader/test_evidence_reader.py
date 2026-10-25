@@ -43,6 +43,11 @@ class IdentifiersAndExistence(unittest.TestCase):
     def test_a_file_checksum_is_not_an_email_hash(self) -> None:
         self.assertEqual(identifiers_in({"integrity_seal": "sha256:" + HASH}), {})
 
+    def test_a_search_filter_is_what_someone_looked_for_not_what_the_record_holds(self) -> None:
+        found = identifiers_in({"text": "Search email:g.silva@example.com · 2 hits\ncustomer_reference:user_9842\n"
+                                        "Email: real@example.com"})
+        self.assertEqual(found, {"email": frozenset({"real@example.com"})})
+
     def test_one_record_can_hold_several_emails(self) -> None:
         found = identifiers_in({"lookup_key": "old@example.com", "correlation_key": "new@example.com"})
         self.assertEqual(found, {"email": frozenset({"old@example.com", "new@example.com"})})
@@ -203,7 +208,8 @@ class TextDocuments(unittest.TestCase):
                                                          "phone": frozenset({"+91 98765 73142"})})
 
     def test_a_file_name_is_not_a_resource(self) -> None:
-        text = "Export export_7364 ready as customer_export_7364.zip, see archive/backup_5061.tar.zst"
+        text = ("Export export_7364 ready as customer_export_7364.zip, see archive/backup_5061.tar.zst "
+                "and customer_export_2026-02-10.zip")
         records = records_in_text(text, "export_service", NOON).records
         self.assertEqual([record.fields["resource_id"] for record in records], ["export_7364"])
 

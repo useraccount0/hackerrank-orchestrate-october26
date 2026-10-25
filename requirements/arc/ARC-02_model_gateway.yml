@@ -4,7 +4,7 @@ derived: false
 header: |
   Model gateway
 interface: |
-  ModelGateway: ask(ModelQuestion) -> answer text; calls() -> ModelCall records
+  ModelGateway: ask(ModelQuestion) -> answer text; recorded_calls() -> ModelCall records
 level: 1.3
 links:
 - CHR-101: ey6AJPBCoo7ooMS2dXdYq923akqUre-AFwJPFLYBjx8=
@@ -12,6 +12,7 @@ links:
 - EXT-401: iqOoXr7TUnZUSeG3q_mGXVYe32SigWJfEe5177Qn0ww=
 - EXT-402: VFah-g0aPJ-GEs4OFX-SiZCxZbfUBN_tVSEjIFCN_DI=
 - EXT-405: vLQ8lPsJOT2C4R9bobVssO4C7Wpp6DBJFpiKv2i3gbI=
+- EXT-408: NhxY3w8WF2AHPyPmT6_TB-vjyeHpUn_X6AGia610AQc=
 - EXT-502: Ooa8_Vi4L_0qCbrWW-MWvytGQcW_TkvTkppMq2Vnygk=
 - EXT-503: v8S359ZZpVVg-2RMmLEugXc96NCRb3aaLI7a7Rdr6CM=
 - EXT-504: GcVxG4G4CEueqO7DwzHMNLKv9RIEqMEajoFRXQ5ofB4=
@@ -20,10 +21,13 @@ links:
 - EXT-601: iQiNNFooXid8nduNUiT5R7S24afvm4aHwcRpPTKUHA0=
 - EXT-602: 6_QzgtDZbDrsvKdZIwHU4sjPHf5QIcQLQ8Av_An7-lw=
 - EXT-603: KhvRrVO_kFVa4SHt3_n54IoEoEQSfeoPSoEHrdBlQuM=
-- EXT-611: pe9t5nrcZgkiZW6N_Y7mOUHo8JbpS_KSCYdnbtsyVx8=
+- EXT-611: f3ofrIpd1YewcypNDasvL04ylIsLDhwFF-a5mbz8zjA=
+- REV-010: shFuscAWVB4Y4UCYtucRETUzqpDj_VGVAGRD4PF5-RA=
 normative: true
-note: ''
+note: |
+  Models chosen on 2026-10-25 by trying those the NVIDIA key can use: text nvidia/nemotron-3-ultra-550b-a55b, vision nvidia/nemotron-3.5-super-vl-120b-a12b (step 7).
+   Follows no redirect (REV-010); stops calling after 3 questions failed in a row; the provider's answers differ between calls even at temperature 0, so byte-identical reruns rely on the answer cache (EXT-402).
 ref: ''
 reviewed: pending-user-review
 text: |
-  The only place that calls an AI model. Provider and model are settings; adapters speak the Anthropic API and the OpenAI-compatible API over plain HTTP. Caches every answer, records calls, tokens, and cost, and checks each answer before handing it on. Reads the API key from the environment only.
+  The only place that calls an AI model. The provider and the models are settings (code/model_settings.toml); one adapter speaks the OpenAI-compatible chat API over plain HTTP, which NVIDIA, OpenAI, Anthropic (compatibility endpoint), and local servers offer. Caches every answer, records calls, tokens, and estimated cost, checks that each answer is complete, and turns every failure into a ModelError. Reads the API key from the environment or the uncommitted .env file.
