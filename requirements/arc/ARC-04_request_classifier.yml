@@ -11,6 +11,8 @@ links:
 - CHR-302: Y2EZovDxb6orI7I485QpklhjQ07a4PvxYvDoTZG8V3E=
 - CHR-303: gqXLBy4YbZ0sNovbUr2gNOEvs5RwKR8o6E_AvRkcQQE=
 - CHR-623: QFitfhsbTEqMekBKXOhqS9SJy722gtqXTI61qCDEIFc=
+- EXT-401: iqOoXr7TUnZUSeG3q_mGXVYe32SigWJfEe5177Qn0ww=
+- EXT-501: 1_1CVgack4lrJJOvJPx2-5nBS-DY6fWuzkC-8176IqQ=
 - EXT-502: Ooa8_Vi4L_0qCbrWW-MWvytGQcW_TkvTkppMq2Vnygk=
 - EXT-504: GcVxG4G4CEueqO7DwzHMNLKv9RIEqMEajoFRXQ5ofB4=
 - EXT-505: 0r7CMFQK4qBHurY92pKQthKToajJpw_TMaLuQRzkcak=
@@ -19,7 +21,8 @@ links:
 - EXT-602: 6_QzgtDZbDrsvKdZIwHU4sjPHf5QIcQLQ8Av_An7-lw=
 - EXT-603: KhvRrVO_kFVa4SHt3_n54IoEoEQSfeoPSoEHrdBlQuM=
 normative: true
-note: ''
+note: |
+  Step 8: the model gets each distinct request text once, on its own and only as data, and answers with a JSON object (asks_for_deletion, request_in_english); the English reading is kept as the reason (EXT-404). Asking every text alone keeps one text from steering the decision on another (EXT-502). An empty text asks for nothing. When the model gives no usable answer, the request is audited as a deletion request, because nearly every request in the file is one (EXT-501). Our own request cases: code/evaluation/request_cases.csv.
 ref: ''
 reviewed: Rtc5Lc6tQ38IDX9k3dL0f_RzPP5fBtUDN5a3WCYFbYI=
 text: |

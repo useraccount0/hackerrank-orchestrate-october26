@@ -24,7 +24,7 @@ They are listed here instead of being silently "fixed" inside a requirement.
 | [ISS-08](#iss-08) | `python3` does not work on this Windows machine | CHR-512 | decided: use `python` as is for now |
 | [ISS-09](#iss-09) | The lists of evidence formats differ | CHR-220 | decided: union of the lists |
 | [ISS-10](#iss-10) | `README.md` is both an input and a deliverable | CHR-513, CHR-606, CHR-627 | decided: keep theirs; ours is `code/README.md` |
-| [ISS-11](#iss-11) | A policy rule's condition does not hold: what then? | CHR-1005 to CHR-1008, CHR-1011 to CHR-1015 | open (found in step 2) |
+| [ISS-11](#iss-11) | A policy rule's condition does not hold: what then? | CHR-1005 to CHR-1008, CHR-1011 to CHR-1015 | decided: settle from the sample answers in c08 |
 | [ISS-12](#iss-12) | The tests have run only on Python 3.15 | REV-007, ARC-12 | decided: Python 3.15 only |
 
 ---
@@ -290,6 +290,10 @@ anonymize or redact).
 **Proposal:** settle it in step 3 (design) with evidence: find records of these categories in the
 32 sample cases and see which steps the official sample answers contain for them, as was done for
 ISS-02 and ISS-07.
+
+**Decision (you, 2026-10-25):** "I agree with ISS-11 proposal". It is settled when c08
+(ARC-08_policy_checker) is built: the sample answers show what applies, and the result is
+recorded here, in the notes of the affected CHR items, and in that step's record.
 
 ## ISS-12
 

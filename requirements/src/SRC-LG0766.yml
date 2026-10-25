@@ -1,0 +1,18 @@
+active: true
+classified_by: ai
+derived: false
+disposition: context
+file: log.txt
+header: |
+  log.txt:766
+level: 7.36
+line_end: '766'
+line_start: '766'
+links: []
+normative: false
+note: |
+  Your signal that the API key was pasted into .env and c02 could start; it states no new requirement.
+ref: ''
+reviewed: pending-user-review
+text: |
+  pasted, continue
