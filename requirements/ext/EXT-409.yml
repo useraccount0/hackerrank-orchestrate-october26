@@ -13,7 +13,7 @@ note: |
 party: system
 rationale: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: kzsp6xBYfLEPaaFVLZrT5aRM0G1zvVklUrxjawZrdc4=
 text: |
   The solution shall audit a request as a deletion only when it is certain that deletion is requested: the AI model has answered that the request text leaves no doubt. A request whose text is unclear, conditional, or contradictory, or for which the model gives no usable answer, shall not be audited as a deletion; when the model gave no usable answer, the decision's reason shall say that a person must check the request.
 verification: test

@@ -913,3 +913,63 @@ repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
 
+## [2026-10-25T03:22:09+01:00] No deletion audit without certainty (EXT-409)
+
+User Prompt (verbatim, secrets redacted):
+if the model gives no usable answer don't treat it as deletion request immediately, choose a safer option. Automatic deletion should be done only if 100% certain that it is requested.
+
+Agent Response Summary:
+Recorded the decision as EXT-409, implemented by ARC-04; it links to the user's words after the next commit, so Doorstop shows one expected warning until then. c04 no longer treats a request without a usable model answer as a deletion: it is not audited as one, and its reason says that a person must check it (only after the stricter second question and c02's retries). The model's question now says to answer true only when the text leaves no doubt, so unclear, conditional, or contradictory texts and questions about deletion count as not deletions; two such own cases were added, and the real model decided all 14 own cases correctly. The rerun on the 375 distinct request texts was started in the background.
+
+Actions:
+* Edited code/c04_request_classifier/request_classifier.py, test_request_classifier.py, code/evaluation/request_cases.csv; ran tests, mypy, ruff
+* Scratch script with Doorstop's API (no git add): added EXT-409, linked it from ARC-04 and updated ARC-04's note; doorstop -F -W, srctrace.py check
+* Edited docs/steps/step-08-request-classifier.md and docs/v-model.md; started a live run through the model gateway
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+
+## [2026-10-25T03:22:09+01:00] Live run stopped at the user's request
+
+User Prompt (verbatim, secrets redacted):
+stop
+
+Agent Response Summary:
+Stopped the background live run of c04 and its monitor, and checked that no process was left calling the model and that no partial cache file remained. The answers received before the stop stay in the local answer cache, so a later run asks only the remaining texts. Nothing else was changed.
+
+Actions:
+* TaskStop for the live run and its monitor; checked running processes and .cache/model_answers for partial files
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+
+## [2026-10-25T03:24:30+01:00] User approved the 5 items of step 8
+
+User Prompt (verbatim, secrets redacted):
+review is ok
+
+Agent Response Summary:
+Recorded the user's approval of the 5 items that waited (SRC-LG0766, SRC-LG0789, ARC-02, ARC-04, EXT-409) with Doorstop's review(), saved without staging; 0 items wait. EXT-409 still lacks its link to the user's words, which can be added only after their next commit; its note says so, so the approval is kept when exactly that link is added. The step 8 record now describes the decision EXT-409 and states that the rerun of the 518 requests with the stricter question is not yet done.
+
+Actions:
+* Scratch script with Doorstop's API (no git add): review() on the 5 items; doorstop -F -W (1 expected warning), srctrace.py check (PASS)
+* Edited docs/steps/step-08-request-classifier.md and docs/v-model.md
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+

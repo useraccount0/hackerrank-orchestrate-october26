@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Date | 2026-10-25 |
-| State | Done, changed by your decision EXT-409 (no deletion audit without certainty), waiting for your review; the next component (c05, identity resolver) starts with your go-ahead (EXT-610) |
+| State | Done, changed by your decision EXT-409 (no deletion audit without certainty), approved by you ("review is ok"); the next component (c05, identity resolver) starts with your go-ahead (EXT-610) |
 | Goal | Decide for every request whether its text, in any language, authorizes deletion (CHR-301 to CHR-303) |
 | Not in this step | Writing `NOT_APPLICABLE` rows (c10, the audit pipeline); scoring the classifier in the evaluation report (c11) |
 
@@ -111,11 +111,35 @@ tests were run against it. Every broken copy failed: no second question (3 tests
 instructions and text in one message (5), no length limit (2), a failed answer guessed as "not a
 deletion" (3), identical texts asked again (2).
 
+## Your decision: no deletion audit without certainty (EXT-409)
+
+Your words: "if the model gives no usable answer don't treat it as deletion request immediately,
+choose a safer option. Automatic deletion should be done only if 100% certain that it is
+requested." Recorded as **EXT-409**, implemented by ARC-04.
+
+| Before | Now |
+|---|---|
+| No usable answer from the model: audited as a deletion request | Only after the stricter second question (and c02's retries of about 2 minutes) has also failed: **not audited as a deletion**, and the reason says "a person must check this request" |
+| The model said "deletion" for any text that asks for deletion | The question now says that deletion cannot be undone: the model may answer true only when the text **leaves no doubt**. An unclear, conditional, or contradictory text, or a mere question about deletion, is not a deletion |
+
+Two own cases test the second rule: "If you cannot fix my login by Friday, maybe just delete the
+account. I'm not sure yet." and "I'm thinking about deleting my account. What would happen to my
+order history?". With the new question, the real model decided **all 14 own cases correctly**,
+including the injection that tries to talk it out of a real deletion request.
+
+**Not yet confirmed:** the rerun of the 518 requests with the new question. You stopped it after
+the own cases. Until it has run, it is not shown that the stricter question still finds exactly the
+same 10 non-deletions and no fewer than 508 deletions.
+
+EXT-409 links to your words after your next commit (the baseline must contain them). Until then,
+Doorstop shows 1 expected warning. You approved EXT-409 with the note that says so, so its approval
+is kept when exactly that link is added.
+
 ## Results
 
-91 tests OK (c04: 11, c02: 23); mypy (strict) and ruff clean; `doorstop -F -W` clean;
-`srctrace.py check` PASS. 4 items wait for your review: the 2 new source units, ARC-02, and
-ARC-04.
+91 tests OK (c04: 11, c02: 23); mypy (strict) and ruff clean; `doorstop -F -W`: 1 expected
+warning (EXT-409's link, above); `srctrace.py check` PASS. You approved the 5 items of this step
+("review is ok"): the 2 new source units, ARC-02, ARC-04, and EXT-409; 0 items wait.
 
 ## How to check
 

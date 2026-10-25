@@ -25,6 +25,6 @@ normative: true
 note: |
   Step 8: the model gets each distinct request text once, on its own and only as data, and answers with a JSON object (asks_for_deletion, request_in_english); the English reading is kept as the reason (EXT-404). Asking every text alone keeps one text from steering the decision on another (EXT-502). An unusable answer is asked again once with a stricter question, because the gateway keeps every answer and an unusable one would otherwise decide every later run. Only the first 4,000 characters of a text are sent. An empty text asks for nothing. The model may answer true only when the text leaves no doubt (EXT-409). When the model gives no usable answer, the request is not audited as a deletion, and its reason says that a person must check it (EXT-409, your decision of step 8; first designed the other way round). Our own request cases: code/evaluation/request_cases.csv.
 ref: ''
-reviewed: Rtc5Lc6tQ38IDX9k3dL0f_RzPP5fBtUDN5a3WCYFbYI=
+reviewed: ddr4uNIT_uIKtAthkSpjiY5X3-It0cFAA0b6ttPnkII=
 text: |
   Decides whether a request text, in any language, authorizes deletion. The text is passed to the model as data, never as instructions.

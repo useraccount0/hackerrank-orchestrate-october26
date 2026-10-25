@@ -13,6 +13,6 @@ normative: false
 note: |
   A one-time request: the test of the model on the non-English requests and the recheck of c02, both done in step 7. That a request in another language must be decided correctly is already CHR-303.
 ref: ''
-reviewed: pending-user-review
+reviewed: kB1U2lT4Cw0AXlK8Nf0mYlziV-gWWMKTbYeu-q6vDvA=
 text: |
   case_507, case_495, case_66 in dataset/deletion_requests.csv and a few others are non-english. These look like Korean and Japanese to me. Test the API for this too. Than recheck the c02
