@@ -41,6 +41,6 @@ links:
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: HjQ_2d6AaOPwyNHnEZ24DEyVqdsql-GBiEswN6nKLXA=
 text: |
   Maps each resource to its data category and deletion rule, and judges whether its state complies with the required treatment; decides COMPLETE or INCOMPLETE.

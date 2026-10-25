@@ -16,7 +16,7 @@ note: |
 party: system
 rationale: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: Kv73HR9KevxX5oZApDhV0svheT7XFS5zj5_fskP85yE=
 text: |
   Inside each phase, steps shall always be in the sort order of CHR-416, also where processing downstream copies before their source records (CHR-329) would give another order.
 verification: test

@@ -14,7 +14,7 @@ note: |
 party: system
 rationale: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: mHwUGgw28bo9Sryeq_Mz4RRzZhTGIWdbWo5wuCUa-FE=
 text: |
   Our runs of the solution shall use AI models of NVIDIA's hosted API (build.nvidia.com); its API key is read from the environment or from the uncommitted .env file at the repository root.
 verification: inspection

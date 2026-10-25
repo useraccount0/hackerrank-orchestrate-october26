@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: YyQszD7msuX3GugSo6miyy_2TQ-Dxeqci94vcIFRqzQ=
 text: |
   The system shall apply the required treatment DELETE to every relevant CACHE_ENTRY record, under the condition "Always" (rule_04).
 verification: test

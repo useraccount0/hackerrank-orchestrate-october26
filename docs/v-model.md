@@ -31,11 +31,11 @@ yet?", and get an exact answer from the links.
 
 | Level | Holds | Step | State |
 |---|---|---|---|
-| SRC | The five challenge files, `dataset/deletion_rules.csv`, and your prompts in `log.txt`, cut into 540 verbatim source units | 1 to 7 | 490 approved by you; the 50 added since step 2 wait for your review |
-| CHR | 217 requirements stated by the hackathon files | 1, 2 | 202 approved by you; section 10 (the 15 policy rules, step 2) waits for your review |
-| EXT | 44 requirements you decided (or we added), kept apart from CHR | 2 to 7 | waiting for your review |
-| REV | Requirements revealed during analysis, implementation, or testing, kept apart from CHR and EXT (EXT-606) | 3 to 7 | 10 items, waiting for your review |
-| ARC | The interfaces, the 11 code components, and the delivery process, each linked to the requirements it implements | 3, 4 | 13 items, design approved by you; items waiting for your review ([step 3](steps/step-03-data-analysis-and-design.md), [step 4](steps/step-04-interfaces.md)) |
+| SRC | The five challenge files, `dataset/deletion_rules.csv`, and your prompts in `log.txt`, cut into 540 verbatim source units | 1 to 7 | all approved by you (the last 50 in [step 7.1](steps/step-07.1-review.md)) |
+| CHR | 217 requirements stated by the hackathon files | 1, 2 | all approved by you |
+| EXT | 44 requirements you decided (or we added), kept apart from CHR | 2 to 7 | all approved by you |
+| REV | Requirements revealed during analysis, implementation, or testing, kept apart from CHR and EXT (EXT-606) | 3 to 7 | 10 items, all approved by you |
+| ARC | The interfaces, the 11 code components, and the delivery process, each linked to the requirements it implements | 3, 4 | 13 items, all approved by you ([step 3](steps/step-03-data-analysis-and-design.md), [step 4](steps/step-04-interfaces.md)) |
 | DES | Module design inside each component | 3, 4 | not started |
 | CODE | The solution | 4, 5, ... | `c00_interfaces` ([step 4](steps/step-04-interfaces.md)), `c01_input_reader` ([step 5](steps/step-05-input-reader.md)), `c03_evidence_reader` ([step 6](steps/step-06-evidence-reader.md)), and `c02_model_gateway` ([step 7](steps/step-07-model-gateway.md)) done; the other components follow one at a time |
 | UNT, INT, SYT, ACC | The checks for each level | 4, 5, ... | unit tests of c00 to c03 (78 tests, all pass); the other levels not started |
@@ -49,7 +49,7 @@ tool, not by memory:
 
 | Question | Answered by | Today |
 |---|---|---|
-| 1. Did you approve it? | Doorstop review fingerprints (`doorstop review`; `pending-user-review` means "not yet") | 139 items wait for you |
+| 1. Did you approve it? | Doorstop review fingerprints (`doorstop review`; `pending-user-review` means "not yet") | 0 items wait for you (139 approved on 2026-10-25) |
 | 2. Is it connected? Every input line has a requirement, every requirement has a source, and later every requirement has a design element and a check | `srctrace.py check` and Doorstop's link checks | complete for SRC to CHR, EXT, and REV; every requirement is implemented by a component (ARC) |
 | 3. Is it proven? The checks linked to it passed on the latest run | test results that carry requirement IDs (set up when the right side starts) | the unit tests of c00 to c03 pass, and each test file names the requirements it checks; no tool marks a requirement as proven yet |
 

@@ -14,7 +14,7 @@ note: |
 party: system
 rationale: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: CPKgmTBp-jv6hp6F8FJDTDY8LhcnINMrIEzxhFIAfpI=
 text: |
   The project shall use Python 3.15 only: the solution is built, tested, and run with it, and code/pyproject.toml declares no other version.
 verification: inspection

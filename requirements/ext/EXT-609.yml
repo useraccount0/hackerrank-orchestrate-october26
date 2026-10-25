@@ -14,7 +14,7 @@ note: |
 party: coding-agent
 rationale: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: FHrTZ-8HAVLZBsPfRCeRV9PX4i_WBCTJxVba_4CYNpE=
 text: |
   The interfaces between the components shall be defined before the components are implemented, so that a test can replace any component by a fake.
 verification: inspection

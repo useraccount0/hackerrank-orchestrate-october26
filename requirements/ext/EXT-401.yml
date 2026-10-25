@@ -15,7 +15,7 @@ note: |
 party: system
 rationale: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: V1TlTpGEJnqOa0t-HVMph1PCVSs5_ohEbMfvy4CBZ0s=
 text: |
   The solution shall decide with deterministic code wherever the participant data allows it, and shall call an AI model only for what code cannot decide reliably.
 verification: inspection

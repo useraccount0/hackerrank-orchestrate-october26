@@ -24,6 +24,6 @@ links:
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: HU2hgQilsuiULG_rCAmJYmXSKfktI7JT3tOwoLUMpoI=
 text: |
   Decides the state of each resource at audit_at from the evidence captured at or before audit_at (activity results are claims), and names the evidence item that proves it.

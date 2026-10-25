@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 1yvPL7JRn5B9JNSmbKvPisVltgz-zferrDs_f2uOCLM=
 text: |
   don't change agents.md I dont want this to be complicated any further. I have additional requirements in terms of code quality. I want error handling to be done in a simple way but protect the solution from unexpected, omitted or intentionally missleading inputs from dataset. I want simple descriptive function names and readable code that doesnt need additional documentation. Comments in code shall not describe what it does, that should be obvious by reading it, but why is some solution chosen if it is not obvious.

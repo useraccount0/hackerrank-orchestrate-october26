@@ -13,7 +13,7 @@ note: |
   The file does not say what applies when the condition does not hold (ISS-11).
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: uN0A3ztAyWk8AzQccmVDRiLBiEI-g3g8KUyb1aCZUns=
 text: |
   The system shall apply the required treatment REDACT to every relevant EMAIL_DELIVERY_LOG record, under the condition "Log contains a user email address" (rule_11).
 verification: test

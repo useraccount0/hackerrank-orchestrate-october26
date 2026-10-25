@@ -57,6 +57,6 @@ links:
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: BKAHaIjK8ojImKp9mQC-z-Vxy9DYPoG3EdlePhl9WR0=
 text: |
   Turns the policy results into the ordered steps of steps_json (findings, remediation, verification), with the evidence rules and the fixed sort order, and serializes them deterministically.

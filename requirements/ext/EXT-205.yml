@@ -16,7 +16,7 @@ note: |
 party: participant
 rationale: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: d39LUK8xRjz3JAX7jmrfFN6XL0PPhd62s5XB5TNPCp0=
 text: |
   code/README.md shall give the run command both as python3 code/main.py (macOS, Linux) and as python code/main.py (Windows); on this machine, python is used as it is.
 verification: inspection

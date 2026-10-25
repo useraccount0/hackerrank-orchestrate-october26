@@ -15,7 +15,7 @@ party: system
 rationale: |
   Revealed in step 4, when the interfaces were rechecked against the 32 sample answers: 4 cited verification steps prove ABSENT with evidence that never names the record (case_01, case_02, case_04: evidence_54, an SQL snapshot of the customer_profiles tables; case_31: evidence_51, a JSON snapshot bundle). Found with a script that checks whether each cited evidence file contains the step's resource_id.
 ref: ''
-reviewed: pending-user-review
+reviewed: BNqILJ4iDh1Ad2hGpbV72XGbCweB2KJWyZeYus1tnu8=
 text: |
   When an evidence item lists all records of a store (a snapshot table or collection) at a time at or before audit_at, a record of that store's kind that is not in the listing shall count as absent from that store, and that evidence item proves the absence.
 verification: test

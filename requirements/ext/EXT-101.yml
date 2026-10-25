@@ -13,7 +13,7 @@ note: 'Your words: "I want to do this project using V model."'
 party: coding-agent
 rationale: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: U5_EwAn0qvpKk6koNcLSu1s3pcz3eDrKgIr2sxTwBL4=
 text: |
   The project shall follow the V-model: every level on the left side (requirements, design, code) gets a matching level of checks on the right side, and every item is linked to the item it comes from.
 verification: inspection

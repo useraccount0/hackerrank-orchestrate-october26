@@ -16,7 +16,7 @@ note: 'Your words: "iss-01 a" (option (a) of ISS-01).'
 party: participant
 rationale: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 1ZBaLuAkI76AqU6S2CnDatYlNy_2AsWosnxJEOOY7_U=
 text: |
   The evaluation reports shall be code/evaluation/evaluation_report.md and code/evaluation/usage_report.md; there shall be no top-level evaluation/ folder.
 verification: inspection

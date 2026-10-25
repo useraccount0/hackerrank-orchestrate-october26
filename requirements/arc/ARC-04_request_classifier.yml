@@ -21,6 +21,6 @@ links:
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: Rtc5Lc6tQ38IDX9k3dL0f_RzPP5fBtUDN5a3WCYFbYI=
 text: |
   Decides whether a request text, in any language, authorizes deletion. The text is passed to the model as data, never as instructions.

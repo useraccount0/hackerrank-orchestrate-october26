@@ -13,7 +13,7 @@ note: |
   The file does not say what applies when the condition does not hold (ISS-11).
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: 4dZK_4One4DTdv-5nKVWpS-amlAZeI6n804yYLqKGyI=
 text: |
   The system shall apply the required treatment ANONYMIZE to every relevant ANALYTICS_PROFILE record, under the condition "Record is still attributable to a user" (rule_07).
 verification: test

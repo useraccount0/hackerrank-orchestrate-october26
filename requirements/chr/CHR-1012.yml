@@ -13,7 +13,7 @@ note: |
   The file does not say what applies when the condition does not hold (ISS-11). The retention period is supplied in the evidence, for example the column retention_until of the table security_audit_records in the SQL snapshots under dataset/evidence/databases/.
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: C5WxcFOEfw0L7kmALh9WAL66w3Gz5fvx8i3FNFyYTNA=
 text: |
   The system shall apply the required treatment RETAIN to every relevant SECURITY_AUDIT_LOG record, under the condition "Record is within the supplied retention period" (rule_12).
 verification: test

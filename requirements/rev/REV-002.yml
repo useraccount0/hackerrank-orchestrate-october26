@@ -15,7 +15,7 @@ party: system
 rationale: |
   Revealed in step 3 (data analysis), not stated by any input line. Sample case_12: analytics_9914 is linked to the subject only through the hash of an old email (correlation_key in evidence_01). The hash rule was recomputed and matches user_identities.csv.
 ref: ''
-reviewed: pending-user-review
+reviewed: gUb9cDFzZSY9INNakUmNzQaCXfoGOkM4t76K2h9hs_8=
 text: |
   A record shall be linked to the subject also through the email hash of any current or old email address of the subject; the email hash is the SHA-256 of the lower-case email address.
 verification: test

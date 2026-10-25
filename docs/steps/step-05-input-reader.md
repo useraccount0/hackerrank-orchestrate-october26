@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Date | 2026-10-25 |
-| State | Done, waiting for your review; the next component (c03, evidence reader) starts with your go-ahead (EXT-610) |
+| State | Done, approved by you on 2026-10-25 ([step 7.1](step-07.1-review.md)) |
 | Goal | Read the CSV files of `dataset/` into the records of c00, check every value where it enters (EXT-503), and never stop on bad input (EXT-501) |
 | Not in this step | Reading the evidence files themselves (c03); any decision about a case |
 

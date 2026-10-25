@@ -13,7 +13,7 @@ party: system
 rationale: |
   Derived from our own analysis, not from any input line. The AI interview asks for the investigation approach and the remediation planning (CHR-605), and evaluation_report.md must describe the failures found and the improvements made (CHR-614). Both need to see why a step was produced. The record is kept beside output.csv, never inside it, so the output format stays as required.
 ref: ''
-reviewed: pending-user-review
+reviewed: VqbPh3WX6uCVBmkM4wFEovJoz8zTqrwSGcGwnXPsvCE=
 text: |
   For every case, the solution shall record why it produced each step: the evidence it read and the deletion rule it applied.
 verification: test

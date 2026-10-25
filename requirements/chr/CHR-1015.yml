@@ -13,7 +13,7 @@ note: |
   The file does not say what applies when the condition does not hold (ISS-11). Which identifiers are removed and which reference stays is stated in CHR-320.
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: Pr5FNkBx2LohuyTgAyO4CI6_8RvOdtwb1C8M8z6BpyA=
 text: |
   The system shall apply the required treatment REDACT to every relevant ACCOUNT_TOMBSTONE record, under the condition "Account is deleted and only a stable internal user_id is needed to preserve references to retained records" (rule_15).
 verification: test

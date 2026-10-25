@@ -14,7 +14,7 @@ note: |
 party: coding-agent
 rationale: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 7ABLasc34gJj8uMEKJ7Rdy9ZV2Kg_SzI5XNtniXBT9A=
 text: |
   At any moment, a tool shall tell for every requirement whether it is satisfied: approved by you, linked to the design and the checks below it, and proven by those checks in the latest run.
 verification: demonstration

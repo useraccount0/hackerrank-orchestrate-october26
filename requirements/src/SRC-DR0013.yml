@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 03C0ihXn6YlMgzEEEnwUJcptYT9T6WYuMgJvny9VIps=
 text: |
   rule_12,SECURITY_AUDIT_LOG,Record is within the supplied retention period,RETAIN

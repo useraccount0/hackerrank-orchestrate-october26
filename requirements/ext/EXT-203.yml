@@ -14,7 +14,7 @@ note: 'Your words: "iss-03 b" (option (b) of ISS-03).'
 party: system
 rationale: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 80JbIjVZU0ghsnT0iP19z-0L5mfk7aqiAyyBCrwlxnQ=
 text: |
   The data rows of output.csv shall be sorted by the number after "case_", which is the order of dataset/deletion_requests.csv.
 verification: test

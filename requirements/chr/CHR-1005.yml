@@ -13,7 +13,7 @@ note: |
   The file does not say what applies when the condition does not hold (ISS-11).
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: DRkfKx8ruZ7w_Cy5S2b8vSXVZBVhLS2qsnKetJlt2gA=
 text: |
   The system shall apply the required treatment REDACT to every relevant SUPPORT_MESSAGE record, under the condition "Conversation contains shared customer, agent, or order context that must be retained" (rule_05).
 verification: test

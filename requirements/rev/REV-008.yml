@@ -15,7 +15,7 @@ party: system
 rationale: |
   Revealed in step 6, while building the evidence reader: the evidence holds names next to the subjects' names that would match as substrings, such as Priya Ramanathan (Priya Raman, case_07) and Jonas Berglund (Jonas Berg, case_06). Found by comparing every identifier the reader extracted with the identity data.
 ref: ''
-reviewed: pending-user-review
+reviewed: ymxxY8RX4OodN8cIxtsrNkfkVx96FLhAq1F86FyQKc0=
 text: |
   A name shall link a record to the subject only when the whole name matches one of the subject's names; a name that merely contains the subject's name, or is contained in it, shall not.
 verification: test

@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Date | 2026-10-25 |
-| State | Done, waiting for your review; the next component (c04, request classifier) starts with your go-ahead (EXT-610) |
+| State | Done, approved by you on 2026-10-25 ([step 7.1](step-07.1-review.md)); the next component (c04, request classifier) starts with your go-ahead (EXT-610) |
 | Goal | The only place that calls an AI model: any provider by settings (EXT-405), your NVIDIA key (EXT-408), cached, recorded, and never stopping the run |
 | Not in this step | Deciding requests (c04); the usage report (c11) |
 

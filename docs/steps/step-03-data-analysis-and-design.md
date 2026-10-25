@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Date | 2026-10-24 |
-| State | Analysis done for the main patterns; component design **proposed, waiting for your approval** (updated after your design-process requirements, EXT section 6) |
+| State | Analysis done for the main patterns; component design (updated after your design-process requirements, EXT section 6) approved by you on 2026-10-25 ([step 7.1](step-07.1-review.md)) |
 | Goal | Learn from the dataset (by tools, read-only) how a case is decided, then propose the architecture |
 | Not in this step | Solution code |
 

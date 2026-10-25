@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Date | 2026-10-24 |
-| State | Done, waiting for your review (86 items); links completed after your commit "Step2" (point 11) |
+| State | Done, approved by you on 2026-10-25 ([step 7.1](step-07.1-review.md)); links completed after your commit "Step2" (point 11) |
 | Goal | (1) Add the 15 policy rules of `dataset/deletion_rules.csv` to the baseline, as you decided. (2) Write the requirements that go beyond the hackathon, kept apart and traceable to your own words |
 | Not in this step | Solution code (EXT-106); the design (step 3) |
 

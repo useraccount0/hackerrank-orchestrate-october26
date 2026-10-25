@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Date | 2026-10-25 |
-| State | Done, waiting for your review; then the components are implemented one at a time (EXT-610) |
+| State | Done, approved by you on 2026-10-25 ([step 7.1](step-07.1-review.md)); the components are implemented one at a time (EXT-610) |
 | Goal | Define how the components talk to each other, so that every component can be tested alone with fakes (EXT-609) |
 | Not in this step | Any component's logic |
 

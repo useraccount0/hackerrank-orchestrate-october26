@@ -14,7 +14,7 @@ party: system
 rationale: |
   Revealed in step 3 (data analysis), not stated by any input line. All 22 INCOMPLETE sample answers do this, for example case_06 verifies account_006 (already absent) next to search_001 (remediated).
 ref: ''
-reviewed: pending-user-review
+reviewed: AQjZXH3XFotlg7Vd5N4koRbjY6SFDbfBc79deWMCRfU=
 text: |
   In an INCOMPLETE case, the verification phase shall contain one check for every relevant record, data flow, and backup: also for those that already comply and for those that are retained.
 verification: test

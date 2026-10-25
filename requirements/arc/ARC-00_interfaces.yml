@@ -19,6 +19,6 @@ links:
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: A7sKGTwwpQn_WZ6POqFxUiu6Jps1B7ab35YWRy41SiA=
 text: |
   The data records the components exchange (code/c00_interfaces/records.py) and the call signature of every component (code/c00_interfaces/components.py). Components depend only on these, never on each other's code; the audit pipeline receives the components as one bundle, so a test can replace any of them, and the model gateway, by a fake (code/c00_interfaces/fakes.py).

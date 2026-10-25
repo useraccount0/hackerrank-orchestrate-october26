@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: HC6CT2ifKDC5CNTe3EPIuT0_3mjDfb_KFcBtOfgAAQk=
 text: |
   rule_11,EMAIL_DELIVERY_LOG,Log contains a user email address,REDACT

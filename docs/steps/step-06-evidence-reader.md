@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Date | 2026-10-25 |
-| State | Done, waiting for your review; the next component (c04, request classifier) starts with your go-ahead (EXT-610) |
+| State | Done, approved by you on 2026-10-25 ([step 7.1](step-07.1-review.md)) |
 | Goal | Turn each of the 94 evidence files into observations (which record, in which store, seen when, with which identifiers and facts) and listings (all records of a store at one time) |
 | Not in this step | Which records belong to a case (c06) and their state at `audit_at` (c07); the real AI model (c02, last) |
 

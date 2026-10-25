@@ -109,6 +109,6 @@ links:
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 59s2U4ZwCp-UEwEHRksp26zY3NM8j_pZ0QbA6luVyBc=
 text: |
   How the work is done and delivered: the coding agent's rules and log.txt, the requirements and their traceability tools, the README, packaging of code.zip, the submission, and the agent trace. Checked by inspection, not by program tests.

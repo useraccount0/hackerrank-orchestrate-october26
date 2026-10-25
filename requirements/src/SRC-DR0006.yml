@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: UUfI8bfu2hfIjrVigCGUdbsRYIT8g-XIKDLD85AMZZU=
 text: |
   rule_05,SUPPORT_MESSAGE,"Conversation contains shared customer, agent, or order context that must be retained",REDACT

@@ -15,7 +15,7 @@ note: |
 party: coding-agent
 rationale: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: zvrqIpIP2-q8rWWWi7QctauPAjSJaxPcLQtgtmigUU4=
 text: |
   The component that calls an AI model (ARC-02_model_gateway) shall be implemented last; until then, the components that use it are tested with a fake gateway.
 verification: inspection

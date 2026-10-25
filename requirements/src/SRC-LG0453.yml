@@ -13,6 +13,6 @@ normative: false
 note: |
   A go-ahead to continue after your commit. As logged it lacks the trailing backslash of the message you sent; the correction is in the log entry of the next turn.
 ref: ''
-reviewed: pending-user-review
+reviewed: 80fSFpZ6zBvubyn57m0Ktnpfv-dfSIa7ONBWcQRsfvE=
 text: |
   commit made, continue]

@@ -15,7 +15,7 @@ note: |
 party: coding-agent
 rationale: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: Yj88iSqoag1tmMfXPivsTjv52ELj6g4MmcINlwlDGxA=
 text: |
   Each component shall have a meaningful name and a number, so that the components are listed in the order the pipeline uses them.
 verification: inspection

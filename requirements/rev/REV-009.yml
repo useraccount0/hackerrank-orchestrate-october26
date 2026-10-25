@@ -15,7 +15,7 @@ party: system
 rationale: |
   Revealed in step 6, in the recheck of c03: two ledger records are recorded two days after their file was captured (evidence_13: account_1417 recorded 2026-08-14 in a file captured 2026-08-12; evidence_36: account_5043 recorded 2026-04-11 in a file captured 2026-04-09). Checking only the file's capture time would let a case audited in between use them.
 ref: ''
-reviewed: pending-user-review
+reviewed: RCez48K3qOOlb2JcTRVr-4BxAEmS8OX2juEP93aEO1s=
 text: |
   An observation shall count for a case only when both the evidence item's capture time and the record's own time (when it was observed or recorded) are at or before the case's audit_at.
 verification: test

@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: RxdjNDTWGIaYPl8dclduHScFuS1osFNacvkaQjrIJW4=
 text: |
   Now define interfaces between components, so that tests can mock them, and then I will let you work on individual components one at a time. Leave the one that uses AI as the last one for implementation

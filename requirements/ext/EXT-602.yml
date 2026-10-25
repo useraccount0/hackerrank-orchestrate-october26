@@ -14,7 +14,7 @@ note: |
 party: coding-agent
 rationale: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: y3wfmgAHxr7YOeOfsQgT0SPyTivAbsRgdCF97AihMbY=
 text: |
   Each component shall be testable individually and independently of the other components.
 verification: test

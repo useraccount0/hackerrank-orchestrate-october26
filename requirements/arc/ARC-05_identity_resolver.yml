@@ -21,6 +21,6 @@ links:
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: ezCwT2CYHC9EJl8utJ_QaS498RW82ekwYchw4Nvxcg4=
 text: |
   Finds the subject of a request from its email (current or old) and collects all current and old identifiers: user_id, emails, phones, names, and email hashes.

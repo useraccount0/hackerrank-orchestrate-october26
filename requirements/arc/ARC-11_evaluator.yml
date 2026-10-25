@@ -43,6 +43,6 @@ links:
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: n569iZYQ7asH8TzN-7udoiO_MWAFcyelN_oqxBWKU0c=
 text: |
   Scores output against the sample answers the way the organizers score (status, steps, fields, sequence), runs our own evaluation cases, and computes the numbers of evaluation_report.md and usage_report.md from recorded data.

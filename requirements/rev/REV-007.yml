@@ -16,7 +16,7 @@ party: system
 rationale: |
   Revealed in step 5, in the recheck of c01: on Python 3.11 and newer, datetime.fromisoformat accepts forms such as 20260904T100000Z that Python 3.10 rejects. code/pyproject.toml declares Python 3.10 as the minimum, so one file could be read differently depending on who runs the solution. EXT-402 covers repeated runs, not different Python versions. The tests have run only on Python 3.15 so far (ISS-12).
 ref: ''
-reviewed: pending-user-review
+reviewed: lFkaQjwYAhJsbN_VUIuj5cveO3f4pAFf7RhxVK-k-1Y=
 text: |
   The solution shall give the same results on every Python version it declares to support; where the standard library behaves differently between these versions (for example, in which written forms of a time datetime.fromisoformat accepts), the solution shall use its own explicit rule instead.
 verification: test

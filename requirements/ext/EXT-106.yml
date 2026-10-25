@@ -14,7 +14,7 @@ note: |
 party: coding-agent
 rationale: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 2fBK5qMLli8IGMjEb2nAS6FBRwXzlCJtf8Quy3k1CNk=
 text: |
   Steps that produce requirements shall produce no solution code; coding starts at a later stage.
 verification: inspection

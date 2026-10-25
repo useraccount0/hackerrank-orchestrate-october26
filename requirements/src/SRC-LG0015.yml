@@ -12,6 +12,6 @@ links: []
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: NtcsdsnUi0PcmIEQ7yVvm8OWdQi5McuDUj9-mW0YXnE=
 text: |
   I'm working on this challenge. I want to understand it completely first. I have already read the files in root. I want to convert all these inputs into structured requirements. I want to do this project using V model. I want them to be traceable and to know exactly which requirements are satisfied at every moment. If any part of the task can be solved or is repeatable by opensource tool I want to use that tool instead of AI. Specifically to this project, I must be able to trace that all input files in the root are completely converted to requirements, that no line is skipped, so that I can go back and forward between imput files and requirements deterministically. I don't want to produce any code results during this step. Next step will be expanding requirements beyond what is given by hackathon, but that part should be clearly differentiated and tracable. Actual coding will come at later stages. I want all the performed steps summarized and written down clearly and in simple terms, stored within the repository. I will work iteratively untill I understand everything produced in this step, before continuing to the next one.

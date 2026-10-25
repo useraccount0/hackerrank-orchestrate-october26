@@ -12,7 +12,7 @@ normative: true
 note: ''
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: RKGFiJiMGf012tiQ_VMmAvsKxFN8A5_sYBrNGMbl2bA=
 text: |
   The system shall apply the required treatment DELETE to every relevant USER_EXPORT record, under the condition "Always" (rule_09).
 verification: test

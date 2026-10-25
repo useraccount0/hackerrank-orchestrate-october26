@@ -16,7 +16,7 @@ party: system
 rationale: |
   Revealed in step 5, while designing the input reader's checks: skipping a bad row, as for the other files, would silently drop its case from output.csv, and a submission without that row breaks CHR-403. The real dataset has no such row; the protection is for unexpected or misleading input (EXT-501).
 ref: ''
-reviewed: pending-user-review
+reviewed: Es4sQ5aMI8yZLwnnbvf02_cRJRit7QirPpfr8DspuX8=
 text: |
   When a row of deletion_requests.csv fails the input checks, the row shall be skipped and reported, but its case_id, when readable, shall still be passed on, so that the case gets its output row.
 verification: test

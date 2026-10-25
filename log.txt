@@ -806,3 +806,44 @@ repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
 
+## [2026-10-25T02:03:17+01:00] What waits for the user's review: 139 Doorstop items and open ISS-11
+
+User Prompt (verbatim, secrets redacted):
+what needs my review
+
+Agent Response Summary:
+Listed every Doorstop item without a review fingerprint with a read-only script: 139 items, namely 50 SRC (15 policy rule lines and 35 of the user's prompts with their AI labels), 16 CHR (section 10, the policy rules), 50 EXT, 10 REV, and 13 ARC. Found that ISS-11 (what applies when a policy rule's condition does not hold) is still open, because step 3 did not settle it; it matters for c08. Proposed a review order that puts the items that change what the code does first, given the time left. Nothing was changed; the baseline move after the user's commit "Step7" is left for the start of the next step.
+
+Actions:
+* srctrace.py check (PASS); read-only scratch scripts with Doorstop's API listing unreviewed items and the REV texts
+* Read requirements/ISSUES.md, docs/v-model.md, docs/steps/step-07-model-gateway.md
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+
+## [2026-10-25T02:18:08+01:00] User approved the 139 pending items; recorded with Doorstop's review
+
+User Prompt (verbatim, secrets redacted):
+requirements ok, approved
+
+Agent Response Summary:
+Recorded the user's approval of all 139 items that waited for review (50 SRC, 16 CHR, 50 EXT, 10 REV, 13 ARC) with Doorstop's own review(), saved without staging; Doorstop now reports 0 items waiting. The ARC items were included because the list the user approved contained them. The step records 2 to 7 and docs/v-model.md now say approved, and the new record docs/steps/step-07.1-review.md describes the review. ISS-11 stays open and c04 was not started, because neither was answered explicitly (EXT-610).
+
+Actions:
+* Scratch script with Doorstop's API (no git add): review() on every item without a fingerprint
+* doorstop -F (no warnings or errors), srctrace.py check (PASS, 0 SRC items waiting), git diff --cached (empty)
+* Edited the State line of docs/steps/step-02 to step-07 and docs/v-model.md; created docs/steps/step-07.1-review.md
+
+Context:
+tool=Claude Code
+model=claude-opus-5-5
+branch=main
+repo_root=C:\pro\HackerRank_Orchestrate_2026_10\hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none
+

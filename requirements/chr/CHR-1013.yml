@@ -13,7 +13,7 @@ note: |
   The file does not say what applies when the condition does not hold (ISS-11). Legal holds appear in the evidence as resources such as legal_hold_8017; how 'active' is established is worked out in the design step.
 party: system
 ref: ''
-reviewed: pending-user-review
+reviewed: -B1SOiaU5-R8vH-cKsBErlAvLWRItA5IonZ-fIjlc84=
 text: |
   The system shall apply the required treatment RETAIN to every relevant LEGAL_HOLD_RECORD record, under the condition "A supplied legal hold is active" (rule_13).
 verification: test

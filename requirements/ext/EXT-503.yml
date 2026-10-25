@@ -14,7 +14,7 @@ note: |
 party: system
 rationale: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: 2Eds7vvsryFSxnE2OM1a60wdaPQBc_U8VGWYxWHDhg0=
 text: |
   Error handling shall be simple: data is checked once, where it enters the solution (when a file from dataset/ is read, or when an AI model answers), and the rest of the code relies on those checks.
 verification: inspection

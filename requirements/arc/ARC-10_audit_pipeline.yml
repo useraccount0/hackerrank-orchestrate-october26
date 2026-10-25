@@ -37,6 +37,6 @@ links:
 normative: true
 note: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: jx4kf0n3BqCXLdOIJdsEbRJZ7CGbwNVW46a8MRuYRGk=
 text: |
   The entry point code/main.py. Runs the components for every case, writes output.csv at the repository root (one row per case, number order, also for a case whose request row could not be read: REV-006) and a readable explanation of every step beside it.

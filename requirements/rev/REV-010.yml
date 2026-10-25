@@ -15,7 +15,7 @@ party: system
 rationale: |
   Revealed in step 7, in the recheck of c02: Python's urllib sends the Authorization header along to whatever server a redirect names. Shown with two local test servers: the second one received the key. A misconfigured address or proxy could have handed the key to a third party.
 ref: ''
-reviewed: pending-user-review
+reviewed: Pcg7Vbw3KQWYdxvDu8ZI3enqjLQ6Dy_ykD0jXI3-ufs=
 text: |
   The API key shall be sent only to the provider address in the model settings; the model gateway shall not follow a redirect to any other address.
 verification: test

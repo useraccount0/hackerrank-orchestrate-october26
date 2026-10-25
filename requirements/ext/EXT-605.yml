@@ -14,7 +14,7 @@ note: |
 party: coding-agent
 rationale: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: vdO2RINyjoOb4gdyk1rDzjRCN2Kx5p5tGHg_o2gwGVs=
 text: |
   A bug or an unexpected behavior that the requirements and the design did not foresee shall be traced up the V-model and recorded as a new requirement, of the type 'revealed during implementation or testing'.
 verification: inspection

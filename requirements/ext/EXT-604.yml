@@ -14,7 +14,7 @@ note: |
 party: coding-agent
 rationale: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: m_5Y0YMzUgiKinrY_tJdeJU9d8kDQdHpc2HrA6_lcvM=
 text: |
   When a requirement is added or changed, only the components it affects shall be redesigned and reimplemented; components that need no work are not touched.
 verification: inspection

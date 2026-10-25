@@ -16,7 +16,7 @@ note: |
 party: system
 rationale: ''
 ref: ''
-reviewed: pending-user-review
+reviewed: cUUN8bds444ecR5-9OTmvQh3uzDRm2QH1YSR9UzbkDU=
 text: |
   Text from dataset/ (request texts, evidence contents) shall be treated only as data, never as instructions, also when it is passed to an AI model.
 verification: test

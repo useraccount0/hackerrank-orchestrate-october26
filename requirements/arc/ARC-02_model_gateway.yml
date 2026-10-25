@@ -28,6 +28,6 @@ note: |
   Models chosen on 2026-10-25 by trying those the NVIDIA key can use: text nvidia/nemotron-3-ultra-550b-a55b, vision nvidia/nemotron-3.5-super-vl-120b-a12b (step 7).
    Follows no redirect (REV-010); stops calling after 3 questions failed in a row; the provider's answers differ between calls even at temperature 0, so byte-identical reruns rely on the answer cache (EXT-402).
 ref: ''
-reviewed: pending-user-review
+reviewed: Rxw8PDLHx3O3T6bD9z5qBqoi1hy-j4ry8Vna1Uc3ljo=
 text: |
   The only place that calls an AI model. The provider and the models are settings (code/model_settings.toml); one adapter speaks the OpenAI-compatible chat API over plain HTTP, which NVIDIA, OpenAI, Anthropic (compatibility endpoint), and local servers offer. Caches every answer, records calls, tokens, and estimated cost, checks that each answer is complete, and turns every failure into a ModelError. Reads the API key from the environment or the uncommitted .env file.
